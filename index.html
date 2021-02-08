@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<style>
+body {
+    margin: 0 0
+}
+.svg-container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#toolbar {
+    z-index: 1;
+    position: absolute;
+    font: 12px sans-serif;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+}
+#popup {
+    visibility: hidden;
+    position: absolute;
+    font: 12px sans-serif;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    position: absolute;
+    z-index: 2;
+    margin: 0px;
+}
+#popup::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+}
+#popup a:link {
+    color: #fff;
+}
+#popup a:visited {
+    color: #999;
+}
+</style>
+</head>
+<body>
+<div id="toolbar">
+<span style="float:left; width: 33%; font-size: 24px; cursor: pointer;" id="title"></span>
+<span style="float:left; width: 33%">Expand
+    <select id="expand">
+        <option value="0">0</button>
+        <option value="1">1</button>
+        <option value="2">2</button>
+        <option value="-1">All</button>
+    </select>
+</span>
+<span style="float:left; width: 33%"><input type="checkbox" id="chronology"/><label for="chronology">Chronology</label></span>
+</div>
+<div id="popup">
+</div>
+<div id="container" class="svg-container">
+</div>
+<script src="tech/tech_node.js"></script>
+<script src="tech/tech_link.js"></script>
+<script>
+const default_title = "Game ⨯ Tech";
+const margin = { left: 0, top: 40, right: 0, bottom: 40 };
+let selected = new Set(["Technology"]);
+let title = default_title;
+let expand = 1;
+let chronology = true;
+let popup = {};
+
+d3.select("#title")
+    .html(title)
+    .on("click", event => {
+        title = window.prompt("Enter title", title) || default_title;
+        d3.select("#title")
+            .html(title);
+    });
+
+d3.select("#expand")
+    .property("value", expand)
+    .on("change", event => {
+        expand = event.srcElement.value;
+        restart();
+    });
+
+d3.select("#chronology")
+    .property("checked", chronology)
+    .on("change", event => {
+        chronology = event.srcElement.checked;
+        svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
+        if (chronology) {
+            nodes.forEach(chronologyConstraint);
+        }
+        else {
+            nodes.forEach(d => d.fx = null);    // Remove constraint
+        }
+        restart();
+    })
+
+const simulation = d3.forceSimulation()
+    .force("charge", d3.forceManyBody().strength(-1000).distanceMax(500))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+    .alphaMin(0.1)
+    .velocityDecay(0.5)
+    
+const drag = simulation => {
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+        chronologyConstraint(event.subject);
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+        chronologyConstraint(event.subject);
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+        chronologyConstraint(event.subject);
+    }
+
+    return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+}
+
+function zoom(svg) {
+    svg.call(d3.zoom()
+        // .extent([[-width/2, -height/2], [width, height]])
+        .scaleExtent([1/8, 8])
+        .on("zoom", event => {
+            g.attr("transform", event.transform);
+            chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)));
+            svg.selectAll(".chronology-axis").call(chronologyAxis);
+            updatePopup();
+        })); 
+}
+
+const container = d3.select("#container");
+
+let width = 0, height = 0;
+
+function updateSize() {
+    const bb = container.node().getBoundingClientRect();
+    width = bb.width;
+    height = bb.height;    
+}
+
+updateSize();
+
+d3.select(window)
+    .on("resize", () => {
+        updateSize();
+        svg.attr("viewBox", [-width/2, -height/2, width, height]);
+        svg.selectAll(".chronology-axis").call(chronologyAxis);
+    });
+
+const chronologyScale = d3.scaleTime()
+    .domain([new Date(1950, 0), Date.now()])
+    .range([-width / 2 + margin.left, width / 2 - margin.right])
+    .nice();
+
+const svg = container
+    .append("svg")
+    // .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", [-width/2, -height/2, width, height])
+    .classed("svg-content", true)
+    .style("font", "12px sans-serif")
+    .call(zoom);
+
+svg.append("defs")
+    .append("marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 15)
+        .attr("refY", -0.5)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+    .append("path")
+        .attr("fill", "#999")
+        .attr("d", "M0,-5L10,0L0,5");
+
+const g = svg.append("g");
+
+let link = g.append("g")
+    .attr("fill", "none")
+    .attr("stroke", "#999")
+    .attr("stroke-opacity", 0.6)
+    .attr("marker-end", `url(${new URL(`#arrow`, location)})`)
+    .selectAll("path");
+
+let node = g.append("g")
+    .attr("stroke-width", 1.5)
+    .attr("cursor", "pointer")
+    .selectAll("g");
+
+svg.append("g")
+    .attr("class", "chronology-axis")
+    .call(chronologyAxis);
+
+function chronologyAxis(g) {
+    let r = chronologyScale.range();
+    g.attr("transform", `translate(0, ${height / 2 - margin.bottom})`)
+        .call(d3.axisBottom(chronologyScale).ticks((r[1] - r[0]) / 100).tickSizeOuter(0));
+}
+
+function chronologyConstraint(d) {
+    if (chronology && d.year) {
+        d.x = d.fx = d3.zoomTransform(svg.node()).invertX(chronologyScale(new Date(d.year, 0)));
+    }
+}
+
+function nodeText(d) {
+    return d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `, ${d.year}` : "");
+}
+
+restart();
+
+function restart() {
+    // Expand selection
+    let new_nodes = [], new_links = [];
+    if (expand == -1) { // Expand all
+        new_nodes = nodes;
+        new_links = links;
+    }
+    else {
+        let node_set = new Set(selected);
+        let link_set = new Set();
+        for (let i = 0; i < expand; i++) {
+            links.filter(l => node_set.has(l.source) || node_set.has(l.target))
+                .forEach(l => {
+                    link_set.add(l)
+                    node_set.add(l.source);
+                    node_set.add(l.target);
+                });
+        }
+
+        new_nodes = nodes.filter(n => node_set.has(n.id));
+        new_links = Array.from(link_set);
+    }
+
+    // Make a shallow copy to protect against mutation, while
+    // recycling old nodes to preserve position and velocity.
+    const old = new Map(node.data().map(d => [d.id, d]));
+    new_nodes = new_nodes.map(d => Object.assign(old.get(d.id) || {}, d));
+    new_links = new_links.map(d => Object.assign({}, d));
+
+    node = node.data(new_nodes, d => d.id)
+        .join(enter => {
+            let g = enter.append("g")
+                .attr("opacity", 0);
+            
+            g.transition().duration(1000).attr("opacity", 1);
+
+            g.append("circle")
+                .attr("r", 20)
+                .attr("opacity", 0);    // for clicking area
+
+            let circle = g.append("circle")
+                .attr("r", 4)
+                .attr("fill", "#777")
+                .attr("stroke", d => selected.has(d.id) ? "black" : "none");
+
+            g.append("text")
+                .text(nodeText)
+                .attr("x", 8)
+                .clone(true).lower()
+                    .attr("fill", "none")
+                    .attr("stroke", "white")
+                    .attr("stroke-width", 3);
+
+            if (chronology) {
+                g.each(chronologyConstraint);
+            }
+
+            g.call(drag(simulation));
+
+            // Hover to show popup
+            {
+                let hoverTimeout = null;
+
+                g.on("mouseenter", (event, d) => {
+                    if (popup.node != d) {
+                        hoverTimeout = setTimeout(() => {
+                            popup = { node: d, srcElement: event.srcElement };
+                            updatePopup()},
+                            500);
+                    }
+                });
+
+                g.on("mouseleave", event => clearTimeout(hoverTimeout));
+                g.on("mousedown", event => clearTimeout(hoverTimeout));
+                g.on("mouseup", event => clearTimeout(hoverTimeout));
+            }
+
+            // Toogle selection
+            g.on("click", (_, d) => {
+                if (selected.size > 1 && selected.has(d.id)) {
+                    selected.delete(d.id);
+                }
+                else {
+                    selected.add(d.id);
+                }
+                setTimeout(restart, 100);
+            });
+
+            return g
+        },
+        update => {
+            update.selectAll("circle")
+                .attr("stroke", d => selected.has(d.id) ? "black" : "none");
+            update.selectAll("text")
+                .text(nodeText);
+            return update;
+        },
+        exit => {
+            exit.call(exit => {
+                exit.transition()
+                    .duration(1000)
+                    .attr("opacity", 0)
+                    .remove();
+                // backup position/velocity
+                const old = new Map(exit.data().map(d => [d.id, d]));
+                nodes = nodes.map(d => Object.assign(old.get(d.id) || {}, d));
+            })
+        });
+
+    link = link.data(new_links, d => [d.source, d.target])
+        .join("path");
+        // .join(enter => {
+        //     let path = enter.append("path")
+        //         .attr("opacity", 0);
+
+        //     path.transition()
+        //         .duration(1000)
+        //         .attr("opacity", 1);
+
+        //     return path;
+        // },
+        // update => update,
+        // exit => {
+        //     exit.call(exit => exit
+        //         .transition()
+        //         .duration(1000)
+        //         .attr("opacity", 0)
+        //         .remove())
+        // });
+
+    simulation.nodes(new_nodes);
+    simulation.force("link", d3.forceLink(new_links).id(d => d.id).distance(100).strength(1.0));
+    simulation.alpha(1.0).restart();
+}
+
+function updatePopup() {
+    if (popup.srcElement) {
+        const r = popup.srcElement.getBoundingClientRect();
+        const shift = (r.bottom - r.top) * 0.5;
+        const width = 200;
+        let d = popup.node;
+        let html = `<p>${d.id}${d.abbr ? " (" + d.abbr + ")" : ""}</p><table>`;
+        if (d.author) html += `<tr><td>🧑‍💻</td><td>${Array.isArray(d.author) ? d.author.join(", ") : d.author}</td></tr>`;
+        if (d.title) html += `<tr><td>📜</td><td>${d.title}</td></tr>`;
+        if (d.conference) html += `<tr><td>🎙️</td><td>${d.conference}</td></tr>`;
+        if (d.link) {
+            html += "<tr><td>🔗</td><td>";
+            const links = Array.isArray(d.link) ? d.link : [d.link];
+            html += links.map(l => `<a href="${d.link}" target="_blank">${new URL(d.link).host}</a>`).join(", ");
+            html += "</td></tr>";
+        }
+        if (d.year) html += `<tr><td>📆</td><td>${d.year}</td></tr>`;
+        html += '</table>';
+        d3.select("#popup")
+            .style("visibility", "visible")
+            .style("width", width + "px")
+            .style("left", r.left - width / 2 + shift - 8 + "px")
+            .style("top", r.bottom + "px")
+            .style("opacity", 0)
+            .html(html)
+            .on("mouseenter", event => { popup.mouseenter = true })
+            .on("mouseleave", event => {
+                popup = {}
+                updatePopup();
+            })
+            .transition().duration(500).style("opacity", 1);
+    }
+    else {
+        d3.select("#popup")
+            .transition().duration(500).style("opacity", 0)
+            .on("end", () => d3.select("#popup").style("visibility", "hidden"));
+    }
+}
+
+simulation.on("tick", () => {
+    function linkArc(d) {
+      const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+      return `
+        M${d.source.x},${d.source.y}
+        A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+      `;
+    }
+
+    link.attr("d", linkArc);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+    updatePopup();
+});
+</script>
+</body>
+</html>
