@@ -1,0 +1,302 @@
+[
+    {
+        "source":"Graphics",
+        "target":"Graphics API",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Direct3D",
+        "type":"include"
+    },
+    {
+        "source":"Direct3D",
+        "target":"High-Level Shader Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"OpenGL",
+        "type":"include"
+    },
+    {
+        "source":"OpenGL",
+        "target":"OpenGL Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"OpenGL",
+        "target":"OpenGL ES",
+        "type":"derive"
+    },
+    {
+        "source":"OpenGL ES",
+        "target":"OpenGL Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Vulkan",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Metal",
+        "type":"include"
+    },
+    {
+        "source":"Metal",
+        "target":"Metal Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Rendering",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Scene Management",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Camera",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Lighting",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Global Illimulation",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Ray Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Path Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Radiosity",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Photon Mapping",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Modeling",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Curve",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Curved Surface",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Mesh",
+        "type":"include"
+    },
+    {
+        "source":"Mesh",
+        "target":"Triangle Mesh",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Voxel",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Digital Elevation Model",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Animation",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Key-frame Animation",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Particle System",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Skinning",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Morphing",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Animation Tree",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Motion Matching",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Render Pipeline",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Camera",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Texture",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Lighting",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Global Illimulation",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Ray Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Path Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Radiosity",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Shadow",
+        "target":"Shadow Volume",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Volume",
+        "target":"Stencil Shadow Volume",
+        "type":"derive"
+    },
+    {
+        "source":"Stencil Shadow Volume",
+        "target":"Carmack's Reverse",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow",
+        "target":"Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Shadow Map Projection Schemes",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Trapezoidal Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Parallel-Split Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Cascaded Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Light Space Perspective Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Shadow Map Filtering Schemes",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow Map Filtering Schemes",
+        "target":"Percentage Closer Filtering",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Filtering Schemes",
+        "target":"Variance Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Soft Shadow Shadow Map",
+        "type":"derive"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Percentage Closer Soft Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Screen-space Soft Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Variance Soft Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Material",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Post-Processing",
+        "type":"include"
+    }
+]

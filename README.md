@@ -33,7 +33,7 @@ Nodes are array of objects with following keys (asterisk are must exist):
 | journal     | string                    | Abbreviation of journal name, e.g. JCGT                      |
 | contributor | string or array of string | github usernames of whom contribute to this node             | 
 
-Edge are arrays of objects with following keys (asterisk are must exist):
+Links are arrays of objects with following keys (asterisk are must exist):
 
 | Key       | Type     | Description           |  
 | --------- | -------- | --------------------- |  

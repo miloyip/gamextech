@@ -1,0 +1,10 @@
+{
+    "nodes": [
+        "tech/tech_node.json",
+        "tech/graphics/graphics_node.json"
+    ],
+    "links": [
+        "tech/tech_link.json",
+        "tech/graphics/graphics_link.json"
+    ]
+}

@@ -113,15 +113,14 @@ let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 
 let nodes = [], links = [];
 
-Promise.all([
-    d3.json("tech/tech_node.json"),
-    d3.json("tech/tech_link.json"),
-]).then(files => {
-    nodes = files[0];
-    links = files[1];
-    main();
-}).catch(err => {
-    console.log(err);
+d3.json("database.json").then(database => {
+    Promise.all(database.nodes.concat(database.links).map(url => d3.json(url))).then(files => {
+        nodes = [].concat.apply([], files.slice(0, database.nodes.length));
+        links = [].concat.apply([], files.slice(database.nodes.length));
+        main();
+    }).catch(err => {
+        console.log(err);
+    })
 });
 
 function main() {

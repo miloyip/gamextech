@@ -1,0 +1,231 @@
+[
+    {
+        "id":"Graphics API"
+    },
+    {
+        "id":"Direct3D"
+    },
+    {
+        "id":"OpenGL"
+    },
+    {
+        "id":"OpenGL ES"
+    },
+    {
+        "id":"Vulkan"
+    },
+    {
+        "id":"Metal"
+    },
+    {
+        "id":"Modeling"
+    },
+    {
+        "id":"Curve"
+    },
+    {
+        "id":"Curved Surface"
+    },
+    {
+        "id":"Mesh"
+    },
+    {
+        "id":"Triangle Mesh"
+    },
+    {
+        "id":"Digital Elevation Model",
+        "abbr":"DEM"
+    },
+    {
+        "id":"Voxel"
+    },
+    {
+        "id":"Animation"
+    },
+    {
+        "id":"Key-frame Animation"
+    },
+    {
+        "id":"Particle System"
+    },
+    {
+        "id":"Skinning"
+    },
+    {
+        "id":"Morphing"
+    },
+    {
+        "id":"Animation Tree"
+    },
+    {
+        "id":"Motion Matching"
+    },
+    {
+        "id":"Rendering"
+    },
+    {
+        "id":"Render Pipeline"
+    },
+    {
+        "id":"Scene Management"
+    },
+    {
+        "id":"Camera"
+    },
+    {
+        "id":"Lighting"
+    },
+    {
+        "id":"Global Illimulation",
+        "abbr":"GI"
+    },
+    {
+        "id":"Ray Tracing",
+        "author":"John Turner Whitted",
+        "title":"An improved illumination model for shaded display.",
+        "conference":"PACMCGIT",
+        "year":1979
+    },
+    {
+        "id":"Path Tracing"
+    },
+    {
+        "id":"Radiosity"
+    },
+    {
+        "id":"Photon Mapping"
+    },
+    {
+        "id":"Shadow"
+    },
+    {
+        "id":"Shadow Volume",
+        "author":"Franklin Crow",
+        "title":"Shadow Algorithms for Computer Graphics",
+        "conference":"SIGGRAPH",
+        "year":1977
+    },
+    {
+        "id":"Stencil Shadow Volume",
+        "author":"Tim Heidmann",
+        "title":"Real Shadows, Real Time",
+        "year":1991
+    },
+    {
+        "id":"Carmack's Reverse",
+        "author":"John Carmck",
+        "year":2000
+    },
+    {
+        "id":"Shadow Map",
+        "author":"Lance Joseph Williams",
+        "title":"Casting curved shadows on curved surfaces",
+        "conference":"PACMCGIT",
+        "year":1978
+    },
+    {
+        "id":"Shadow Map Projection Schemes"
+    },
+    {
+        "id":"Trapezoidal Shadow Map",
+        "abbr":"TSM",
+        "author":[
+            "Tobias Martin",
+            "Tiow-Seng Tan"
+        ],
+        "title":"Anti-aliasing and Continuity with Trapezoidal Shadow Maps",
+        "conference":"EGSR",
+        "year":2004
+    },
+    {
+        "id":"Parallel-Split Shadow Map",
+        "abbr":"PSSM",
+        "author":[
+            "Fan Zhang",
+            "Hanqiu Sun",
+            "Leilei Xu",
+            "Lee Kit Lun"
+        ],
+        "title":"Parallel-split shadow maps for large-scale virtual environments",
+        "conference":"VRCAI",
+        "year":2006
+    },
+    {
+        "id":"Cascaded Shadow Map",
+        "abbr":"CSM",
+        "author":"Rouslan Dimitrov",
+        "link":"http://developer.download.nvidia.com/SDK/10.5/opengl/src/cascaded_shadow_maps/doc/cascaded_shadow_maps.pdf",
+        "year":2007
+    },
+    {
+        "id":"Light Space Perspective Shadow Map",
+        "abbr":"LSPSM",
+        "author":[
+            "Michael Wimmer",
+            "Daniel Scherzer",
+            "Werner Purgathofer"
+        ],
+        "conference":"EGSR",
+        "year":2004
+    },
+    {
+        "id":"Shadow Map Filtering Schemes"
+    },
+    {
+        "id":"Percentage Closer Filtering",
+        "abbr":"PCF",
+        "author":[
+            "William T. Reeves",
+            "David H. Salesin",
+            "Robert L. Cook"
+        ],
+        "title":"Rendering Antialiased Shadows with Depth Maps",
+        "conference":"SIGGRAPH",
+        "year":1987
+    },
+    {
+        "id":"Variance Shadow Map",
+        "abbr":"VSM",
+        "author":[
+            "William Donnelly",
+            "Andrew Lauritzen"
+        ],
+        "title":"Variance shadow maps",
+        "conference":"I3D",
+        "year":2006
+    },
+    {
+        "id":"Soft Shadow Shadow Map"
+    },
+    {
+        "id":"Percentage Closer Soft Shadow",
+        "abbr":"PCSS"
+    },
+    {
+        "id":"Screen-space Soft Shadow",
+        "abbr":"SSSS"
+    },
+    {
+        "id":"Variance Soft Shadow Map",
+        "abbr":"VSSM",
+        "author":[
+            "Baoguang Yang",
+            "Zhao Dong",
+            "Jieqing Feng",
+            "Hans-Peter Seidel",
+            "Jan Kautz"
+        ],
+        "title":"Variance Soft Shadow Mapping",
+        "conference":"Pacific Graphics",
+        "year":2010
+    },
+    {
+        "id":"Texture"
+    },
+    {
+        "id":"Material"
+    },
+    {
+        "id":"Post-Processing"
+    }
+]
