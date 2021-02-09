@@ -221,6 +221,21 @@
     "target": "Variance Shadow Map"
   },
   {
+    "source": "Shadow Map Filtering Schemes",
+    "target": "Convolution Shadow Map",
+    "type": "derive"
+  },
+  {
+    "source": "Convolution Shadow Map",
+    "target": "Exponential Shadow Map",
+    "type": "derive"
+  },
+  {
+    "source": "Exponential Shadow Map",
+    "target": "Moment Shadow Map",
+    "type": "derive"
+  },
+  {
     "source": "Shadow Map",
     "target": "Soft Shadow Shadow Map",
     "type": "derive"

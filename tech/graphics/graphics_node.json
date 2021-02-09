@@ -103,17 +103,20 @@
     "author": "Franklin Crow",
     "title": "Shadow Algorithms for Computer Graphics",
     "conference": "SIGGRAPH",
+    "link": "http://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S15/papers/crow_shadows_77.pdf",
     "year": 1977
   },
   {
     "id": "Stencil Shadow Volume",
     "author": "Tim Heidmann",
     "title": "Real Shadows, Real Time",
+    "journal": "IRIS Universe",
     "year": 1991
   },
   {
     "id": "Carmack's Reverse",
     "author": "John Carmck",
+    "link": "https://web.archive.org/web/20080719150755/http://developer.nvidia.com/attach/6832",
     "year": 2000
   },
   {
@@ -121,6 +124,7 @@
     "author": "Lance Joseph Williams",
     "title": "Casting curved shadows on curved surfaces",
     "conference": "PACMCGIT",
+    "link": "https://www.researchgate.net/publication/234784687_Casting_Curved_Shadows_on_Curved_Surfaces",
     "year": 1978
   },
   {
@@ -135,6 +139,7 @@
     ],
     "title": "Anti-aliasing and Continuity with Trapezoidal Shadow Maps",
     "conference": "EGSR",
+    "link": "https://www.researchgate.net/publication/220853011_Anti-aliasing_and_Continuity_with_Trapezoidal_Shadow_Maps",
     "year": 2004
   },
   {
@@ -148,6 +153,7 @@
     ],
     "title": "Parallel-split shadow maps for large-scale virtual environments",
     "conference": "VRCAI",
+    "link": "https://www.researchgate.net/publication/220805307_Parallel-split_shadow_maps_for_large-scale_virtual_environments",
     "year": 2006
   },
   {
@@ -166,6 +172,7 @@
       "Werner Purgathofer"
     ],
     "conference": "EGSR",
+    "link": "https://www.researchgate.net/publication/220852877_Light_Space_Perspective_Shadow_Maps",
     "year": 2004
   },
   {
@@ -181,6 +188,7 @@
     ],
     "title": "Rendering Antialiased Shadows with Depth Maps",
     "conference": "SIGGRAPH",
+    "link": "https://graphics.pixar.com/library/ShadowMaps/paper.pdf",
     "year": 1987
   },
   {
@@ -192,18 +200,78 @@
     ],
     "title": "Variance shadow maps",
     "conference": "I3D",
+    "link": "https://www.researchgate.net/publication/220792112_Variance_shadow_maps",
     "year": 2006
+  },
+  {
+    "id": "Convolution Shadow Map",
+    "abbr": "CSM",
+    "author": [
+      "Thomas Annen",
+      "Tom Mertens",
+      "Philippe Bekaert",
+      "Hans-Peter Seidel",
+      "Jan Kautz"
+    ],
+    "title": "Convolution Shadow Maps",
+    "conference": "EGSR",
+    "year": 2007
+  },
+  {
+    "id": "Exponential Shadow Map",
+    "abbr": "ESM",
+    "author": [
+      "Thomas Annen",
+      "Tom Mertens",
+      "Hans-Peter Seidel",
+      "Eddy Flerackers",
+      "Jan Kautz"
+    ],
+    "title": "Exponential Shadow Maps",
+    "conference": "Graphics Interface",
+    "link": "https://www.researchgate.net/publication/32893024_Exponential_Shadow_Maps",
+    "year": 2008
+  },
+  {
+    "id": "Moment Shadow Map",
+    "abbr": "MSM",
+    "author": [
+      "Christoph Peters", 
+      "Reinhard Klein"
+    ],
+    "title":"Moment shadow mapping",
+    "conference": "I3D",
+    "link": [
+      "https://dl.acm.org/doi/pdf/10.1145/2699276.2699277",
+      "https://www.gdcvault.com/play/1023864/Rendering-Antialiased-Shadows-with-Moment"
+    ],
+    "year": 2015
   },
   {
     "id": "Soft Shadow Shadow Map"
   },
   {
     "id": "Percentage Closer Soft Shadow",
-    "abbr": "PCSS"
+    "abbr": "PCSS",
+    "author": "Randima Fernando",
+    "conference": "SIGGRAPH",
+    "link": [
+      "https://dl.acm.org/doi/pdf/10.1145/1187112.1187153",
+      "https://http.download.nvidia.com/developer/presentations/2005/SIGGRAPH/Percentage_Closer_Soft_Shadows.pdf"
+    ],
+    "year": 2005
   },
   {
     "id": "Screen-space Soft Shadow",
-    "abbr": "SSSS"
+    "abbr": "SSSS",
+    "author": [
+      "Jesus Gumbau",
+      "Miguel Chover",
+      "Mateu Sbert"
+    ],
+    "title": "Screen space soft shadows",
+    "journal": "GPU Pro",
+    "year": 2010
   },
   {
     "id": "Variance Soft Shadow Map",
@@ -217,6 +285,7 @@
     ],
     "title": "Variance Soft Shadow Mapping",
     "conference": "Pacific Graphics",
+    "link": "https://www.researchgate.net/publication/261844424_Variance_soft_shadow_mapping",
     "year": 2010
   },
   {
