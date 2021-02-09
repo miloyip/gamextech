@@ -390,7 +390,7 @@ function updatePopup() {
         if (d.link) {
             html += "<tr><td>🔗</td><td>";
             const links = Array.isArray(d.link) ? d.link : [d.link];
-            html += links.map(l => `<a href="${d.link}" target="_blank">${new URL(d.link).host}</a>`).join(", ");
+            html += links.map(l => `<a href="${l}" target="_blank">${new URL(l).host}</a>`).join(", ");
             html += "</td></tr>";
         }
         if (d.year) html += `<tr><td>📆</td><td>${d.year}</td></tr>`;
