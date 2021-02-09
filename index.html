@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <script src="https://d3js.org/d3.v6.min.js"></script>
 <style>
 body {
@@ -84,8 +85,9 @@ body {
 </div>
 <div id="container" class="svg-container">
 </div>
-<script src="tech/tech_node.js"></script>
+<!-- <script src="tech/tech_node.js"></script>
 <script src="tech/tech_link.js"></script>
+ -->
 <script>
 // Preset state
 const preset = {
@@ -105,101 +107,119 @@ let chronology = preset.chronology;
 const margin = { left: 0, top: 40, right: 0, bottom: 40 };
 let popup = {};
 let width = 0, height = 0;
+let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 
-updateSize();
-updateStateFromURL();
+// Graph database
 
-// Window events
-d3.select(window)
-    .on('popstate', event => {
-        updateStateFromURL();
-        restartSimulation();
-    })
-    .on("resize", () => {
-        updateSize();
-        svg.attr("viewBox", [-width/2, -height/2, width, height]);
-        svg.selectAll(".chronology-axis").call(chronologyAxis);
-    });
+let nodes = [], links = [];
 
-// Toolbar events
+Promise.all([
+    d3.json("tech/tech_node.json"),
+    d3.json("tech/tech_link.json"),
+]).then(files => {
+    nodes = files[0];
+    links = files[1];
+    main();
+}).catch(err => {
+    console.log(err);
+});
 
-d3.select("#title")
-    .on("click", event => {
-        title = window.prompt("Enter title", title) || title;
-        updateTitle();
-        pushState();
-    });
+function main() {
+    updateSize();
+    updateStateFromURL();
 
-d3.select("#expand")
-    .on("change", event => {
-        expand = event.srcElement.value;
-        pushState();
-        restartSimulation();
-    });
+    // Window events
+    d3.select(window)
+        .on('popstate', event => {
+            updateStateFromURL();
+            restartSimulation();
+        })
+        .on("resize", () => {
+            updateSize();
+            svg.attr("viewBox", [-width/2, -height/2, width, height]);
+            svg.selectAll(".chronology-axis").call(chronologyAxis);
+        });
 
-d3.select("#chronology")
-    .on("change", event => {
-        chronology = event.srcElement.checked;
-        svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
-        if (chronology) {
-            nodes.forEach(chronologyConstraint);
-        }
-        else {
-            nodes.forEach(d => d.fx = null);    // Remove constraint
-        }
-        pushState();
-        restartSimulation();
-    });
+    // Toolbar events
 
-// Chronology scale
+    d3.select("#title")
+        .on("click", event => {
+            title = window.prompt("Enter title", title) || title;
+            updateTitle();
+            pushState();
+        });
 
-const chronologyScale = d3.scaleTime()
-    .domain([new Date(1950, 0), Date.now()])
-    .range([-width / 2 + margin.left, width / 2 - margin.right])
-    .nice();
+    d3.select("#expand")
+        .on("change", event => {
+            expand = event.srcElement.value;
+            pushState();
+            restartSimulation();
+        });
 
-// Render SVG
+    d3.select("#chronology")
+        .on("change", event => {
+            chronology = event.srcElement.checked;
+            svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
+            if (chronology) {
+                nodes.forEach(chronologyConstraint);
+            }
+            else {
+                nodes.forEach(d => d.fx = null);    // Remove constraint
+            }
+            pushState();
+            restartSimulation();
+        });
 
-const svg = d3.select("#container")
-    .append("svg")
-    // .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", [-width/2, -height/2, width, height])
-    .classed("svg-content", true)
-    .style("font", "12px sans-serif")
-    .call(zoom);
+    // Chronology scale
 
-svg.append("defs")
-    .append("marker")
-        .attr("id", "arrow")
-        .attr("viewBox", "0 -5 10 10")
-        .attr("refX", 15)
-        .attr("refY", -0.5)
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 6)
-        .attr("orient", "auto")
-    .append("path")
-        .attr("fill", "#999")
-        .attr("d", "M0,-5L10,0L0,5");
+    chronologyScale = d3.scaleTime()
+        .domain([new Date(1950, 0), Date.now()])
+        .range([-width / 2 + margin.left, width / 2 - margin.right])
+        .nice();
 
-const g = svg.append("g");
+    // Render SVG
 
-let link = g.append("g")
-    .attr("fill", "none")
-    .attr("stroke", "#999")
-    .attr("stroke-opacity", 0.6)
-    .attr("marker-end", `url(${new URL(`#arrow`, location)})`)
-    .selectAll("path");
+    svg = d3.select("#container")
+        .append("svg")
+        // .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", [-width/2, -height/2, width, height])
+        .classed("svg-content", true)
+        .style("font", "12px sans-serif")
+        .call(zoom);
 
-let node = g.append("g")
-    .attr("stroke-width", 1.5)
-    .attr("cursor", "pointer")
-    .selectAll("g");
+    svg.append("defs")
+        .append("marker")
+            .attr("id", "arrow")
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 15)
+            .attr("refY", -0.5)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto")
+        .append("path")
+            .attr("fill", "#999")
+            .attr("d", "M0,-5L10,0L0,5");
 
-svg.append("g")
-    .attr("class", "chronology-axis")
-    .call(chronologyAxis);
+    g = svg.append("g");
 
-restartSimulation();
+    link = g.append("g")
+        .attr("fill", "none")
+        .attr("stroke", "#999")
+        .attr("stroke-opacity", 0.6)
+        .attr("marker-end", `url(${new URL(`#arrow`, location)})`)
+        .selectAll("path");
+
+    node = g.append("g")
+        .attr("stroke-width", 1.5)
+        .attr("cursor", "pointer")
+        .selectAll("g");
+
+    svg.append("g")
+        .attr("class", "chronology-axis")
+        .call(chronologyAxis);
+
+    restartSimulation();
+}
 
 function restartSimulation() {
     const simulation = d3.forceSimulation()

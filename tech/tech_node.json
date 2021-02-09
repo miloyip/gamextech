@@ -1,6 +1,6 @@
-nodes = [
+[
     {
-        "id":"Technology",
+        "id":"Technology"
     },
     {
         "id":"Mathematics"

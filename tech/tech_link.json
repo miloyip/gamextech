@@ -1,0 +1,991 @@
+[
+    {
+        "source":"Technology",
+        "target":"Mathematics",
+        "type":"include"
+    },
+    {
+        "source":"Mathematics",
+        "target":"Algebra",
+        "type":"include"
+    },
+    {
+        "source":"Algebra",
+        "target":"Linear Algebra",
+        "type":"include"
+    },
+    {
+        "source":"Linear Algebra",
+        "target":"Vector",
+        "type":"include"
+    },
+    {
+        "source":"Linear Algebra",
+        "target":"Matrix",
+        "type":"include"
+    },
+    {
+        "source":"Algebra",
+        "target":"Grasmann Algebra",
+        "type":"include"
+    },
+    {
+        "source":"Algebra",
+        "target":"Quaternion",
+        "type":"include"
+    },
+    {
+        "source":"Algebra",
+        "target":"Dual Quaternion",
+        "type":"include"
+    },
+    {
+        "source":"Mathematics",
+        "target":"Calculus",
+        "type":"include"
+    },
+    {
+        "source":"Calculus",
+        "target":"Vector Calculus",
+        "type":"include"
+    },
+    {
+        "source":"Mathematics",
+        "target":"Geometry",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Computer Science",
+        "type":"include"
+    },
+    {
+        "source":"Computer Science",
+        "target":"Algorithm",
+        "type":"include"
+    },
+    {
+        "source":"Computer Science",
+        "target":"Data Structure",
+        "type":"include"
+    },
+    {
+        "source":"Computer Science",
+        "target":"Computer Architecture",
+        "type":"include"
+    },
+    {
+        "source":"Computer Science",
+        "target":"Computational Geometry",
+        "type":"include"
+    },
+    {
+        "source":"Computer Science",
+        "target":"Numerical Method",
+        "type":"include"
+    },
+    {
+        "source":"Numerical Method",
+        "target":"Root Finding",
+        "type":"include"
+    },
+    {
+        "source":"Root Finding",
+        "target":"Bisection Method",
+        "type":"include"
+    },
+    {
+        "source":"Root Finding",
+        "target":"Newton's Method",
+        "type":"include"
+    },
+    {
+        "source":"Root Finding",
+        "target":"Runge-Kutta Method",
+        "type":"include"
+    },
+    {
+        "source":"Numerical Method",
+        "target":"Differential Equation Solving",
+        "type":"include"
+    },
+    {
+        "source":"Differential Equation Solving",
+        "target":"Euler Method",
+        "type":"include"
+    },
+    {
+        "source":"Differential Equation Solving",
+        "target":"Verlet Integration",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Platform",
+        "type":"include"
+    },
+    {
+        "source":"Platform",
+        "target":"Personal Computer",
+        "type":"include"
+    },
+    {
+        "source":"Personal Computer",
+        "target":"Windows",
+        "type":"include"
+    },
+    {
+        "source":"Personal Computer",
+        "target":"MacOS",
+        "type":"include"
+    },
+    {
+        "source":"Personal Computer",
+        "target":"Linux",
+        "type":"include"
+    },
+    {
+        "source":"Platform",
+        "target":"Mobile Device",
+        "type":"include"
+    },
+    {
+        "source":"Mobile Device",
+        "target":"iOS",
+        "type":"include"
+    },
+    {
+        "source":"Mobile Device",
+        "target":"Android",
+        "type":"include"
+    },
+    {
+        "source":"Platform",
+        "target":"Video Game Console",
+        "type":"include"
+    },
+    {
+        "source":"Video Game Console",
+        "target":"PlayStation",
+        "type":"include"
+    },
+    {
+        "source":"Video Game Console",
+        "target":"Xbox",
+        "type":"include"
+    },
+    {
+        "source":"Platform",
+        "target":"Portable Game Console",
+        "type":"include"
+    },
+    {
+        "source":"Video Game Console",
+        "target":"Nintendo Switch",
+        "type":"include"
+    },
+    {
+        "source":"Portable Game Console",
+        "target":"Nintendo Switch",
+        "type":"include"
+    },
+    {
+        "source":"Windows",
+        "target":"Direct3D",
+        "type":"include"
+    },
+    {
+        "source":"MacOS",
+        "target":"Metal",
+        "type":"include"
+    },
+    {
+        "source":"iOS",
+        "target":"Metal",
+        "type":"include"
+    },
+    {
+        "source":"Android",
+        "target":"OpenGL ES",
+        "type":"include"
+    },
+    {
+        "source":"Android",
+        "target":"Vulkan",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Programming",
+        "type":"include"
+    },
+    {
+        "source":"Programming",
+        "target":"Programming Paradigm",
+        "type":"include"
+    },
+    {
+        "source":"Programming Paradigm",
+        "target":"Procedural Programming",
+        "type":"include"
+    },
+    {
+        "source":"Programming Paradigm",
+        "target":"Object-oriented Programming",
+        "type":"include"
+    },
+    {
+        "source":"Programming Paradigm",
+        "target":"Functional Programming",
+        "type":"include"
+    },
+    {
+        "source":"Programming Paradigm",
+        "target":"Event-driven Programming",
+        "type":"include"
+    },
+    {
+        "source":"Programming",
+        "target":"Programming Language",
+        "type":"include"
+    },
+    {
+        "source":"Programming Language",
+        "target":"Native Programming Language",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"Assembly",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"C",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"C++",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"Objective-C",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"Rust",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"C#",
+        "type":"include"
+    },
+    {
+        "source":"Native Programming Language",
+        "target":"Java",
+        "type":"include"
+    },
+    {
+        "source":"Programming Language",
+        "target":"Scripting Programming Language",
+        "type":"include"
+    },
+    {
+        "source":"Scripting Programming Language",
+        "target":"Lua",
+        "type":"include"
+    },
+    {
+        "source":"Scripting Programming Language",
+        "target":"Python",
+        "type":"include"
+    },
+    {
+        "source":"Programming Language",
+        "target":"Shader Programming Language",
+        "type":"include"
+    },
+    {
+        "source":"Shader Programming Language",
+        "target":"High-Level Shader Language",
+        "type":"include"
+    },
+    {
+        "source":"Shader Programming Language",
+        "target":"OpenGL Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Shader Programming Language",
+        "target":"Metal Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Software Engineering",
+        "type":"include"
+    },
+    {
+        "source":"Software Engineering",
+        "target":"Software Design",
+        "type":"include"
+    },
+    {
+        "source":"Software Design",
+        "target":"Unified Modeling Language",
+        "type":"include"
+    },
+    {
+        "source":"Software Design",
+        "target":"Design Pattern",
+        "type":"include"
+    },
+    {
+        "source":"Software Engineering",
+        "target":"Debugging",
+        "type":"include"
+    },
+    {
+        "source":"Software Engineering",
+        "target":"Testing",
+        "type":"include"
+    },
+    {
+        "source":"Software Engineering",
+        "target":"Profiling",
+        "type":"include"
+    },
+    {
+        "source":"Software Engineering",
+        "target":"Verson Control",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Graphics",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Graphics API",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Direct3D",
+        "type":"include"
+    },
+    {
+        "source":"Direct3D",
+        "target":"High-Level Shader Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"OpenGL",
+        "type":"include"
+    },
+    {
+        "source":"OpenGL",
+        "target":"OpenGL Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"OpenGL",
+        "target":"OpenGL ES",
+        "type":"derive"
+    },
+    {
+        "source":"OpenGL ES",
+        "target":"OpenGL Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Vulkan",
+        "type":"include"
+    },
+    {
+        "source":"Graphics API",
+        "target":"Metal",
+        "type":"include"
+    },
+    {
+        "source":"Metal",
+        "target":"Metal Shading Language",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Rendering",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Scene Management",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Camera",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Lighting",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Global Illimulation",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Ray Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Path Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Radiosity",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Photon Mapping",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Modeling",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Curve",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Curved Surface",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Mesh",
+        "type":"include"
+    },
+    {
+        "source":"Mesh",
+        "target":"Triangle Mesh",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Voxel",
+        "type":"include"
+    },
+    {
+        "source":"Modeling",
+        "target":"Digital Elevation Model",
+        "type":"include"
+    },
+    {
+        "source":"Graphics",
+        "target":"Animation",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Key-frame Animation",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Particle System",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Skinning",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Morphing",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Animation Tree",
+        "type":"include"
+    },
+    {
+        "source":"Animation",
+        "target":"Motion Matching",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Render Pipeline",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Camera",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Texture",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Lighting",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Global Illimulation",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Ray Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Path Tracing",
+        "type":"include"
+    },
+    {
+        "source":"Global Illimulation",
+        "target":"Radiosity",
+        "type":"include"
+    },
+    {
+        "source":"Lighting",
+        "target":"Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Shadow",
+        "target":"Shadow Volume",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Volume",
+        "target":"Stencil Shadow Volume",
+        "type":"derive"
+    },
+    {
+        "source":"Stencil Shadow Volume",
+        "target":"Carmack's Reverse",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow",
+        "target":"Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Shadow Map Projection Schemes",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Trapezoidal Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Parallel-Split Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Cascaded Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Projection Schemes",
+        "target":"Light Space Perspective Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Shadow Map Filtering Schemes",
+        "type":"derive"
+    },
+    {
+        "source":"Shadow Map Filtering Schemes",
+        "target":"Percentage Closer Filtering",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map Filtering Schemes",
+        "target":"Variance Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Shadow Map",
+        "target":"Soft Shadow Shadow Map",
+        "type":"derive"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Percentage Closer Soft Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Screen-space Soft Shadow",
+        "type":"include"
+    },
+    {
+        "source":"Soft Shadow Shadow Map",
+        "target":"Variance Soft Shadow Map",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Material",
+        "type":"include"
+    },
+    {
+        "source":"Rendering",
+        "target":"Post-Processing",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Audio",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Human Computer Interaction",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Physics",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Collision Detection",
+        "type":"include"
+    },
+    {
+        "source":"Collision Detection",
+        "target":"Broad-phase Collision Detection",
+        "type":"include"
+    },
+    {
+        "source":"Collision Detection",
+        "target":"Narrow-phase Collision Detection",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Rigid Body Dynamics",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Soft Body Dynamics",
+        "type":"include"
+    },
+    {
+        "source":"Soft Body Dynamics",
+        "target":"Rope Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Soft Body Dynamics",
+        "target":"Cloth Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Fluid Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Fluid Simulation",
+        "target":"Eulerian Fluid Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Eulerian Fluid Simulation",
+        "target":"Stable Fluid",
+        "type":"include"
+    },
+    {
+        "source":"Fluid Simulation",
+        "target":"Lagrangian Fluid Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Lagrangian Fluid Simulation",
+        "target":"Smoothed Particle Hydrodynamics",
+        "type":"include"
+    },
+    {
+        "source":"Fluid Simulation",
+        "target":"Hybrid Fluid Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Hybrid Fluid Simulation",
+        "target":"Particle-In-Cell Method",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Vehicle Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Fracture Simulation",
+        "type":"include"
+    },
+    {
+        "source":"Physics",
+        "target":"Physics Engine",
+        "type":"include"
+    },
+    {
+        "source":"Physics Engine",
+        "target":"Commercial Physics Engine",
+        "type":"include"
+    },
+    {
+        "source":"Commercial Physics Engine",
+        "target":"PhysX",
+        "type":"include"
+    },
+    {
+        "source":"Commercial Physics Engine",
+        "target":"Havok",
+        "type":"include"
+    },
+    {
+        "source":"Physics Engine",
+        "target":"Open Source Physics Engine",
+        "type":"include"
+    },
+    {
+        "source":"Open Source Physics Engine",
+        "target":"Bullet",
+        "type":"include"
+    },
+    {
+        "source":"Open Source Physics Engine",
+        "target":"Open Dynamics Engine",
+        "type":"include"
+    },
+    {
+        "source":"Open Source Physics Engine",
+        "target":"Box2D",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Artificial Intelligence",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Navigation",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Game Tree",
+        "type":"include"
+    },
+    {
+        "source":"Navigation",
+        "target":"Path Finding",
+        "type":"include"
+    },
+    {
+        "source":"Navigation",
+        "target":"Obstacle Avoidance",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Behavior Modeling",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Game Tree",
+        "type":"include"
+    },
+    {
+        "source":"Game Tree",
+        "target":"Minimax Search",
+        "type":"include"
+    },
+    {
+        "source":"Minimax Search",
+        "target":"Alpha-beta Prunning",
+        "type":"derive"
+    },
+    {
+        "source":"Behavior Modeling",
+        "target":"Finite State Machine",
+        "type":"include"
+    },
+    {
+        "source":"Behavior Modeling",
+        "target":"Behavior Tree",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Machine Learning",
+        "type":"include"
+    },
+    {
+        "source":"Machine Learning",
+        "target":"Supervised Learning",
+        "type":"include"
+    },
+    {
+        "source":"Machine Learning",
+        "target":"Unsupervised Learning",
+        "type":"include"
+    },
+    {
+        "source":"Machine Learning",
+        "target":"Reinforcement Learning",
+        "type":"include"
+    },
+    {
+        "source":"Artificial Intelligence",
+        "target":"Natural Language Processing",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Gameplay"
+    },
+    {
+        "source":"Technology",
+        "target":"Game Engine",
+        "type":"include"
+    },
+    {
+        "source":"Game Engine",
+        "target":"Commercial Game Engine",
+        "type":"include"
+    },
+    {
+        "source":"Commercial Game Engine",
+        "target":"Unreal Engine",
+        "type":"include"
+    },
+    {
+        "source":"Commercial Game Engine",
+        "target":"Unity",
+        "type":"include"
+    },
+    {
+        "source":"Commercial Game Engine",
+        "target":"CryEngine",
+        "type":"include"
+    },
+    {
+        "source":"Game Engine",
+        "target":"Open Source Game Engine",
+        "type":"include"
+    },
+    {
+        "source":"Open Source Game Engine",
+        "target":"Cocos2dx",
+        "type":"include"
+    },
+    {
+        "source":"Open Source Game Engine",
+        "target":"Godot",
+        "type":"include"
+    },
+    {
+        "source":"Game Engine",
+        "target":"Proprietary Game Engine",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"Anvil",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"Decima",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"Dunia",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"Insomniac Engine",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"Forstbite",
+        "type":"include"
+    },
+    {
+        "source":"Proprietary Game Engine",
+        "target":"QuickSilver",
+        "type":"include"
+    },
+    {
+        "source":"Technology",
+        "target":"Content Creation",
+        "type":"include"
+    },
+    {
+        "source":"Content Creation",
+        "target":"Digital Content Creation",
+        "type":"include"
+    },
+    {
+        "source":"Content Creation",
+        "target":"Procedural Content Generation",
+        "type":"include"
+    },
+    {
+        "source":"Content Creation",
+        "target":"Photogrammetry",
+        "type":"include"
+    },
+    {
+        "source":"Content Creation",
+        "target":"Motion Capture",
+        "type":"include"
+    }
+]
