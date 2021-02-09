@@ -87,6 +87,7 @@ body {
 <script src="tech/tech_node.js"></script>
 <script src="tech/tech_link.js"></script>
 <script>
+// Preset state
 const preset = {
     title: "Game⨯Tech",
     selected: ["Technology"],
@@ -94,26 +95,33 @@ const preset = {
     chronology: false,
 };
 
+// Current state
 let selected = new Set(preset.selected);
 let title = preset.title;
 let expand = preset.expand;
 let chronology = preset.chronology;
 
+// UI state
 const margin = { left: 0, top: 40, right: 0, bottom: 40 };
 let popup = {};
+let width = 0, height = 0;
 
-parseURL();
-updateTitle();
-updateExpand();
-updateChronology();
+updateSize();
+updateStateFromURL();
 
-window.addEventListener('popstate', event => {
-    parseURL();
-    updateTitle();
-    updateExpand();
-    updateChronology();
-    restart();
-});
+// Window events
+d3.select(window)
+    .on('popstate', event => {
+        updateStateFromURL();
+        restartSimulation();
+    })
+    .on("resize", () => {
+        updateSize();
+        svg.attr("viewBox", [-width/2, -height/2, width, height]);
+        svg.selectAll(".chronology-axis").call(chronologyAxis);
+    });
+
+// Toolbar events
 
 d3.select("#title")
     .on("click", event => {
@@ -126,7 +134,7 @@ d3.select("#expand")
     .on("change", event => {
         expand = event.srcElement.value;
         pushState();
-        restart();
+        restartSimulation();
     });
 
 d3.select("#chronology")
@@ -140,80 +148,19 @@ d3.select("#chronology")
             nodes.forEach(d => d.fx = null);    // Remove constraint
         }
         pushState();
-        restart();
-    })
-
-const simulation = d3.forceSimulation()
-    .force("charge", d3.forceManyBody().strength(-1000).distanceMax(500))
-    .force("x", d3.forceX())
-    .force("y", d3.forceY())
-    .alphaMin(0.1)
-    .velocityDecay(0.5)
-    
-const drag = simulation => {
-    function dragstarted(event) {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-        chronologyConstraint(event.subject);
-    }
-
-    function dragged(event) {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-        chronologyConstraint(event.subject);
-    }
-
-    function dragended(event) {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-        chronologyConstraint(event.subject);
-    }
-
-    return d3.drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended);
-}
-
-function zoom(svg) {
-    svg.call(d3.zoom()
-        // .extent([[-width/2, -height/2], [width, height]])
-        .scaleExtent([1/8, 8])
-        .on("zoom", event => {
-            g.attr("transform", event.transform);
-            chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)));
-            svg.selectAll(".chronology-axis").call(chronologyAxis);
-            updatePopup();
-        })); 
-}
-
-const container = d3.select("#container");
-
-let width = 0, height = 0;
-
-function updateSize() {
-    const bb = container.node().getBoundingClientRect();
-    width = bb.width;
-    height = bb.height;    
-}
-
-updateSize();
-
-d3.select(window)
-    .on("resize", () => {
-        updateSize();
-        svg.attr("viewBox", [-width/2, -height/2, width, height]);
-        svg.selectAll(".chronology-axis").call(chronologyAxis);
+        restartSimulation();
     });
+
+// Chronology scale
 
 const chronologyScale = d3.scaleTime()
     .domain([new Date(1950, 0), Date.now()])
     .range([-width / 2 + margin.left, width / 2 - margin.right])
     .nice();
 
-const svg = container
+// Render SVG
+
+const svg = d3.select("#container")
     .append("svg")
     // .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", [-width/2, -height/2, width, height])
@@ -252,25 +199,29 @@ svg.append("g")
     .attr("class", "chronology-axis")
     .call(chronologyAxis);
 
-function chronologyAxis(g) {
-    let r = chronologyScale.range();
-    g.attr("transform", `translate(0, ${height / 2 - margin.bottom})`)
-        .call(d3.axisBottom(chronologyScale).ticks((r[1] - r[0]) / 100).tickSizeOuter(0));
-}
+restartSimulation();
 
-function chronologyConstraint(d) {
-    if (chronology && d.year) {
-        d.x = d.fx = d3.zoomTransform(svg.node()).invertX(chronologyScale(new Date(d.year, 0)));
-    }
-}
+function restartSimulation() {
+    const simulation = d3.forceSimulation()
+        .force("charge", d3.forceManyBody().strength(-1000).distanceMax(500))
+        .force("x", d3.forceX())
+        .force("y", d3.forceY())
+        .alphaMin(0.1)
+        .velocityDecay(0.5)
+        .on("tick", () => {
+            function linkArc(d) {
+              const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+              return `
+                M${d.source.x},${d.source.y}
+                A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+              `;
+            }
 
-function nodeText(d) {
-    return d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `, ${d.year}` : "");
-}
+            link.attr("d", linkArc);
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
+            updatePopup();
+        });
 
-restart();
-
-function restart() {
     // Expand selection
     let new_nodes = [], new_links = [];
     if (expand == -1) { // Expand all
@@ -356,7 +307,7 @@ function restart() {
                     selected.add(d.id);
                 }
                 pushState();
-                setTimeout(restart, 100);
+                setTimeout(restartSimulation, 100);
             });
 
             return g
@@ -382,28 +333,16 @@ function restart() {
 
     link = link.data(new_links, d => [d.source, d.target])
         .join("path");
-        // .join(enter => {
-        //     let path = enter.append("path")
-        //         .attr("opacity", 0);
-
-        //     path.transition()
-        //         .duration(1000)
-        //         .attr("opacity", 1);
-
-        //     return path;
-        // },
-        // update => update,
-        // exit => {
-        //     exit.call(exit => exit
-        //         .transition()
-        //         .duration(1000)
-        //         .attr("opacity", 0)
-        //         .remove())
-        // });
 
     simulation.nodes(new_nodes);
     simulation.force("link", d3.forceLink(new_links).id(d => d.id).distance(100).strength(1.0));
     simulation.alpha(1.0).restart();
+}
+
+function updateSize() {
+    const bb = d3.select("#container").node().getBoundingClientRect();
+    width = bb.width;
+    height = bb.height;    
 }
 
 function updateTitle() {
@@ -496,19 +435,67 @@ function parseURL() {
     }
 }
 
-simulation.on("tick", () => {
-    function linkArc(d) {
-      const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
-      return `
-        M${d.source.x},${d.source.y}
-        A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
-      `;
+function updateStateFromURL() {
+    parseURL();
+    updateTitle();
+    updateExpand();
+    updateChronology();    
+}
+
+function drag(simulation) {
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+        chronologyConstraint(event.subject);
     }
 
-    link.attr("d", linkArc);
-    node.attr("transform", d => `translate(${d.x},${d.y})`);
-    updatePopup();
-});
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+        chronologyConstraint(event.subject);
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+        chronologyConstraint(event.subject);
+    }
+
+    return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+}
+
+function zoom(svg) {
+    svg.call(d3.zoom()
+        // .extent([[-width/2, -height/2], [width, height]])
+        .scaleExtent([1/8, 8])
+        .on("zoom", event => {
+            g.attr("transform", event.transform);
+            chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)));
+            svg.selectAll(".chronology-axis").call(chronologyAxis);
+            updatePopup();
+        })); 
+}
+
+function chronologyAxis(g) {
+    let r = chronologyScale.range();
+    g.attr("transform", `translate(0, ${height / 2 - margin.bottom})`)
+        .call(d3.axisBottom(chronologyScale).ticks((r[1] - r[0]) / 100).tickSizeOuter(0));
+}
+
+function chronologyConstraint(d) {
+    if (chronology && d.year) {
+        d.x = d.fx = d3.zoomTransform(svg.node()).invertX(chronologyScale(new Date(d.year, 0)));
+    }
+}
+
+function nodeText(d) {
+    return d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `, ${d.year}` : "");
+}
 </script>
 </body>
 </html>
