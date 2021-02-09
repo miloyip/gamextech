@@ -1,0 +1,74 @@
+[
+  {
+    "source": "Platform",
+    "target": "Personal Computer"
+  },
+  {
+    "source": "Personal Computer",
+    "target": "Windows"
+  },
+  {
+    "source": "Personal Computer",
+    "target": "MacOS"
+  },
+  {
+    "source": "Personal Computer",
+    "target": "Linux"
+  },
+  {
+    "source": "Platform",
+    "target": "Mobile Device"
+  },
+  {
+    "source": "Mobile Device",
+    "target": "iOS"
+  },
+  {
+    "source": "Mobile Device",
+    "target": "Android"
+  },
+  {
+    "source": "Platform",
+    "target": "Video Game Console"
+  },
+  {
+    "source": "Video Game Console",
+    "target": "PlayStation"
+  },
+  {
+    "source": "Video Game Console",
+    "target": "Xbox"
+  },
+  {
+    "source": "Platform",
+    "target": "Portable Game Console"
+  },
+  {
+    "source": "Video Game Console",
+    "target": "Nintendo Switch"
+  },
+  {
+    "source": "Portable Game Console",
+    "target": "Nintendo Switch"
+  },
+  {
+    "source": "Windows",
+    "target": "Direct3D"
+  },
+  {
+    "source": "MacOS",
+    "target": "Metal"
+  },
+  {
+    "source": "iOS",
+    "target": "Metal"
+  },
+  {
+    "source": "Android",
+    "target": "OpenGL ES"
+  },
+  {
+    "source": "Android",
+    "target": "Vulkan"
+  }
+]

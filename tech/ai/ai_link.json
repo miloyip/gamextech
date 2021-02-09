@@ -1,0 +1,63 @@
+[
+  {
+    "source": "Artificial Intelligence",
+    "target": "Navigation"
+  },
+  {
+    "source": "Artificial Intelligence",
+    "target": "Game Tree"
+  },
+  {
+    "source": "Navigation",
+    "target": "Path Finding"
+  },
+  {
+    "source": "Navigation",
+    "target": "Obstacle Avoidance"
+  },
+  {
+    "source": "Artificial Intelligence",
+    "target": "Behavior Modeling"
+  },
+  {
+    "source": "Artificial Intelligence",
+    "target": "Game Tree"
+  },
+  {
+    "source": "Game Tree",
+    "target": "Minimax Search"
+  },
+  {
+    "source": "Minimax Search",
+    "target": "Alpha-beta Prunning",
+    "type": "derive"
+  },
+  {
+    "source": "Behavior Modeling",
+    "target": "Finite State Machine"
+  },
+  {
+    "source": "Behavior Modeling",
+    "target": "Behavior Tree"
+  },
+  {
+    "source": "Artificial Intelligence",
+    "target": "Machine Learning"
+  },
+  {
+    "source": "Machine Learning",
+    "target": "Supervised Learning"
+  },
+  {
+    "source": "Machine Learning",
+    "target": "Unsupervised Learning"
+  },
+  {
+    "source": "Machine Learning",
+    "target": "Reinforcement Learning"
+  },
+  {
+    "source": "Artificial Intelligence",
+    "target": "Natural Language Processing"
+  }
+]

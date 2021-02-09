@@ -1,0 +1,50 @@
+[
+  {
+    "source": "Computer Science",
+    "target": "Algorithm"
+  },
+  {
+    "source": "Computer Science",
+    "target": "Data Structure"
+  },
+  {
+    "source": "Computer Science",
+    "target": "Computer Architecture"
+  },
+  {
+    "source": "Computer Science",
+    "target": "Computational Geometry"
+  },
+  {
+    "source": "Computer Science",
+    "target": "Numerical Method"
+  },
+  {
+    "source": "Numerical Method",
+    "target": "Root Finding"
+  },
+  {
+    "source": "Root Finding",
+    "target": "Bisection Method"
+  },
+  {
+    "source": "Root Finding",
+    "target": "Newton's Method"
+  },
+  {
+    "source": "Root Finding",
+    "target": "Runge-Kutta Method"
+  },
+  {
+    "source": "Numerical Method",
+    "target": "Differential Equation Solving"
+  },
+  {
+    "source": "Differential Equation Solving",
+    "target": "Euler Method"
+  },
+  {
+    "source": "Differential Equation Solving",
+    "target": "Verlet Integration"
+  }
+]

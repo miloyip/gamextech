@@ -23,7 +23,7 @@ Nodes are array of objects with following keys (asterisk are must exist):
 | ----------- | ------------------------- | ------------------------------------------------------------ |
 | id*         | string                    | Unique idenfitifer in title case                             |
 | abbr        | string                    | Abbreviation                                                 |
-| type        | string                    | "category" or "technique" or "game"                          |
+| type        | string                    | "category" (default) or "technique" or "game"                          |
 | year        | number                    | Year of invention or publicaiton                             |
 | synopsis    | string                    | Concise description                                          |
 | author      | string or array of string | Inventor(s) or author(s)                                     |
@@ -35,8 +35,8 @@ Nodes are array of objects with following keys (asterisk are must exist):
 
 Links are arrays of objects with following keys (asterisk are must exist):
 
-| Key       | Type     | Description           |  
-| --------- | -------- | --------------------- |  
-| source*   | string   | Source node id        |  
-| target*   | string   | Target node id        |  
-| type      | string   | "include" or "derive" |  
+| Key       | Type     | Description                     |  
+| --------- | -------- | ------------------------------- |  
+| source*   | string   | Source node id                  |  
+| target*   | string   | Target node id                  |  
+| type      | string   | "include" (default) or "derive" |  

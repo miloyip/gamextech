@@ -1,0 +1,78 @@
+[
+  {
+    "id": "Collision Detection",
+    "abbr": "CD"
+  },
+  {
+    "id": "Broad-phase Collision Detection"
+  },
+  {
+    "id": "Narrow-phase Collision Detection"
+  },
+  {
+    "id": "Rigid Body Dynamics"
+  },
+  {
+    "id": "Soft Body Dynamics"
+  },
+  {
+    "id": "Rope Simulation"
+  },
+  {
+    "id": "Cloth Simulation"
+  },
+  {
+    "id": "Fluid Simulation"
+  },
+  {
+    "id": "Eulerian Fluid Simulation"
+  },
+  {
+    "id": "Stable Fluid"
+  },
+  {
+    "id": "Lagrangian Fluid Simulation"
+  },
+  {
+    "id": "Smoothed Particle Hydrodynamics",
+    "abbr": "SPH"
+  },
+  {
+    "id": "Hybrid Fluid Simulation"
+  },
+  {
+    "id": "Particle-In-Cell Method",
+    "abbr": "PIC"
+  },
+  {
+    "id": "Vehicle Simulation"
+  },
+  {
+    "id": "Fracture Simulation"
+  },
+  {
+    "id": "Physics Engine"
+  },
+  {
+    "id": "Commercial Physics Engine"
+  },
+  {
+    "id": "PhysX"
+  },
+  {
+    "id": "Havok"
+  },
+  {
+    "id": "Open Source Physics Engine"
+  },
+  {
+    "id": "Bullet"
+  },
+  {
+    "id": "Open Dynamics Engine",
+    "abbr": "ODE"
+  },
+  {
+    "id": "Box2D"
+  }
+]

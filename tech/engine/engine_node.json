@@ -1,0 +1,45 @@
+[
+  {
+    "id": "Commercial Game Engine"
+  },
+  {
+    "id": "Unreal Engine",
+    "abbr": "UE"
+  },
+  {
+    "id": "Unity"
+  },
+  {
+    "id": "CryEngine"
+  },
+  {
+    "id": "Open Source Game Engine"
+  },
+  {
+    "id": "Cocos2dx"
+  },
+  {
+    "id": "Godot"
+  },
+  {
+    "id": "Proprietary Game Engine"
+  },
+  {
+    "id": "Anvil"
+  },
+  {
+    "id": "Decima"
+  },
+  {
+    "id": "Dunia"
+  },
+  {
+    "id": "Insomniac Engine"
+  },
+  {
+    "id": "Forstbite"
+  },
+  {
+    "id": "QuickSilver"
+  }
+]

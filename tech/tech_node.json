@@ -1,421 +1,49 @@
 [
-    {
-        "id":"Technology"
-    },
-    {
-        "id":"Mathematics"
-    },
-    {
-        "id":"Algebra"
-    },
-    {
-        "id":"Linear Algebra"
-    },
-    {
-        "id":"Vector"
-    },
-    {
-        "id":"Matrix"
-    },
-    {
-        "id":"Quaternion"
-    },
-    {
-        "id":"Dual Quaternion"
-    },
-    {
-        "id":"Grasmann Algebra"
-    },
-    {
-        "id":"Calculus"
-    },
-    {
-        "id":"Vector Calculus"
-    },
-    {
-        "id":"Geometry"
-    },
-    {
-        "id":"Computer Science"
-    },
-    {
-        "id":"Algorithm"
-    },
-    {
-        "id":"Data Structure"
-    },
-    {
-        "id":"Computer Architecture"
-    },
-    {
-        "id":"Computational Geometry"
-    },
-    {
-        "id":"Numerical Method"
-    },
-    {
-        "id":"Root Finding"
-    },
-    {
-        "id":"Bisection Method"
-    },
-    {
-        "id":"Newton's Method"
-    },
-    {
-        "id":"Runge-Kutta Method"
-    },
-    {
-        "id":"Differential Equation Solving"
-    },
-    {
-        "id":"Euler Method"
-    },
-    {
-        "id":"Verlet Integration"
-    },
-    {
-        "id":"Platform"
-    },
-    {
-        "id":"Personal Computer",
-        "abbr":"PC"
-    },
-    {
-        "id":"Windows"
-    },
-    {
-        "id":"MacOS"
-    },
-    {
-        "id":"Linux"
-    },
-    {
-        "id":"Mobile Device"
-    },
-    {
-        "id":"iOS"
-    },
-    {
-        "id":"Android"
-    },
-    {
-        "id":"Video Game Console"
-    },
-    {
-        "id":"PlayStation"
-    },
-    {
-        "id":"Xbox"
-    },
-    {
-        "id":"Portable Game Console"
-    },
-    {
-        "id":"Nintendo Switch"
-    },
-    {
-        "id":"Programming"
-    },
-    {
-        "id":"Programming Paradigm"
-    },
-    {
-        "id":"Procedural Programming"
-    },
-    {
-        "id":"Object-oriented Programming",
-        "abbr":"OOP"
-    },
-    {
-        "id":"Functional Programming",
-        "abbr":"FP"
-    },
-    {
-        "id":"Event-driven Programming"
-    },
-    {
-        "id":"Programming Language"
-    },
-    {
-        "id":"Native Programming Language"
-    },
-    {
-        "id":"Assembly"
-    },
-    {
-        "id":"C"
-    },
-    {
-        "id":"C++"
-    },
-    {
-        "id":"Objective-C"
-    },
-    {
-        "id":"Swift"
-    },
-    {
-        "id":"Rust"
-    },
-    {
-        "id":"Java"
-    },
-    {
-        "id":"C#"
-    },
-    {
-        "id":"Scripting Programming Language"
-    },
-    {
-        "id":"Lua"
-    },
-    {
-        "id":"Python"
-    },
-    {
-        "id":"Shader Programming Language"
-    },
-    {
-        "id":"High-Level Shader Language",
-        "abbr":"HLSL"
-    },
-    {
-        "id":"OpenGL Shading Language",
-        "abbr":"GLSL"
-    },
-    {
-        "id":"Metal Shading Language",
-        "abbr":"MSL"
-    },
-    {
-        "id":"Software Engineering"
-    },
-    {
-        "id":"Software Design"
-    },
-    {
-        "id":"Unified Modeling Language",
-        "abbr":"UML"
-    },
-    {
-        "id":"Design Pattern"
-    },
-    {
-        "id":"Debugging"
-    },
-    {
-        "id":"Testing"
-    },
-    {
-        "id":"Profiling"
-    },
-    {
-        "id":"Verson Control"
-    },
-    {
-        "id":"Graphics"
-    },
-    {
-        "id":"Audio"
-    },
-    {
-        "id":"Human Computer Interaction",
-        "abbr":"HCI"
-    },
-    {
-        "id":"Physics"
-    },
-    {
-        "id":"Collision Detection",
-        "abbr":"CD"
-    },
-    {
-        "id":"Broad-phase Collision Detection"
-    },
-    {
-        "id":"Narrow-phase Collision Detection"
-    },
-    {
-        "id":"Rigid Body Dynamics"
-    },
-    {
-        "id":"Soft Body Dynamics"
-    },
-    {
-        "id":"Rope Simulation"
-    },
-    {
-        "id":"Cloth Simulation"
-    },
-    {
-        "id":"Fluid Simulation"
-    },
-    {
-        "id":"Eulerian Fluid Simulation"
-    },
-    {
-        "id":"Stable Fluid"
-    },
-    {
-        "id":"Lagrangian Fluid Simulation"
-    },
-    {
-        "id":"Smoothed Particle Hydrodynamics",
-        "abbr":"SPH"
-    },
-    {
-        "id":"Hybrid Fluid Simulation"
-    },
-    {
-        "id":"Particle-In-Cell Method",
-        "abbr":"PIC"
-    },
-    {
-        "id":"Vehicle Simulation"
-    },
-    {
-        "id":"Fracture Simulation"
-    },
-    {
-        "id":"Physics Engine"
-    },
-    {
-        "id":"Commercial Physics Engine"
-    },
-    {
-        "id":"PhysX"
-    },
-    {
-        "id":"Havok"
-    },
-    {
-        "id":"Open Source Physics Engine"
-    },
-    {
-        "id":"Bullet"
-    },
-    {
-        "id":"Open Dynamics Engine",
-        "abbr":"ODE"
-    },
-    {
-        "id":"Box2D"
-    },
-    {
-        "id":"Artificial Intelligence"
-    },
-    {
-        "id":"Game Tree"
-    },
-    {
-        "id":"Minimax Search"
-    },
-    {
-        "id":"Alpha-beta Prunning"
-    },
-    {
-        "id":"Behavior Modeling"
-    },
-    {
-        "id":"Finite State Machine",
-        "abbr":"FSM"
-    },
-    {
-        "id":"Behavior Tree"
-    },
-    {
-        "id":"Navigation"
-    },
-    {
-        "id":"Path Finding"
-    },
-    {
-        "id":"Obstacle Avoidance"
-    },
-    {
-        "id":"Machine Learning"
-    },
-    {
-        "id":"Supervised Learning"
-    },
-    {
-        "id":"Unsupervised Learning"
-    },
-    {
-        "id":"Reinforcement Learning"
-    },
-    {
-        "id":"Natural Language Processing",
-        "abbr":"NLP"
-    },
-    {
-        "id":"Gameplay"
-    },
-    {
-        "id":"Multiplayer"
-    },
-    {
-        "id":"Game Engine"
-    },
-    {
-        "id":"Commercial Game Engine"
-    },
-    {
-        "id":"Unreal Engine",
-        "abbr":"UE"
-    },
-    {
-        "id":"Unity"
-    },
-    {
-        "id":"CryEngine"
-    },
-    {
-        "id":"Open Source Game Engine"
-    },
-    {
-        "id":"Cocos2dx"
-    },
-    {
-        "id":"Godot"
-    },
-    {
-        "id":"Proprietary Game Engine"
-    },
-    {
-        "id":"Anvil"
-    },
-    {
-        "id":"Decima"
-    },
-    {
-        "id":"Dunia"
-    },
-    {
-        "id":"Insomniac Engine"
-    },
-    {
-        "id":"Forstbite"
-    },
-    {
-        "id":"QuickSilver"
-    },
-    {
-        "id":"Content Creation"
-    },
-    {
-        "id":"Digital Content Creation",
-        "abbr":"DCC"
-    },
-    {
-        "id":"Procedural Content Generation",
-        "abbr":"PCG"
-    },
-    {
-        "id":"Photogrammetry"
-    },
-    {
-        "id":"Motion Capture"
-    }
+  {
+    "id": "Technology"
+  },
+  {
+    "id": "Mathematics"
+  },
+  {
+    "id": "Computer Science"
+  },
+  {
+    "id": "Platform"
+  },
+  {
+    "id": "Programming"
+  },
+  {
+    "id": "Software Engineering"
+  },
+  {
+    "id": "Graphics"
+  },
+  {
+    "id": "Audio"
+  },
+  {
+    "id": "Human Computer Interaction",
+    "abbr": "HCI"
+  },
+  {
+    "id": "Physics"
+  },
+  {
+    "id": "Artificial Intelligence",
+    "abbr": "AI"
+  },
+  {
+    "id": "Gameplay"
+  },
+  {
+    "id": "Multiplayer"
+  },
+  {
+    "id": "Game Engine"
+  },
+  {
+    "id": "Content Creation"
+  }
 ]

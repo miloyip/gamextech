@@ -1,0 +1,42 @@
+[
+  {
+    "source": "Mathematics",
+    "target": "Algebra"
+  },
+  {
+    "source": "Algebra",
+    "target": "Linear Algebra"
+  },
+  {
+    "source": "Linear Algebra",
+    "target": "Vector"
+  },
+  {
+    "source": "Linear Algebra",
+    "target": "Matrix"
+  },
+  {
+    "source": "Algebra",
+    "target": "Grasmann Algebra"
+  },
+  {
+    "source": "Algebra",
+    "target": "Quaternion"
+  },
+  {
+    "source": "Algebra",
+    "target": "Dual Quaternion"
+  },
+  {
+    "source": "Mathematics",
+    "target": "Calculus"
+  },
+  {
+    "source": "Calculus",
+    "target": "Vector Calculus"
+  },
+  {
+    "source": "Mathematics",
+    "target": "Geometry"
+  }
+]

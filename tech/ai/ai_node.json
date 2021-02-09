@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Game Tree"
+  },
+  {
+    "id": "Minimax Search"
+  },
+  {
+    "id": "Alpha-beta Prunning"
+  },
+  {
+    "id": "Behavior Modeling"
+  },
+  {
+    "id": "Finite State Machine",
+    "abbr": "FSM"
+  },
+  {
+    "id": "Behavior Tree"
+  },
+  {
+    "id": "Navigation"
+  },
+  {
+    "id": "Path Finding"
+  },
+  {
+    "id": "Obstacle Avoidance"
+  },
+  {
+    "id": "Machine Learning"
+  },
+  {
+    "id": "Supervised Learning"
+  },
+  {
+    "id": "Unsupervised Learning"
+  },
+  {
+    "id": "Reinforcement Learning"
+  },
+  {
+    "id": "Natural Language Processing",
+    "abbr": "NLP"
+  }
+]

@@ -1,10 +1,28 @@
 {
-    "nodes": [
-        "tech/tech_node.json",
-        "tech/graphics/graphics_node.json"
-    ],
-    "links": [
-        "tech/tech_link.json",
-        "tech/graphics/graphics_link.json"
-    ]
+  "nodes": [
+    "tech/tech_node.json",
+    "tech/ai/ai_node.json",
+    "tech/content/content_node.json",
+    "tech/cs/cs_node.json",
+    "tech/engine/engine_node.json",
+    "tech/graphics/graphics_node.json",
+    "tech/math/math_node.json",
+    "tech/physics/physics_node.json",
+    "tech/platform/platform_node.json",
+    "tech/programming/programming_node.json",
+    "tech/se/se_node.json"
+  ],
+  "links": [
+    "tech/tech_link.json",
+    "tech/ai/ai_link.json",
+    "tech/content/content_link.json",
+    "tech/cs/cs_link.json",
+    "tech/engine/engine_link.json",
+    "tech/graphics/graphics_link.json",
+    "tech/math/math_link.json",
+    "tech/physics/physics_link.json",
+    "tech/platform/platform_link.json",
+    "tech/programming/programming_link.json",
+    "tech/se/se_link.json"
+  ]
 }

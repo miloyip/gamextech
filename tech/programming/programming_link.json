@@ -1,0 +1,86 @@
+[
+  {
+    "source": "Programming",
+    "target": "Programming Paradigm"
+  },
+  {
+    "source": "Programming Paradigm",
+    "target": "Procedural Programming"
+  },
+  {
+    "source": "Programming Paradigm",
+    "target": "Object-oriented Programming"
+  },
+  {
+    "source": "Programming Paradigm",
+    "target": "Functional Programming"
+  },
+  {
+    "source": "Programming Paradigm",
+    "target": "Event-driven Programming"
+  },
+  {
+    "source": "Programming",
+    "target": "Programming Language"
+  },
+  {
+    "source": "Programming Language",
+    "target": "Native Programming Language"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "Assembly"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "C"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "C++"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "Objective-C"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "Rust"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "C#"
+  },
+  {
+    "source": "Native Programming Language",
+    "target": "Java"
+  },
+  {
+    "source": "Programming Language",
+    "target": "Scripting Programming Language"
+  },
+  {
+    "source": "Scripting Programming Language",
+    "target": "Lua"
+  },
+  {
+    "source": "Scripting Programming Language",
+    "target": "Python"
+  },
+  {
+    "source": "Programming Language",
+    "target": "Shader Programming Language"
+  },
+  {
+    "source": "Shader Programming Language",
+    "target": "High-Level Shader Language"
+  },
+  {
+    "source": "Shader Programming Language",
+    "target": "OpenGL Shading Language"
+  },
+  {
+    "source": "Shader Programming Language",
+    "target": "Metal Shading Language"
+  }
+]
