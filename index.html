@@ -87,33 +87,49 @@ body {
 <script src="tech/tech_node.js"></script>
 <script src="tech/tech_link.js"></script>
 <script>
-const default_title = "Game⨯Tech";
+const preset = {
+    title: "Game⨯Tech",
+    selected: ["Technology"],
+    expand: 1,
+    chronology: false,
+};
+
+let selected = new Set(preset.selected);
+let title = preset.title;
+let expand = preset.expand;
+let chronology = preset.chronology;
+
 const margin = { left: 0, top: 40, right: 0, bottom: 40 };
-let selected = new Set(["Technology"]);
-let title = default_title;
-let expand = 1;
-let chronology = true;
 let popup = {};
 
-d3.select("head").append("title").text(title);
+parseURL();
+updateTitle();
+updateExpand();
+updateChronology();
+
+window.addEventListener('popstate', event => {
+    parseURL();
+    updateTitle();
+    updateExpand();
+    updateChronology();
+    restart();
+});
 
 d3.select("#title")
-    .html(title)
     .on("click", event => {
-        title = window.prompt("Enter title", title) || default_title;
-        d3.select("#title")
-            .html(title);
+        title = window.prompt("Enter title", title) || title;
+        updateTitle();
+        pushState();
     });
 
 d3.select("#expand")
-    .property("value", expand)
     .on("change", event => {
         expand = event.srcElement.value;
+        pushState();
         restart();
     });
 
 d3.select("#chronology")
-    .property("checked", chronology)
     .on("change", event => {
         chronology = event.srcElement.checked;
         svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
@@ -123,6 +139,7 @@ d3.select("#chronology")
         else {
             nodes.forEach(d => d.fx = null);    // Remove constraint
         }
+        pushState();
         restart();
     })
 
@@ -338,6 +355,7 @@ function restart() {
                 else {
                     selected.add(d.id);
                 }
+                pushState();
                 setTimeout(restart, 100);
             });
 
@@ -388,6 +406,19 @@ function restart() {
     simulation.alpha(1.0).restart();
 }
 
+function updateTitle() {
+    d3.select("head").append("title").text(title);
+    d3.select("#title").html(title)
+}
+
+function updateExpand() {
+    d3.select("#expand").property("value", expand);
+}
+
+function updateChronology() {
+    d3.select("#chronology").property("checked", chronology);
+}
+
 function updatePopup() {
     if (popup.srcElement) {
         const r = popup.srcElement.getBoundingClientRect();
@@ -424,6 +455,44 @@ function updatePopup() {
         d3.select("#popup")
             .transition().duration(500).style("opacity", 0)
             .on("end", () => d3.select("#popup").style("visibility", "hidden"));
+    }
+}
+
+function pushState() {
+    let q = [];
+    if (title != preset.title)
+        q.push(`t=${encodeURIComponent(title)}`);
+    if (selected != preset.selected)
+        q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id)).join(",")}`);
+    if (expand != preset.expand)
+        q.push(`e=${expand}`);
+    if (chronology != preset.chronology)
+        q.push(`c=${chronology | 0}`);
+    history.pushState({}, "", q.length == 0 ? "" : `?${q.join("&")}`);
+}
+
+function parseURL() {
+    const q = new URL(document.location.href).searchParams;
+    
+    title = q.get("t") || preset.title;
+    
+    let e = q.get("e"), i;
+    expand = e && !Number.isNaN(i = parseInt(e)) ? Math.min(Math.max(i, -1), 2) : preset.expand;
+    
+    chronology = q.get("c") || preset.chronology;
+    
+    let s = q.get("s");
+    if (s) {
+        const idset = new Set(nodes.map(node => node.id));
+        selected = new Set(
+            s.split(",")
+                .map(id => decodeURIComponent(id))
+                .filter(id => idset.has(id)));
+        if (selected.size == 0)
+            selected = new Set(preset.selected);
+    }
+    else {
+        selected = new Set(preset.selected);
     }
 }
 
