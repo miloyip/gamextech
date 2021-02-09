@@ -183,6 +183,11 @@
     "type": "derive"
   },
   {
+    "source": "Shadow Volume",
+    "target": "Geometry-based Soft Shadow Volume",
+    "type": "derive"
+  },
+  {
     "source": "Shadow",
     "target": "Shadow Map"
   },
@@ -190,6 +195,10 @@
     "source": "Shadow Map",
     "target": "Shadow Map Projection Schemes",
     "type": "derive"
+  },
+  {
+    "source": "Shadow Map Projection Schemes",
+    "target": "Perspective Shadow Map"
   },
   {
     "source": "Shadow Map Projection Schemes",
@@ -251,6 +260,39 @@
   {
     "source": "Soft Shadow Shadow Map",
     "target": "Variance Soft Shadow Map"
+  },
+  {
+    "source": "Shadow Map",
+    "target": "Shadow Map with Transparency"
+  },
+  {
+    "source": "Shadow Map with Transparency",
+    "target": "Deep Shadow Map"
+  },
+  {
+    "source": "Shadow Map with Transparency",
+    "target": "Opacity Shadow Map"
+  },
+  {
+    "source": "Shadow Map with Transparency",
+    "target": "Colored Stochastic Shadow Map"
+  },
+  {
+    "source": "Shadow",
+    "target": "Shadow with Precomputation"
+  },
+  {
+    "source": "Shadow with Precomputation",
+    "target": "Horizon Mapping"
+  },
+  {
+    "source": "Horizon Mapping",
+    "target": "Interactive Horizon Mapping",
+    "type": "derive"
+  },
+  {
+    "source": "Shadow with Precomputation",
+    "target": "Occlusion Interval Map"
   },
   {
     "source": "Rendering",

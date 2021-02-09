@@ -120,6 +120,17 @@
     "year": 2000
   },
   {
+    "id": "Geometry-based Soft Shadow Volume",
+    "author": [
+      "Ulf Assarsson",
+      "Tomas Akenine-Moller"
+    ],
+    "title": "A Geometry-based Soft Shadow Volume Algorithm using Graphics Hardware",
+    "journal": "TOG",
+    "link": "https://dl.acm.org/doi/pdf/10.1145/882262.882300",
+    "year": 2003
+  },
+  {
     "id": "Shadow Map",
     "author": "Lance Joseph Williams",
     "title": "Casting curved shadows on curved surfaces",
@@ -129,6 +140,17 @@
   },
   {
     "id": "Shadow Map Projection Schemes"
+  },
+  {
+    "id": "Perspective Shadow Map",
+    "abbr": "PSM",
+    "author": [
+      "Marc Stamminger",
+      "Drettakis George"
+    ],
+    "title": "Perspective shadow maps",
+    "conference": "PACMCGIT",
+    "year": 2002
   },
   {
     "id": "Trapezoidal Shadow Map",
@@ -287,6 +309,69 @@
     "conference": "Pacific Graphics",
     "link": "https://www.researchgate.net/publication/261844424_Variance_soft_shadow_mapping",
     "year": 2010
+  },
+  {
+    "id": "Shadow Map with Transparency"
+  },
+  {
+    "id": "Deep Shadow Map",
+    "abbr": "DSM",
+    "author": [
+      "Tom Lokovic",
+      "Eric Veach"
+    ],
+    "title": "Deep shadow maps",
+    "conference": "PACMCGIT",
+    "link": "https://graphics.stanford.edu/papers/deepshadows/deepshad.pdf",
+    "year": 2000
+  },
+  {
+    "id": "Opacity Shadow Map",
+    "abbr": "OSM",
+    "author": [
+      "Tae-Yong Kim",
+      "Ulrich Neumann"
+    ],
+    "conference": "EGSR",
+    "link": "http://diglib.eg.org/bitstream/handle/10.2312/EGWR.EGWR01.177-182/177-182.pdf",
+    "year": 2001
+  },
+  {
+    "id": "Colored Stochastic Shadow Map",
+    "abbr": "CSSM",
+    "author": [
+      "Morgan McGuire",
+      "Eric Enderton"
+    ],
+    "conference": "I3D",
+    "year": 2011
+  },
+  {
+    "id": "Shadow with Precomputation"
+  },
+  {
+    "id": "Horizon Mapping",
+    "title": "Horizon Mapping: Shadows for Bump-Mapped Surfaces",
+    "author": "Nelson Max",
+    "journal": "The Visual Computer",
+    "year": 1988
+  },
+  {
+    "id": "Interactive Horizon Mapping",
+    "author": [
+      "Peter-Pike J. Sloan",
+      "Michael F. Cohen"
+    ],
+    "conference": "EGSR",
+    "link": "https://www.ppsloan.org/publications/bs.pdf",
+    "year": 2000
+  },
+  {
+    "id": "Occlusion Interval Map",
+    "author": ["William Donnelly", "Joe Demers"],
+    "title": "Generating soft shadows using occlusion interval maps",
+    "journal": "GPU Gems",
+    "year": 2004
   },
   {
     "id": "Texture"
