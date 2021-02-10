@@ -159,10 +159,10 @@
     "id": "Moment Shadow Map",
     "abbr": "MSM",
     "author": [
-      "Christoph Peters", 
+      "Christoph Peters",
       "Reinhard Klein"
     ],
-    "title":"Moment shadow mapping",
+    "title": "Moment shadow mapping",
     "conference": "I3D",
     "link": [
       "https://dl.acm.org/doi/pdf/10.1145/2699276.2699277",
@@ -269,7 +269,10 @@
   },
   {
     "id": "Occlusion Interval Map",
-    "author": ["William Donnelly", "Joe Demers"],
+    "author": [
+      "William Donnelly",
+      "Joe Demers"
+    ],
     "title": "Generating soft shadows using occlusion interval maps",
     "journal": "GPU Gems",
     "year": 2004

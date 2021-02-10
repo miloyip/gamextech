@@ -34,6 +34,11 @@
     "id": "Portable Game Console"
   },
   {
-    "id": "Nintendo Switch"
+    "id": "Nintendo Switch",
+    "abbr": "NS"
+  },
+  {
+    "id": "World Wide Web",
+    "abbr": "WWW"
   }
 ]

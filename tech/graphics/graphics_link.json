@@ -41,6 +41,14 @@
     "target": "Metal Shading Language"
   },
   {
+    "source": "Graphics API",
+    "target": "WebGL"
+  },
+  {
+    "source": "Graphics API",
+    "target": "WebGPU"
+  },
+  {
     "source": "Graphics",
     "target": "Rendering"
   },

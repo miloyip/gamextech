@@ -18,6 +18,12 @@
     "id": "Metal"
   },
   {
+    "id": "WebGL"
+  },
+  {
+    "id": "WebGPU"
+  },
+  {
     "id": "Modeling"
   },
   {

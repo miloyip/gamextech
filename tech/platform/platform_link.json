@@ -52,12 +52,36 @@
     "target": "Nintendo Switch"
   },
   {
+    "source": "Platform",
+    "target": "World Wide Web"
+  },
+  {
     "source": "Windows",
     "target": "Direct3D"
   },
   {
+    "source": "Windows",
+    "target": "OpenGL"
+  },
+  {
+    "source": "Windows",
+    "target": "Vulkan"
+  },
+  {
     "source": "MacOS",
     "target": "Metal"
+  },
+  {
+    "source": "Linux",
+    "target": "OpenGL"
+  },
+  {
+    "source": "Linux",
+    "target": "Vulkan"
+  },
+  {
+    "source": "iOS",
+    "target": "OpenGL ES"
   },
   {
     "source": "iOS",
@@ -69,6 +93,18 @@
   },
   {
     "source": "Android",
+    "target": "Vulkan"
+  },
+  {
+    "source": "World Wide Web",
+    "target": "WebGL"
+  },
+  {
+    "source": "World Wide Web",
+    "target": "WebGPU"
+  },
+  {
+    "source": "Nintendo Switch",
     "target": "Vulkan"
   }
 ]
