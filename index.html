@@ -215,6 +215,7 @@ function main() {
 
     svg.append("g")
         .attr("class", "chronology-axis")
+        .attr("visibility", chronology ? null : "hidden")
         .call(chronologyAxis);
 
     restartSimulation();
