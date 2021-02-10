@@ -23,7 +23,8 @@ Nodes are array of objects with following keys (asterisk are must exist):
 | ----------- | ------------------------- | ------------------------------------------------------------ |
 | id*         | string                    | Unique idenfitifer in title case                             |
 | abbr        | string                    | Abbreviation                                                 |
-| type        | string                    | "category" (default) or "technique" or "game"                          |
+| aka         | string or array of string | Alternative names (also known as                             |
+| type        | string                    | "category" (default) or "technique" or "game"                |
 | year        | number                    | Year of invention or publicaiton                             |
 | synopsis    | string                    | Concise description                                          |
 | author      | string or array of string | Inventor(s) or author(s)                                     |

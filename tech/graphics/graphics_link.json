@@ -113,6 +113,23 @@
     "target": "Digital Elevation Model"
   },
   {
+    "source": "Modeling",
+    "target": "Implicit Surface"
+  },
+  {
+    "source": "Modeling",
+    "target": "Constructive Solid Geometry"
+  },
+  {
+    "source": "Modeling",
+    "target": "Billboard"
+  },
+  {
+    "source": "Billboard",
+    "target": "Imposter",
+    "type": "derive"
+  },
+  {
     "source": "Graphics",
     "target": "Animation"
   },
@@ -142,7 +159,43 @@
   },
   {
     "source": "Rendering",
-    "target": "Render Pipeline"
+    "target": "Visibility"
+  },
+  {
+    "source": "Visibility",
+    "target": "Rasterization Stage Visibility"
+  },
+  {
+    "source": "Rasterization Stage Visibility",
+    "target": "Back-face Culling"
+  },
+  {
+    "source": "Rasterization Stage Visibility",
+    "target": "Z-buffer"
+  },
+  {
+    "source": "Rasterization Stage Visibility",
+    "target": "Occlusion Query"
+  },
+  {
+    "source": "Visibility",
+    "target": "Application Stage Visibility"
+  },
+  {
+    "source": "Application Stage Visibility",
+    "target": "View Frustum Culling"
+  },
+  {
+    "source": "Application Stage Visibility",
+    "target": "Occlusion Culling"
+  },
+  {
+    "source": "Application Stage Visibility",
+    "target": "Contribution Culling"
+  },
+  {
+    "source": "Application Stage Visibility",
+    "target": "Potentially Visible Set"
   },
   {
     "source": "Rendering",
@@ -155,6 +208,43 @@
   {
     "source": "Rendering",
     "target": "Lighting"
+  },
+  {
+    "source": "Lighting",
+    "target": "Shading"
+  },
+  {
+    "source": "Shading",
+    "target": "Forward Shading"
+  },
+  {
+    "source": "Shading",
+    "target": "Deferred Shading"
+  },
+  {
+    "source": "Deferred Shading",
+    "target": "Deferred Lighting",
+    "type": "derive"
+  },
+  {
+    "source": "Deferred Shading",
+    "target": "Tiled Deferred Shading",
+    "type": "derive"
+  },
+  {
+    "source": "Forward Shading",
+    "target": "Tiled Forward Shading",
+    "type": "derive"
+  },
+  {
+    "source": "Tiled Forward Shading",
+    "target": "Clustered Forward Shading",
+    "type": "derive"
+  },
+  {
+    "source": "Tiled Deferred Shading",
+    "target": "Clustered Deferred Shading",
+    "type": "derive"
   },
   {
     "source": "Lighting",

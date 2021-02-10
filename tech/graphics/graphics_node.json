@@ -46,6 +46,20 @@
     "id": "Voxel"
   },
   {
+    "id": "Implicit Surface",
+    "link": "https://en.wikipedia.org/wiki/Implicit_surface"
+  },
+  {
+    "id": "Constructive Solid Geometry",
+    "abbr": "CSG"
+  },
+  {
+    "id": "Billboard"
+  },
+  {
+    "id": "Imposter"
+  },
+  {
     "id": "Animation"
   },
   {
@@ -70,7 +84,35 @@
     "id": "Rendering"
   },
   {
-    "id": "Render Pipeline"
+    "id": "Visibility"
+  },
+  {
+    "id": "Rasterization Stage Visibility"
+  },
+  {
+    "id": "Application Stage Visibility"
+  },
+  {
+    "id": "Back-face Culling"
+  },
+  {
+    "id": "Z-buffer"
+  },
+  {
+    "id": "Occlusion Query"
+  },
+  {
+    "id": "View Frustum Culling"
+  },
+  {
+    "id": "Occlusion Culling"
+  },
+  {
+    "id": "Contribution Culling"
+  },
+  {
+    "id": "Potentially Visible Set",
+    "abbr": "PVS"
   },
   {
     "id": "Scene Management"
@@ -80,6 +122,32 @@
   },
   {
     "id": "Lighting"
+  },
+  {
+    "id": "Shading"
+  },
+  {
+    "id": "Forward Shading"
+  },
+  {
+    "id": "Deferred Shading",
+    "link": "https://en.wikipedia.org/wiki/Deferred_shading"
+  },
+  {
+    "id": "Deferred Lighting",
+    "aka": "Light Pre-pass"
+  },
+  {
+    "id": "Tiled Deferred Shading"
+  },
+  {
+    "id": "Tiled Forward Shading"
+  },
+  {
+    "id": "Clustered Forward Shading"
+  },
+  {
+    "id": "Clustered Deferred Shading"
   },
   {
     "id": "Global Illimulation",
