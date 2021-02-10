@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "Game Tree"
+    },
+    {
+      "id": "Minimax Search"
+    },
+    {
+      "id": "Alpha-beta Prunning"
+    },
+    {
+      "id": "Behavior Modeling"
+    },
+    {
+      "id": "Finite State Machine",
+      "abbr": "FSM"
+    },
+    {
+      "id": "Behavior Tree"
+    },
+    {
+      "id": "Navigation"
+    },
+    {
+      "id": "Path Finding"
+    },
+    {
+      "id": "Obstacle Avoidance"
+    },
+    {
+      "id": "Machine Learning"
+    },
+    {
+      "id": "Supervised Learning"
+    },
+    {
+      "id": "Unsupervised Learning"
+    },
+    {
+      "id": "Reinforcement Learning"
+    },
+    {
+      "id": "Natural Language Processing",
+      "abbr": "NLP"
+    }
+  ],
+  "links": [
+    {
+      "source": "Artificial Intelligence",
+      "target": "Navigation"
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Game Tree"
+    },
+    {
+      "source": "Navigation",
+      "target": "Path Finding"
+    },
+    {
+      "source": "Navigation",
+      "target": "Obstacle Avoidance"
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Behavior Modeling"
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Game Tree"
+    },
+    {
+      "source": "Game Tree",
+      "target": "Minimax Search"
+    },
+    {
+      "source": "Minimax Search",
+      "target": "Alpha-beta Prunning",
+      "type": "derive"
+    },
+    {
+      "source": "Behavior Modeling",
+      "target": "Finite State Machine"
+    },
+    {
+      "source": "Behavior Modeling",
+      "target": "Behavior Tree"
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Machine Learning"
+    },
+    {
+      "source": "Machine Learning",
+      "target": "Supervised Learning"
+    },
+    {
+      "source": "Machine Learning",
+      "target": "Unsupervised Learning"
+    },
+    {
+      "source": "Machine Learning",
+      "target": "Reinforcement Learning"
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Natural Language Processing"
+    }
+  ]
+}

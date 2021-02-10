@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "Digital Content Creation",
+      "abbr": "DCC"
+    },
+    {
+      "id": "Procedural Content Generation",
+      "abbr": "PCG"
+    },
+    {
+      "id": "Photogrammetry"
+    },
+    {
+      "id": "Motion Capture"
+    }
+  ],
+  "links": [
+    {
+      "source": "Content Creation",
+      "target": "Digital Content Creation"
+    },
+    {
+      "source": "Content Creation",
+      "target": "Procedural Content Generation"
+    },
+    {
+      "source": "Content Creation",
+      "target": "Photogrammetry"
+    },
+    {
+      "source": "Content Creation",
+      "target": "Motion Capture"
+    }
+  ]
+}

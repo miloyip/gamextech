@@ -1,0 +1,463 @@
+{
+  "nodes": [
+    {
+      "id": "Graphics API"
+    },
+    {
+      "id": "Direct3D"
+    },
+    {
+      "id": "OpenGL"
+    },
+    {
+      "id": "OpenGL ES"
+    },
+    {
+      "id": "Vulkan"
+    },
+    {
+      "id": "Metal"
+    },
+    {
+      "id": "WebGL"
+    },
+    {
+      "id": "WebGPU"
+    },
+    {
+      "id": "Modeling"
+    },
+    {
+      "id": "Curve"
+    },
+    {
+      "id": "Curved Surface"
+    },
+    {
+      "id": "Mesh"
+    },
+    {
+      "id": "Triangle Mesh"
+    },
+    {
+      "id": "Digital Elevation Model",
+      "abbr": "DEM"
+    },
+    {
+      "id": "Voxel"
+    },
+    {
+      "id": "Implicit Surface",
+      "link": "https://en.wikipedia.org/wiki/Implicit_surface"
+    },
+    {
+      "id": "Constructive Solid Geometry",
+      "abbr": "CSG"
+    },
+    {
+      "id": "Billboard"
+    },
+    {
+      "id": "Imposter"
+    },
+    {
+      "id": "Animation"
+    },
+    {
+      "id": "Key-frame Animation"
+    },
+    {
+      "id": "Particle System"
+    },
+    {
+      "id": "Skinning"
+    },
+    {
+      "id": "Morphing"
+    },
+    {
+      "id": "Animation Tree"
+    },
+    {
+      "id": "Motion Matching"
+    },
+    {
+      "id": "Rendering"
+    },
+    {
+      "id": "Visibility"
+    },
+    {
+      "id": "Rasterization Stage Visibility"
+    },
+    {
+      "id": "Application Stage Visibility"
+    },
+    {
+      "id": "Back-face Culling"
+    },
+    {
+      "id": "Z-buffer"
+    },
+    {
+      "id": "Occlusion Query"
+    },
+    {
+      "id": "View Frustum Culling"
+    },
+    {
+      "id": "Occlusion Culling"
+    },
+    {
+      "id": "Contribution Culling"
+    },
+    {
+      "id": "Potentially Visible Set",
+      "abbr": "PVS"
+    },
+    {
+      "id": "Scene Management"
+    },
+    {
+      "id": "Camera"
+    },
+    {
+      "id": "Lighting"
+    },
+    {
+      "id": "Shading"
+    },
+    {
+      "id": "Forward Shading"
+    },
+    {
+      "id": "Deferred Shading",
+      "link": "https://en.wikipedia.org/wiki/Deferred_shading"
+    },
+    {
+      "id": "Deferred Lighting",
+      "aka": "Light Pre-pass"
+    },
+    {
+      "id": "Tiled Deferred Shading"
+    },
+    {
+      "id": "Tiled Forward Shading"
+    },
+    {
+      "id": "Clustered Forward Shading"
+    },
+    {
+      "id": "Clustered Deferred Shading"
+    },
+    {
+      "id": "Global Illimulation",
+      "abbr": "GI"
+    },
+    {
+      "id": "Ray Tracing",
+      "author": "John Turner Whitted",
+      "title": "An improved illumination model for shaded display.",
+      "conference": "PACMCGIT",
+      "year": 1979
+    },
+    {
+      "id": "Path Tracing"
+    },
+    {
+      "id": "Radiosity"
+    },
+    {
+      "id": "Photon Mapping"
+    },
+    {
+      "id": "Shadow"
+    },
+    {
+      "id": "Texture"
+    },
+    {
+      "id": "Material"
+    },
+    {
+      "id": "Post-Processing"
+    }
+  ],
+  "links": [
+    {
+      "source": "Graphics",
+      "target": "Graphics API"
+    },
+    {
+      "source": "Graphics API",
+      "target": "Direct3D"
+    },
+    {
+      "source": "Direct3D",
+      "target": "High-Level Shader Language"
+    },
+    {
+      "source": "Graphics API",
+      "target": "OpenGL"
+    },
+    {
+      "source": "OpenGL",
+      "target": "OpenGL Shading Language"
+    },
+    {
+      "source": "OpenGL",
+      "target": "OpenGL ES",
+      "type": "derive"
+    },
+    {
+      "source": "OpenGL ES",
+      "target": "OpenGL Shading Language"
+    },
+    {
+      "source": "Graphics API",
+      "target": "Vulkan"
+    },
+    {
+      "source": "Graphics API",
+      "target": "Metal"
+    },
+    {
+      "source": "Metal",
+      "target": "Metal Shading Language"
+    },
+    {
+      "source": "Graphics API",
+      "target": "WebGL"
+    },
+    {
+      "source": "Graphics API",
+      "target": "WebGPU"
+    },
+    {
+      "source": "Graphics",
+      "target": "Rendering"
+    },
+    {
+      "source": "Rendering",
+      "target": "Scene Management"
+    },
+    {
+      "source": "Rendering",
+      "target": "Camera"
+    },
+    {
+      "source": "Rendering",
+      "target": "Lighting"
+    },
+    {
+      "source": "Lighting",
+      "target": "Global Illimulation"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Ray Tracing"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Path Tracing"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Radiosity"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Photon Mapping"
+    },
+    {
+      "source": "Graphics",
+      "target": "Modeling"
+    },
+    {
+      "source": "Modeling",
+      "target": "Curve"
+    },
+    {
+      "source": "Modeling",
+      "target": "Curved Surface"
+    },
+    {
+      "source": "Modeling",
+      "target": "Mesh"
+    },
+    {
+      "source": "Mesh",
+      "target": "Triangle Mesh"
+    },
+    {
+      "source": "Modeling",
+      "target": "Voxel"
+    },
+    {
+      "source": "Modeling",
+      "target": "Digital Elevation Model"
+    },
+    {
+      "source": "Modeling",
+      "target": "Implicit Surface"
+    },
+    {
+      "source": "Modeling",
+      "target": "Constructive Solid Geometry"
+    },
+    {
+      "source": "Modeling",
+      "target": "Billboard"
+    },
+    {
+      "source": "Billboard",
+      "target": "Imposter",
+      "type": "derive"
+    },
+    {
+      "source": "Graphics",
+      "target": "Animation"
+    },
+    {
+      "source": "Animation",
+      "target": "Key-frame Animation"
+    },
+    {
+      "source": "Animation",
+      "target": "Particle System"
+    },
+    {
+      "source": "Animation",
+      "target": "Skinning"
+    },
+    {
+      "source": "Animation",
+      "target": "Morphing"
+    },
+    {
+      "source": "Animation",
+      "target": "Animation Tree"
+    },
+    {
+      "source": "Animation",
+      "target": "Motion Matching"
+    },
+    {
+      "source": "Rendering",
+      "target": "Visibility"
+    },
+    {
+      "source": "Visibility",
+      "target": "Rasterization Stage Visibility"
+    },
+    {
+      "source": "Rasterization Stage Visibility",
+      "target": "Back-face Culling"
+    },
+    {
+      "source": "Rasterization Stage Visibility",
+      "target": "Z-buffer"
+    },
+    {
+      "source": "Rasterization Stage Visibility",
+      "target": "Occlusion Query"
+    },
+    {
+      "source": "Visibility",
+      "target": "Application Stage Visibility"
+    },
+    {
+      "source": "Application Stage Visibility",
+      "target": "View Frustum Culling"
+    },
+    {
+      "source": "Application Stage Visibility",
+      "target": "Occlusion Culling"
+    },
+    {
+      "source": "Application Stage Visibility",
+      "target": "Contribution Culling"
+    },
+    {
+      "source": "Application Stage Visibility",
+      "target": "Potentially Visible Set"
+    },
+    {
+      "source": "Rendering",
+      "target": "Camera"
+    },
+    {
+      "source": "Rendering",
+      "target": "Texture"
+    },
+    {
+      "source": "Rendering",
+      "target": "Lighting"
+    },
+    {
+      "source": "Lighting",
+      "target": "Shading"
+    },
+    {
+      "source": "Shading",
+      "target": "Forward Shading"
+    },
+    {
+      "source": "Shading",
+      "target": "Deferred Shading"
+    },
+    {
+      "source": "Deferred Shading",
+      "target": "Deferred Lighting",
+      "type": "derive"
+    },
+    {
+      "source": "Deferred Shading",
+      "target": "Tiled Deferred Shading",
+      "type": "derive"
+    },
+    {
+      "source": "Forward Shading",
+      "target": "Tiled Forward Shading",
+      "type": "derive"
+    },
+    {
+      "source": "Tiled Forward Shading",
+      "target": "Clustered Forward Shading",
+      "type": "derive"
+    },
+    {
+      "source": "Tiled Deferred Shading",
+      "target": "Clustered Deferred Shading",
+      "type": "derive"
+    },
+    {
+      "source": "Lighting",
+      "target": "Global Illimulation"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Ray Tracing"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Path Tracing"
+    },
+    {
+      "source": "Global Illimulation",
+      "target": "Radiosity"
+    },
+    {
+      "source": "Lighting",
+      "target": "Shadow"
+    },
+    {
+      "source": "Rendering",
+      "target": "Material"
+    },
+    {
+      "source": "Rendering",
+      "target": "Post-Processing"
+    }
+  ]
+}

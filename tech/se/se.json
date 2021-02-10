@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "Software Design"
+    },
+    {
+      "id": "Unified Modeling Language",
+      "abbr": "UML"
+    },
+    {
+      "id": "Design Pattern"
+    },
+    {
+      "id": "Debugging"
+    },
+    {
+      "id": "Testing"
+    },
+    {
+      "id": "Profiling"
+    },
+    {
+      "id": "Verson Control"
+    }
+  ],
+  "links": [
+    {
+      "source": "Software Engineering",
+      "target": "Software Design"
+    },
+    {
+      "source": "Software Design",
+      "target": "Unified Modeling Language"
+    },
+    {
+      "source": "Software Design",
+      "target": "Design Pattern"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Debugging"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Testing"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Profiling"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Verson Control"
+    }
+  ]
+}

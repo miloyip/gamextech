@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "id": "Technology"
+    },
+    {
+      "id": "Mathematics"
+    },
+    {
+      "id": "Computer Science"
+    },
+    {
+      "id": "Platform"
+    },
+    {
+      "id": "Programming"
+    },
+    {
+      "id": "Software Engineering"
+    },
+    {
+      "id": "Graphics"
+    },
+    {
+      "id": "Audio"
+    },
+    {
+      "id": "Human Computer Interaction",
+      "abbr": "HCI"
+    },
+    {
+      "id": "Physics"
+    },
+    {
+      "id": "Artificial Intelligence",
+      "abbr": "AI"
+    },
+    {
+      "id": "Gameplay"
+    },
+    {
+      "id": "Multiplayer"
+    },
+    {
+      "id": "Game Engine"
+    },
+    {
+      "id": "Content Creation"
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Mathematics"
+    },
+    {
+      "source": "Technology",
+      "target": "Computer Science"
+    },
+    {
+      "source": "Technology",
+      "target": "Platform"
+    },
+    {
+      "source": "Technology",
+      "target": "Programming"
+    },
+    {
+      "source": "Technology",
+      "target": "Software Engineering"
+    },
+    {
+      "source": "Technology",
+      "target": "Graphics"
+    },
+    {
+      "source": "Technology",
+      "target": "Audio"
+    },
+    {
+      "source": "Technology",
+      "target": "Human Computer Interaction"
+    },
+    {
+      "source": "Technology",
+      "target": "Physics"
+    },
+    {
+      "source": "Technology",
+      "target": "Artificial Intelligence"
+    },
+    {
+      "source": "Technology",
+      "target": "Gameplay"
+    },
+    {
+      "source": "Technology",
+      "target": "Game Engine"
+    },
+    {
+      "source": "Game Engine",
+      "target": "Commercial Game Engine"
+    },
+    {
+      "source": "Technology",
+      "target": "Content Creation"
+    }
+  ]
+}

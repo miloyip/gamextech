@@ -85,9 +85,6 @@ body {
 </div>
 <div id="container" class="svg-container">
 </div>
-<!-- <script src="tech/tech_node.js"></script>
-<script src="tech/tech_link.js"></script>
- -->
 <script>
 // Preset state
 const preset = {
@@ -114,9 +111,9 @@ let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 let nodes = [], links = [];
 
 d3.json("database.json").then(database => {
-    Promise.all(database.nodes.concat(database.links).map(url => d3.json(url))).then(files => {
-        nodes = [].concat.apply([], files.slice(0, database.nodes.length));
-        links = [].concat.apply([], files.slice(database.nodes.length));
+    Promise.all(database.map(url => d3.json(url))).then(files => {
+        nodes = [].concat.apply([], files.map(file => file.nodes));
+        links = [].concat.apply([], files.map(file => file.links));
         main();
     }).catch(err => {
         console.log(err);

@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "id": "Personal Computer",
+      "abbr": "PC"
+    },
+    {
+      "id": "Windows"
+    },
+    {
+      "id": "MacOS"
+    },
+    {
+      "id": "Linux"
+    },
+    {
+      "id": "Mobile Device"
+    },
+    {
+      "id": "iOS"
+    },
+    {
+      "id": "Android"
+    },
+    {
+      "id": "Video Game Console"
+    },
+    {
+      "id": "PlayStation"
+    },
+    {
+      "id": "Xbox"
+    },
+    {
+      "id": "Portable Game Console"
+    },
+    {
+      "id": "Nintendo Switch",
+      "abbr": "NS"
+    },
+    {
+      "id": "World Wide Web",
+      "abbr": "WWW"
+    }
+  ],
+  "links": [
+    {
+      "source": "Platform",
+      "target": "Personal Computer"
+    },
+    {
+      "source": "Personal Computer",
+      "target": "Windows"
+    },
+    {
+      "source": "Personal Computer",
+      "target": "MacOS"
+    },
+    {
+      "source": "Personal Computer",
+      "target": "Linux"
+    },
+    {
+      "source": "Platform",
+      "target": "Mobile Device"
+    },
+    {
+      "source": "Mobile Device",
+      "target": "iOS"
+    },
+    {
+      "source": "Mobile Device",
+      "target": "Android"
+    },
+    {
+      "source": "Platform",
+      "target": "Video Game Console"
+    },
+    {
+      "source": "Video Game Console",
+      "target": "PlayStation"
+    },
+    {
+      "source": "Video Game Console",
+      "target": "Xbox"
+    },
+    {
+      "source": "Platform",
+      "target": "Portable Game Console"
+    },
+    {
+      "source": "Video Game Console",
+      "target": "Nintendo Switch"
+    },
+    {
+      "source": "Portable Game Console",
+      "target": "Nintendo Switch"
+    },
+    {
+      "source": "Platform",
+      "target": "World Wide Web"
+    },
+    {
+      "source": "Windows",
+      "target": "Direct3D"
+    },
+    {
+      "source": "Windows",
+      "target": "OpenGL"
+    },
+    {
+      "source": "Windows",
+      "target": "Vulkan"
+    },
+    {
+      "source": "MacOS",
+      "target": "Metal"
+    },
+    {
+      "source": "Linux",
+      "target": "OpenGL"
+    },
+    {
+      "source": "Linux",
+      "target": "Vulkan"
+    },
+    {
+      "source": "iOS",
+      "target": "OpenGL ES"
+    },
+    {
+      "source": "iOS",
+      "target": "Metal"
+    },
+    {
+      "source": "Android",
+      "target": "OpenGL ES"
+    },
+    {
+      "source": "Android",
+      "target": "Vulkan"
+    },
+    {
+      "source": "World Wide Web",
+      "target": "WebGL"
+    },
+    {
+      "source": "World Wide Web",
+      "target": "WebGPU"
+    },
+    {
+      "source": "Nintendo Switch",
+      "target": "Vulkan"
+    }
+  ]
+}
