@@ -42,3 +42,28 @@ Links are arrays of objects with following keys (asterisk are must exist):
 | source*   | string   | Source node id                  |  
 | target*   | string   | Target node id                  |  
 | type      | string   | "include" (default) or "derive" |  
+
+## Contribution
+
+Contributions are welcome. Please follow:
+
+1. Fork this repository
+2. Add nodes or links in related json files. Add "contributor" key optionally.
+3. Testing
+4. Make Pull request
+
+If there are too many nodes/links in a single file, you may extract them into a new JSON in a directory,
+and add the JSON file into `/database.json`.
+
+### Testing
+
+When testing locally, you need to start a http server
+(because most browser does not accept reading json files in `file://`).
+For example, using python 3's built-in http server:
+
+~~~bash
+python3 -m http.server
+~~~
+
+Then you can use `http://localhost:8000` to view the local site.
+For testing single(or several) JSON, you may use `?d=` in query string, such as `http://localhost:8000/?d=/tech/graphics/shadow/shadow.json&e=-1`.

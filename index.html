@@ -91,6 +91,7 @@ body {
 <script>
 // Preset state
 const preset = {
+    database: [],
     title: "Game⨯Tech",
     selected: ["Technology"],
     expand: 1,
@@ -98,6 +99,7 @@ const preset = {
 };
 
 // Current state
+let database = preset.database;
 let selected = new Set(preset.selected);
 let title = preset.title;
 let expand = preset.expand;
@@ -113,15 +115,28 @@ let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 
 let nodes = [], links = [];
 
-d3.json("database.json").then(database => {
+parseURLdatabse();
+if (database.length != 0) {
+    loadDatabase(database);
+}
+else {
+    d3.json("database.json").then(loadDatabase);
+}
+
+function loadDatabase(database) {
     Promise.all(database.map(url => d3.json(url))).then(files => {
         nodes = [].concat.apply([], files.map(file => file.nodes));
         links = [].concat.apply([], files.map(file => file.links));
+
+        // Remove invalid links
+        const idset = new Set(nodes.map(node => node.id));
+        links = links.filter(l => idset.has(l.source) && idset.has(l.target));
+
         main();
     }).catch(err => {
         console.log(err);
     })
-});
+}
 
 function main() {
     updateSize();
@@ -435,6 +450,8 @@ function updatePopup() {
 
 function pushState() {
     let q = [];
+    if (database.length != 0)
+        q.push(`d=${database.join(",")}`);
     if (title != preset.title)
         q.push(`t=${encodeURIComponent(title)}`);
     if (selected.size != preset.selected.length || !preset.selected.every(id => selected.has(id)))
@@ -469,6 +486,13 @@ function parseURL() {
     else {
         selected = new Set(preset.selected);
     }
+}
+
+// This need to be done independently before parseURL()
+function parseURLdatabse() {
+    const q = new URL(document.location.href).searchParams;
+    d = q.get("d");
+    database = d ? d.split(",") : preset.database;
 }
 
 function updateStateFromURL() {
