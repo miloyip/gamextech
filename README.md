@@ -32,6 +32,7 @@ Nodes are array of objects with following keys (asterisk are must exist):
 | title       | string                    | Title of the first publication which reveals this            | 
 | conference  | string                    | Abbreviation of conference name, e.g. GDC, SIGGRAPH          |
 | journal     | string                    | Abbreviation of journal name, e.g. JCGT                      |
+| organization| string or array of string | Company, institute or other organization                     |
 | contributor | string or array of string | github usernames of whom contribute to this node             | 
 
 Links are arrays of objects with following keys (asterisk are must exist):

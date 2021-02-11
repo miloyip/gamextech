@@ -65,6 +65,9 @@ body {
 <span style="float:left; width: 50%; font-size: 24px; cursor: pointer;" id="title" title="Click to rename"></span>
 <span style="clear:both">
     <span style="display:inline-block; width:100px">
+        <button id="reset">Reset</button>
+    </span>
+    <span style="display:inline-block; width:100px">
         Expand
         <select id="expand">
             <option value="0">0</button>
@@ -145,6 +148,16 @@ function main() {
             pushState();
         });
 
+    d3.select("#reset")
+        .on("click", event => {
+            selected = new Set(preset.selected);
+            title = preset.title;
+            expand = preset.expand;
+            chronology = preset.chronology;
+            updateTitle();
+            pushState();
+            restartSimulation();
+        });
     d3.select("#expand")
         .on("change", event => {
             expand = event.srcElement.value;
@@ -169,7 +182,7 @@ function main() {
     // Chronology scale
 
     chronologyScale = d3.scaleTime()
-        .domain([new Date(1950, 0), Date.now()])
+        .domain([new Date(1990, 0), Date.now()])
         .range([-width / 2 + margin.left, width / 2 - margin.right])
         .nice();
 
@@ -381,10 +394,16 @@ function updatePopup() {
         const shift = (r.bottom - r.top) * 0.5;
         const width = 200;
         let d = popup.node;
-        let html = `<p>${d.id}${d.abbr ? " (" + d.abbr + ")" : ""}</p><table>`;
+        let html = `<p>${d.id}${d.abbr ? " (" + d.abbr + ")" : ""}`;
+        if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(", ") : d.aka}</small>`;
+        html += "</p>";
+        if (d.synopsis) html += `<p>${d.synopsis}</p>`
+        html += "<table>";
         if (d.author) html += `<tr><td>🧑‍💻</td><td>${Array.isArray(d.author) ? d.author.join(", ") : d.author}</td></tr>`;
+        if (d.organization) html += `<tr><td>🏛</td><td>${Array.isArray(d.organization) ? d.organization.join(", ") : d.organization}</td></tr>`;
         if (d.title) html += `<tr><td>📜</td><td>${d.title}</td></tr>`;
         if (d.conference) html += `<tr><td>🎙️</td><td>${d.conference}</td></tr>`;
+        if (d.journal) html += `<tr><td>📚</td><td>${d.journal}</td></tr>`;
         if (d.link) {
             html += "<tr><td>🔗</td><td>";
             const links = Array.isArray(d.link) ? d.link : [d.link];
@@ -418,13 +437,13 @@ function pushState() {
     let q = [];
     if (title != preset.title)
         q.push(`t=${encodeURIComponent(title)}`);
-    if (selected != preset.selected)
+    if (selected.size != preset.selected.length || !preset.selected.every(id => selected.has(id)))
         q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id)).join(",")}`);
     if (expand != preset.expand)
         q.push(`e=${expand}`);
     if (chronology != preset.chronology)
         q.push(`c=${chronology | 0}`);
-    history.pushState({}, "", q.length == 0 ? "" : `?${q.join("&")}`);
+    history.pushState({}, "", q.length == 0 ? location.pathname : `?${q.join("&")}`);
 }
 
 function parseURL() {
