@@ -377,7 +377,7 @@ function restartSimulation() {
             update.selectAll("circle")
                 .attr("stroke", d => selected.has(d.id) ? "black" : "none");
             update.selectAll("text")
-                .text(nodeHtml);
+                .html(nodeHtml);
             return update;
         },
         exit => {
