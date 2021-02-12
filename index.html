@@ -329,8 +329,7 @@ function restartSimulation() {
                 .attr("stroke", d => selected.has(d.id) ? "black" : "none");
 
             g.append("text")
-                .text(nodeText)
-                .attr("x", 8)
+                .html(nodeHtml)
                 .clone(true).lower()
                     .attr("fill", "none")
                     .attr("stroke", "white")
@@ -378,7 +377,7 @@ function restartSimulation() {
             update.selectAll("circle")
                 .attr("stroke", d => selected.has(d.id) ? "black" : "none");
             update.selectAll("text")
-                .text(nodeText);
+                .text(nodeHtml);
             return update;
         },
         exit => {
@@ -588,8 +587,12 @@ function chronologyConstraint(d) {
     }
 }
 
-function nodeText(d) {
-    return d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `, ${d.year}` : "");
+function nodeHtml(d) {
+    let s = d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `, ${d.year}` : "");
+    return s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
+        .split("\n")
+        .map((d, i) => `<tspan x="8" y="${i * 12}">${d}</tspan>`)
+        .join("\n");
 }
 </script>
 </body>
