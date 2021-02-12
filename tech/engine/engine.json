@@ -1,6 +1,10 @@
 {
   "nodes": [
     {
+      "id": "Game Engine",
+      "aka": "Game Framework"
+    },
+    {
       "id": "Commercial Game Engine"
     },
     {
@@ -133,15 +137,6 @@
         "https://en.wikipedia.org/wiki/Unity_(game_engine)"
       ],
       "year": 2020
-    },
-    {
-      "id": "Unity",
-      "organization": "Unity Technologies",
-      "link": [
-        "https://unity.com/",
-        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
-      ],
-      "year": 2005
     },
     {
       "id": "CryEngine",
@@ -567,8 +562,12 @@
   ],
   "links": [
     {
-      "source": "Commercial Game Engine",
-      "target": "Unreal Engine"
+      "source": "Technology",
+      "target": "Game Engine"
+    },
+    {
+      "source": "Game Engine",
+      "target": "Commercial Game Engine"
     },
     {
       "source": "Unreal Engine",
@@ -752,6 +751,10 @@
     },
     {
       "source": "Proprietary Game Engine",
+      "target": "UbiArt Framework"
+    },
+    {
+      "source": "Proprietary Game Engine",
       "target": "Scimitar"
     },
     {
@@ -830,6 +833,10 @@
     },
     {
       "source": "Proprietary Game Engine",
+      "target": "Rockstar Advanced Game Engine"
+    },
+    {
+      "source": "Proprietary Game Engine",
       "target": "Ego"
     },
     {
@@ -856,6 +863,10 @@
     {
       "source": "Proprietary Game Engine",
       "target": "MT Framework"
+    },
+    {
+      "source": "Proprietary Game Engine",
+      "target": "Fox Engine"
     },
     {
       "source": "Proprietary Game Engine",

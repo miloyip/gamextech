@@ -42,10 +42,6 @@
       "id": "Multiplayer"
     },
     {
-      "id": "Game Engine",
-      "aka": "Game Framework"
-    },
-    {
       "id": "Content Creation"
     }
   ],
@@ -93,14 +89,6 @@
     {
       "source": "Technology",
       "target": "Gameplay"
-    },
-    {
-      "source": "Technology",
-      "target": "Game Engine"
-    },
-    {
-      "source": "Game Engine",
-      "target": "Commercial Game Engine"
     },
     {
       "source": "Technology",

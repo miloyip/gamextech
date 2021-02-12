@@ -34,6 +34,13 @@
       "id": "Curved Surface"
     },
     {
+      "id": "Subdivision Surface"
+    },
+    {
+      "id": "Implicit Surface",
+      "link": "https://en.wikipedia.org/wiki/Implicit_surface"
+    },
+    {
       "id": "Mesh"
     },
     {
@@ -47,10 +54,6 @@
       "id": "Voxel"
     },
     {
-      "id": "Implicit Surface",
-      "link": "https://en.wikipedia.org/wiki/Implicit_surface"
-    },
-    {
       "id": "Constructive Solid Geometry",
       "abbr": "CSG"
     },
@@ -59,6 +62,14 @@
     },
     {
       "id": "Imposter"
+    },
+    {
+      "id": "Tessellation",
+      "link": "https://en.wikipedia.org/wiki/Tessellation_(computer_graphics)"
+    },
+    {
+      "id": "Displacement Mapping",
+      "link": "https://en.wikipedia.org/wiki/Displacement_mapping"
     },
     {
       "id": "Animation"
@@ -125,32 +136,6 @@
       "id": "Lighting"
     },
     {
-      "id": "Shading"
-    },
-    {
-      "id": "Forward Shading"
-    },
-    {
-      "id": "Deferred Shading",
-      "link": "https://en.wikipedia.org/wiki/Deferred_shading"
-    },
-    {
-      "id": "Deferred Lighting",
-      "aka": "Light Pre-pass"
-    },
-    {
-      "id": "Tiled Deferred Shading"
-    },
-    {
-      "id": "Tiled Forward Shading"
-    },
-    {
-      "id": "Clustered Forward Shading"
-    },
-    {
-      "id": "Clustered Deferred Shading"
-    },
-    {
       "id": "Global Illimulation",
       "abbr": "GI"
     },
@@ -158,7 +143,7 @@
       "id": "Ray Tracing",
       "author": "John Turner Whitted",
       "title": "An improved illumination model for shaded display.",
-      "conference": "PACMCGIT",
+      "conference": "SIGGRAPH",
       "year": 1979
     },
     {
@@ -171,16 +156,11 @@
       "id": "Photon Mapping"
     },
     {
-      "id": "Shadow"
-    },
-    {
-      "id": "Texture"
-    },
-    {
-      "id": "Material"
-    },
-    {
       "id": "Post-Processing"
+    },
+    {
+      "id": "Non-Photorealistic Rendering",
+      "abbr": "NPR"
     }
   ],
   "links": [
@@ -283,6 +263,14 @@
     },
     {
       "source": "Modeling",
+      "target": "Implicit Surface"
+    },
+    {
+      "source": "Modeling",
+      "target": "Subdivision Surface"
+    },
+    {
+      "source": "Modeling",
       "target": "Mesh"
     },
     {
@@ -299,10 +287,6 @@
     },
     {
       "source": "Modeling",
-      "target": "Implicit Surface"
-    },
-    {
-      "source": "Modeling",
       "target": "Constructive Solid Geometry"
     },
     {
@@ -313,6 +297,14 @@
       "source": "Billboard",
       "target": "Imposter",
       "type": "derive"
+    },
+    {
+      "source": "Modeling",
+      "target": "Tessellation"
+    },
+    {
+      "source": "Tessellation",
+      "target": "Displacement Mapping"
     },
     {
       "source": "Graphics",
@@ -388,48 +380,7 @@
     },
     {
       "source": "Rendering",
-      "target": "Texture"
-    },
-    {
-      "source": "Rendering",
       "target": "Lighting"
-    },
-    {
-      "source": "Lighting",
-      "target": "Shading"
-    },
-    {
-      "source": "Shading",
-      "target": "Forward Shading"
-    },
-    {
-      "source": "Shading",
-      "target": "Deferred Shading"
-    },
-    {
-      "source": "Deferred Shading",
-      "target": "Deferred Lighting",
-      "type": "derive"
-    },
-    {
-      "source": "Deferred Shading",
-      "target": "Tiled Deferred Shading",
-      "type": "derive"
-    },
-    {
-      "source": "Forward Shading",
-      "target": "Tiled Forward Shading",
-      "type": "derive"
-    },
-    {
-      "source": "Tiled Forward Shading",
-      "target": "Clustered Forward Shading",
-      "type": "derive"
-    },
-    {
-      "source": "Tiled Deferred Shading",
-      "target": "Clustered Deferred Shading",
-      "type": "derive"
     },
     {
       "source": "Lighting",
@@ -448,16 +399,12 @@
       "target": "Radiosity"
     },
     {
-      "source": "Lighting",
-      "target": "Shadow"
-    },
-    {
-      "source": "Rendering",
-      "target": "Material"
-    },
-    {
       "source": "Rendering",
       "target": "Post-Processing"
+    },
+    {
+      "source": "Rendering",
+      "target": "Non-Photorealistic Rendering"
     }
   ]
 }

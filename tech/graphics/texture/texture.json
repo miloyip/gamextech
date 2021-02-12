@@ -1,0 +1,461 @@
+{
+  "nodes": [
+    {
+      "id": "Texture"
+    },
+    {
+      "id": "Texel",
+      "aka": [
+        "Texture Element",
+        "Texture Pixel"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Texel_(graphics)"
+    },
+    {
+      "id": "Texture Mapping",
+      "author": "Edwin Catmull",
+      "title": "A subdivision algorithm for computer display of curved surfaces",
+      "link": "http://www.pixartouchbook.com/storage/catmull_thesis.pdf",
+      "year": 1974
+    },
+    {
+      "id": "Texture Mapping Rasterization Algorithm"
+    },
+    {
+      "id": "Affine Texture Mapping"
+    },
+    {
+      "id": "Perspective Correct Texture Mapping",
+      "author": "Paul Heckbert",
+      "title": "Texture Mapping Polygons in Perspective",
+      "link": "https://www.researchgate.net/publication/2722735_Texture_Mapping_Polygons_In_Perspective",
+      "year": 1983
+    },
+    {
+      "id": "Texture Filtering"
+    },
+    {
+      "id": "Mipmap",
+      "author": "Lance Williams",
+      "title": "Pyramidal Parametrics",
+      "link": [
+        "https://web.archive.org/web/20140414134825/http://staff.cs.psu.ac.th/iew/cs344-481/p1-williams.pdf",
+        "https://en.wikipedia.org/wiki/Mipmap"
+      ],
+      "conference": "SIGGRAPH",
+      "year": 1983
+    },
+    {
+      "id": "Nearest Filtering",
+      "aka": [
+        "Point Sampling",
+        "Nearest-neighbor Interpolation",
+        "Proximal Interpolation"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation"
+    },
+    {
+      "id": "Bilinear Filtering",
+      "aka": "Bilinear Interpolation",
+      "link": "https://en.wikipedia.org/wiki/Bilinear_interpolation"
+    },
+    {
+      "id": "Trilinear Filtering",
+      "link": "https://en.wikipedia.org/wiki/Trilinear_filtering"
+    },
+    {
+      "id": "Anisotropic Filtering",
+      "abbr": "AF",
+      "link": "https://en.wikipedia.org/wiki/Anisotropic_filtering"
+    },
+    {
+      "id": "Bicubic Filtering",
+      "link": "https://en.wikipedia.org/wiki/Bicubic_interpolation"
+    },
+    {
+      "id": "Summed-area Table",
+      "abbr": "SAT",
+      "author": "Franklin Crow",
+      "title": "Summed-Area Tables for Texture Mapping",
+      "conference": "SIGGRAPH",
+      "link": "https://en.wikipedia.org/wiki/Summed-area_table",
+      "year": 1984
+    },
+    {
+      "id": "Texture Addressing Mode"
+    },
+    {
+      "id": "Wrap Addressing Mode"
+    },
+    {
+      "id": "Clamp Addressing Mode"
+    },
+    {
+      "id": "Mirror Addressing Mode"
+    },
+    {
+      "id": "Border Color Addressing Mode"
+    },
+    {
+      "id": "Texture Type"
+    },
+    {
+      "id": "1D Texture"
+    },
+    {
+      "id": "2D Texture"
+    },
+    {
+      "id": "3D Texture",
+      "aka": [
+        "Volume Texture",
+        "Volumetric Texture"
+      ]
+    },
+    {
+      "id": "Cube Texture",
+      "author": "Ned Greene",
+      "title": "Environment mapping and other applications of world projections.",
+      "conference": "IEEE computer graphics and Applications",
+      "link": "https://en.wikipedia.org/wiki/Cube_mapping",
+      "year": 1986
+    },
+    {
+      "id": "Texture Array",
+      "aka": "Array Texture"
+    },
+    {
+      "id": "Texture Compression",
+      "author": [
+        "Andrew Beers",
+        "Maneesh Agrawala",
+        "Navin Chaddha"
+      ],
+      "title": "Rendering from Compressed Textures",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/237170.237276",
+        "https://en.wikipedia.org/wiki/Texture_compression"
+      ],
+      "year": 1996
+    },
+    {
+      "id": "S3 Texture Compression",
+      "abbr": "S3TC",
+      "aka": [
+        "DXTn",
+        "DXTC",
+        "BCn"
+      ],
+      "organization": "S3 Graphics",
+      "link": "https://en.wikipedia.org/wiki/S3_Texture_Compression",
+      "year": 1998
+    },
+    {
+      "id": "Ericsson Texture Compression",
+      "aka": "iPACKMAN",
+      "abbr": "ETC",
+      "organization": "Ericsson Research",
+      "year": 2005
+    },
+    {
+      "id": "PowerVR Texture Compression",
+      "abbr": "PVRTC",
+      "link": "https://en.wikipedia.org/wiki/PVRTC"
+    },
+    {
+      "id": "Adaptive Scalable Texture Compression",
+      "abbr": "ASTC",
+      "link": "https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression",
+      "year": 2012
+    },
+    {
+      "id": "Supercompressed Texture"
+    },
+    {
+      "id": "Crunch",
+      "link": "https://github.com/BinomialLLC/crunch"
+    },
+    {
+      "id": "Basis Universal",
+      "link": "https://github.com/BinomialLLC/basis_universal"
+    },
+    {
+      "id": "GPU-decodable Supercompressed Texture",
+      "abbr": "GST",
+      "author": [
+        "Pavel Krajcevski",
+        "Srihari Pratapa",
+        "Dinesh Manocha"
+      ],
+      "conference": "SIGGRAPH Asia",
+      "link": "http://gamma.cs.unc.edu/GST/",
+      "year": 2016
+    },
+    {
+      "id": "Texture Atlas",
+      "link": "https://en.wikipedia.org/wiki/Texture_atlas"
+    },
+    {
+      "id": "Virtual Texture"
+    },
+    {
+      "id": "Clipmap",
+      "author": [
+        "Christopher C. Tanner",
+        "Christopher J. Migdal",
+        "Michael T. Jones"
+      ],
+      "title": "The clipmap: a virtual mipmap",
+      "year": 1998
+    },
+    {
+      "id": "MegaTexture"
+    },
+    {
+      "id": "Streaming Virtual Texture",
+      "abbr": "SVT"
+    },
+    {
+      "id": "Runtime Virtual Texture",
+      "abbr": "RVT"
+    },
+    {
+      "id": "Procedural Texture"
+    },
+    {
+      "id": "Gradient Noise",
+      "link": "https://en.wikipedia.org/wiki/Gradient_noise"
+    },
+    {
+      "id": "Value Noise",
+      "link": "https://en.wikipedia.org/wiki/Value_noise"
+    },
+    {
+      "id": "Perlin Noise",
+      "author": "Ken Perlin",
+      "title": "An image synthesizer",
+      "conference": "SIGGRAPH",
+      "link": [
+        "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.2248&rep=rep1&type=pdf",
+        "https://en.wikipedia.org/wiki/Perlin_noise"
+      ],
+      "year": 1985
+    },
+    {
+      "id": "Simplex Noise",
+      "author": "Ken Perlin",
+      "title": "Noise hardware",
+      "conference": "Real-Time Shading SIGGRAPH Course Notes",
+      "link": [
+        "https://www.csee.umbc.edu/~olano/s2002c36/ch02.pdf",
+        "https://en.wikipedia.org/wiki/Simplex_noise"
+      ],
+      "year": 2001
+    },
+    {
+      "id": "Hypertexture",
+      "author": [
+        "Ken Perlin",
+        "Eric M. Hoffert"
+      ],
+      "conference": "SIGGRAPH",
+      "year": 1989
+    }
+  ],
+  "links": [
+    {
+      "source": "Rendering",
+      "target": "Texture"
+    },
+    {
+      "source": "Texture",
+      "target": "Texel"
+    },
+    {
+      "source": "Texture",
+      "target": "Texture Mapping"
+    },
+    {
+      "source": "Texture Mapping",
+      "target": "Texture Mapping Rasterization Algorithm"
+    },
+    {
+      "source": "Texture Mapping Rasterization Algorithm",
+      "target": "Affine Texture Mapping"
+    },
+    {
+      "source": "Texture Mapping Rasterization Algorithm",
+      "target": "Perspective Correct Texture Mapping"
+    },
+    {
+      "source": "Texture Mapping",
+      "target": "Texture Filtering"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Mipmap"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Nearest Filtering"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Bilinear Filtering"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Trilinear Filtering"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Anisotropic Filtering"
+    },
+    {
+      "source": "Texture Filtering",
+      "target": "Bicubic Filtering"
+    },
+    {
+      "source": "Anisotropic Filtering",
+      "target": "Summed-area Table"
+    },
+    {
+      "source": "Texture Mapping",
+      "target": "Texture Addressing Mode"
+    },
+    {
+      "source": "Texture Addressing Mode",
+      "target": "Wrap Addressing Mode"
+    },
+    {
+      "source": "Texture Addressing Mode",
+      "target": "Clamp Addressing Mode"
+    },
+    {
+      "source": "Texture Addressing Mode",
+      "target": "Mirror Addressing Mode"
+    },
+    {
+      "source": "Texture Addressing Mode",
+      "target": "Border Color Addressing Mode"
+    },
+    {
+      "source": "Texture",
+      "target": "Texture Type"
+    },
+    {
+      "source": "Texture Type",
+      "target": "1D Texture"
+    },
+    {
+      "source": "Texture Type",
+      "target": "2D Texture"
+    },
+    {
+      "source": "Texture Type",
+      "target": "3D Texture"
+    },
+    {
+      "source": "Texture Type",
+      "target": "Cube Texture"
+    },
+    {
+      "source": "Texture Type",
+      "target": "Texture Array"
+    },
+    {
+      "source": "Texture",
+      "target": "Texture Compression"
+    },
+    {
+      "source": "Texture Compression",
+      "target": "S3 Texture Compression"
+    },
+    {
+      "source": "Texture Compression",
+      "target": "Ericsson Texture Compression"
+    },
+    {
+      "source": "Texture Compression",
+      "target": "PowerVR Texture Compression"
+    },
+    {
+      "source": "Texture Compression",
+      "target": "Adaptive Scalable Texture Compression"
+    },
+    {
+      "source": "Texture Compression",
+      "target": "Supercompressed Texture"
+    },
+    {
+      "source": "Supercompressed Texture",
+      "target": "Crunch"
+    },
+    {
+      "source": "Supercompressed Texture",
+      "target": "Basis Universal"
+    },
+    {
+      "source": "Supercompressed Texture",
+      "target": "GPU-decodable Supercompressed Texture"
+    },
+    {
+      "source": "Texture",
+      "target": "Displacement Mapping"
+    },
+    {
+      "source": "Texture",
+      "target": "Texture Atlas"
+    },
+    {
+      "source": "Texture",
+      "target": "Mega Texture"
+    },
+    {
+      "source": "Texture",
+      "target": "Virtual Texture"
+    },
+    {
+      "source": "Virtual Texture",
+      "target": "Clipmap"
+    },
+    {
+      "source": "Virtual Texture",
+      "target": "MegaTexture"
+    },
+    {
+      "source": "Virtual Texture",
+      "target": "Streaming Virtual Texture"
+    },
+    {
+      "source": "Virtual Texture",
+      "target": "Runtime Virtual Texture"
+    },
+    {
+      "source": "Texture",
+      "target": "Procedural Texture"
+    },
+    {
+      "source": "Procedural Texture",
+      "target": "Gradient Noise"
+    },
+    {
+      "source": "Procedural Texture",
+      "target": "Value Noise"
+    },
+    {
+      "source": "Gradient Noise",
+      "target": "Perlin Noise"
+    },
+    {
+      "source": "Perlin Noise",
+      "target": "Simplex Noise",
+      "type": "derive"
+    },
+    {
+      "source": "Procedural Texture",
+      "target": "Hypertexture"
+    }
+  ]
+}

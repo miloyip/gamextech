@@ -1,6 +1,9 @@
 {
   "nodes": [
     {
+      "id": "Shadow"
+    },
+    {
       "id": "Shadow Volume",
       "author": "Franklin Crow",
       "title": "Shadow Algorithms for Computer Graphics",
@@ -34,9 +37,10 @@
     },
     {
       "id": "Shadow Map",
+      "aka": "Shadowing Projection",
       "author": "Lance Joseph Williams",
       "title": "Casting curved shadows on curved surfaces",
-      "conference": "PACMCGIT",
+      "conference": "SIGGRAPH",
       "link": "https://www.researchgate.net/publication/234784687_Casting_Curved_Shadows_on_Curved_Surfaces",
       "year": 1978
     },
@@ -51,7 +55,7 @@
         "Drettakis George"
       ],
       "title": "Perspective shadow maps",
-      "conference": "PACMCGIT",
+      "conference": "SIGGRAPH",
       "year": 2002
     },
     {
@@ -223,7 +227,7 @@
         "Eric Veach"
       ],
       "title": "Deep shadow maps",
-      "conference": "PACMCGIT",
+      "conference": "SIGGRAPH",
       "link": "https://graphics.stanford.edu/papers/deepshadows/deepshad.pdf",
       "year": 2000
     },
@@ -247,6 +251,37 @@
       ],
       "conference": "I3D",
       "year": 2011
+    },
+    {
+      "id": "Omnidirectional Shadow Map"
+    },
+    {
+      "id": "Cube Shadow Map",
+      "link": "https://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch12.html"
+    },
+    {
+      "id": "Dual Parabloid Shadow Map",
+      "abbr": "DPSM",
+      "author": [
+        "Stefan Brabec",
+        "Thomas Annen",
+        "Hans-Peter",
+        "Seidel John Vince"
+      ],
+      "title": "Shadow Mapping for Hemispherical and Omnidirectional Light Sources",
+      "link": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.11.3540&rep=rep1&type=pdf",
+      "year": 2002
+    },
+    {
+      "id": "Practical Dual Parabloid Shadow Map",
+      "author": [
+        "Brian Osman",
+        "Mike Bukowski",
+        "Chris McEvoy"
+      ],
+      "title": "Practical implementation of dual paraboloid shadow maps",
+      "conference": "SIGGRAPH on Video Game",
+      "year": 2006
     },
     {
       "id": "Shadow with Precomputation"
@@ -280,6 +315,10 @@
     }
   ],
   "links": [
+    {
+      "source": "Lighting",
+      "target": "Shadow"
+    },
     {
       "source": "Shadow",
       "target": "Shadow Volume"
@@ -388,6 +427,32 @@
     {
       "source": "Shadow Map with Transparency",
       "target": "Colored Stochastic Shadow Map"
+    },
+    {
+      "source": "Shadow Map",
+      "target": "Omnidirectional Shadow Map"
+    },
+    {
+      "source": "Omnidirectional Shadow Map",
+      "target": "Cube Shadow Map"
+    },
+    {
+      "source": "Cube Shadow Map",
+      "target": "Cube Mapping"
+    },
+    {
+      "source": "Omnidirectional Shadow Map",
+      "target": "Dual Parabloid Shadow Map"
+    },
+    {
+      "source": "Dual Parabloid Shadow Map",
+      "target": "Dual Parabloid Mapping",
+      "type": "use"
+    },
+    {
+      "source": "Dual Parabloid Shadow Map",
+      "target": "Practical Dual Parabloid Shadow Map",
+      "type": "derive"
     },
     {
       "source": "Shadow",
