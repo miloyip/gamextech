@@ -165,6 +165,7 @@ function main() {
 
     d3.select("#reset")
         .on("click", event => {
+            database = preset.database;
             selected = new Set(preset.selected);
             title = preset.title;
             expand = preset.expand;
