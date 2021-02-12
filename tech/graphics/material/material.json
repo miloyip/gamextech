@@ -13,6 +13,9 @@
       "id": "Data-driven Material"
     },
     {
+      "id": "Specialized Material"
+    },
+    {
       "id": "Albedo",
       "link": "https://en.wikipedia.org/wiki/Albedo"
     },
@@ -287,6 +290,35 @@
         "https://merl.com/publications/docs/TR2003-83.pdf"
       ],
       "year": 2003
+    },
+    {
+      "id": "Hair Material"
+    },
+    {
+      "id": "Kajiya-Kay Model",
+      "author": [
+        "James T.Kajiya",
+        "Timothy L. Kay"
+      ],
+      "title": "Rendering fur with three dimensional textures",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/74334.74361",
+      "year": 1989
+    },
+    {
+      "id": "Marschner Model",
+      "author": [
+        "Stephen R. Marschner",
+        "Henrik Wann Jensen",
+        "Mike Cammarano"
+      ],
+      "title": "Light scattering from human hair fibers",
+      "journal": "TOG",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/882262.882345",
+      "year": 2003
+    },
+    {
+      "id": "Skin Material"
     }
   ],
   "links": [
@@ -305,6 +337,10 @@
     {
       "source": "Material",
       "target": "Data-driven Material"
+    },
+    {
+      "source": "Material",
+      "target": "Specialized Material"
     },
     {
       "source": "Physically-based Material",
@@ -465,6 +501,22 @@
     {
       "source": "Data-driven Material",
       "target": "MERL BRDF Database"
+    },
+    {
+      "source": "Specialized Material",
+      "target": "Hair Material"
+    },
+    {
+      "source": "Hair Material",
+      "target": "Kajiya-Kay Model"
+    },
+    {
+      "source": "Hair Material",
+      "target": "Marschner Model"
+    },
+    {
+      "source": "Specialized Material",
+      "target": "Skin Material"
     }
   ]
 }
