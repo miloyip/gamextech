@@ -234,6 +234,15 @@ function main() {
         .attr("marker-end", `url(${new URL(`#arrow`, location)})`)
         .selectAll("path");
 
+    linkLabelPath = g.append("g")
+        .attr("visibility", "hidden")
+        .selectAll("path");
+
+    linkLabel = g.append("g")
+        .attr("fill", "#999")
+        .style("pointer-events", "none")
+        .selectAll("text");
+
     node = g.append("g")
         .attr("stroke-width", 1.5)
         .attr("cursor", "pointer")
@@ -256,14 +265,21 @@ function restartSimulation() {
         .velocityDecay(0.5)
         .on("tick", () => {
             function linkArc(d) {
-              const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
-              return `
-                M${d.source.x},${d.source.y}
-                A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
-              `;
+                const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+                return `M${d.source.x},${d.source.y} A${r},${r} 0 0 1 ${d.target.x},${d.target.y}`;
+            }
+            function linkLabelArc(d) {
+                if (d.source.x > d.target.x) { // swap the source/target for flipping the text
+                    const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+                    return `M${d.target.x},${d.target.y} A${r},${r} 0 0 0 ${d.source.x},${d.source.y}`;
+                }
+                else {
+                     return linkArc(d);
+                }
             }
 
             link.attr("d", linkArc);
+            linkLabelPath.attr("d", linkLabelArc);
             node.attr("transform", d => `translate(${d.x},${d.y})`);
             updatePopup();
         });
@@ -379,6 +395,24 @@ function restartSimulation() {
 
     link = link.data(new_links, d => [d.source, d.target])
         .join("path");
+
+    let labaledLinks = new_links.filter(d => d.type != null);
+    linkLabelPath = linkLabelPath.data(labaledLinks, d => [d.source, d.target])
+        .join("path")
+        .attr("id", (d, i) => `labeledLink${i}`);
+
+    linkLabel = linkLabel.data(labaledLinks, d => [d.source, d.target])
+        .join("text")
+        .append("textPath")
+        .attr("startOffset", "50%")
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("xlink:href", (d, i) => `#labeledLink${i}`)
+        .text(d => d.type)
+        .clone(true).lower()
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .attr("stroke-width", 3);
 
     simulation.nodes(new_nodes);
     simulation.force("link", d3.forceLink(new_links).id(d => d.id).distance(100).strength(1.0));
