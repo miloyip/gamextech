@@ -19,9 +19,6 @@
       "id": "Software Engineering"
     },
     {
-      "id": "Graphics"
-    },
-    {
       "id": "Audio"
     },
     {
@@ -65,10 +62,6 @@
     {
       "source": "Technology",
       "target": "Software Engineering"
-    },
-    {
-      "source": "Technology",
-      "target": "Graphics"
     },
     {
       "source": "Technology",

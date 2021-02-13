@@ -38,7 +38,7 @@
         "David Neubelt"
       ],
       "title": "Real-Time Polygonal-Light Shading with Linearly Transformed Cosines",
-      "link":"https://eheitzresearch.wordpress.com/415-2/",
+      "link": "https://eheitzresearch.wordpress.com/415-2/",
       "conference": "SIGGRAPH",
       "year": 2016
     },
@@ -310,7 +310,7 @@
     },
     {
       "source": "Global Illumination",
-      "target": "Offline Global Illumination"      
+      "target": "Offline Global Illumination"
     },
     {
       "source": "Offline Global Illumination",
@@ -330,7 +330,7 @@
     },
     {
       "source": "Global Illumination",
-      "target": "Realtime Global Illumination"      
+      "target": "Realtime Global Illumination"
     },
     {
       "source": "Realtime Global Illumination",

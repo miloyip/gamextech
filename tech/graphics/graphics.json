@@ -1,6 +1,10 @@
 {
   "nodes": [
     {
+      "id": "Graphics",
+      "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"      
+    },
+    {
       "id": "Graphics API"
     },
     {
@@ -93,54 +97,14 @@
       "id": "Motion Matching"
     },
     {
-      "id": "Rendering"
-    },
-    {
-      "id": "Visibility"
-    },
-    {
-      "id": "Rasterization Stage Visibility"
-    },
-    {
-      "id": "Application Stage Visibility"
-    },
-    {
-      "id": "Back-face Culling"
-    },
-    {
-      "id": "Z-buffer"
-    },
-    {
-      "id": "Occlusion Query"
-    },
-    {
-      "id": "View Frustum Culling"
-    },
-    {
-      "id": "Occlusion Culling"
-    },
-    {
-      "id": "Contribution Culling"
-    },
-    {
-      "id": "Potentially Visible Set",
-      "abbr": "PVS"
-    },
-    {
       "id": "Scene Management"
-    },
-    {
-      "id": "Camera"
-    },
-    {
-      "id": "Post-Processing"
-    },
-    {
-      "id": "Non-Photorealistic Rendering",
-      "abbr": "NPR"
     }
   ],
   "links": [
+    {
+      "source": "Technology",
+      "target": "Graphics"
+    },
     {
       "source": "Graphics",
       "target": "Graphics API"
@@ -189,18 +153,6 @@
     {
       "source": "Graphics API",
       "target": "WebGPU"
-    },
-    {
-      "source": "Graphics",
-      "target": "Rendering"
-    },
-    {
-      "source": "Rendering",
-      "target": "Scene Management"
-    },
-    {
-      "source": "Rendering",
-      "target": "Camera"
     },
     {
       "source": "Graphics",
@@ -288,76 +240,8 @@
       "target": "Motion Matching"
     },
     {
-      "source": "Rendering",
-      "target": "Visibility"
-    },
-    {
-      "source": "Visibility",
-      "target": "Rasterization Stage Visibility"
-    },
-    {
-      "source": "Rasterization Stage Visibility",
-      "target": "Back-face Culling"
-    },
-    {
-      "source": "Rasterization Stage Visibility",
-      "target": "Z-buffer"
-    },
-    {
-      "source": "Rasterization Stage Visibility",
-      "target": "Occlusion Query"
-    },
-    {
-      "source": "Visibility",
-      "target": "Application Stage Visibility"
-    },
-    {
-      "source": "Application Stage Visibility",
-      "target": "View Frustum Culling"
-    },
-    {
-      "source": "Application Stage Visibility",
-      "target": "Occlusion Culling"
-    },
-    {
-      "source": "Application Stage Visibility",
-      "target": "Contribution Culling"
-    },
-    {
-      "source": "Application Stage Visibility",
-      "target": "Potentially Visible Set"
-    },
-    {
-      "source": "Rendering",
-      "target": "Camera"
-    },
-    {
-      "source": "Rendering",
-      "target": "Lighting"
-    },
-    {
-      "source": "Lighting",
-      "target": "Global Illimulation"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Ray Tracing"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Path Tracing"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Radiosity"
-    },
-    {
-      "source": "Rendering",
-      "target": "Post-Processing"
-    },
-    {
-      "source": "Rendering",
-      "target": "Non-Photorealistic Rendering"
+      "source": "Graphics",
+      "target": "Scene Management"
     }
   ]
 }

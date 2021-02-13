@@ -335,7 +335,7 @@
   ],
   "links": [
     {
-      "source": "Lighting",
+      "source": "Rendering",
       "target": "Shadow"
     },
     {
