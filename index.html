@@ -490,7 +490,8 @@ function pushState() {
     if (title != preset.title)
         q.push(`t=${encodeURIComponent(title)}`);
     if (selected.size != preset.selected.length || !preset.selected.every(id => selected.has(id)))
-        q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id)).join(",")}`);
+        q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id.replace(" ", "_")))
+            .join(",")}`);
     if (expand != preset.expand)
         q.push(`e=${expand}`);
     if (chronology != preset.chronology)
@@ -513,7 +514,7 @@ function parseURL() {
         const idset = new Set(nodes.map(node => node.id));
         selected = new Set(
             s.split(",")
-                .map(id => decodeURIComponent(id))
+                .map(id => decodeURIComponent(id).replace("_", " "))
                 .filter(id => idset.has(id)));
         if (selected.size == 0)
             selected = new Set(preset.selected);
