@@ -284,6 +284,25 @@
       "year": 2006
     },
     {
+      "id": "Hemispherical Shadow Map"
+    },
+    {
+      "id": "Imperfect Shadow Map",
+      "abbr": "ISM",
+      "author": [
+        "T. Ritschel",
+        "T. Grosch",
+        "M. H. Kim",
+        "H. P. Seidel",
+        "C. Dachsbacher",
+        "J. Kautz"
+      ],
+      "title": "Imperfect Shadow Maps for Efficient Computation of Indirect Illumination",
+      "journal": "TOG",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/1409060.1409082",
+      "year": 2008
+    },
+    {
       "id": "Shadow with Precomputation"
     },
     {
@@ -453,6 +472,14 @@
       "source": "Dual Parabloid Shadow Map",
       "target": "Practical Dual Parabloid Shadow Map",
       "type": "derive"
+    },
+    {
+      "source": "Shadow Map",
+      "target": "Hemispherical Shadow Map"
+    },
+    {
+      "source": "Hemispherical Shadow Map",
+      "target": "Imperfect Shadow Map"
     },
     {
       "source": "Shadow",

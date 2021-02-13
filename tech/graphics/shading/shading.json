@@ -241,6 +241,23 @@
       "conference": "I3D",
       "link": "https://dl.acm.org/doi/pdf/10.1145/1111411.1111423",
       "year": 2006
+    },
+    {
+      "id": "Projective Texture Mapping",
+      "author": [
+        "Mark Segal",
+        "Carl Korobkin",
+        "Rolf van Widenfelt",
+        "Jim Foran",
+        "Paul Haeberli"
+      ],
+      "title": "Fast shadows and lighting effects using texture mapping",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://en.wikipedia.org/wiki/Projective_texture_mapping",
+        "https://dl.acm.org/doi/pdf/10.1145/133994.134071"
+      ],
+      "year": 1992
     }
   ],
   "links": [
@@ -358,6 +375,10 @@
       "source": "Parallax Occlusion Mapping",
       "target": "Parallax Occlusion Mapping with Soft Shadow",
       "type": "derive"
+    },
+    {
+      "source": "Shading",
+      "target": "Projective Texture Mapping"
     }
   ]
 }

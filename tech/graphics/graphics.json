@@ -133,29 +133,6 @@
       "id": "Camera"
     },
     {
-      "id": "Lighting"
-    },
-    {
-      "id": "Global Illimulation",
-      "abbr": "GI"
-    },
-    {
-      "id": "Ray Tracing",
-      "author": "John Turner Whitted",
-      "title": "An improved illumination model for shaded display.",
-      "conference": "SIGGRAPH",
-      "year": 1979
-    },
-    {
-      "id": "Path Tracing"
-    },
-    {
-      "id": "Radiosity"
-    },
-    {
-      "id": "Photon Mapping"
-    },
-    {
       "id": "Post-Processing"
     },
     {
@@ -224,30 +201,6 @@
     {
       "source": "Rendering",
       "target": "Camera"
-    },
-    {
-      "source": "Rendering",
-      "target": "Lighting"
-    },
-    {
-      "source": "Lighting",
-      "target": "Global Illimulation"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Ray Tracing"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Path Tracing"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Radiosity"
-    },
-    {
-      "source": "Global Illimulation",
-      "target": "Photon Mapping"
     },
     {
       "source": "Graphics",
