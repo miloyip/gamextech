@@ -5,30 +5,6 @@
       "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"
     },
     {
-      "id": "Graphics API"
-    },
-    {
-      "id": "Direct3D"
-    },
-    {
-      "id": "OpenGL"
-    },
-    {
-      "id": "OpenGL ES"
-    },
-    {
-      "id": "Vulkan"
-    },
-    {
-      "id": "Metal"
-    },
-    {
-      "id": "WebGL"
-    },
-    {
-      "id": "WebGPU"
-    },
-    {
       "id": "Modeling"
     },
     {
@@ -104,55 +80,6 @@
     {
       "source": "Technology",
       "target": "Graphics"
-    },
-    {
-      "source": "Graphics",
-      "target": "Graphics API"
-    },
-    {
-      "source": "Graphics API",
-      "target": "Direct3D"
-    },
-    {
-      "source": "Direct3D",
-      "target": "High-Level Shader Language"
-    },
-    {
-      "source": "Graphics API",
-      "target": "OpenGL"
-    },
-    {
-      "source": "OpenGL",
-      "target": "OpenGL Shading Language"
-    },
-    {
-      "source": "OpenGL",
-      "target": "OpenGL ES",
-      "type": "derive"
-    },
-    {
-      "source": "OpenGL ES",
-      "target": "OpenGL Shading Language"
-    },
-    {
-      "source": "Graphics API",
-      "target": "Vulkan"
-    },
-    {
-      "source": "Graphics API",
-      "target": "Metal"
-    },
-    {
-      "source": "Metal",
-      "target": "Metal Shading Language"
-    },
-    {
-      "source": "Graphics API",
-      "target": "WebGL"
-    },
-    {
-      "source": "Graphics API",
-      "target": "WebGPU"
     },
     {
       "source": "Graphics",

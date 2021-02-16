@@ -8,6 +8,9 @@
       "id": "Windows"
     },
     {
+      "id": "DirectX"
+    },
+    {
       "id": "MacOS"
     },
     {
@@ -51,6 +54,14 @@
     {
       "source": "Personal Computer",
       "target": "Windows"
+    },
+    {
+      "source": "Windows",
+      "target": "DirectX"
+    },
+    {
+      "source": "DirectX",
+      "target": "Direct3D"
     },
     {
       "source": "Personal Computer",

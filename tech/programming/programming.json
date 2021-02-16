@@ -54,19 +54,123 @@
       "id": "Python"
     },
     {
-      "id": "Shader Programming Language"
+      "id": "Shading Language",
+      "link": "https://en.wikipedia.org/wiki/Shading_language"
+    },
+    {
+      "id": "Cg Programming Language",
+      "author": [
+        "William R. Mark",
+        "R. Steven Glanville",
+        "Kurt Akeley",
+        "Mark J. Kilgard"
+      ],
+      "title": "Cg: A system for programming graphics hardware in a C-like language.",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/1201775.882362",
+        "https://developer.download.nvidia.com/CgTutorial/cg_tutorial_chapter01.html"
+      ],
+      "year": 2003
     },
     {
       "id": "High-Level Shader Language",
-      "abbr": "HLSL"
+      "abbr": "HLSL",
+      "organization": "Microsoft",
+      "link": [
+        "https://en.wikipedia.org/wiki/High-Level_Shading_Language"
+      ],
+      "year": 2002
     },
     {
       "id": "OpenGL Shading Language",
-      "abbr": "GLSL"
+      "abbr": "GLSL",
+      "organization": "Khronos Group",
+      "link": "https://en.wikipedia.org/wiki/OpenGL_Shading_Language",
+      "year": 2004
+    },
+    {
+      "id": "OpenGL ES Shading Language",
+      "abbr": "GLSL ES",
+      "organization": "Khronos Group",
+      "link": "https://en.wikipedia.org/wiki/OpenGL_Shading_Language",
+      "year": 2009
     },
     {
       "id": "Metal Shading Language",
       "abbr": "MSL"
+    },
+    {
+      "id": "Intermediate Language",
+      "abbr": "IR"
+    },
+    {
+      "id": "Common Intermediate Language",
+      "abbr": "CIL",
+      "organization": "Microsoft",
+      "link": [
+        "https://www.ecma-international.org/publications-and-standards/standards/ecma-335/",
+        "https://en.wikipedia.org/wiki/Common_Intermediate_Language"
+      ],
+      "year": 2001
+    },
+    {
+      "id": "DirectX Intermediate Language",
+      "organization": "Microsoft",
+      "abbr": "DXIR",
+      "link": "https://github.com/microsoft/DirectXShaderCompiler/blob/master/docs/DXIL.rst"
+    },
+    {
+      "id": "LLVM Intermediate Representation",
+      "abbr": "LLVM IR",
+      "link": [
+        "https://www.llvm.org/",
+        "https://en.wikipedia.org/wiki/LLVM"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "Standard Portable Intermediate Representation",
+      "abbr": "SPIR",
+      "organization": "Khronos Group",
+      "link": [
+        "https://www.khronos.org/spir",
+        "https://en.wikipedia.org/wiki/Standard_Portable_Intermediate_Representation"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "Standard Portable Intermediate Representation V",
+      "abbr": "SPIR-V",
+      "organization": "Khronos Group",
+      "link": [
+        "https://www.khronos.org/spir",
+        "https://en.wikipedia.org/wiki/Standard_Portable_Intermediate_Representation"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "Sh",
+      "author": [
+        "Michael D. McCool",
+        "Zheng Qin",
+        "Tiberiu S. Popa"
+      ],
+      "title": "Shader Metaprogramming",
+      "link": "http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/mccool02_sh.pdf",
+      "year": 2002
+    },
+    {
+      "id": "Slang",
+      "author": [
+        "Yong He",
+        "Kayvon Fatahalian",
+        "Tim Foley"
+      ],
+      "title": "Slang: language mechanisms for extensible real-time shading systems.",
+      "journal": "TOG",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/3197517.3201380",
+      "year": 2018
     }
   ],
   "links": [
@@ -140,19 +244,64 @@
     },
     {
       "source": "Programming Language",
-      "target": "Shader Programming Language"
+      "target": "Shading Language"
     },
     {
-      "source": "Shader Programming Language",
+      "source": "Shading Language",
       "target": "High-Level Shader Language"
     },
     {
-      "source": "Shader Programming Language",
+      "source": "Shading Language",
+      "target": "Cg Programming Language"
+    },
+    {
+      "source": "Shading Language",
       "target": "OpenGL Shading Language"
     },
     {
-      "source": "Shader Programming Language",
+      "source": "Shading Language",
+      "target": "OpenGL ES Shading Language"
+    },
+    {
+      "source": "Shading Language",
       "target": "Metal Shading Language"
+    },
+    {
+      "source": "Programming Language",
+      "target": "Intermediate Language"
+    },
+    {
+      "source": "Intermediate Language",
+      "target": "Common Intermediate Language"
+    },
+    {
+      "source": "Intermediate Language",
+      "target": "DirectX Intermediate Language"
+    },
+    {
+      "source": "Intermediate Language",
+      "target": "LLVM Intermediate Representation"
+    },
+    {
+      "source": "Intermediate Language",
+      "target": "Standard Portable Intermediate Representation"
+    },
+    {
+      "source": "Standard Portable Intermediate Representation",
+      "target": "Standard Portable Intermediate Representation V",
+      "type": "derive"
+    },
+    {
+      "source": "Shading Language",
+      "target": "Standard Portable Intermediate Representation V"
+    },
+    {
+      "source": "Shading Language",
+      "target": "Sh"
+    },
+    {
+      "source": "Shading Language",
+      "target": "Slang"
     }
   ]
 }

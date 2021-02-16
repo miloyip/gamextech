@@ -5,6 +5,7 @@
   "tech/cs/cs.json",
   "tech/engine/engine.json",
   "tech/graphics/graphics.json",
+  "tech/graphics/api/api.json",
   "tech/graphics/image/image.json",
   "tech/graphics/rendering/rendering.json",
   "tech/graphics/rendering/material/material.json",
