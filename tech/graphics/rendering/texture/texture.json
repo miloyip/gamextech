@@ -82,6 +82,19 @@
       "year": 1984
     },
     {
+      "id": "Fast Summed-area Table",
+      "author": [
+        "Justin Hensley",
+        "Thorsten Scheuermann",
+        "Greg Coombe",
+        "Montek Singh",
+        "Anselmo Lastra"
+      ],
+      "title": "Fast Summed-Area Table Generation and its Applications",
+      "journal": "Computer Graphics Forum",
+      "year": 2005
+    },
+    {
       "id": "Texture Addressing Mode"
     },
     {
@@ -319,6 +332,10 @@
     {
       "source": "Anisotropic Filtering",
       "target": "Summed-area Table"
+    },
+    {
+      "source": "Summed-area Table",
+      "target": "Fast Summed-area Table"
     },
     {
       "source": "Texture Mapping",

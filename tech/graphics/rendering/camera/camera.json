@@ -1,0 +1,824 @@
+{
+  "nodes": [
+    {
+      "id": "Camera",
+      "aka": "Virtual Camera System",
+      "link": "https://en.wikipedia.org/wiki/Virtual_camera_system"
+    },
+    {
+      "id": "Field of View",
+      "abbr": "FOV",
+      "aka": "Angle of View",
+      "link": "https://en.wikipedia.org/wiki/Angle_of_view"
+    },
+    {
+      "id": "Aspect Ratio",
+      "link": "https://en.wikipedia.org/wiki/Aspect_ratio"
+    },
+    {
+      "id": "Display Aspect Ratio",
+      "link": "https://en.wikipedia.org/wiki/Display_aspect_ratio"
+    },
+    {
+      "id": "Image Aspect Ratio",
+      "link": "https://en.wikipedia.org/wiki/Aspect_ratio_(image)"
+    },
+    {
+      "id": "Pixel Aspect Ratio",
+      "abbr": "PAR",
+      "link": "https://en.wikipedia.org/wiki/Pixel_aspect_ratio"
+    },
+    {
+      "id": "Pinhole Camera Model",
+      "link": "https://en.wikipedia.org/wiki/Pinhole_camera_model"
+    },
+    {
+      "id": "Camera Projection"
+    },
+    {
+      "id": "Near Plane"
+    },
+    {
+      "id": "Far Plane"
+    },
+    {
+      "id": "Orthographic Projection",
+      "link": "https://en.wikipedia.org/wiki/Orthographic_projection"
+    },
+    {
+      "id": "Perspective Projection"
+    },
+    {
+      "id": "Asymmetric Projection"
+    },
+    {
+      "id": "Oblique Projection",
+      "author": "Lengyel, Eric",
+      "title": "Oblique View Frustum Depth Projection and Clipping",
+      "journal": "JOGD",
+      "link": "http://terathon.com/lengyel/Lengyel-Oblique.pdf",
+      "year": 2005
+    },
+    {
+      "id": "Infinite Projection"
+    },
+    {
+      "id": "Reversed-Z",
+      "link": "https://developer.nvidia.com/content/depth-precision-visualized"
+    },
+    {
+      "id": "View Frustum",
+      "aka": "Viewing Frustum",
+      "link": "https://en.wikipedia.org/wiki/Viewing_frustum"
+    },
+    {
+      "id": "View Frustum Plane Extraction",
+      "author": [
+        "Gil Gribb",
+        "Klaus Hartmann"
+      ],
+      "title": "Fast Extraction of Viewing Frustum Planes from the WorldView-Projection Matrix",
+      "link": "https://www.gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf",
+      "year": 2001
+    },
+    {
+      "id": "Realistic Camera Model",
+      "author": [
+        "Craig Kolb",
+        "Don Mitchell",
+        "Pat Hanrahan"
+      ],
+      "title": "A realistic camera model for computer graphics",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/218380.218463",
+      "year": 1995
+    },
+    {
+      "id": "Depth of Field",
+      "abbr": "DOF",
+      "link": [
+        "https://en.wikipedia.org/wiki/Depth_of_field",
+        "https://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch23.html"
+      ]
+    },
+    {
+      "id": "Gather-based DOF"
+    },
+    {
+      "id": "Scatter-based DOF"
+    },
+    {
+      "id": "Diffusion-based DOF"
+    },
+    {
+      "id": "Circle of Confusion",
+      "abbr": "CoC",
+      "link": "https://en.wikipedia.org/wiki/Circle_of_confusion"
+    },
+    {
+      "id": "Bokeh",
+      "link": "https://en.wikipedia.org/wiki/Bokeh"
+    },
+    {
+      "id": "Finite Aperture Camera Model",
+      "author": [
+        "Michael Potmesil",
+        "Indranil Chakravarty"
+      ],
+      "title": "A lens and aperture camera model for synthetic image generation",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/965161.806818",
+      "year": 1981
+    },
+    {
+      "id": "Accumulation Buffer",
+      "author": [
+        "Paul Haeberli",
+        "Kurt Akeley"
+      ],
+      "title": "The Accumulation Buffer: Hardware Support for High-Quality Rendering",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/97880.97913",
+      "year": 1990
+    },
+    {
+      "id": "Layered DOF",
+      "author": "Cary Scofield",
+      "title": "2½-D Depth of Field Simulation for Computer Animation",
+      "journal": "Graphics Gems III",
+      "link": "",
+      "year": 1994
+    },
+    {
+      "id": "Surface Splatting DOF",
+      "author": [
+        "Jaroslav Krivánek",
+        "Jiri Zara",
+        "Kadi Bouatouch"
+      ],
+      "title": "Fast depth of field rendering with surface splatting",
+      "conference": "CGI",
+      "year": 2003
+    },
+    {
+      "id": "Summed-area Table DOF",
+      "author": "Simon Green",
+      "title": "Summed Area Tables using Graphics Hardware",
+      "conference": "GDC",
+      "year": 2003
+    },
+    {
+      "id": "Diffusion DOF",
+      "abbr": "DDOF",
+      "author": [
+        "Marcelo Bertalmio",
+        "Pere Fort",
+        "Daniel SanchezCrespo"
+      ],
+      "title": "Real-time, accurate depth of field using anisotropic diffusion and programmable graphics cards",
+      "conference": "3DPVT",
+      "link": "http://www.klayge.org/material/4_2/DoF/doffin00.pdf",
+      "year": 2004
+    },
+    {
+      "id": "DDOF with Cyclic Reduction",
+      "author": [
+        "Michael Kass",
+        "Aaron Lefohn",
+        "John D. Owens"
+      ],
+      "title": "Interactive Depth of Field Using Simulated Diffusion on a GPU",
+      "link": "https://escholarship.org/content/qt5nm063xk/qt5nm063xk.pdf",
+      "year": 2006
+    },
+    {
+      "id": "Optimized DDOF",
+      "author": "Holger Grün",
+      "title": "An Optimized Diffusion Depth Of Field Solver (DDOF)",
+      "conference": "gdc",
+      "year": 2011
+    },
+    {
+      "id": "Pyramidal DOF",
+      "author": [
+        "Martin Kraus",
+        "Magnus Strengert"
+      ],
+      "title": "Depth‐of‐field rendering by pyramidal image processing",
+      "journal": "Computer Graphics Forum",
+      "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.67.4881&rep=rep1&type=pdf",
+      "year": 2007
+    },
+    {
+      "id": "Separable Blur DOF",
+      "author": [
+        "Tianshu Zhou",
+        "Jim X. Chen",
+        "Mark Pullen"
+      ],
+      "title": "Accurate depth of field simulation in real time",
+      "journal": "Computer Graphics Forum",
+      "year": 2007
+    },
+    {
+      "id": "Lost Planet DOF",
+      "link": "http://www.4gamer.net/news/history/2007.08/20070809235901detail.html",
+      "conference": "CEDEC",
+      "year": 2007
+    },
+    {
+      "id": "Flexible Linear-time Area Gather",
+      "abbr": "FLAG",
+      "author": [
+        "Moersch, Johannes",
+        "Howard J. Hamilton"
+      ],
+      "title": "Variable-sized, circular bokeh depth of field effects",
+      "journal": "Graphics Interface",
+      "link": "https://dl.acm.org/doi/pdf/10.5555/2619648.2619665",
+      "year": 2014
+    },
+    {
+      "id": "Circular DOF",
+      "author": "Kleber Garcia",
+      "title": "Circular Separable Convolution Depth of Field",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/3084363.3085022",
+        "https://www.ea.com/frostbite/news/circular-separable-convolution-depth-of-field"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "Motion Blur",
+      "link": "https://en.wikipedia.org/wiki/Motion_blur"
+    },
+    {
+      "id": "Velocity Buffer"
+    },
+    {
+      "id": "Motion Blur Camera Model",
+      "author": [
+        "Michael Potmesil",
+        "Indranil Chakravarty"
+      ],
+      "title": "Modeling motion blur in computer-generated images",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/964967.801169",
+      "year": 1983
+    },
+    {
+      "id": "Camera Motion Blur"
+    },
+    {
+      "id": "2.5D Motion Blur",
+      "author": [
+        "Nelson L. Max",
+        "Douglas M. Lerner"
+      ],
+      "title": "A two-and-a-half-d motion-blur algorithm",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/325334.325188",
+      "year": 1985
+    },
+    {
+      "id": "Line Integral Convolution",
+      "abbr": "LIC",
+      "author": [
+        "Brian Cabral",
+        "Leith Leedom"
+      ],
+      "title": "Imaging Vector Fields Using Line Integral Convolution",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/166117.166151",
+        "https://en.wikipedia.org/wiki/Line_integral_convolution"
+      ],
+      "year": "1993"
+    },
+    {
+      "id": "Environment Map Motion Blur",
+      "author": "Jason Mitchell",
+      "title": "Motion Blurring Environment Maps",
+      "journal": "ShaderX4",
+      "year": 2005
+    },
+    {
+      "id": "Orange Box Motion Blur",
+      "author": "Alex Vlachos",
+      "title": "Post Processing in The Orange Box",
+      "conference": "GDC",
+      "link": "https://cdn.akamai.steamstatic.com/apps/valve/2008/GDC2008_PostProcessingInTheOrangeBox.pdf",
+      "year": 2008
+    },
+    {
+      "id": "Object Motion Blur"
+    },
+    {
+      "id": "Motion Blur with Geometry Expansion",
+      "author": "Simon Green",
+      "title": "Stupid opengl shader tricks",
+      "conference": "GDC",
+      "year": 2003
+    },
+    {
+      "id": "Split Second Motion Blur",
+      "author": [
+        "Matt Ritchie",
+        "Greg Modern",
+        "Kenny Mitchell"
+      ],
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/1837026.1837048",
+      "year": 2010
+    },
+    {
+      "id": "Texture Space Motion Blur",
+      "author": "Jörn Loviscach",
+      "title": "Motion blur for textures by means of anisotropic filtering",
+      "conference": "EGSR",
+      "link": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.5885&rep=rep1&type=pdf",
+      "year": 2005
+    },
+    {
+      "id": "Motion Blur Reconstruction Filter",
+      "author": [
+        "Morgan McGuire",
+        "Padraic Hennessy",
+        "Michael Bukowski",
+        "Brian Osman"
+      ],
+      "title": "A reconstruction filter for plausible motion blur",
+      "conference": "I3D",
+      "year": 2012
+    },
+    {
+      "id": "Feature-Aware Motion Blur Filter",
+      "author": [
+        "Jean-Philippe Guertin",
+        "Morgan McGuire",
+        "Derek Nowrouzezahrai"
+      ],
+      "title": "A Fast and Stable Feature-Aware Motion Blur Filter",
+      "conference": "HPC",
+      "year": 2014
+    },
+    {
+      "id": "Vignetting",
+      "link": "https://en.wikipedia.org/wiki/Vignetting"
+    },
+    {
+      "id": "Chromatic Aberration",
+      "abbr": "CA",
+      "link": "https://en.wikipedia.org/wiki/Chromatic_aberration"
+    },
+    {
+      "id": "Glare",
+      "link": "https://en.wikipedia.org/wiki/Glare_(vision)"
+    },
+    {
+      "id": "Physically-based Glare Effect",
+      "author": [
+        "Greg Spencer",
+        "Peter Shirleyy",
+        "Kurt Zimmermanz",
+        "Donald P. Greenberg"
+      ],
+      "title": "Physically-based glare effects for digital images.",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/218380.218466",
+      "year": 1995
+    },
+    {
+      "id": "Wave Optics Glare",
+      "author": "Masanori Kakimoto",
+      "title": "Glare generation based on wave optics.",
+      "link": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.915.9214&rep=rep1&type=pdf",
+      "year": 2004
+    },
+    {
+      "id": "Lens Flare",
+      "link": "https://en.wikipedia.org/wiki/Lens_flare"
+    },
+    {
+      "id": "2D Lens Flare",
+      "author": "Yossarian King",
+      "title": "2D Lens Flare",
+      "journal": "Game Programming Gems",
+      "year": 2000
+    },
+    {
+      "id": "Texture Masking Lens Flare",
+      "author": "Chris Maughan",
+      "title": "Texture Masking for Faster Lens Flare",
+      "journal": "Programming Gems 2",
+      "year": 2001
+    },
+    {
+      "id": "Lens Flare with Occlusion Query",
+      "author": "Dean Sekulic",
+      "title": "Efficient Occlusion Culling",
+      "journal": "GPU Gems",
+      "year": 2004
+    },
+    {
+      "id": "Steerable Streak Filter",
+      "author": "Chris Oat",
+      "title": "A steerable streak filter",
+      "journal": "ShaderX3",
+      "year": 2004
+    },
+    {
+      "id": "Physically-based Lens Flare",
+      "author": [
+        "Matthias Hullin",
+        "Elmar Eisemann",
+        "Hans-Peter Seidel",
+        "Sungkil Lee"
+      ],
+      "title": "Physically-based real-time lens flare rendering",
+      "conference": "SIGGRAPH",
+      "link": "http://resources.mpi-inf.mpg.de/lensflareRendering/pdf/flare.pdf",
+      "year": 2011
+    },
+    {
+      "id": "Practical Physically-based Lens Flare",
+      "author": [
+        "Sungkil Lee",
+        "Elmar Eisemann"
+      ],
+      "title": "Practical real‐time lens‐flare rendering",
+      "journal": "Computer Graphics Forum",
+      "link": "http://cg.skku.ac.kr/pub/papers/2013-lee-egsr-matrixflare-cam.pdf",
+      "year": 2013
+    },
+    {
+      "id": "Anamorphic Lens Flare",
+      "author": "Bartlomiej Wronski",
+      "title": "Anamorphic Lens Flares and Visual Effects",
+      "year": 2015
+    },
+    {
+      "id": "Bloom",
+      "link": "https://en.wikipedia.org/wiki/Bloom_(shader_effect)"
+    },
+    {
+      "id": "Real-time Glow",
+      "author": [
+        "Greg James",
+        "John O’Rorke"
+      ],
+      "title": "Real-time Glow",
+      "journal": "GPU Gems",
+      "year": 2004
+    },
+    {
+      "id": "Adapative Glare",
+      "author": "Tiago Sousa",
+      "title": "Adaptive Glare",
+      "journal": "ShaderX3",
+      "year": 2004
+    }
+  ],
+  "links": [
+    {
+      "source": "Rendering",
+      "target": "Camera"
+    },
+    {
+      "source": "Camera",
+      "target": "Field of View"
+    },
+    {
+      "source": "Camera",
+      "target": "Aspect Ratio"
+    },
+    {
+      "source": "Aspect Ratio",
+      "target": "Display Aspect Ratio"
+    },
+    {
+      "source": "Aspect Ratio",
+      "target": "Image Aspect Ratio"
+    },
+    {
+      "source": "Aspect Ratio",
+      "target": "Pixel Aspect Ratio"
+    },
+    {
+      "source": "Camera",
+      "target": "Pinhole Camera Model"
+    },
+    {
+      "source": "Pinhole Camera Model",
+      "target": "Camera Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Near Plane"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Far Plane"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Orthographic Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Perspective Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Oblique Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Asymmetric Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Infinite Projection"
+    },
+    {
+      "source": "Camera Projection",
+      "target": "Reversed-Z"
+    },
+    {
+      "source": "Pinhole Camera Model",
+      "target": "View Frustum"
+    },
+    {
+      "source": "View Frustum Culling",
+      "target": "View Frustum",
+      "type": "use"
+    },
+    {
+      "source": "View Frustum",
+      "target": "View Frustum Plane Extraction"
+    },
+    {
+      "source": "Planar Reflection",
+      "target": "View Frustum Plane Extraction",
+      "type": "use"
+    },
+    {
+      "source": "Planar Refraction",
+      "target": "View Frustum Plane Extraction",
+      "type": "use"
+    },
+    {
+      "source": "Camera",
+      "target": "Realistic Camera Model"
+    },
+    {
+      "source": "Camera",
+      "target": "Depth of Field"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Gather-based DOF"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Layered DOF"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Diffusion DOF"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Circle of Confusion"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Finite Aperture Camera Model"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Accumulation Buffer"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Scatter-based DOF"
+    },
+    {
+      "source": "Scatter-based DOF",
+      "target": "Surface Splatting DOF"
+    },
+    {
+      "source": "Gather-based DOF",
+      "target": "Summed-area Table DOF"
+    },
+    {
+      "source": "Summed-area Table DOF",
+      "target": "Summed-area Table",
+      "type": "use"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Diffusion-based DOF"
+    },
+    {
+      "source": "Diffusion-based DOF",
+      "target": "DDOF with Cyclic Reduction"
+    },
+    {
+      "source": "DDOF with Cyclic Reduction",
+      "target": "Optimized DDOF",
+      "type": "derive"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Pyramidal DOF"
+    },
+    {
+      "source": "Gather-based DOF",
+      "target": "Separable Blur DOF"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Distributed Ray Tracing"
+    },
+    {
+      "source": "Depth of Field",
+      "target": "Bokeh"
+    },
+    {
+      "source": "Bokeh",
+      "target": "Lost Planet DOF"
+    },
+    {
+      "source": "Scatter-based DOF",
+      "target": "Lost Planet DOF"
+    },
+    {
+      "source": "Bokeh",
+      "target": "Lost Planet DOF"
+    },
+    {
+      "source": "Gather-based DOF",
+      "target": "Flexible Linear-time Area Gather"
+    },
+    {
+      "source": "Bokeh",
+      "target": "Flexible Linear-time Area Gather"
+    },
+    {
+      "source": "Gather-based DOF",
+      "target": "Circular DOF"
+    },
+    {
+      "source": "Bokeh",
+      "target": "Circular DOF"
+    },
+    {
+      "source": "Camera",
+      "target": "Motion Blur"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Velocity Buffer"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Accumulation Buffer"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Motion Blur Camera Model"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Distributed Ray Tracing"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Velocity Space Motion Blur"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Camera Motion Blur"
+    },
+    {
+      "source": "Camera Motion Blur",
+      "target": "Line Integral Convolution"
+    },
+    {
+      "source": "Camera Motion Blur",
+      "target": "2.5D Motion Blur"
+    },
+    {
+      "source": "Camera Motion Blur",
+      "target": "Environment Map Motion Blur"
+    },
+    {
+      "source": "Environment Map Motion Blur",
+      "target": "Cube Map",
+      "type": "use"
+    },
+    {
+      "source": "Camera Motion Blur",
+      "target": "Orange Box Motion Blur"
+    },
+    {
+      "source": "Motion Blur",
+      "target": "Object Motion Blur"
+    },
+    {
+      "source": "Object Motion Blur",
+      "target": "Motion Blur with Geometry Expansion"
+    },
+    {
+      "source": "Object Motion Blur",
+      "target": "Split Second Motion Blur"
+    },
+    {
+      "source": "Object Motion Blur",
+      "target": "Texture Space Motion Blur"
+    },
+    {
+      "source": "Object Motion Blur",
+      "target": "Motion Blur Reconstruction Filter"
+    },
+    {
+      "source": "Motion Blur Reconstruction Filter",
+      "target": "Feature-Aware Motion Blur Filter"
+    },
+    {
+      "source": "Camera",
+      "target": "Vignetting"
+    },
+    {
+      "source": "Camera",
+      "target": "Chromatic Aberration"
+    },
+    {
+      "source": "Camera",
+      "target": "Glare"
+    },
+    {
+      "source": "Glare",
+      "target": "Lens Flare"
+    },
+    {
+      "source": "Glare",
+      "target": "Physically-based Glare Effect"
+    },
+    {
+      "source": "Glare",
+      "target": "Wave Optics Glare"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "2D Lens Flare"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "Texture Masking Lens Flare"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "Lens Flare with Occlusion Query"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "Steerable Streak Filter"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "Anamorphic Lens Flare"
+    },
+    {
+      "source": "Lens Flare",
+      "target": "Physically-based Lens Flare"
+    },
+    {
+      "source": "Physically-based Lens Flare",
+      "target": "Practical Physically-based Lens Flare"
+    },
+    {
+      "source": "Glare",
+      "target": "Bloom"
+    },
+    {
+      "source": "Bloom",
+      "target": "Real-time Glow"
+    },
+    {
+      "source": "Bloom",
+      "target": "Adapative Glare"
+    },
+    {
+      "source": "Real-time Glow",
+      "target": "Gaussian Blur",
+      "type": "use"
+    },
+    {
+      "source": "Camera",
+      "target": "Tone Mapping"
+    }
+  ]
+}

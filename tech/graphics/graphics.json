@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "Graphics",
-      "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"      
+      "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"
     },
     {
       "id": "Graphics API"

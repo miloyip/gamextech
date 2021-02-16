@@ -1,0 +1,447 @@
+{
+  "nodes": [
+    {
+      "id": "Image",
+      "aka": "Digital Image",
+      "link": "https://en.wikipedia.org/wiki/Digital_image"
+    },
+    {
+      "id": "Pixel",
+      "aka": "Picture Element",
+      "link": "https://en.wikipedia.org/wiki/Pixel",
+      "year": 1965
+    },
+    {
+      "id": "Color Space"
+    },
+    {
+      "id": "XYZ Color Space",
+      "aka": "CIE 1931 Color Space",
+      "link": "https://en.wikipedia.org/wiki/CIE_1931_color_space",
+      "year": 1931
+    },
+    {
+      "id": "RGB Color Space",
+      "link": "https://en.wikipedia.org/wiki/RGB_color_space",
+      "year": 1931
+    },
+    {
+      "id": "sRGB Color Space",
+      "link": "https://en.wikipedia.org/wiki/SRGB",
+      "year": 1996
+    },
+    {
+      "id": "YUV Color Space",
+      "link": "https://en.wikipedia.org/wiki/YUV"
+    },
+    {
+      "id": "YCbCr Color Space",
+      "link": "https://en.wikipedia.org/wiki/YCbCr",
+      "year": 1982
+    },
+    {
+      "id": "HSV Color Space",
+      "aka": "HSB Color Space",
+      "author": "Alvy Ray Smith",
+      "title": "Color gamut transform pairs",
+      "conference": "SIGGRAPH",
+      "link": "https://en.wikipedia.org/wiki/HSL_and_HSV",
+      "year": 1978
+    },
+    {
+      "id": "Image File Format",
+      "link": "https://en.wikipedia.org/wiki/Image_file_formats"
+    },
+    {
+      "id": "Truevision Advanced Raster Graphics Adapter",
+      "abbr": [
+        "TARGA",
+        "TGA"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Truevision_TGA",
+      "year": 1984
+    },
+    {
+      "id": "Portable Network Graphics",
+      "abbr": "PNG",
+      "link": [
+        "https://en.wikipedia.org/wiki/Portable_Network_Graphics",
+        "https://www.w3.org/TR/2003/REC-PNG-20031110/"
+      ],
+      "year": 1996
+    },
+    {
+      "id": "Joint Photographic Experts Group",
+      "abbr": "JPEG",
+      "link": [
+        "https://jpeg.org/",
+        "https://en.wikipedia.org/wiki/JPEG"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "WebP",
+      "link": [
+        "https://developers.google.com/speed/webp",
+        "https://en.wikipedia.org/wiki/WebP"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "DirectDraw Surface",
+      "abbr": "DDS",
+      "link": [
+        "https://docs.microsoft.com/en-us/windows/win32/direct3ddds/dx-graphics-dds",
+        "https://en.wikipedia.org/wiki/DirectDraw_Surface"
+      ],
+      "year": 1999
+    },
+    {
+      "id": "Image Processing",
+      "aka": "Digital Image Processing",
+      "link": "https://en.wikipedia.org/wiki/Digital_image_processing"
+    },
+    {
+      "id": "Convolution",
+      "link": "https://en.wikipedia.org/wiki/Convolution"
+    },
+    {
+      "id": "Separable Filter",
+      "link": "https://en.wikipedia.org/wiki/Separable_filter"
+    },
+    {
+      "id": "Low Pass Filter",
+      "aka": "Blur Filter"
+    },
+    {
+      "id": "Box Filter",
+      "aka": "Box Blur",
+      "link": "https://en.wikipedia.org/wiki/Box_blur"
+    },
+    {
+      "id": "Gaussian Filter",
+      "aka": "Guassian Blur",
+      "link": "https://en.wikipedia.org/wiki/Gaussian_blur"
+    },
+    {
+      "id": "Kawase Filter",
+      "author": "Masaki Kawase",
+      "title": "Frame Buffer Postprocessing Effects in DOUBLE-STEAL (Wrechless)",
+      "conference": "GDC",
+      "year": 2003
+    },
+    {
+      "id": "Dual Kawase Filter",
+      "author": "Marius Bjørge",
+      "title": "Bandwidth-Efficient Rendering",
+      "conference": "SIGGRAPH",
+      "link": "https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/siggraph2015_2D00_mmg_2D00_marius_2D00_notes.pdf",
+      "year": 2015
+    },
+    {
+      "id": "Edge Detection",
+      "link": "https://en.wikipedia.org/wiki/Edge_detection"
+    },
+    {
+      "id": "Fourier Transform",
+      "link": "https://en.wikipedia.org/wiki/Fourier_transform"
+    },
+    {
+      "id": "Fast Fourier Transform",
+      "abbr": "FFT",
+      "author": "E. Oran Brigham",
+      "title": "The fast Fourier transform and its applications",
+      "link": "https://en.wikipedia.org/wiki/Fast_Fourier_transform",
+      "year": 1988
+    },
+    {
+      "id": "Bilaterial Filter",
+      "link": "https://en.wikipedia.org/wiki/Bilateral_filter"
+    },
+    {
+      "id": "Color Transform"
+    },
+    {
+      "id": "Color Transform by Lookup Table",
+      "aka": "LUT Color Transform",
+      "author": "Jeremy Selan",
+      "title": "Using lookup tables to accelerate color transformations",
+      "journal": "GPU Gems 2",
+      "link": "https://developer.nvidia.com/gpugems/gpugems2/part-iii-high-quality-rendering/chapter-24-using-lookup-tables-accelerate-color",
+      "year": 2004
+    },
+    {
+      "id": "Gamma Correction",
+      "aka": "Gamma",
+      "link": "https://en.wikipedia.org/wiki/Gamma_correction"
+    },
+    {
+      "id": "Tone Mapping",
+      "aka": "Tone Reproduction",
+      "link": "https://en.wikipedia.org/wiki/Tone_mapping"
+    },
+    {
+      "id": "Local Tone Mapping"
+    },
+    {
+      "id": "Global Tone Mapping"
+    },
+    {
+      "id": "Tone Reproduction Transform"
+    },
+    {
+      "id": "Reinhard Tone Mapping",
+      "author": [
+        "Erik Reinhard",
+        "Michael Stark",
+        "Peter Shirley",
+        "James Ferwerda"
+      ],
+      "title": "Photographic tone reproduction for digital images",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/566570.566575",
+      "year": 2002
+    },
+    {
+      "id": "Adaptive Logarithmic Mapping",
+      "author": [
+        "Drago, F.",
+        "K. Myszkowski",
+        "T. Annen",
+        "N. Chiba"
+      ],
+      "title": "Adaptive Logarithmic Mapping for Displaying High Contrast Scenes",
+      "journal": "Computer Graphics Forum",
+      "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.69.8094&rep=rep1&type=pdf",
+      "year": 2003
+    },
+    {
+      "id": "Flimic Tone Mapping",
+      "author": [
+        "Haarm-Pieter Duiker",
+        "George Borshukov"
+      ],
+      "title": "Filmic Tone Mapping",
+      "year": 2006
+    },
+    {
+      "id": "S-curve Tone Mapping",
+      "author": "Mike Day",
+      "title": "An Efficient and User-Friendly Tone Mapping Operator",
+      "link": "http://d3cw3dd2w32x2b.cloudfront.net/wp-content/uploads/2012/09/an-efficient-and-user-friendly-tone-mapping-operator.pdf",
+      "year": 2012
+    },
+    {
+      "id": "Filmic Tonemapping with Piecewise Power Curves",
+      "author": "John Hable",
+      "title": "Filmic Tonemapping with Piecewise Power Curves",
+      "link": "http://filmicworlds.com/blog/filmic-tonemapping-with-piecewise-power-curves/",
+      "year": 2017
+    },
+    {
+      "id": "Exposure"
+    },
+    {
+      "id": "Color Grading",
+      "link": "https://en.wikipedia.org/wiki/Color_grading"
+    }
+  ],
+  "links": [
+    {
+      "source": "Graphics",
+      "target": "Image"
+    },
+    {
+      "source": "Image",
+      "target": "Pixel"
+    },
+    {
+      "source": "Image",
+      "target": "Color Space"
+    },
+    {
+      "source": "Color Space",
+      "target": "XYZ Color Space"
+    },
+    {
+      "source": "Color Space",
+      "target": "RGB Color Space"
+    },
+    {
+      "source": "RGB Color Space",
+      "target": "sRGB Color Space"
+    },
+    {
+      "source": "Color Space",
+      "target": "YUV Color Space"
+    },
+    {
+      "source": "YUV Color Space",
+      "target": "YCbCr Color Space"
+    },
+    {
+      "source": "Color Space",
+      "target": "HSV Color Space"
+    },
+    {
+      "source": "Image",
+      "target": "Texture",
+      "type": "derive"
+    },
+    {
+      "source": "Image",
+      "target": "Image File Format"
+    },
+    {
+      "source": "Image",
+      "target": "Texture"
+    },
+    {
+      "source": "Image File Format",
+      "target": "Texture Compression"
+    },
+    {
+      "source": "Image File Format",
+      "target": "Truevision Advanced Raster Graphics Adapter"
+    },
+    {
+      "source": "Image File Format",
+      "target": "Joint Photographic Experts Group"
+    },
+    {
+      "source": "Image File Format",
+      "target": "Portable Network Graphics"
+    },
+    {
+      "source": "Image File Format",
+      "target": "WebP"
+    },
+    {
+      "source": "Image File Format",
+      "target": "DirectDraw Surface"
+    },
+    {
+      "source": "DirectX",
+      "target": "DirectDraw Surface"
+    },
+    {
+      "source": "Image",
+      "target": "Image Processing"
+    },
+    {
+      "source": "Convolution",
+      "target": "Separable Filter"
+    },
+    {
+      "source": "Convolution",
+      "target": "Bilaterial Filter"
+    },
+    {
+      "source": "Image Processing",
+      "target": "Convolution"
+    },
+    {
+      "source": "Convolution",
+      "target": "Separable Filter"
+    },
+    {
+      "source": "Convolution",
+      "target": "Low Pass Filter"
+    },
+    {
+      "source": "Low Pass Filter",
+      "target": "Box Filter"
+    },
+    {
+      "source": "Separable Filter",
+      "target": "Box Filter"
+    },
+    {
+      "source": "Low Pass Filter",
+      "target": "Gaussian Filter"
+    },
+    {
+      "source": "Separable Filter",
+      "target": "Gaussian Filter"
+    },
+    {
+      "source": "Gaussian Filter",
+      "target": "Kawase Filter",
+      "type": "derive"
+    },
+    {
+      "source": "Kawase Filter",
+      "target": "Dual Kawase Filter",
+      "type": "derive"
+    },
+    {
+      "source": "Convolution",
+      "target": "Edge Detection"
+    },
+    {
+      "source": "Convolution",
+      "target": "Fourier Transform"
+    },
+    {
+      "source": "Fourier Transform",
+      "target": "Fast Fourier Transform"
+    },
+    {
+      "source": "Image Processing",
+      "target": "Color Transform"
+    },
+    {
+      "source": "Color Transform",
+      "target": "Gamma Correction"
+    },
+    {
+      "source": "Color Transform",
+      "target": "Color Transform by Lookup Table"
+    },
+    {
+      "source": "Color Transform",
+      "target": "Color Grading"
+    },
+    {
+      "source": "Color Transform",
+      "target": "Tone Mapping"
+    },
+    {
+      "source": "Tone Mapping",
+      "target": "Local Tone Mapping"
+    },
+    {
+      "source": "Tone Mapping",
+      "target": "Global Tone Mapping"
+    },
+    {
+      "source": "Tone Mapping",
+      "target": "Tone Reproduction Transform"
+    },
+    {
+      "source": "Tone Reproduction Transform",
+      "target": "Reinhard Tone Mapping"
+    },
+    {
+      "source": "Tone Reproduction Transform",
+      "target": "Adaptive Logarithmic Mapping"
+    },
+    {
+      "source": "Tone Reproduction Transform",
+      "target": "Flimic Tone Mapping"
+    },
+    {
+      "source": "Tone Reproduction Transform",
+      "target": "S-curve Tone Mapping"
+    },
+    {
+      "source": "Flimic Tone Mapping",
+      "target": "Filmic Tonemapping with Piecewise Power Curves",
+      "type": "derive"
+    },
+    {
+      "source": "Tone Mapping",
+      "target": "Exposure"
+    }
+  ]
+}

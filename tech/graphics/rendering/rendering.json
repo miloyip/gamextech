@@ -4,14 +4,11 @@
       "id": "Rendering"
     },
     {
-      "id": "Camera"
-    },
-    {
-      "id": "Post-Processing"
-    },
-    {
       "id": "Non-Photorealistic Rendering",
       "abbr": "NPR"
+    },
+    {
+      "id": "Participating Media Rendering"
     },
     {
       "id": "Visibility"
@@ -52,19 +49,19 @@
     },
     {
       "source": "Rendering",
-      "target": "Camera"
-    },
-    {
-      "source": "Rendering",
       "target": "Lighting"
     },
     {
       "source": "Rendering",
-      "target": "Post-Processing"
+      "target": "Image Processing"
     },
     {
       "source": "Rendering",
       "target": "Non-Photorealistic Rendering"
+    },
+    {
+      "source": "Rendering",
+      "target": "Participating Media Rendering"
     },
     {
       "source": "Rendering",

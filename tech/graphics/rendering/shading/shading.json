@@ -110,7 +110,7 @@
       "year": 2012
     },
     {
-      "id": "Enviornment Mapping",
+      "id": "Environment Mapping",
       "aka": "Reflection Mapping",
       "author": [
         "James Blinn",
@@ -156,6 +156,17 @@
       "title": "View-independent Environment Maps",
       "conference": "EGGH",
       "year": 1998
+    },
+    {
+      "id": "Octahedral Mapping",
+      "author": [
+        "Thomas Engelhardt",
+        "Carsten Dachsbacher"
+      ],
+      "title": "Octahedron Environment Maps",
+      "conference": "VMV",
+      "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.681.1522&rep=rep1&type=pdf",
+      "year": 2008
     },
     {
       "id": "Bump Mapping",
@@ -258,6 +269,19 @@
         "https://dl.acm.org/doi/pdf/10.1145/133994.134071"
       ],
       "year": 1992
+    },
+    {
+      "id": "Reflection",
+      "link": "https://en.wikipedia.org/wiki/Reflection_(computer_graphics)"
+    },
+    {
+      "id": "Planar Reflection"
+    },
+    {
+      "id": "Refraction"
+    },
+    {
+      "id": "Planar Refraction"
     }
   ],
   "links": [
@@ -320,22 +344,22 @@
     },
     {
       "source": "Shading",
-      "target": "Enviornment Mapping"
+      "target": "Environment Mapping"
     },
     {
       "source": "Texture",
-      "target": "Enviornment Mapping"
+      "target": "Environment Mapping"
     },
     {
-      "source": "Enviornment Mapping",
+      "source": "Environment Mapping",
       "target": "Latitude-longitude Mapping"
     },
     {
-      "source": "Enviornment Mapping",
+      "source": "Environment Mapping",
       "target": "Sphere Mapping"
     },
     {
-      "source": "Enviornment Mapping",
+      "source": "Environment Mapping",
       "target": "Cube Mapping"
     },
     {
@@ -344,8 +368,12 @@
       "type": "use"
     },
     {
-      "source": "Enviornment Mapping",
+      "source": "Environment Mapping",
       "target": "Dual Paraboloid Mapping"
+    },
+    {
+      "source": "Environment Mapping",
+      "target": "Octahedral Mapping"
     },
     {
       "source": "Shading",
@@ -379,6 +407,30 @@
     {
       "source": "Shading",
       "target": "Projective Texture Mapping"
+    },
+    {
+      "source": "Shading",
+      "target": "Reflection"
+    },
+    {
+      "source": "Reflection",
+      "target": "Planar Reflection"
+    },
+    {
+      "source": "Reflection",
+      "target": "Environment Mapping"
+    },
+    {
+      "source": "Shading",
+      "target": "Refraction"
+    },
+    {
+      "source": "Refraction",
+      "target": "Planar Refraction"
+    },
+    {
+      "source": "Refraction",
+      "target": "Environment Mapping"
     }
   ]
 }

@@ -13,11 +13,17 @@
       "id": "Ambient Light"
     },
     {
-      "id": "Point Light",
-      "aka": "Omnidirectional Light"
+      "id": "Directional Light"
     },
     {
-      "id": "Directional Light"
+      "id": "Punctual Light"
+    },
+    {
+      "id": "Point Light",
+      "aka": [
+        "Omnidirectional Light",
+        "Omni Light"
+      ]
     },
     {
       "id": "Spot Light"
@@ -139,6 +145,17 @@
       "year": 1979
     },
     {
+      "id": "Distributed Ray Tracing",
+      "author": [
+        "Robert L. Cook",
+        "Thomas Porter",
+        "Loren Carpenter"
+      ],
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/800031.808590",
+      "year": 1984
+    },
+    {
       "id": "Path Tracing"
     },
     {
@@ -238,14 +255,18 @@
     },
     {
       "source": "Light Source",
-      "target": "Point Light"
-    },
-    {
-      "source": "Light Source",
       "target": "Directional Light"
     },
     {
       "source": "Light Source",
+      "target": "Punctual Light"
+    },
+    {
+      "source": "Punctual Light",
+      "target": "Point Light"
+    },
+    {
+      "source": "Punctual Light",
       "target": "Spot Light"
     },
     {
@@ -315,6 +336,11 @@
     {
       "source": "Offline Global Illumination",
       "target": "Ray Tracing"
+    },
+    {
+      "source": "Ray Tracing",
+      "target": "Distributed Ray Tracing",
+      "type": "derive"
     },
     {
       "source": "Offline Global Illumination",
