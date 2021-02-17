@@ -7,6 +7,7 @@
   "tech/graphics/graphics.json",
   "tech/graphics/api/api.json",
   "tech/graphics/image/image.json",
+  "tech/graphics/modeling/modeling.json",
   "tech/graphics/rendering/rendering.json",
   "tech/graphics/rendering/material/material.json",
   "tech/graphics/rendering/shadow/shadow.json",

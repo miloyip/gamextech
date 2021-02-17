@@ -5,53 +5,6 @@
       "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"
     },
     {
-      "id": "Modeling"
-    },
-    {
-      "id": "Curve"
-    },
-    {
-      "id": "Curved Surface"
-    },
-    {
-      "id": "Subdivision Surface"
-    },
-    {
-      "id": "Implicit Surface",
-      "link": "https://en.wikipedia.org/wiki/Implicit_surface"
-    },
-    {
-      "id": "Mesh"
-    },
-    {
-      "id": "Triangle Mesh"
-    },
-    {
-      "id": "Digital Elevation Model",
-      "abbr": "DEM"
-    },
-    {
-      "id": "Voxel"
-    },
-    {
-      "id": "Constructive Solid Geometry",
-      "abbr": "CSG"
-    },
-    {
-      "id": "Billboard"
-    },
-    {
-      "id": "Imposter"
-    },
-    {
-      "id": "Tessellation",
-      "link": "https://en.wikipedia.org/wiki/Tessellation_(computer_graphics)"
-    },
-    {
-      "id": "Displacement Mapping",
-      "link": "https://en.wikipedia.org/wiki/Displacement_mapping"
-    },
-    {
       "id": "Animation"
     },
     {
@@ -80,63 +33,6 @@
     {
       "source": "Technology",
       "target": "Graphics"
-    },
-    {
-      "source": "Graphics",
-      "target": "Modeling"
-    },
-    {
-      "source": "Modeling",
-      "target": "Curve"
-    },
-    {
-      "source": "Modeling",
-      "target": "Curved Surface"
-    },
-    {
-      "source": "Modeling",
-      "target": "Implicit Surface"
-    },
-    {
-      "source": "Modeling",
-      "target": "Subdivision Surface"
-    },
-    {
-      "source": "Modeling",
-      "target": "Mesh"
-    },
-    {
-      "source": "Mesh",
-      "target": "Triangle Mesh"
-    },
-    {
-      "source": "Modeling",
-      "target": "Voxel"
-    },
-    {
-      "source": "Modeling",
-      "target": "Digital Elevation Model"
-    },
-    {
-      "source": "Modeling",
-      "target": "Constructive Solid Geometry"
-    },
-    {
-      "source": "Modeling",
-      "target": "Billboard"
-    },
-    {
-      "source": "Billboard",
-      "target": "Imposter",
-      "type": "derive"
-    },
-    {
-      "source": "Modeling",
-      "target": "Tessellation"
-    },
-    {
-      "source": "Tessellation",
-      "target": "Displacement Mapping"
     },
     {
       "source": "Graphics",
