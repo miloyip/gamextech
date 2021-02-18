@@ -120,6 +120,7 @@ let popup = {};
 let width = 0, height = 0;
 let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 let hoverTimeout = null;
+let simulation = {};
 
 // Graph database
 
@@ -270,11 +271,7 @@ function main() {
         .attr("visibility", chronology ? null : "hidden")
         .call(chronologyAxis);
 
-    restartSimulation();
-}
-
-function restartSimulation() {
-    const simulation = d3.forceSimulation()
+    simulation = d3.forceSimulation()
         .force("charge", d3.forceManyBody().strength(-2000).distanceMax(500))
         .force("collide", d3.forceCollide(50))
         .force("x", d3.forceX())
@@ -302,6 +299,10 @@ function restartSimulation() {
             updatePopup();
         });
 
+    restartSimulation();
+}
+
+function restartSimulation() {
     // Expand selection
     let newNodes = [], newLinks = [];
     if (expand == -1) { // Expand all
