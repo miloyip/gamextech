@@ -199,7 +199,7 @@ function main() {
     d3.select(window)
         .on('popstate', event => {
             updateStateFromURL();
-            restartSimulation();
+            restartSimulation(true);
         })
         .on("resize", () => {
             updateSize();
@@ -384,7 +384,7 @@ function main() {
         .force("collide", d3.forceCollide(50))
         .force("x", d3.forceX())
         .force("y", d3.forceY())
-        .alphaMin(0.1)
+        // .alphaMin(0.1)
         .velocityDecay(0.5)
         .on("tick", () => {
             function linkArc(d) {
@@ -407,10 +407,10 @@ function main() {
             updatePopup();
         });
 
-    restartSimulation();
+    restartSimulation(true);
 }
 
-function restartSimulation() {
+function restartSimulation(first) {
     // Expand selection
     let newNodes = [], newLinks = [];
     if (expand == -1) { // Expand all
@@ -546,7 +546,7 @@ function restartSimulation() {
 
     simulation.nodes(newNodes);
     simulation.force("link", d3.forceLink(newLinks).id(d => d.id).distance(100).strength(1.0));
-    simulation.alpha(1.0).restart();
+    simulation.alpha(first ? 1.0 : 0.5).restart();
 }
 
 function updateSize() {
