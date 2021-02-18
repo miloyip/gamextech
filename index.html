@@ -232,6 +232,8 @@ function main() {
             expand = preset.expand;
             chronology = preset.chronology;
             updateTitle();
+            updateExpand();
+            updateChronology();
             pushState();
             restartSimulation();
         });
@@ -245,13 +247,6 @@ function main() {
     d3.select("#chronology")
         .on("change", event => {
             chronology = event.srcElement.checked;
-            svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
-            if (chronology) {
-                nodes.forEach(chronologyConstraint);
-            }
-            else {
-                nodes.forEach(d => d.fx = null);    // Remove constraint
-            }
             pushState();
             restartSimulation();
         });
@@ -448,6 +443,15 @@ function restartSimulation(first) {
         newNodeMap.get(l.source).currentLinkCount++;
         newNodeMap.get(l.target).currentLinkCount++;
     });
+
+    // Chronology
+    if (chronology) {
+        nodes.forEach(chronologyConstraint);
+    }
+    else {
+        nodes.forEach(d => d.fx = null);    // Remove constraint
+    }
+    svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
 
     // Make a shallow copy to protect against mutation, while
     // recycling old nodes to preserve position and velocity.
