@@ -21,6 +21,15 @@ body {
     top: 0;
     left: 0;
 }
+svg text {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+svg text::selection {
+    background: none;
+}
 #toolbar {
     z-index: 1;
     position: absolute;
