@@ -502,7 +502,6 @@ function restartSimulation(first) {
                 }
             });
 
-            g.on("mouseleave", event => clearPopup());
             g.on("mousedown", event => clearPopup());
             g.on("mouseup", event => clearPopup());
 
@@ -621,7 +620,6 @@ function updatePopup() {
             .style("top", r.bottom + "px")
             .style("opacity", 0)
             .html(html)
-            .on("mouseenter", event => { popup.mouseenter = true })
             .on("mouseleave", event => {
                 popup = {}
                 updatePopup();
@@ -630,6 +628,7 @@ function updatePopup() {
     }
     else {
         d3.select("#popup")
+            .interrupt()
             .transition().duration(500).style("opacity", 0)
             .on("end", () => d3.select("#popup").style("visibility", "hidden"));
     }
