@@ -47,24 +47,51 @@ svg text::selection {
     color: #fff;
     border-radius: 8px;
     padding: 8px;
-    position: absolute;
     z-index: 2;
     margin: 0px;
 }
 #popup::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
 }
 #popup a:link {
     color: #fff;
 }
 #popup a:visited {
+    color: #999;
+}
+#search-result {
+    position: absolute;
+    visibility: hidden;
+    min-width: 100px;
+    font: 12px sans-serif;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 2;
+    margin: 1px;
+}
+#search-result ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#search-result li {
+    display: block;
+    padding: 4px;
+}
+#search-result li.result-item:hover {
+    background-color: rgba(128, 128, 128, 0.75);
+    cursor: pointer;
+}
+#search-result li.result-info {
     color: #999;
 }
 </style>
@@ -87,6 +114,13 @@ svg text::selection {
     </span>
     <span style="display:inline-block; width:100px;">
         <input type="checkbox" id="chronology" style="vertical-align: middle;"/><label for="chronology" style="vertical-align: middle;">Chronology</label>
+    </span>
+    <span style="display:inline-block; width:100px;">
+        <input type="text" id="search" style="width: 100px" placeholder="Search (regex)" autocomplete="off" />
+        <div id="search-result">
+            <ul>
+            </ul>
+        </div>
     </span>
 </span>
 <span style="float:right; width: 48px;">
@@ -212,6 +246,79 @@ function main() {
             pushState();
             restartSimulation();
         });
+
+    let searchResult = [];
+    d3.select("#search")
+        .on("input", event => {
+            let s = event.srcElement.value.trim();
+            if (s != "") {
+                const maxSearchResult = 10;
+                let r = new RegExp(s, 'i');
+                let count = 0;
+                searchResult = nodes.filter(n => (
+                    r.test(n.id) ||
+                        (Array.isArray(n.abbr) ? n.abbr.some(a => r.test(a)) : r.test(n.abbr)) ||
+                        (Array.isArray(n.aka) ? n.aka.some(a => r.test(a)) : r.test(n.aka)))
+                    && count++ < maxSearchResult);
+
+                if (searchResult.length > 0) {
+                    searchResult.sort((a, b) => a.id.localeCompare(b.id));
+
+                    // Move exact match to the top
+                    let index = searchResult.findIndex(n => n.id.toLowerCase() == s.toLowerCase());
+                    if (index > 0) {
+                        searchResult.unshift(searchResult.splice(index, 1)[0]);
+                    }
+                }
+
+                let ul = d3.select("#search-result")
+                    .style("visibility", "visible")
+                    .select("ul")
+
+                ul.selectAll("li")
+                    .data(searchResult)
+                    .join("li")
+                    .classed("result-item", true)
+                    .classed("result-info", false)
+                    .text(d => d.id)
+                    .on("click", (event, d) => {
+                        d3.select("#search").property("value", "");
+                        d3.select("#search-result").style("visibility", "hidden");
+                        selected.add(d.id);
+                        pushState();
+                        restartSimulation();                        
+                    });
+
+                if (searchResult.length == 0) {
+                    ul.append("li")
+                        .classed("result-info", true)
+                        .classed("result-item", false)
+                        .text("no result");
+                }
+                else if (count > maxSearchResult) {
+                    ul.append("li")
+                        .classed("result-info", true)
+                        .classed("result-item", false)
+                        .text(`+ ${count - maxSearchResult} items...`);
+                }
+            }
+            else {
+                d3.select("#search-result")
+                    .style("visibility", "hidden");
+            }
+        })
+        .on("keyup", event => { // When press enter, select the first result
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                if (searchResult.length > 0) {
+                    d3.select("#search").property("value", "");
+                    d3.select("#search-result").style("visibility", "hidden");
+                    selected.add(searchResult[0].id);
+                    pushState();
+                    restartSimulation();                    
+                }
+            }
+        })
 
     // Chronology scale
 
