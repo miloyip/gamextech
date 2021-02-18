@@ -129,8 +129,15 @@ function loadDatabase(database) {
         links = [].concat.apply([], files.map(file => file.links));
 
         // Remove invalid links
-        const idset = new Set(nodes.map(node => node.id));
-        links = links.filter(l => idset.has(l.source) && idset.has(l.target));
+        const nodeMap = new Map(nodes.map(node => [node.id, node]));
+        links = links.filter(l => nodeMap.has(l.source) && nodeMap.has(l.target));
+
+        // Count link per node (for computing remaining link count)
+        nodes.forEach(n => { n.linkCount = 0; });
+        links.forEach(l => {
+            nodeMap.get(l.source).linkCount++
+            nodeMap.get(l.target).linkCount++
+        });
 
         main();
     }).catch(err => {
@@ -286,34 +293,42 @@ function restartSimulation() {
         });
 
     // Expand selection
-    let new_nodes = [], new_links = [];
+    let newNodes = [], newLinks = [];
     if (expand == -1) { // Expand all
-        new_nodes = nodes;
-        new_links = links;
+        newNodes = nodes;
+        newLinks = links;
     }
     else {
-        let node_set = new Set(selected);
-        let link_set = new Set();
+        let nodeSet = new Set(selected);
+        let linkSet = new Set();
         for (let i = 0; i < expand; i++) {
-            links.filter(l => node_set.has(l.source) || node_set.has(l.target))
+            links.filter(l => nodeSet.has(l.source) || nodeSet.has(l.target))
                 .forEach(l => {
-                    link_set.add(l)
-                    node_set.add(l.source);
-                    node_set.add(l.target);
+                    linkSet.add(l)
+                    nodeSet.add(l.source);
+                    nodeSet.add(l.target);
                 });
         }
 
-        new_nodes = nodes.filter(n => node_set.has(n.id));
-        new_links = Array.from(link_set);
+        newNodes = nodes.filter(n => nodeSet.has(n.id));
+        newLinks = Array.from(linkSet);
     }
+
+    // Count current count link per node
+    let newNodeMap = new Map(newNodes.map(n => [n.id, n]));
+    newNodes.forEach(n => { n.currentLinkCount = 0; });
+    newLinks.forEach(l => {
+        newNodeMap.get(l.source).currentLinkCount++;
+        newNodeMap.get(l.target).currentLinkCount++;
+    });
 
     // Make a shallow copy to protect against mutation, while
     // recycling old nodes to preserve position and velocity.
     const old = new Map(node.data().map(d => [d.id, d]));
-    new_nodes = new_nodes.map(d => Object.assign(old.get(d.id) || {}, d));
-    new_links = new_links.map(d => Object.assign({}, d));
+    newNodes = newNodes.map(d => Object.assign(old.get(d.id) || {}, d));
+    newLinks = newLinks.map(d => Object.assign({}, d));
 
-    node = node.data(new_nodes, d => d.id)
+    node = node.data(newNodes, d => d.id)
         .join(enter => {
             let g = enter.append("g")
                 .attr("opacity", 0);
@@ -393,10 +408,10 @@ function restartSimulation() {
             })
         });
 
-    link = link.data(new_links, d => [d.source, d.target])
+    link = link.data(newLinks, d => [d.source, d.target])
         .join("path");
 
-    let labaledLinks = new_links.filter(d => d.type != null);
+    let labaledLinks = newLinks.filter(d => d.type != null);
     linkLabelPath = linkLabelPath.data(labaledLinks, d => [d.source, d.target])
         .join("path")
         .attr("id", (d, i) => `labeledLink${i}`);
@@ -414,8 +429,8 @@ function restartSimulation() {
             .attr("stroke", "white")
             .attr("stroke-width", 3);
 
-    simulation.nodes(new_nodes);
-    simulation.force("link", d3.forceLink(new_links).id(d => d.id).distance(100).strength(1.0));
+    simulation.nodes(newNodes);
+    simulation.force("link", d3.forceLink(newLinks).id(d => d.id).distance(100).strength(1.0));
     simulation.alpha(1.0).restart();
 }
 
@@ -590,11 +605,20 @@ function chronologyConstraint(d) {
 }
 
 function nodeHtml(d) {
+    const lineHeight = 12;
     let s = d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `\n${d.year}` : "");
-    return s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
+    let y = 0;
+    s = s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
         .split("\n")
-        .map((d, i) => `<tspan x="8" y="${i * 12}">${d}</tspan>`)
+        .map((d, i) => `<tspan x="8" y="${y = i * lineHeight}">${d}</tspan>`)
         .join("\n");
+
+    let remainLinkCount = d.linkCount - d.currentLinkCount;
+    if (remainLinkCount > 0) {
+        s += `<tspan style="fill: #999" x="8" y="${y + lineHeight}">+ ${remainLinkCount}</tspan>`;
+    }
+
+    return s;
 }
 </script>
 </body>
