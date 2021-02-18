@@ -432,6 +432,10 @@ function restartSimulation(first) {
                 });
         }
 
+        // linking the expanded nodes
+        links.filter(l => nodeSet.has(l.source) && nodeSet.has(l.target))
+            .forEach(l => linkSet.add(l));
+
         newNodes = nodes.filter(n => nodeSet.has(n.id));
         newLinks = Array.from(linkSet);
     }
