@@ -137,7 +137,7 @@ svg text::selection {
 const preset = {
     database: [],
     title: "Game⨯Tech",
-    selected: ["Technology"],
+    selected: ["Game", "Technology"],
     expand: 1,
     chronology: false,
 };
@@ -183,6 +183,14 @@ function loadDatabase(database) {
         links.forEach(l => {
             nodeMap.get(l.source).linkCount++
             nodeMap.get(l.target).linkCount++
+        });
+
+        // Align preset nodes to x-axis
+        preset.selected.forEach(id => {
+            let n = nodeMap.get(id);
+            if (n != null) {
+                n.fy = n.y = 0;
+            }
         });
 
         main();
@@ -380,7 +388,7 @@ function main() {
         .call(chronologyAxis);
 
     simulation = d3.forceSimulation()
-        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(500))
+        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(2000))
         .force("collide", d3.forceCollide(50))
         .force("x", d3.forceX())
         .force("y", d3.forceY())

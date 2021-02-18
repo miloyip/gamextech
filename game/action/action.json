@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": "Action Game",
+      "abbr": "ACT",
+      "link": "https://en.wikipedia.org/wiki/Action_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Action Game"
+    }
+  ]
+}

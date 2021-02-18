@@ -570,6 +570,10 @@
       "target": "Commercial Game Engine"
     },
     {
+      "source": "Commercial Game Engine",
+      "target": "Unreal Engine"
+    },
+    {
       "source": "Unreal Engine",
       "target": "Unreal Engine 2",
       "type": "derive"
@@ -673,6 +677,10 @@
       "source": "Doom Engine",
       "target": "Quake Engine",
       "type": "derive"
+    },
+    {
+      "source": "Quake Engine",
+      "target": "Light Map"
     },
     {
       "source": "Quake Engine",

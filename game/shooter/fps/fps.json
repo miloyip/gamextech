@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "id": "First-person Shooter",
+      "abbr": "FPS"
+    },
+    {
+      "id": "Doom",
+      "organization": "id Software",
+      "link": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
+      "year": "1993"
+    },
+    {
+      "id": "Quake",
+      "organization": "id Software",
+      "link": "https://en.wikipedia.org/wiki/Quake_(video_game)",
+      "year": "1996"
+    }
+  ],
+  "links": [
+    {
+      "source": "Shooter Game",
+      "target": "First-person Shooter"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Doom"
+    },
+    {
+      "source": "Doom",
+      "target": "Doom Engine",
+      "type": "use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Quake"
+    },
+    {
+      "source": "Quake",
+      "target": "Quake Engine",
+      "type": "use"
+    }
+  ]
+}

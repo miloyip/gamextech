@@ -124,7 +124,7 @@
       "id": "Metaballs",
       "author": "James F Blinn",
       "title": "A generalization of algebraic surface drawing",
-      "journal" : "TOG",
+      "journal": "TOG",
       "link": [
         "https://dl.acm.org/doi/pdf/10.1145/357306.357310",
         "https://en.wikipedia.org/wiki/Metaballs"
@@ -173,7 +173,7 @@
     {
       "id": "Dual Marching Cubes",
       "author": [
-        "Scott Schaefer", 
+        "Scott Schaefer",
         "Joe Warren"
       ],
       "title": "Dual marching cubes: Primal contouring of dual grids",
@@ -189,7 +189,7 @@
         "Joe Warren"
       ],
       "title": "Manifold dual contouring",
-      "journal" :"TVCG",
+      "journal": "TVCG",
       "year": 2007
     },
     {

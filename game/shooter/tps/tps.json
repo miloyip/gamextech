@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "id": "Third-person Shooter",
+      "abbr": "TPS"
+    }
+  ],
+  "links": [
+    {
+      "source": "Shooter Game",
+      "target": "Third-person Shooter"
+    }
+  ]
+}

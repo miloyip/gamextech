@@ -158,6 +158,14 @@
       "source": "WebGPU",
       "target": "Standard Portable Intermediate Representation V",
       "type": "use"
+    },
+    {
+      "source": "Graphics API",
+      "target": "Glide"
+    },
+    {
+      "source": "Graphics API",
+      "target": "Mantle"
     }
   ]
 }
