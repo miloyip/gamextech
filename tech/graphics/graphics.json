@@ -1,7 +1,8 @@
 {
   "nodes": [
     {
-      "id": "Graphics",
+      "id": "Computer Graphics",
+      "abbr": "CG",
       "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"
     },
     {
@@ -32,10 +33,14 @@
   "links": [
     {
       "source": "Technology",
-      "target": "Graphics"
+      "target": "Computer Graphics"
     },
     {
-      "source": "Graphics",
+      "source": "Computer Science",
+      "target": "Computer Graphics"
+    },
+    {
+      "source": "Computer Graphics",
       "target": "Animation"
     },
     {
@@ -63,7 +68,7 @@
       "target": "Motion Matching"
     },
     {
-      "source": "Graphics",
+      "source": "Computer Graphics",
       "target": "Scene Management"
     }
   ]
