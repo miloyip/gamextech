@@ -17,7 +17,7 @@ Visualize game related technology for knowledge management.
 
 ## Schema
 
-Nodes are array of objects with following keys (asterisk are must exist):
+Nodes are array of objects with following keys (*required):
 
 | Key         | Type                      | Description                                                  |
 | ----------- | ------------------------- | ------------------------------------------------------------ |
@@ -35,13 +35,13 @@ Nodes are array of objects with following keys (asterisk are must exist):
 | organization| string or array of string | Company, institute or other organization                     |
 | contributor | string or array of string | github usernames of whom contribute to this node             | 
 
-Links are arrays of objects with following keys (asterisk are must exist):
+Links are arrays of objects with following keys (*required):
 
 | Key       | Type     | Description                     |  
 | --------- | -------- | ------------------------------- |  
 | source*   | string   | Source node id                  |  
 | target*   | string   | Target node id                  |  
-| type      | string   | "include" (default) or "derive" or "use" or "invent" |  
+| type      | string   | "include" (default) or "derive" or "use" or "first-use" or "invent" |  
 
 ## Contribution
 

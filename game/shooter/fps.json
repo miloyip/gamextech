@@ -15,6 +15,12 @@
       "organization": "id Software",
       "link": "https://en.wikipedia.org/wiki/Quake_(video_game)",
       "year": "1996"
+    },
+    {
+      "id": "Half-Life 2",
+      "organization": "Valve",
+      "link": "https://en.wikipedia.org/wiki/Half-Life_2",
+      "year": "2004"
     }
   ],
   "links": [
@@ -38,7 +44,26 @@
     {
       "source": "Quake",
       "target": "Quake Engine",
+      "type": "first-use"
+    },
+    {
+      "source": "Quake",
+      "target": "Light Map",
+      "type": "first-use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Half-Life 2"
+    },
+    {
+      "source": "Half-Life 2",
+      "target": "Source",
       "type": "use"
+    },
+    {
+      "source": "Half-Life 2",
+      "target": "Radiosity Normal Mapping",
+      "type": "first-use"
     }
   ]
 }

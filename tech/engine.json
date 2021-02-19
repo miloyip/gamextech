@@ -823,6 +823,11 @@
     },
     {
       "source": "Source",
+      "target": "Radiosity Normal Mapping",
+      "type": "invent"
+    },
+    {
+      "source": "Source",
       "target": "Source 2",
       "type": "derive"
     },
