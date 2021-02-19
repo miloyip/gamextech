@@ -116,12 +116,14 @@ svg text::selection {
     <span style="display:inline-block; width:100px;">
         <input type="checkbox" id="chronology" style="vertical-align: middle;"/><label for="chronology" style="vertical-align: middle;">Chronology</label>
     </span>
-    <span style="display:inline-block; width:100px;">
+    <span style="display:inline-block; width:120px;">
         <input type="text" id="search" style="width: 100px" placeholder="Search (regex)" autocomplete="off" />
         <div id="search-result">
             <ul>
             </ul>
         </div>
+    </span>
+    <span style="display:inline-block; width:100px;" id="stat">
     </span>
 </span>
 <span style="float:right">
@@ -457,6 +459,9 @@ function restartSimulation(first) {
         nodes.forEach(d => d.fx = null);    // Remove constraint
     }
     svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
+
+    // Stat
+    d3.select("#stat").text(`${newNodes.length} / ${nodes.length}`);
 
     // Make a shallow copy to protect against mutation, while
     // recycling old nodes to preserve position and velocity.
