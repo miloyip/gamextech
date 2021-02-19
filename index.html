@@ -151,7 +151,7 @@ let chronology = preset.chronology;
 
 // UI state
 const margin = { left: 0, top: 40, right: 0, bottom: 40 };
-let popup = {};
+let popup = null;
 let width = 0, height = 0;
 let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
 let hoverTimeout = null;
@@ -407,7 +407,8 @@ function main() {
             link.attr("d", linkArc);
             linkLabelPath.attr("d", linkLabelArc);
             node.attr("transform", d => `translate(${d.x},${d.y})`);
-            updatePopup();
+            if (popup)
+                updatePopupBounds();
         });
 
     restartSimulation(true);
@@ -494,16 +495,44 @@ function restartSimulation(first) {
 
             // Hover to show popup
             g.on("mouseenter", (event, d) => {
-                if (popup.node != d) {
+                if (popup) {
+                    popup.labelHover = true;
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                    if (popup.node != d) { // Hover to another label while popup is shown, switch
+                        popup.node = d;
+                        popup.srcElement = event.srcElement;
+                        updatePopup();
+                    }
+                }
+                else if (hoverTimeout == null) {
                     hoverTimeout = setTimeout(() => {
-                        popup = { node: d, srcElement: event.srcElement };
-                        updatePopup()},
-                        500);
+                        hoverTimeout = null;
+                        popup = {
+                            node: d,
+                            srcElement: event.srcElement,
+                            labelHover: true,
+                            popupHover: false
+                        };
+                        updatePopup();
+                    }, 500);
                 }
             });
 
-            g.on("mousedown", event => clearPopup());
-            g.on("mouseup", event => clearPopup());
+            g.on("mouseleave", (event, d) => {
+                if (popup) {
+                    popup.labelHover = false;
+                    if (!popup.popupHover && hoverTimeout == null) {
+                        hoverTimeout = setTimeout(() => {
+                            clearPopup();
+                        }, 500);
+                    }
+                }
+                else {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                }
+            });
 
             // Toogle selection
             g.on("click", (_, d) => {
@@ -514,7 +543,9 @@ function restartSimulation(first) {
                     selected.add(d.id);
                 }
                 pushState();
-                setTimeout(restartSimulation, 100);
+                // setTimeout(restartSimulation, 100);
+                clearPopup();
+                restartSimulation();
             });
 
             return g
@@ -584,16 +615,30 @@ function updateChronology() {
 }
 
 function clearPopup() {
-    clearTimeout(hoverTimeout);
-    popup = {};
-    updatePopup();
+    if (popup) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+        popup = null;
+        updatePopup();
+    }
 }
 
-function updatePopup() {
-    if (popup.srcElement) {
+function updatePopupBounds() {
+    if (popup) {
         const r = popup.srcElement.getBoundingClientRect();
         const shift = (r.bottom - r.top) * 0.5;
         const width = 200;
+        d3.select("#popup")
+            .style("visibility", "visible")
+            .style("width", width + "px")
+            .style("left", r.left - width / 2 + shift - 8 + "px")
+            .style("top", r.bottom + "px");
+    }    
+}
+
+function updatePopup() {
+    if (popup) {
+        updatePopupBounds();
         let d = popup.node;
         let html = `<p>${d.id}${d.abbr ? " (" + d.abbr + ")" : ""}`;
         if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(", ") : d.aka}</small>`;
@@ -615,22 +660,33 @@ function updatePopup() {
         html += '</table>';
         d3.select("#popup")
             .style("visibility", "visible")
-            .style("width", width + "px")
-            .style("left", r.left - width / 2 + shift - 8 + "px")
-            .style("top", r.bottom + "px")
             .style("opacity", 0)
             .html(html)
-            .on("mouseleave", event => {
-                popup = {}
-                updatePopup();
+            .on("mouseenter", event => {
+                if (popup) {
+                    popup.popupHover = true;
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                }
             })
+            .on("mouseleave", event => {
+                if (popup) {
+                    popup.popupHover = false;
+                    if (!popup.labelHover && !hoverTimeout) {
+                        hoverTimeout = setTimeout(() => {
+                            clearPopup();
+                        }, 500);
+                    }
+                }
+            })
+            .interrupt()
             .transition().duration(500).style("opacity", 1);
     }
     else {
         d3.select("#popup")
             .interrupt()
             .transition().duration(500).style("opacity", 0)
-            .on("end", () => d3.select("#popup").style("visibility", "hidden"));
+            .on("end", () => d3.select("#popup").style("visibility", "hidden"));    
     }
 }
 
@@ -691,6 +747,7 @@ function updateStateFromURL() {
 
 function drag(simulation) {
     function dragstarted(event) {
+        clearPopup();
         if (!event.active) simulation.alphaTarget(0.3).restart();
         event.subject.fx = event.subject.x;
         event.subject.fy = event.subject.y;
@@ -698,6 +755,7 @@ function drag(simulation) {
     }
 
     function dragged(event) {
+        clearPopup();
         event.subject.fx = event.x;
         event.subject.fy = event.y;
         chronologyConstraint(event.subject);
