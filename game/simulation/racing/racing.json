@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "Racing Game",
+      "link": "https://en.wikipedia.org/wiki/Racing_game"
+    },
+    {
+      "id": "Wreckless: The Yakuza Missions",
+      "aka": "Double S.T.E.A.L.",
+      "link": "https://en.wikipedia.org/wiki/Wreckless:_The_Yakuza_Missions",
+      "year": 2002
+    }
+  ],
+  "links": [
+    {
+      "source": "Simulation Game",
+      "target": "Racing Game"
+    },
+    {
+      "source": "Racing Game",
+      "target": "Wreckless: The Yakuza Missions"
+    },
+    {
+      "source": "Wreckless: The Yakuza Missions",
+      "target": "Kawase Filter",
+      "type": "invent"
+    }
+  ]
+}

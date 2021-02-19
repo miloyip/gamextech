@@ -680,7 +680,8 @@
     },
     {
       "source": "Quake Engine",
-      "target": "Light Map"
+      "target": "Light Map",
+      "type": "invent"
     },
     {
       "source": "Quake Engine",

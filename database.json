@@ -9,6 +9,7 @@
   "game/shooter/fps/fps.json",
   "game/shooter/tps/tps.json",
   "game/simulation/simulation.json",
+  "game/simulation/racing/racing.json",
   "game/sports/sports.json",
   "game/strategy/strategy.json",
   "tech/tech.json",

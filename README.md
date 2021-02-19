@@ -41,7 +41,7 @@ Links are arrays of objects with following keys (asterisk are must exist):
 | --------- | -------- | ------------------------------- |  
 | source*   | string   | Source node id                  |  
 | target*   | string   | Target node id                  |  
-| type      | string   | "include" (default) or "derive" or "use" |  
+| type      | string   | "include" (default) or "derive" or "use" or "invent" |  
 
 ## Contribution
 
