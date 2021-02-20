@@ -13,9 +13,6 @@
       "id": "Platform"
     },
     {
-      "id": "Programming"
-    },
-    {
       "id": "Software Engineering"
     },
     {
@@ -54,10 +51,6 @@
     {
       "source": "Technology",
       "target": "Platform"
-    },
-    {
-      "source": "Technology",
-      "target": "Programming"
     },
     {
       "source": "Technology",

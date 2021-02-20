@@ -1,57 +1,185 @@
 {
   "nodes": [
     {
-      "id": "Programming Paradigm"
+      "id": "Programming",
+      "aka": "Coding",
+      "link": "https://en.wikipedia.org/wiki/Computer_programming"
     },
     {
-      "id": "Procedural Programming"
+      "id": "Programming Paradigm",
+      "link": "https://en.wikipedia.org/wiki/Programming_paradigm"
+    },
+    {
+      "id": "Procedural Programming",
+      "link": "https://en.wikipedia.org/wiki/Procedural_programming"
     },
     {
       "id": "Object-oriented Programming",
       "abbr": "OOP"
     },
     {
+      "id": "Data-oriented Programming",
+      "abbr": "DOP",
+      "link": "https://en.wikipedia.org/wiki/Data-oriented_design"
+    },
+    {
       "id": "Functional Programming",
-      "abbr": "FP"
+      "abbr": "FP",
+      "link": "https://en.wikipedia.org/wiki/Functional_programming"
+    },
+    {
+      "id": "Generic Programming",
+      "link": "https://en.wikipedia.org/wiki/Generic_programming"
+    },
+    {
+      "id": "Metaprogramming",
+      "link": "https://en.wikipedia.org/wiki/Metaprogramming"
     },
     {
       "id": "Event-driven Programming"
     },
     {
-      "id": "Programming Language"
+      "id": "Data-driven Programming",
+      "link": "https://en.wikipedia.org/wiki/Data-driven_programming"
     },
     {
-      "id": "Native Programming Language"
+      "id": "Programming Language",
+      "link": "https://en.wikipedia.org/wiki/Programming_language"
     },
     {
-      "id": "Assembly"
+      "id": "Assembly",
+      "author": "David Wheeler",
+      "link": "https://en.wikipedia.org/wiki/Assembly_language",
+      "year": 1949
     },
     {
-      "id": "C"
+      "id": "Compiled Language"
     },
     {
-      "id": "C++"
+      "id": "C",
+      "author": "Dennis Ritchie",
+      "link": [
+        "https://en.cppreference.com/w/c",
+        "https://en.wikipedia.org/wiki/C_(programming_language)"
+      ],
+      "year": 1972
     },
     {
-      "id": "Objective-C"
+      "id": "Objective-C",
+      "author": [
+        "Tom Love",
+        "Brad Cox"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Objective-C",
+      "year": 1984
     },
     {
-      "id": "Rust"
+      "id": "C++",
+      "author": "Bjarne Stroustrup",
+      "link": [
+        "https://en.cppreference.com/w/cpp",
+        "https://en.wikipedia.org/wiki/C%2B%2B"
+      ],
+      "year": 1985
     },
     {
-      "id": "Java"
+      "id": "Java",
+      "author": "James Gosling",
+      "organization": ["Sun", "Oracle"],
+      "link": [
+        "https://www.oracle.com/java/",
+        "https://en.wikipedia.org/wiki/Java_(programming_language)"
+      ],
+      "year": 1995
     },
     {
-      "id": "C#"
+      "id": "C#",
+      "author": "Anders Hejlsberg",
+      "organization": "Microsoft",
+      "link": [
+        "https://docs.microsoft.com/en-us/dotnet/csharp/",
+        "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+      ],
+      "year": 2000
     },
     {
-      "id": "Scripting Programming Language"
+      "id": "Go",
+      "author": [
+        "Robert Griesemer",
+        "Rob Pike",
+        "Ken Thompson"
+      ],
+      "link": [
+        "https://golang.org/",
+        "https://en.wikipedia.org/wiki/Go_(programming_language)"
+      ],
+      "year": 2009
     },
     {
-      "id": "Lua"
+      "id": "Rust",
+      "author": "Graydon Hoare",
+      "link": [
+        "https://www.rust-lang.org/",
+        "https://en.wikipedia.org/wiki/Rust_(programming_language)"
+      ],
+      "year": 2010
     },
     {
-      "id": "Python"
+      "id": "Scripting Language",
+      "link": "https://en.wikipedia.org/wiki/Scripting_language"
+    },
+    {
+      "id": "Python",
+      "author": "Guido van Rossum",
+      "link": [
+        "https://www.python.org/",
+        "https://en.wikipedia.org/wiki/Python_(programming_language)"
+      ],
+      "year": 1991
+    },
+    {
+      "id": "Lua",
+      "author": [
+        "Roberto Ierusalimschy",
+        "Waldemar Celes",
+        "Luiz Henrique de Figueiredo"
+      ],
+      "link": [
+        "https://www.lua.org/",
+        "https://en.wikipedia.org/wiki/Lua_(programming_language)"
+      ],
+      "year": 1993
+    },
+    {
+      "id": "Javascript",
+      "abbr": "JS",
+      "aka": "ECMAScript",
+      "author": "Brendan Eich",
+      "link": [
+        "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
+        "https://en.wikipedia.org/wiki/JavaScript"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "Visual Programming Language",
+      "abbr": "VPL",
+      "link": "https://en.wikipedia.org/wiki/Visual_programming_language"
+    },
+    {
+      "id": "Scratch",
+      "organization": "MIT",
+      "link": [
+        "https://scratch.mit.edu/",
+        "https://en.wikipedia.org/wiki/Scratch_(programming_language)"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "Blueprint",
+      "organization": "Epic Games",
+      "link": "https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/index.html",
+      "year": 2012
     },
     {
       "id": "Shading Language",
@@ -175,6 +303,10 @@
   ],
   "links": [
     {
+      "source": "Technology",
+      "target": "Programming"
+    },
+    {
       "source": "Programming",
       "target": "Programming Paradigm"
     },
@@ -188,7 +320,23 @@
     },
     {
       "source": "Programming Paradigm",
+      "target": "Data-oriented Programming"
+    },
+    {
+      "source": "Programming Paradigm",
       "target": "Functional Programming"
+    },
+    {
+      "source": "Programming Paradigm",
+      "target": "Generic Programming"
+    },
+    {
+      "source": "Programming Paradigm",
+      "target": "Metaprogramming"
+    },
+    {
+      "source": "Programming Paradigm",
+      "target": "Data-driven Programming"
     },
     {
       "source": "Programming Paradigm",
@@ -200,47 +348,81 @@
     },
     {
       "source": "Programming Language",
-      "target": "Native Programming Language"
-    },
-    {
-      "source": "Native Programming Language",
       "target": "Assembly"
     },
     {
-      "source": "Native Programming Language",
+      "source": "Programming Language",
+      "target": "Compiled Language"
+    },
+    {
+      "source": "Compiled Language",
       "target": "C"
     },
     {
-      "source": "Native Programming Language",
-      "target": "C++"
-    },
-    {
-      "source": "Native Programming Language",
+      "source": "Compiled Language",
       "target": "Objective-C"
     },
     {
-      "source": "Native Programming Language",
-      "target": "Rust"
+      "source": "C",
+      "target": "Objective-C",
+      "type": "derive"
     },
     {
-      "source": "Native Programming Language",
-      "target": "C#"
+      "source": "Compiled Language",
+      "target": "C++"
     },
     {
-      "source": "Native Programming Language",
+      "source": "C",
+      "target": "C++",
+      "type": "derive"
+    },
+    {
+      "source": "Compiled Language",
       "target": "Java"
     },
     {
-      "source": "Programming Language",
-      "target": "Scripting Programming Language"
+      "source": "Compiled Language",
+      "target": "C#"
     },
     {
-      "source": "Scripting Programming Language",
+      "source": "Compiled Language",
+      "target": "Go"
+    },
+    {
+      "source": "Compiled Language",
+      "target": "Rust"
+    },
+    {
+      "source": "Programming Language",
+      "target": "Scripting Language"
+    },
+    {
+      "source": "Scripting Language",
+      "target": "Python"
+    },
+    {
+      "source": "Scripting Language",
       "target": "Lua"
     },
     {
-      "source": "Scripting Programming Language",
-      "target": "Python"
+      "source": "Scripting Language",
+      "target": "Javascript"
+    },
+    {
+      "source": "Scripting Language",
+      "target": "JavaScript"
+    },
+    {
+      "source": "Programming Language",
+      "target": "Visual Programming Language"
+    },
+    {
+      "source": "Visual Programming Language",
+      "target": "Scratch"
+    },
+    {
+      "source": "Visual Programming Language",
+      "target": "Blueprint"
     },
     {
       "source": "Programming Language",

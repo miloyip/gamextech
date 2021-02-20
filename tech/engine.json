@@ -590,6 +590,10 @@
     },
     {
       "source": "Unreal Engine 4",
+      "target": "Blueprint"
+    },
+    {
+      "source": "Unreal Engine 4",
       "target": "Unreal Engine 5",
       "type": "derive"
     },
