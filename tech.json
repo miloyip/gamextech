@@ -23,9 +23,6 @@
       "abbr": "HCI"
     },
     {
-      "id": "Physics"
-    },
-    {
       "id": "Artificial Intelligence",
       "abbr": "AI"
     },
@@ -63,10 +60,6 @@
     {
       "source": "Technology",
       "target": "Human Computer Interaction"
-    },
-    {
-      "source": "Technology",
-      "target": "Physics"
     },
     {
       "source": "Technology",

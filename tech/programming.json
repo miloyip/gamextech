@@ -85,7 +85,10 @@
     {
       "id": "Java",
       "author": "James Gosling",
-      "organization": ["Sun", "Oracle"],
+      "organization": [
+        "Sun",
+        "Oracle"
+      ],
       "link": [
         "https://www.oracle.com/java/",
         "https://en.wikipedia.org/wiki/Java_(programming_language)"

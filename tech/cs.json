@@ -13,6 +13,10 @@
       "id": "Computational Geometry"
     },
     {
+      "id": "Convex Hull",
+      "link": "https://en.wikipedia.org/wiki/Convex_hull"
+    },
+    {
       "id": "Numerical Method"
     },
     {
@@ -53,6 +57,10 @@
     {
       "source": "Computer Science",
       "target": "Computational Geometry"
+    },
+    {
+      "source": "Computational Geometry",
+      "target": "Convex Hull"
     },
     {
       "source": "Computer Science",
