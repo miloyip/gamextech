@@ -2,7 +2,7 @@
 
 A web-based knowledge management system for visualizing game related technologies.
 
-This repository can be viewed at [gamextech.org](https://gamextech.org/).
+This repository can be viewed at [gamextech.org](http://gamextech.org/).
 
 Currently the database is very limited. Please consider [contribution](#contribution).
 
