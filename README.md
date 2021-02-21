@@ -29,7 +29,7 @@ Currently the database is very limited. Please consider [contribution](#contribu
 
 The database contains a set of graphs.
 
-The [database](gamextech/blob/main/database.json) and graph are stored in [JSON](https://www.json.org/json-en.html) format.
+The [database](database.json) and graphs are stored in [JSON](https://www.json.org/json-en.html) format.
 
 Each graph JSON is an object, with "nodes" and "links" array.
 
