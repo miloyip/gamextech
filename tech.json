@@ -23,10 +23,6 @@
       "abbr": "HCI"
     },
     {
-      "id": "Artificial Intelligence",
-      "abbr": "AI"
-    },
-    {
       "id": "Gameplay"
     },
     {
@@ -60,10 +56,6 @@
     {
       "source": "Technology",
       "target": "Human Computer Interaction"
-    },
-    {
-      "source": "Technology",
-      "target": "Artificial Intelligence"
     },
     {
       "source": "Technology",

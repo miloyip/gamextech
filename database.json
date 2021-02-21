@@ -6,6 +6,7 @@
   "game/platformer/puzzleplatform.json",
   "game/puzzle.json",
   "game/roleplay.json",
+  "game/roleplay/arpg.json",
   "game/shooter.json",
   "game/shooter/fps.json",
   "game/shooter/tps.json",
