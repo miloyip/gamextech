@@ -34,6 +34,10 @@
       "year": 1975
     },
     {
+      "id": "Per-pixel Lighting",
+      "link": "https://en.wikipedia.org/wiki/Per-pixel_lighting"
+    },
+    {
       "id": "Forward Shading",
       "aka": "Forward Rendering"
     },

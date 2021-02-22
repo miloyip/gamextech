@@ -260,7 +260,7 @@
       "link": "https://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch12.html"
     },
     {
-      "id": "Dual Parabloid Shadow Map",
+      "id": "Dual Paraboloid Shadow Map",
       "abbr": "DPSM",
       "author": [
         "Stefan Brabec",
@@ -273,7 +273,7 @@
       "year": 2002
     },
     {
-      "id": "Practical Dual Parabloid Shadow Map",
+      "id": "Practical Dual Paraboloid Shadow Map",
       "author": [
         "Brian Osman",
         "Mike Bukowski",
@@ -461,16 +461,16 @@
     },
     {
       "source": "Omnidirectional Shadow Map",
-      "target": "Dual Parabloid Shadow Map"
+      "target": "Dual Paraboloid Shadow Map"
     },
     {
-      "source": "Dual Parabloid Shadow Map",
-      "target": "Dual Parabloid Mapping",
+      "source": "Dual Paraboloid Shadow Map",
+      "target": "Dual Paraboloid Mapping",
       "type": "use"
     },
     {
-      "source": "Dual Parabloid Shadow Map",
-      "target": "Practical Dual Parabloid Shadow Map",
+      "source": "Dual Paraboloid Shadow Map",
+      "target": "Practical Dual Paraboloid Shadow Map",
       "type": "derive"
     },
     {

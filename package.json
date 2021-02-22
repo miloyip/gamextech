@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "chalk": "latest",
+    "jsonschema": "1.4.0"
+  },
+  "scripts": {
+    "test": "node validate.js"
+  }
+}
