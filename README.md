@@ -1,5 +1,7 @@
 # Game ⨯ Tech (beta)
 
+[![Build Status](https://travis-ci.org/miloyip/gamextech.svg?branch=main)](https://travis-ci.org/miloyip/gamextech)
+
 A web-based knowledge management system for visualizing game related technologies.
 
 This repository can be viewed at [gamextech.org](http://gamextech.org/).
@@ -80,6 +82,8 @@ If you want to add a lot of data or reorganize existing structure, you may creat
 Adding new features and fixing bugs are welcome as well.
 
 ### Testing
+
+You can run `npm install` and `npm test` to validate the database with schema and additinoal checks.
 
 When testing locally, you need to start a http server
 (because most browser does not accept reading json files in `file://`).
