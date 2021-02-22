@@ -114,24 +114,24 @@
       "aka": "Blur Filter"
     },
     {
-      "id": "Box Filter",
-      "aka": "Box Blur",
+      "id": "Box Blur",
+      "aka": "Box Filter",
       "link": "https://en.wikipedia.org/wiki/Box_blur"
     },
     {
-      "id": "Gaussian Filter",
-      "aka": "Guassian Blur",
+      "id": "Gaussian Blur",
+      "aka": "Guassian Filter",
       "link": "https://en.wikipedia.org/wiki/Gaussian_blur"
     },
     {
-      "id": "Kawase Filter",
+      "id": "Kawase Blur",
       "author": "Masaki Kawase",
       "title": "Frame Buffer Postprocessing Effects in DOUBLE-S.T.E.A.L. (Wreckless)",
       "conference": "GDC",
       "year": 2003
     },
     {
-      "id": "Dual Kawase Filter",
+      "id": "Dual Kawase Blur",
       "author": "Marius Bjørge",
       "title": "Bandwidth-Efficient Rendering",
       "conference": "SIGGRAPH",
@@ -350,28 +350,28 @@
     },
     {
       "source": "Low Pass Filter",
-      "target": "Box Filter"
+      "target": "Box Blur"
     },
     {
       "source": "Separable Filter",
-      "target": "Box Filter"
+      "target": "Box Blur"
     },
     {
       "source": "Low Pass Filter",
-      "target": "Gaussian Filter"
+      "target": "Gaussian Blur"
     },
     {
       "source": "Separable Filter",
-      "target": "Gaussian Filter"
+      "target": "Gaussian Blur"
     },
     {
-      "source": "Gaussian Filter",
-      "target": "Kawase Filter",
+      "source": "Gaussian Blur",
+      "target": "Kawase Blur",
       "type": "derive"
     },
     {
-      "source": "Kawase Filter",
-      "target": "Dual Kawase Filter",
+      "source": "Kawase Blur",
+      "target": "Dual Kawase Blur",
       "type": "derive"
     },
     {

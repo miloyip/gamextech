@@ -294,7 +294,7 @@
         "https://dl.acm.org/doi/pdf/10.1145/166117.166151",
         "https://en.wikipedia.org/wiki/Line_integral_convolution"
       ],
-      "year": "1993"
+      "year": 1993
     },
     {
       "id": "Environment Map Motion Blur",
@@ -696,10 +696,6 @@
     },
     {
       "source": "Motion Blur",
-      "target": "Velocity Space Motion Blur"
-    },
-    {
-      "source": "Motion Blur",
       "target": "Camera Motion Blur"
     },
     {
@@ -716,7 +712,7 @@
     },
     {
       "source": "Environment Map Motion Blur",
-      "target": "Cube Map",
+      "target": "Cube Texture",
       "type": "use"
     },
     {

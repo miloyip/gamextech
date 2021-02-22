@@ -555,10 +555,6 @@
     },
     {
       "source": "Multibody System",
-      "target": "Constraint Constraint"
-    },
-    {
-      "source": "Multibody System",
       "target": "Contact Constraint"
     },
     {
