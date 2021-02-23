@@ -139,689 +139,674 @@ svg text::selection {
 <div id="container" class="svg-container">
 </div>
 <script>
+/* global d3 */
 // Preset state
 const preset = {
-    database: [],
-    title: "Game ⨯ Tech (beta)",
-    selected: ["Game", "Technology"],
-    expand: 1,
-    chronology: false,
-};
+  database: [],
+  title: 'Game ⨯ Tech (beta)',
+  selected: ['Game', 'Technology'],
+  expand: 1,
+  chronology: false
+}
 
 // Current state
-let database = preset.database;
-let selected = new Set(preset.selected);
-let title = preset.title;
-let expand = preset.expand;
-let chronology = preset.chronology;
+let database = preset.database
+let selected = new Set(preset.selected)
+let title = preset.title
+let expand = preset.expand
+let chronology = preset.chronology
 
 // UI state
-const margin = { left: 0, top: 40, right: 0, bottom: 40 };
-let popup = null;
-let width = 0, height = 0;
-let chronologyScale = {}, svg = {}, g = {}, link = {}, node = {};
-let hoverTimeout = null;
-let simulation = {};
+const margin = { left: 0, top: 40, right: 0, bottom: 40 }
+let popup = null
+let width = 0; let height = 0
+let chronologyScale = {}; let svg = {}; let g = {}; let link = {}; let node = {}; let linkLabelPath = {}; let linkLabel = {}
+let hoverTimeout = null
+let simulation = {}
 
 // Graph database
 
-let nodes = [], links = [];
+let nodes = []; let links = []
 
-parseURLdatabse();
-if (database.length != 0) {
-    loadDatabase(database);
+parseURLdatabse()
+if (database.length !== 0) {
+  loadDatabase(database)
+} else {
+  d3.json('database.json').then(loadDatabase)
 }
-else {
-    d3.json("database.json").then(loadDatabase);
-}
 
-function loadDatabase(database) {
-    Promise.all(database.map(url => d3.json(url))).then(files => {
-        nodes = [].concat.apply([], files.map(file => file.nodes));
-        links = [].concat.apply([], files.map(file => file.links));
+function loadDatabase (database) {
+  Promise.all(database.map(url => d3.json(url))).then(files => {
+    nodes = [].concat.apply([], files.map(file => file.nodes))
+    links = [].concat.apply([], files.map(file => file.links))
 
-        // Remove invalid links
-        const nodeMap = new Map(nodes.map(node => [node.id, node]));
-        links = links.filter(l => nodeMap.has(l.source) && nodeMap.has(l.target));
+    // Remove invalid links
+    const nodeMap = new Map(nodes.map(node => [node.id, node]))
+    links = links.filter(l => nodeMap.has(l.source) && nodeMap.has(l.target))
 
-        // Count link per node (for computing remaining link count)
-        nodes.forEach(n => { n.linkCount = 0; });
-        links.forEach(l => {
-            nodeMap.get(l.source).linkCount++
-            nodeMap.get(l.target).linkCount++
-        });
-
-        // Align preset nodes to x-axis
-        preset.selected.forEach(id => {
-            let n = nodeMap.get(id);
-            if (n != null) {
-                n.fy = n.y = 0;
-            }
-        });
-
-        main();
-    }).catch(err => {
-        console.log(err);
+    // Count link per node (for computing remaining link count)
+    nodes.forEach(n => { n.linkCount = 0 })
+    links.forEach(l => {
+      nodeMap.get(l.source).linkCount++
+      nodeMap.get(l.target).linkCount++
     })
+
+    // Align preset nodes to x-axis
+    preset.selected.forEach(id => {
+      const n = nodeMap.get(id)
+      if (n !== null) {
+        n.fy = n.y = 0
+      }
+    })
+
+    main()
+  }).catch(err => {
+    console.log(err)
+  })
 }
 
-function main() {
-    updateSize();
-    updateStateFromURL();
+function main () {
+  updateSize()
+  updateStateFromURL()
 
-    // Window events
-    d3.select(window)
-        .on('popstate', event => {
-            updateStateFromURL();
-            restartSimulation(true);
-        })
-        .on("resize", () => {
-            updateSize();
-            svg.attr("viewBox", [-width/2, -height/2, width, height]);
-            svg.selectAll(".chronology-axis").call(chronologyAxis);
-        });
+  // Window events
+  d3.select(window)
+    .on('popstate', event => {
+      updateStateFromURL()
+      restartSimulation(true)
+    })
+    .on('resize', () => {
+      updateSize()
+      svg.attr('viewBox', [-width / 2, -height / 2, width, height])
+      svg.selectAll('.chronology-axis').call(chronologyAxis)
+    })
 
-    // Toolbar events
+  // Toolbar events
 
-    d3.select("#title")
-        .on("click", event => {
-            title = window.prompt("Enter title", title) || title;
-            updateTitle();
-            pushState();
-        });
+  d3.select('#title')
+    .on('click', event => {
+      title = window.prompt('Enter title', title) || title
+      updateTitle()
+      pushState()
+    })
 
-    d3.select("#reset")
-        .on("click", event => {
-            database = preset.database;
-            selected = new Set(preset.selected);
-            title = preset.title;
-            expand = preset.expand;
-            chronology = preset.chronology;
-            updateTitle();
-            updateExpand();
-            updateChronology();
-            pushState();
-            restartSimulation();
-        });
-    d3.select("#expand")
-        .on("change", event => {
-            expand = event.srcElement.value;
-            pushState();
-            restartSimulation();
-        });
+  d3.select('#reset')
+    .on('click', event => {
+      database = preset.database
+      selected = new Set(preset.selected)
+      title = preset.title
+      expand = preset.expand
+      chronology = preset.chronology
+      updateTitle()
+      updateExpand()
+      updateChronology()
+      pushState()
+      restartSimulation()
+    })
+  d3.select('#expand')
+    .on('change', event => {
+      expand = event.srcElement.value
+      pushState()
+      restartSimulation()
+    })
 
-    d3.select("#chronology")
-        .on("change", event => {
-            chronology = event.srcElement.checked;
-            pushState();
-            restartSimulation();
-        });
+  d3.select('#chronology')
+    .on('change', event => {
+      chronology = event.srcElement.checked
+      pushState()
+      restartSimulation()
+    })
 
-    let searchResult = [];
-    d3.select("#search")
-        .on("input", event => {
-            let s = event.srcElement.value.trim();
-            if (s != "") {
-                const maxSearchResult = 10;
-                let r = new RegExp(s, 'i');
-                let count = 0;
-                searchResult = nodes.filter(n => (
-                    r.test(n.id) ||
+  let searchResult = []
+  d3.select('#search')
+    .on('input', event => {
+      const s = event.srcElement.value.trim()
+      if (s !== '') {
+        const maxSearchResult = 10
+        const r = new RegExp(s, 'i')
+        let count = 0
+        searchResult = nodes.filter(n => (
+          r.test(n.id) ||
                         (Array.isArray(n.abbr) ? n.abbr.some(a => r.test(a)) : r.test(n.abbr)) ||
-                        (Array.isArray(n.aka) ? n.aka.some(a => r.test(a)) : r.test(n.aka)))
-                    && count++ < maxSearchResult);
+                        (Array.isArray(n.aka) ? n.aka.some(a => r.test(a)) : r.test(n.aka))) &&
+                    count++ < maxSearchResult)
 
-                if (searchResult.length > 0) {
-                    searchResult.sort((a, b) => a.id.localeCompare(b.id));
+        if (searchResult.length > 0) {
+          searchResult.sort((a, b) => a.id.localeCompare(b.id))
 
-                    // Move exact match to the top
-                    let index = searchResult.findIndex(n => n.id.toLowerCase() == s.toLowerCase());
-                    if (index > 0) {
-                        searchResult.unshift(searchResult.splice(index, 1)[0]);
-                    }
-                }
-
-                let ul = d3.select("#search-result")
-                    .style("visibility", "visible")
-                    .select("ul")
-
-                ul.selectAll("li")
-                    .data(searchResult)
-                    .join("li")
-                    .classed("result-item", true)
-                    .classed("result-info", false)
-                    .text(d => d.id)
-                    .on("click", (event, d) => {
-                        d3.select("#search").property("value", "");
-                        d3.select("#search-result").style("visibility", "hidden");
-                        selected.add(d.id);
-                        pushState();
-                        restartSimulation();                        
-                    });
-
-                if (searchResult.length == 0) {
-                    ul.append("li")
-                        .classed("result-info", true)
-                        .classed("result-item", false)
-                        .text("no result");
-                }
-                else if (count > maxSearchResult) {
-                    ul.append("li")
-                        .classed("result-info", true)
-                        .classed("result-item", false)
-                        .text(`+ ${count - maxSearchResult} items...`);
-                }
-            }
-            else {
-                d3.select("#search-result")
-                    .style("visibility", "hidden");
-            }
-        })
-        .on("keyup", event => { // When press enter, select the first result
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                if (searchResult.length > 0) {
-                    d3.select("#search").property("value", "");
-                    d3.select("#search-result").style("visibility", "hidden");
-                    selected.add(searchResult[0].id);
-                    pushState();
-                    restartSimulation();                    
-                }
-            }
-        })
-
-    // Chronology scale
-
-    chronologyScale = d3.scaleTime()
-        .domain([new Date(1990, 0), Date.now()])
-        .range([-width / 2 + margin.left, width / 2 - margin.right])
-        .nice();
-
-    // Render SVG
-
-    svg = d3.select("#container")
-        .append("svg")
-        // .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", [-width/2, -height/2, width, height])
-        .classed("svg-content", true)
-        .style("font", "12px sans-serif")
-        .call(zoom);
-
-    svg.append("defs")
-        .append("marker")
-            .attr("id", "arrow")
-            .attr("viewBox", "0 -5 10 10")
-            .attr("refX", 15)
-            .attr("refY", -0.5)
-            .attr("markerWidth", 6)
-            .attr("markerHeight", 6)
-            .attr("orient", "auto")
-        .append("path")
-            .attr("fill", "#999")
-            .attr("d", "M0,-5L10,0L0,5");
-
-    g = svg.append("g");
-
-    link = g.append("g")
-        .attr("fill", "none")
-        .attr("stroke", "#999")
-        .attr("stroke-opacity", 0.6)
-        .attr("marker-end", `url(${new URL(`#arrow`, location)})`)
-        .selectAll("path");
-
-    linkLabelPath = g.append("g")
-        .attr("visibility", "hidden")
-        .selectAll("path");
-
-    linkLabel = g.append("g")
-        .attr("fill", "#999")
-        .style("pointer-events", "none")
-        .selectAll("text");
-
-    node = g.append("g")
-        .attr("stroke-width", 1.5)
-        .attr("cursor", "pointer")
-        .selectAll("g");
-
-    svg.append("g")
-        .attr("class", "chronology-axis")
-        .attr("visibility", chronology ? null : "hidden")
-        .call(chronologyAxis);
-
-    simulation = d3.forceSimulation()
-        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(2000))
-        .force("collide", d3.forceCollide(50))
-        .force("x", d3.forceX())
-        .force("y", d3.forceY())
-        // .alphaMin(0.1)
-        .velocityDecay(0.5)
-        .on("tick", () => {
-            function linkArc(d) {
-                const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
-                return `M${d.source.x},${d.source.y} A${r},${r} 0 0 1 ${d.target.x},${d.target.y}`;
-            }
-            function linkLabelArc(d) {
-                if (d.source.x > d.target.x) { // swap the source/target for flipping the text
-                    const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
-                    return `M${d.target.x},${d.target.y} A${r},${r} 0 0 0 ${d.source.x},${d.source.y}`;
-                }
-                else {
-                     return linkArc(d);
-                }
-            }
-
-            link.attr("d", linkArc);
-            linkLabelPath.attr("d", linkLabelArc);
-            node.attr("transform", d => `translate(${d.x},${d.y})`);
-            if (popup)
-                updatePopupBounds();
-        });
-
-    restartSimulation(true);
-}
-
-function restartSimulation(first) {
-    // Expand selection
-    let newNodes = [], newLinks = [];
-    if (expand == -1) { // Expand all
-        newNodes = nodes;
-        newLinks = links;
-    }
-    else {
-        let nodeSet = new Set(selected);
-        let linkSet = new Set();
-        for (let i = 0; i < expand; i++) {
-            links.filter(l => nodeSet.has(l.source) || nodeSet.has(l.target))
-                .forEach(l => {
-                    linkSet.add(l)
-                    nodeSet.add(l.source);
-                    nodeSet.add(l.target);
-                });
+          // Move exact match to the top
+          const index = searchResult.findIndex(n => n.id.toLowerCase() === s.toLowerCase())
+          if (index > 0) {
+            searchResult.unshift(searchResult.splice(index, 1)[0])
+          }
         }
 
-        // linking the expanded nodes
-        links.filter(l => nodeSet.has(l.source) && nodeSet.has(l.target))
-            .forEach(l => linkSet.add(l));
+        const ul = d3.select('#search-result')
+          .style('visibility', 'visible')
+          .select('ul')
 
-        newNodes = nodes.filter(n => nodeSet.has(n.id));
-        newLinks = Array.from(linkSet);
+        ul.selectAll('li')
+          .data(searchResult)
+          .join('li')
+          .classed('result-item', true)
+          .classed('result-info', false)
+          .text(d => d.id)
+          .on('click', (event, d) => {
+            d3.select('#search').property('value', '')
+            d3.select('#search-result').style('visibility', 'hidden')
+            selected.add(d.id)
+            pushState()
+            restartSimulation()
+          })
+
+        if (searchResult.length === 0) {
+          ul.append('li')
+            .classed('result-info', true)
+            .classed('result-item', false)
+            .text('no result')
+        } else if (count > maxSearchResult) {
+          ul.append('li')
+            .classed('result-info', true)
+            .classed('result-item', false)
+            .text(`+ ${count - maxSearchResult} items...`)
+        }
+      } else {
+        d3.select('#search-result')
+          .style('visibility', 'hidden')
+      }
+    })
+    .on('keyup', event => { // When press enter, select the first result
+      if (event.keyCode === 13) {
+        event.preventDefault()
+        if (searchResult.length > 0) {
+          d3.select('#search').property('value', '')
+          d3.select('#search-result').style('visibility', 'hidden')
+          selected.add(searchResult[0].id)
+          pushState()
+          restartSimulation()
+        }
+      }
+    })
+
+  // Chronology scale
+
+  chronologyScale = d3.scaleTime()
+    .domain([new Date(1990, 0), Date.now()])
+    .range([-width / 2 + margin.left, width / 2 - margin.right])
+    .nice()
+
+  // Render SVG
+
+  svg = d3.select('#container')
+    .append('svg')
+  // .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr('viewBox', [-width / 2, -height / 2, width, height])
+    .classed('svg-content', true)
+    .style('font', '12px sans-serif')
+    .call(zoom)
+
+  svg.append('defs')
+    .append('marker')
+    .attr('id', 'arrow')
+    .attr('viewBox', '0 -5 10 10')
+    .attr('refX', 15)
+    .attr('refY', -0.5)
+    .attr('markerWidth', 6)
+    .attr('markerHeight', 6)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('fill', '#999')
+    .attr('d', 'M0,-5L10,0L0,5')
+
+  g = svg.append('g')
+
+  link = g.append('g')
+    .attr('fill', 'none')
+    .attr('stroke', '#999')
+    .attr('stroke-opacity', 0.6)
+    .attr('marker-end', `url(${new URL('#arrow', location)})`)
+    .selectAll('path')
+
+  linkLabelPath = g.append('g')
+    .attr('visibility', 'hidden')
+    .selectAll('path')
+
+  linkLabel = g.append('g')
+    .attr('fill', '#999')
+    .style('pointer-events', 'none')
+    .selectAll('text')
+
+  node = g.append('g')
+    .attr('stroke-width', 1.5)
+    .attr('cursor', 'pointer')
+    .selectAll('g')
+
+  svg.append('g')
+    .attr('class', 'chronology-axis')
+    .attr('visibility', chronology ? null : 'hidden')
+    .call(chronologyAxis)
+
+  simulation = d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(-2000).distanceMax(2000))
+    .force('collide', d3.forceCollide(50))
+    .force('x', d3.forceX())
+    .force('y', d3.forceY())
+  // .alphaMin(0.1)
+    .velocityDecay(0.5)
+    .on('tick', () => {
+      function linkArc (d) {
+        const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y)
+        return `M${d.source.x},${d.source.y} A${r},${r} 0 0 1 ${d.target.x},${d.target.y}`
+      }
+      function linkLabelArc (d) {
+        if (d.source.x > d.target.x) { // swap the source/target for flipping the text
+          const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y)
+          return `M${d.target.x},${d.target.y} A${r},${r} 0 0 0 ${d.source.x},${d.source.y}`
+        } else {
+          return linkArc(d)
+        }
+      }
+
+      link.attr('d', linkArc)
+      linkLabelPath.attr('d', linkLabelArc)
+      node.attr('transform', d => `translate(${d.x},${d.y})`)
+      if (popup) { updatePopupBounds() }
+    })
+
+  restartSimulation(true)
+}
+
+function restartSimulation (first) {
+  // Expand selection
+  let newNodes = []; let newLinks = []
+  if (expand === -1) { // Expand all
+    newNodes = nodes
+    newLinks = links
+  } else {
+    const nodeSet = new Set(selected)
+    const linkSet = new Set()
+    for (let i = 0; i < expand; i++) {
+      links.filter(l => nodeSet.has(l.source) || nodeSet.has(l.target))
+        .forEach(l => {
+          linkSet.add(l)
+          nodeSet.add(l.source)
+          nodeSet.add(l.target)
+        })
     }
 
-    // Count current count link per node
-    let newNodeMap = new Map(newNodes.map(n => [n.id, n]));
-    newNodes.forEach(n => { n.currentLinkCount = 0; });
-    newLinks.forEach(l => {
-        newNodeMap.get(l.source).currentLinkCount++;
-        newNodeMap.get(l.target).currentLinkCount++;
-    });
+    // linking the expanded nodes
+    links.filter(l => nodeSet.has(l.source) && nodeSet.has(l.target))
+      .forEach(l => linkSet.add(l))
 
-    // Chronology
-    if (chronology) {
-        nodes.forEach(chronologyConstraint);
-    }
-    else {
-        nodes.forEach(d => d.fx = null);    // Remove constraint
-    }
-    svg.selectAll(".chronology-axis").attr("visibility", chronology ? null : "hidden");
+    newNodes = nodes.filter(n => nodeSet.has(n.id))
+    newLinks = Array.from(linkSet)
+  }
 
-    // Stat
-    d3.select("#stat").text(`${newNodes.length} / ${nodes.length}`);
+  // Count current count link per node
+  const newNodeMap = new Map(newNodes.map(n => [n.id, n]))
+  newNodes.forEach(n => { n.currentLinkCount = 0 })
+  newLinks.forEach(l => {
+    newNodeMap.get(l.source).currentLinkCount++
+    newNodeMap.get(l.target).currentLinkCount++
+  })
 
-    // Make a shallow copy to protect against mutation, while
-    // recycling old nodes to preserve position and velocity.
-    const old = new Map(node.data().map(d => [d.id, d]));
-    newNodes = newNodes.map(d => Object.assign(old.get(d.id) || {}, d));
-    newLinks = newLinks.map(d => Object.assign({}, d));
+  // Chronology
+  if (chronology) {
+    nodes.forEach(chronologyConstraint)
+  } else {
+    nodes.forEach(d => { d.fx = null }) // Remove constraint
+  }
+  svg.selectAll('.chronology-axis').attr('visibility', chronology ? null : 'hidden')
 
-    node = node.data(newNodes, d => d.id)
-        .join(enter => {
-            let g = enter.append("g")
-                .attr("opacity", 0);
-            
-            g.transition().duration(1000).attr("opacity", 1);
+  // Stat
+  d3.select('#stat').text(`${newNodes.length} / ${nodes.length}`)
 
-            g.append("circle")
-                .attr("r", 20)
-                .attr("opacity", 0);    // for clicking area
+  // Make a shallow copy to protect against mutation, while
+  // recycling old nodes to preserve position and velocity.
+  const old = new Map(node.data().map(d => [d.id, d]))
+  newNodes = newNodes.map(d => Object.assign(old.get(d.id) || {}, d))
+  newLinks = newLinks.map(d => Object.assign({}, d))
 
-            let circle = g.append("circle")
-                .attr("r", 4)
-                .attr("fill", "#777")
-                .attr("stroke", d => selected.has(d.id) ? "black" : "none");
+  node = node.data(newNodes, d => d.id)
+    .join(enter => {
+      const g = enter.append('g')
+        .attr('opacity', 0)
 
-            g.append("text")
-                .html(nodeHtml)
-                .clone(true).lower()
-                    .attr("fill", "none")
-                    .attr("stroke", "white")
-                    .attr("stroke-width", 3);
+      g.transition().duration(1000).attr('opacity', 1)
 
-            if (chronology) {
-                g.each(chronologyConstraint);
-            }
+      g.append('circle')
+        .attr('r', 20)
+        .attr('opacity', 0) // for clicking area
 
-            g.call(drag(simulation));
+      g.append('circle')
+        .attr('r', 4)
+        .attr('fill', '#777')
+        .attr('stroke', d => selected.has(d.id) ? 'black' : 'none')
 
-            // Hover to show popup
-            g.on("mouseenter", (event, d) => {
-                if (popup) {
-                    popup.labelHover = true;
-                    clearTimeout(hoverTimeout);
-                    hoverTimeout = null;
-                    if (popup.node != d) { // Hover to another label while popup is shown, switch
-                        popup.node = d;
-                        popup.srcElement = event.srcElement;
-                        updatePopup();
-                    }
-                }
-                else if (hoverTimeout == null) {
-                    hoverTimeout = setTimeout(() => {
-                        hoverTimeout = null;
-                        popup = {
-                            node: d,
-                            srcElement: event.srcElement,
-                            labelHover: true,
-                            popupHover: false
-                        };
-                        updatePopup();
-                    }, 500);
-                }
-            });
-
-            g.on("mouseleave", (event, d) => {
-                if (popup) {
-                    popup.labelHover = false;
-                    if (!popup.popupHover && hoverTimeout == null) {
-                        hoverTimeout = setTimeout(() => {
-                            clearPopup();
-                        }, 500);
-                    }
-                }
-                else {
-                    clearTimeout(hoverTimeout);
-                    hoverTimeout = null;
-                }
-            });
-
-            // Toogle selection
-            g.on("click", (_, d) => {
-                if (selected.size > 1 && selected.has(d.id)) {
-                    selected.delete(d.id);
-                }
-                else {
-                    selected.add(d.id);
-                }
-                pushState();
-                // setTimeout(restartSimulation, 100);
-                clearPopup();
-                restartSimulation();
-            });
-
-            return g
-        },
-        update => {
-            update.selectAll("circle")
-                .attr("stroke", d => selected.has(d.id) ? "black" : "none");
-            update.selectAll("text")
-                .html(nodeHtml);
-            return update;
-        },
-        exit => {
-            exit.call(exit => {
-                exit.transition()
-                    .duration(1000)
-                    .attr("opacity", 0)
-                    .remove();
-                // backup position/velocity
-                const old = new Map(exit.data().map(d => [d.id, d]));
-                nodes = nodes.map(d => Object.assign(old.get(d.id) || {}, d));
-            })
-        });
-
-    link = link.data(newLinks, d => [d.source, d.target])
-        .join("path");
-
-    let labaledLinks = newLinks.filter(d => d.type != null);
-    linkLabelPath = linkLabelPath.data(labaledLinks, d => [d.source, d.target])
-        .join("path")
-        .attr("id", (d, i) => `labeledLink${i}`);
-
-    linkLabel = linkLabel.data(labaledLinks, d => [d.source, d.target])
-        .join("text")
-        .append("textPath")
-        .attr("startOffset", "50%")
-        .attr("text-anchor", "middle")
-        .attr("alignment-baseline", "middle")
-        .attr("xlink:href", (d, i) => `#labeledLink${i}`)
-        .text(d => d.type)
+      g.append('text')
+        .html(nodeHtml)
         .clone(true).lower()
-            .attr("fill", "none")
-            .attr("stroke", "white")
-            .attr("stroke-width", 3);
+        .attr('fill', 'none')
+        .attr('stroke', 'white')
+        .attr('stroke-width', 3)
 
-    simulation.nodes(newNodes);
-    simulation.force("link", d3.forceLink(newLinks).id(d => d.id).distance(100).strength(1.0));
-    simulation.alpha(first ? 1.0 : 0.5).restart();
-}
+      if (chronology) {
+        g.each(chronologyConstraint)
+      }
 
-function updateSize() {
-    const bb = d3.select("#container").node().getBoundingClientRect();
-    width = bb.width;
-    height = bb.height;    
-}
+      g.call(drag(simulation))
 
-function updateTitle() {
-    d3.select("head").append("title").text(title);
-    d3.select("#title").html(title)
-}
-
-function updateExpand() {
-    d3.select("#expand").property("value", expand);
-}
-
-function updateChronology() {
-    d3.select("#chronology").property("checked", chronology);
-}
-
-function clearPopup() {
-    if (popup) {
-        clearTimeout(hoverTimeout);
-        hoverTimeout = null;
-        popup = null;
-        updatePopup();
-    }
-}
-
-function updatePopupBounds() {
-    if (popup) {
-        const r = popup.srcElement.getBoundingClientRect();
-        const shift = (r.bottom - r.top) * 0.5;
-        const width = 200;
-        d3.select("#popup")
-            .style("visibility", "visible")
-            .style("width", width + "px")
-            .style("left", r.left - width / 2 + shift - 8 + "px")
-            .style("top", r.bottom + "px");
-    }    
-}
-
-function updatePopup() {
-    if (popup) {
-        updatePopupBounds();
-        let d = popup.node;
-        let html = `<p>${d.id}${d.abbr ? " (" + d.abbr + ")" : ""}`;
-        if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(", ") : d.aka}</small>`;
-        html += "</p>";
-        if (d.synopsis) html += `<p>${d.synopsis}</p>`
-        html += "<table>";
-        if (d.author) html += `<tr><td>🧑‍💻</td><td>${Array.isArray(d.author) ? d.author.join(", ") : d.author}</td></tr>`;
-        if (d.organization) html += `<tr><td>🏛</td><td>${Array.isArray(d.organization) ? d.organization.join(", ") : d.organization}</td></tr>`;
-        if (d.title) html += `<tr><td>📜</td><td>${d.title}</td></tr>`;
-        if (d.conference) html += `<tr><td>🎙️</td><td>${d.conference}</td></tr>`;
-        if (d.journal) html += `<tr><td>📚</td><td>${d.journal}</td></tr>`;
-        if (d.link) {
-            html += "<tr><td>🔗</td><td>";
-            const links = Array.isArray(d.link) ? d.link : [d.link];
-            html += links.map(l => `<a href="${l}" target="_blank">${new URL(l).host}</a>`).join(", ");
-            html += "</td></tr>";
+      // Hover to show popup
+      g.on('mouseenter', (event, d) => {
+        if (popup) {
+          popup.labelHover = true
+          clearTimeout(hoverTimeout)
+          hoverTimeout = null
+          if (popup.node !== d) { // Hover to another label while popup is shown, switch
+            popup.node = d
+            popup.srcElement = event.srcElement
+            updatePopup()
+          }
+        } else if (hoverTimeout === null) {
+          hoverTimeout = setTimeout(() => {
+            hoverTimeout = null
+            popup = {
+              node: d,
+              srcElement: event.srcElement,
+              labelHover: true,
+              popupHover: false
+            }
+            updatePopup()
+          }, 500)
         }
-        if (d.year) html += `<tr><td>📆</td><td>${d.year}</td></tr>`;
-        html += '</table>';
-        d3.select("#popup")
-            .style("visibility", "visible")
-            .style("opacity", 0)
-            .html(html)
-            .on("mouseenter", event => {
-                if (popup) {
-                    popup.popupHover = true;
-                    clearTimeout(hoverTimeout);
-                    hoverTimeout = null;
-                }
-            })
-            .on("mouseleave", event => {
-                if (popup) {
-                    popup.popupHover = false;
-                    if (!popup.labelHover && !hoverTimeout) {
-                        hoverTimeout = setTimeout(() => {
-                            clearPopup();
-                        }, 500);
-                    }
-                }
-            })
-            .interrupt()
-            .transition().duration(500).style("opacity", 1);
-    }
-    else {
-        d3.select("#popup")
-            .interrupt()
-            .transition().duration(500).style("opacity", 0)
-            .on("end", () => d3.select("#popup").style("visibility", "hidden"));    
-    }
+      })
+
+      g.on('mouseleave', (event, d) => {
+        if (popup) {
+          popup.labelHover = false
+          if (!popup.popupHover && hoverTimeout === null) {
+            hoverTimeout = setTimeout(() => {
+              clearPopup()
+            }, 500)
+          }
+        } else {
+          clearTimeout(hoverTimeout)
+          hoverTimeout = null
+        }
+      })
+
+      // Toogle selection
+      g.on('click', (_, d) => {
+        if (selected.size > 1 && selected.has(d.id)) {
+          selected.delete(d.id)
+        } else {
+          selected.add(d.id)
+        }
+        pushState()
+        // setTimeout(restartSimulation, 100);
+        clearPopup()
+        restartSimulation()
+      })
+
+      return g
+    },
+    update => {
+      update.selectAll('circle')
+        .attr('stroke', d => selected.has(d.id) ? 'black' : 'none')
+      update.selectAll('text')
+        .html(nodeHtml)
+      return update
+    },
+    exit => {
+      exit.call(exit => {
+        exit.transition()
+          .duration(1000)
+          .attr('opacity', 0)
+          .remove()
+        // backup position/velocity
+        const old = new Map(exit.data().map(d => [d.id, d]))
+        nodes = nodes.map(d => Object.assign(old.get(d.id) || {}, d))
+      })
+    })
+
+  link = link.data(newLinks, d => [d.source, d.target])
+    .join('path')
+
+  const labaledLinks = newLinks.filter(d => d.type !== null)
+  linkLabelPath = linkLabelPath.data(labaledLinks, d => [d.source, d.target])
+    .join('path')
+    .attr('id', (d, i) => `labeledLink${i}`)
+
+  linkLabel = linkLabel.data(labaledLinks, d => [d.source, d.target])
+    .join('text')
+    .append('textPath')
+    .attr('startOffset', '50%')
+    .attr('text-anchor', 'middle')
+    .attr('alignment-baseline', 'middle')
+    .attr('xlink:href', (d, i) => `#labeledLink${i}`)
+    .text(d => d.type)
+    .clone(true).lower()
+    .attr('fill', 'none')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 3)
+
+  simulation.nodes(newNodes)
+  simulation.force('link', d3.forceLink(newLinks).id(d => d.id).distance(100).strength(1.0))
+  simulation.alpha(first ? 1.0 : 0.5).restart()
 }
 
-function pushState() {
-    let q = [];
-    if (database.length != 0)
-        q.push(`d=${database.join(",")}`);
-    if (title != preset.title)
-        q.push(`t=${encodeURIComponent(title)}`);
-    if (selected.size != preset.selected.length || !preset.selected.every(id => selected.has(id)))
-        q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id.replaceAll(" ", "_")))
-            .join(",")}`);
-    if (expand != preset.expand)
-        q.push(`e=${expand}`);
-    if (chronology != preset.chronology)
-        q.push(`c=${chronology | 0}`);
-    history.pushState({}, "", q.length == 0 ? location.pathname : `?${q.join("&")}`);
+function updateSize () {
+  const bb = d3.select('#container').node().getBoundingClientRect()
+  width = bb.width
+  height = bb.height
 }
 
-function parseURL() {
-    const q = new URL(document.location.href).searchParams;
-    
-    title = q.get("t") || preset.title;
-    
-    let e = q.get("e"), i;
-    expand = e && !Number.isNaN(i = parseInt(e)) ? Math.min(Math.max(i, -1), 2) : preset.expand;
-    
-    chronology = q.get("c") || preset.chronology;
-    
-    let s = q.get("s");
-    if (s) {
-        const idset = new Set(nodes.map(node => node.id));
-        selected = new Set(
-            s.split(",")
-                .map(id => decodeURIComponent(id).replaceAll("_", " "))
-                .filter(id => idset.has(id)));
-        if (selected.size == 0)
-            selected = new Set(preset.selected);
+function updateTitle () {
+  d3.select('head').append('title').text(title)
+  d3.select('#title').html(title)
+}
+
+function updateExpand () {
+  d3.select('#expand').property('value', expand)
+}
+
+function updateChronology () {
+  d3.select('#chronology').property('checked', chronology)
+}
+
+function clearPopup () {
+  if (popup) {
+    clearTimeout(hoverTimeout)
+    hoverTimeout = null
+    popup = null
+    updatePopup()
+  }
+}
+
+function updatePopupBounds () {
+  if (popup) {
+    const r = popup.srcElement.getBoundingClientRect()
+    const shift = (r.bottom - r.top) * 0.5
+    const width = 200
+    d3.select('#popup')
+      .style('visibility', 'visible')
+      .style('width', width + 'px')
+      .style('left', r.left - width / 2 + shift - 8 + 'px')
+      .style('top', r.bottom + 'px')
+  }
+}
+
+function updatePopup () {
+  if (popup) {
+    updatePopupBounds()
+    const d = popup.node
+    let html = `<p>${d.id}${d.abbr ? ' (' + d.abbr + ')' : ''}`
+    if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(', ') : d.aka}</small>`
+    html += '</p>'
+    if (d.synopsis) html += `<p>${d.synopsis}</p>`
+    html += '<table>'
+    if (d.author) html += `<tr><td>🧑‍💻</td><td>${Array.isArray(d.author) ? d.author.join(', ') : d.author}</td></tr>`
+    if (d.organization) html += `<tr><td>🏛</td><td>${Array.isArray(d.organization) ? d.organization.join(', ') : d.organization}</td></tr>`
+    if (d.title) html += `<tr><td>📜</td><td>${d.title}</td></tr>`
+    if (d.conference) html += `<tr><td>🎙️</td><td>${d.conference}</td></tr>`
+    if (d.journal) html += `<tr><td>📚</td><td>${d.journal}</td></tr>`
+    if (d.link) {
+      html += '<tr><td>🔗</td><td>'
+      const links = Array.isArray(d.link) ? d.link : [d.link]
+      html += links.map(l => `<a href="${l}" target="_blank">${new URL(l).host}</a>`).join(', ')
+      html += '</td></tr>'
     }
-    else {
-        selected = new Set(preset.selected);
-    }
+    if (d.year) html += `<tr><td>📆</td><td>${d.year}</td></tr>`
+    html += '</table>'
+    d3.select('#popup')
+      .style('visibility', 'visible')
+      .style('opacity', 0)
+      .html(html)
+      .on('mouseenter', event => {
+        if (popup) {
+          popup.popupHover = true
+          clearTimeout(hoverTimeout)
+          hoverTimeout = null
+        }
+      })
+      .on('mouseleave', event => {
+        if (popup) {
+          popup.popupHover = false
+          if (!popup.labelHover && !hoverTimeout) {
+            hoverTimeout = setTimeout(() => {
+              clearPopup()
+            }, 500)
+          }
+        }
+      })
+      .interrupt()
+      .transition().duration(500).style('opacity', 1)
+  } else {
+    d3.select('#popup')
+      .interrupt()
+      .transition().duration(500).style('opacity', 0)
+      .on('end', () => d3.select('#popup').style('visibility', 'hidden'))
+  }
+}
+
+function pushState () {
+  const q = []
+  if (database.length !== 0) { q.push(`d=${database.join(',')}`) }
+  if (title !== preset.title) { q.push(`t=${encodeURIComponent(title)}`) }
+  if (selected.size !== preset.selected.length || !preset.selected.every(id => selected.has(id))) {
+    q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id.replaceAll(' ', '_')))
+            .join(',')}`)
+  }
+  if (expand !== preset.expand) { q.push(`e=${expand}`) }
+  if (chronology !== preset.chronology) { q.push(`c=${chronology | 0}`) }
+  history.pushState({}, '', q.length === 0 ? location.pathname : `?${q.join('&')}`)
+}
+
+function parseURL () {
+  const q = new URL(document.location.href).searchParams
+
+  title = q.get('t') || preset.title
+
+  const e = q.get('e'); let i
+  expand = e && !Number.isNaN(i = parseInt(e)) ? Math.min(Math.max(i, -1), 2) : preset.expand
+
+  chronology = q.get('c') || preset.chronology
+
+  const s = q.get('s')
+  if (s) {
+    const idset = new Set(nodes.map(node => node.id))
+    selected = new Set(
+      s.split(',')
+        .map(id => decodeURIComponent(id).replaceAll('_', ' '))
+        .filter(id => idset.has(id)))
+    if (selected.size === 0) { selected = new Set(preset.selected) }
+  } else {
+    selected = new Set(preset.selected)
+  }
 }
 
 // This need to be done independently before parseURL()
-function parseURLdatabse() {
-    const q = new URL(document.location.href).searchParams;
-    d = q.get("d");
-    database = d ? d.split(",") : preset.database;
+function parseURLdatabse () {
+  const q = new URL(document.location.href).searchParams
+  const d = q.get('d')
+  database = d ? d.split(',') : preset.database
 }
 
-function updateStateFromURL() {
-    parseURL();
-    updateTitle();
-    updateExpand();
-    updateChronology();    
+function updateStateFromURL () {
+  parseURL()
+  updateTitle()
+  updateExpand()
+  updateChronology()
 }
 
-function drag(simulation) {
-    function dragstarted(event) {
-        clearPopup();
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-        chronologyConstraint(event.subject);
-    }
+function drag (simulation) {
+  function dragstarted (event) {
+    clearPopup()
+    if (!event.active) simulation.alphaTarget(0.3).restart()
+    event.subject.fx = event.subject.x
+    event.subject.fy = event.subject.y
+    chronologyConstraint(event.subject)
+  }
 
-    function dragged(event) {
-        clearPopup();
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-        chronologyConstraint(event.subject);
-    }
+  function dragged (event) {
+    clearPopup()
+    event.subject.fx = event.x
+    event.subject.fy = event.y
+    chronologyConstraint(event.subject)
+  }
 
-    function dragended(event) {
-        if (!event.active) simulation.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-        chronologyConstraint(event.subject);
-    }
+  function dragended (event) {
+    if (!event.active) simulation.alphaTarget(0)
+    event.subject.fx = null
+    event.subject.fy = null
+    chronologyConstraint(event.subject)
+  }
 
-    return d3.drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended);
+  return d3.drag()
+    .on('start', dragstarted)
+    .on('drag', dragged)
+    .on('end', dragended)
 }
 
-function zoom(svg) {
-    svg.call(d3.zoom()
-        // .extent([[-width/2, -height/2], [width, height]])
-        .scaleExtent([1/8, 8])
-        .on("zoom", event => {
-            g.attr("transform", event.transform);
-            chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)));
-            svg.selectAll(".chronology-axis").call(chronologyAxis);
-            updatePopup();
-        })); 
+function zoom (svg) {
+  svg.call(d3.zoom()
+  // .extent([[-width/2, -height/2], [width, height]])
+    .scaleExtent([1 / 8, 8])
+    .on('zoom', event => {
+      g.attr('transform', event.transform)
+      chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)))
+      svg.selectAll('.chronology-axis').call(chronologyAxis)
+      updatePopup()
+    }))
 }
 
-function chronologyAxis(g) {
-    let r = chronologyScale.range();
-    g.attr("transform", `translate(0, ${height / 2 - margin.bottom})`)
-        .call(d3.axisBottom(chronologyScale).ticks((r[1] - r[0]) / 100).tickSizeOuter(0));
+function chronologyAxis (g) {
+  const r = chronologyScale.range()
+  g.attr('transform', `translate(0, ${height / 2 - margin.bottom})`)
+    .call(d3.axisBottom(chronologyScale).ticks((r[1] - r[0]) / 100).tickSizeOuter(0))
 }
 
-function chronologyConstraint(d) {
-    if (chronology && d.year) {
-        d.x = d.fx = d3.zoomTransform(svg.node()).invertX(chronologyScale(new Date(d.year, 0)));
-    }
+function chronologyConstraint (d) {
+  if (chronology && d.year) {
+    d.x = d.fx = d3.zoomTransform(svg.node()).invertX(chronologyScale(new Date(d.year, 0)))
+  }
 }
 
-function nodeHtml(d) {
-    const lineHeight = 12;
-    let s = d.id + (d.abbr ? ` (${d.abbr})` : "") + (chronology && d.year ? `\n${d.year}` : "");
-    let y = 0;
-    s = s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
-        .split("\n")
-        .map((d, i) => `<tspan x="8" y="${y = i * lineHeight}">${d}</tspan>`)
-        .join("\n");
+function nodeHtml (d) {
+  const lineHeight = 12
+  let s = d.id + (d.abbr ? ` (${d.abbr})` : '') + (chronology && d.year ? `\n${d.year}` : '')
+  let y = 0
+  s = s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
+    .split('\n')
+    .map((d, i) => { y = i * lineHeight; return `<tspan x="8" y="${y}">${d}</tspan>` })
+    .join('\n')
 
-    let remainLinkCount = d.linkCount - d.currentLinkCount;
-    if (remainLinkCount > 0) {
-        s += `<tspan style="fill: #999" x="8" y="${y + lineHeight}">+ ${remainLinkCount}</tspan>`;
-    }
+  const remainLinkCount = d.linkCount - d.currentLinkCount
+  if (remainLinkCount > 0) {
+    s += `<tspan style="fill: #999" x="8" y="${y + lineHeight}">+ ${remainLinkCount}</tspan>`
+  }
 
-    return s;
+  return s
 }
 </script>
 </body>
