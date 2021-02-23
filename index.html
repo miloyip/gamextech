@@ -666,6 +666,11 @@ function updatePopup () {
       html += '</td></tr>'
     }
     if (d.year) html += `<tr><td>📆</td><td>${d.year}</td></tr>`
+    if (d.contributor) {
+      const c = Array.isArray(d.contributor) ? d.contributor : [d.contributor]
+      const s = c.map(n => `<a href="https://github.com/${n}" target="_blank" title="contributor">${n}</a>`).join(', ')
+      html += `<tr><td>😎</td><td>${s}</td></tr>`
+    }
     html += '</table>'
     d3.select('#popup')
       .style('visibility', 'visible')
