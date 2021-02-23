@@ -1,7 +1,8 @@
 {
   "nodes": [
     {
-      "id": "Technology"
+      "id": "Technology",
+      "contributor": "miloyip"
     },
     {
       "id": "Mathematics"
