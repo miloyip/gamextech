@@ -5,6 +5,8 @@ const validate = require('jsonschema').validate
 const graphSchema = JSON.parse(fs.readFileSync('graph.schema.json', 'utf8'))
 const databaseSchema = JSON.parse(fs.readFileSync('database.schema.json', 'utf8'))
 
+process.exitCode = 0
+
 const logOk = (s) => console.log(chalk.green(s))
 const logErr = (s) => { console.log(chalk.red(s)); process.exitCode = 1 }
 
