@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "chalk": "latest",
+    "htmlhint": "^0.14.2",
     "jsonschema": "1.4.0"
   },
   "scripts": {
-    "test": "npx eslint *.html *.js && node validate.js"
+    "test": "npx htmlhint && npx eslint *.html *.js && node validate.js"
   },
   "devDependencies": {
     "eslint": "^7.20.0",
