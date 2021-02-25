@@ -204,7 +204,7 @@ function loadDatabase (database) {
     // Align preset nodes to x-axis
     preset.selected.forEach(id => {
       const n = nodeMap.get(id)
-      if (n !== null) {
+      if (n !== undefined) {
         n.fy = n.y = 0
       }
     })
@@ -582,7 +582,7 @@ function restartSimulation (first) {
   link = link.data(newLinks, d => [d.source, d.target])
     .join('path')
 
-  const labaledLinks = newLinks.filter(d => d.type !== null)
+  const labaledLinks = newLinks.filter(d => d.type !== undefined)
   linkLabelPath = linkLabelPath.data(labaledLinks, d => [d.source, d.target])
     .join('path')
     .attr('id', (d, i) => `labeledLink${i}`)
