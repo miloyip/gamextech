@@ -41,11 +41,11 @@ Each node is an object with following keys (*required):
 
 | Key         | Type                      | Description                                                  |
 | ----------- | ------------------------- | ------------------------------------------------------------ |
-| id*         | string                    | Unique idenfitifer in title case                             |
+| id*         | string                    | Unique identifier in title case                             |
 | abbr        | string                    | Abbreviation                                                 |
 | aka         | string or array of string | Alternative names (also known as                             |
 | type        | string                    | "category" (default) or "technique" or "game"                |
-| year        | number                    | Year of invention or publicaiton                             |
+| year        | number                    | Year of invention or publication                             |
 | synopsis    | string                    | Concise description                                          |
 | author      | string or array of string | Inventor(s) or author(s)                                     |
 | link        | string or array of string | links of publication, wikipedia or other related information | 
@@ -83,17 +83,16 @@ Adding new features and fixing bugs are welcome as well.
 
 ### Testing
 
-You can run `npm install` and `npm test` to validate the database with schema and additinoal checks.
+Run `npm install` and `npm test` to validate the database with schema and additional checks.
 
-When testing locally, you need to start a http server
-(because most browser does not accept reading json files in `file://`).
-For example, using python 3's built-in http server:
+Run `npm start` to start a local http server, and open one of the listed URL in the browser to view the local site.
+```
+Starting up http-server, serving .
+Available on:
+  http://192.168.1.1:8080
+  http://127.0.0.1:8080
+```
 
-~~~bash
-python3 -m http.server
-~~~
-
-Then you can use `http://localhost:8000` to view the local site.
 For testing single(or several) JSON, you may use `?d=` in query string, such as `http://localhost:8000/?d=/tech/graphics/shadow.json&e=-1`.
 
 ## History
