@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "Action-adventure Game",
+      "link": "https://en.wikipedia.org/wiki/Action-adventure_game"
+    },
+    {
+      "id": "Alice: Madness Returns",
+      "oraganization": "Spicy Horse",
+      "link": [
+        "https://www.ea.com/games/alice/alice-madness-returns",
+        "https://en.wikipedia.org/wiki/Alice:_Madness_Returns"
+      ],
+      "year": 2011
+    }
+  ],
+  "links": [
+    {
+      "source": "Action Game",
+      "target": "Action-adventure Game"
+    },
+    {
+      "source": "Adventure Game",
+      "target": "Action-adventure Game"
+    },
+    {
+      "source": "Action-adventure Game",
+      "target": "Alice: Madness Returns"
+    },
+    {
+      "source": "Alice: Madness Returns",
+      "target": "Long Range Attachment",
+      "type": "use"
+    }
+  ]
+}

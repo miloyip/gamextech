@@ -1,6 +1,7 @@
 [
   "game.json",
   "game/action.json",
+  "game/adventure/actionadventure.json",
   "game/adventure.json",
   "game/platformer.json",
   "game/platformer/puzzleplatform.json",

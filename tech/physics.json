@@ -68,6 +68,26 @@
       "year": 1996
     },
     {
+      "id": "SDF-Mesh Collision Detection",
+      "author": [
+        "Miles Macklin",
+        "Kenny Erleben",
+        "Matthias Müller",
+        "Nuttapong Chentanez",
+        "Stefan Jeschke",
+        "Zach Corse"
+      ],
+      "title": "Local Optimization for Robust Signed Distance Field Collision",
+      "conference": "I3D",
+      "link": [
+        "https://mmacklin.com/sdfcontact.pdf",
+        "https://mmacklin.com/sdfcontact_slides.pdf",
+        "https://www.youtube.com/watch?v=icU6Bm-HZ-E",
+        "https://www.shadertoy.com/view/wdcGDB"
+      ],
+      "year": 2020
+    },
+    {
       "id": "Rigid Body Dynamics",
       "link": "https://en.wikipedia.org/wiki/Rigid_body_dynamics"
     },
@@ -205,6 +225,18 @@
     },
     {
       "id": "Cloth Simulation"
+    },
+    {
+      "id": "Long Range Attachment",
+      "abbr": "LRA",
+      "author": [
+        "Tae-Yong Kim",
+        "Nuttapong Chentanez",
+        "Matthias Müller-Fischer"
+      ],
+      "title": "Long range attachments-a method to simulate inextensible clothing in computer games",
+      "conference": "SIGGRAPH",
+      "year": 2012
     },
     {
       "id": "Fluid Simulation",
@@ -508,6 +540,14 @@
       "target": "OBB Intersection Test"
     },
     {
+      "source": "Narrow-phase Collision Detection",
+      "target": "SDF-Mesh Collision Detection"
+    },
+    {
+      "source": "SDF-Mesh Collision Detection",
+      "target": "3D Signed Distance Field"
+    },
+    {
       "source": "OBB Intersection Test",
       "target": "Oriented Bounding Box",
       "type": "use"
@@ -633,11 +673,16 @@
     },
     {
       "source": "Oriented Particles",
-      "target": "Position Based Dynamics"
+      "target": "Position Based Dynamics",
+      "type": "use"
     },
     {
       "source": "Soft Body Dynamics",
       "target": "Cloth Simulation"
+    },
+    {
+      "source": "Cloth Simulation",
+      "target": "Long Range Attachment"
     },
     {
       "source": "Game Physics",
