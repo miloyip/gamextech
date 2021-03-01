@@ -28,6 +28,7 @@
   "tech/graphics/rendering/camera.json",
   "tech/graphics/rendering/lighting.json",
   "tech/graphics/rendering/material.json",
+  "tech/graphics/rendering/participating.json",
   "tech/graphics/rendering/shading.json",
   "tech/graphics/rendering/shadow.json",
   "tech/graphics/rendering/texture.json",

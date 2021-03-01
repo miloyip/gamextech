@@ -8,9 +8,6 @@
       "abbr": "NPR"
     },
     {
-      "id": "Participating Media Rendering"
-    },
-    {
       "id": "Visibility"
     },
     {
@@ -58,10 +55,6 @@
     {
       "source": "Rendering",
       "target": "Non-Photorealistic Rendering"
-    },
-    {
-      "source": "Rendering",
-      "target": "Participating Media Rendering"
     },
     {
       "source": "Rendering",
