@@ -5,7 +5,23 @@
       "link": "https://en.wikipedia.org/wiki/Computer_animation"
     },
     {
-      "id": "Keyframe Animation"
+      "id": "2D Animation"
+    },
+    {
+      "id": "Sprite Animation",
+      "link": "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)"
+    },
+    {
+      "id": "Color Cyclying",
+      "link": "https://en.wikipedia.org/wiki/Color_cycling"
+    },
+    {
+      "id": "Parallax Scrolling",
+      "link": "https://en.wikipedia.org/wiki/Parallax_scrolling"
+    },
+    {
+      "id": "Keyframe Animation",
+      "link": "https://en.wikipedia.org/wiki/Key_frame"
     },
     {
       "id": "Particle System",
@@ -352,6 +368,22 @@
     {
       "source": "Computer Graphics",
       "target": "Computer Animation"
+    },
+    {
+      "source": "Computer Animation",
+      "target": "2D Animation"
+    },
+    {
+      "source": "2D Animation",
+      "target": "Sprite Animation"
+    },
+    {
+      "source": "2D Animation",
+      "target": "Color Cyclying"
+    },
+    {
+      "source": "2D Animation",
+      "target": "Parallax Scrolling"
     },
     {
       "source": "Computer Animation",
