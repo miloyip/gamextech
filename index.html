@@ -271,7 +271,7 @@ function main () {
     })
   d3.select('#expand')
     .on('change', event => {
-      expand = event.srcElement.value
+      expand = parseInt(event.srcElement.value)
       pushState()
       restartSimulation()
     })
