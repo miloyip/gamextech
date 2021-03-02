@@ -195,14 +195,18 @@ let simulation = {}
 let nodes = []; let links = []
 
 parseURLdatabse()
-if (database.length !== 0) {
-  loadDatabase(database)
-} else {
-  d3.json('database.json').then(loadDatabase)
+reloadDatabase().then(main)
+
+function reloadDatabase () {
+  if (database.length !== 0) {
+    return loadDatabase(database)
+  } else {
+    return d3.json('database.json').then(loadDatabase)
+  }
 }
 
 function loadDatabase (database) {
-  Promise.all(database.map(url => d3.json(url))).then(files => {
+  return Promise.all(database.map(url => d3.json(url))).then(files => {
     nodes = [].concat.apply([], files.map(file => file.nodes))
     links = [].concat.apply([], files.map(file => file.links))
 
@@ -224,8 +228,6 @@ function loadDatabase (database) {
         n.fy = n.y = 0
       }
     })
-
-    main()
   }).catch(err => {
     console.log(err)
   })
@@ -239,7 +241,8 @@ function main () {
   d3.select(window)
     .on('popstate', event => {
       updateStateFromURL()
-      restartSimulation(true)
+      parseURLdatabse()
+      reloadDatabase().then(restartSimulation)
     })
     .on('resize', () => {
       updateSize()
@@ -267,7 +270,7 @@ function main () {
       updateExpand()
       updateChronology()
       pushState()
-      restartSimulation()
+      reloadDatabase().then(restartSimulation)
     })
   d3.select('#expand')
     .on('change', event => {
