@@ -130,7 +130,18 @@
     },
     {
       "id": "Moment of Inertia",
-      "link": "https://en.wikipedia.org/wiki/Moment_of_inertia"
+      "link": [
+        "https://en.wikipedia.org/wiki/Moment_of_inertia",
+        "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+      ]
+    },
+    {
+      "id": "Triangle Mesh Momemnt of Inertia",
+      "title": "Computing the Moment of Inertia of a Solid Defined by a Triangle Mesh",
+      "author": "Michael Kallay",
+      "link": "https://github.com/erich666/jgt-code/blob/master/Volume_11/Number_2/Kallay2006/Moment_of_Inertia.cpp",
+      "journal": "JGT",
+      "year": 2006
     },
     {
       "id": "Multibody System",
@@ -592,6 +603,15 @@
     {
       "source": "Rigid Body Dynamics",
       "target": "Moment of Inertia"
+    },
+    {
+      "source": "Moment of Inertia",
+      "target": "Triangle Mesh Momemnt of Inertia"
+    },
+    {
+      "source": "Triangle Mesh Momemnt of Inertia",
+      "target": "Triangle Mesh",
+      "type": "use"
     },
     {
       "source": "Rigid Body Dynamics",
