@@ -189,6 +189,8 @@ let width = 0; let height = 0
 let chronologyScale = {}; let svg = {}; let g = {}; let link = {}; let node = {}; let linkLabelPath = {}; let linkLabel = {}
 let hoverTimeout = null
 let simulation = {}
+let zoom = {}
+let zoomID = null // node ID to which is programmatically zoomed
 
 // Graph database
 
@@ -324,6 +326,7 @@ function main () {
             d3.select('#search').property('value', '')
             d3.select('#search-result').style('visibility', 'hidden')
             selected.add(d.id)
+            zoomID = d.id
             pushState()
             restartSimulation()
           })
@@ -351,6 +354,7 @@ function main () {
           d3.select('#search').property('value', '')
           d3.select('#search-result').style('visibility', 'hidden')
           selected.add(searchResult[0].id)
+          zoomID = searchResult[0].id
           pushState()
           restartSimulation()
         }
@@ -372,7 +376,7 @@ function main () {
     .attr('viewBox', [-width / 2, -height / 2, width, height])
     .classed('svg-content', true)
     .style('font', '12px sans-serif')
-    .call(zoom)
+    .call(zoomSetup)
 
   svg.append('defs')
     .append('marker')
@@ -440,6 +444,12 @@ function main () {
       linkLabelPath.attr('d', linkLabelArc)
       node.attr('transform', d => `translate(${d.x},${d.y})`)
       if (popup) { updatePopupBounds() }
+      if (zoomID) {
+        const n = node.data().find(d => d.id === zoomID)
+        if (n !== undefined) {
+          svg.call(zoom.transform, d3.zoomIdentity.scale(1).translate(-n.x, -n.y))
+        }
+      }
     })
 
   restartSimulation(true)
@@ -802,10 +812,14 @@ function drag (simulation) {
     .on('end', dragended)
 }
 
-function zoom (svg) {
-  svg.call(d3.zoom()
-  // .extent([[-width/2, -height/2], [width, height]])
+function zoomSetup (svg) {
+  svg.call(zoom = d3.zoom()
     .scaleExtent([1 / 8, 8])
+    .on('start', event => {
+      if (event.sourceEvent !== null) {
+        zoomID = null // programmatic zoom cancelled by user initiated zoom
+      }
+    })
     .on('zoom', event => {
       g.attr('transform', event.transform)
       chronologyScale.range([-width / 2 + margin.left, width / 2 - margin.right].map(d => event.transform.applyX(d)))
