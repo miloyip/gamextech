@@ -1,0 +1,205 @@
+{
+  "nodes": [
+    {
+      "id": "Tool Development"
+    },
+    {
+      "id": "GUI Toolkit",
+      "aka": [
+        "Widget Toolkit",
+        "Widget library",
+        "UX library"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Widget_toolkit"
+    },
+    {
+      "id": "Naitve GUI Toolkit"
+    },
+    {
+      "id": "Microsoft Foundation Class",
+      "abbr": "MFC",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library",
+      "year": 1992
+    },
+    {
+      "id": "WxWidgets",
+      "aka": "WxWindows",
+      "author": "Julian Smart",
+      "link": [
+        "https://wxwidgets.org/",
+        "https://en.wikipedia.org/wiki/WxWidgets"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "Qt",
+      "link": [
+        "https://www.qt.io/",
+        "https://en.wikipedia.org/wiki/Qt_(software)"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "GTK",
+      "link": [
+        "https://gtk.org/",
+        "https://en.wikipedia.org/wiki/GTK"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "Windows Template Library",
+      "abbr": "WTL",
+      "organization": "Microsoft",
+      "link": [
+        "https://sourceforge.NET/projects/wtl/",
+        "https://en.wikipedia.org/wiki/Windows_Template_Library"
+      ],
+      "year": 2004
+    },
+    {
+      "id": "Dear ImGui",
+      "author": "Omar Cornut",
+      "link": "https://github.com/ocornut/imgui",
+      "year": 2014
+    },
+    {
+      "id": ".NET GUI Toolkit"
+    },
+    {
+      "id": "Windows Forms",
+      "aka": "WinForms",
+      "organization": ".NET Foundation",
+      "link": [
+        "https://en.wikipedia.org/wiki/Windows_Forms",
+        "https://docs.microsoft.com/en-us/dotnet/desktop/winforms/"
+      ],
+      "year": 2002
+    },
+    {
+      "id": "GtkSharp",
+      "aka": "GTK#",
+      "link": [
+        "https://www.mono-project.com/docs/gui/gtksharp/",
+        "https://github.com/GtkSharp/GtkSharp"
+      ],
+      "year": 2005
+    },
+    {
+      "id": "Windows Presentation Foundation",
+      "abbr": "WPF",
+      "organization": ".NET Foundation",
+      "link": [
+        "https://en.wikipedia.org/wiki/Windows_Presentation_Foundation",
+        "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "Web-based Software Framework"
+    },
+    {
+      "id": "Chromium Embedded Framework",
+      "abbr": "CEF",
+      "author": "Marshall Greenblatt",
+      "link": [
+        "https://bitbucket.org/chromiumembedded/cef/",
+        "https://en.wikipedia.org/wiki/Chromium_Embedded_Framework"
+      ],
+      "year": 2009
+    },
+    {
+      "id": "Electron",
+      "link": [
+        "https://www.electronjs.org/",
+        "https://en.wikipedia.org/wiki/Electron_(software_framework)"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "NW.js",
+      "aka": "node-webkit",
+      "link": [
+        "https://nwjs.io/",
+        "https://github.com/nwjs/nw.js"
+      ],
+      "year": 2013
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Tool Development"
+    },
+    {
+      "source": "Tool Development",
+      "target": "GUI Toolkit"
+    },
+    {
+      "source": "GUI Toolkit",
+      "target": "Naitve GUI Toolkit"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "Microsoft Foundation Class"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "Qt"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "WxWidgets"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "GTK"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "Windows Template Library"
+    },
+    {
+      "source": "Naitve GUI Toolkit",
+      "target": "Dear ImGui"
+    },
+    {
+      "source": "GUI Toolkit",
+      "target": ".NET GUI Toolkit"
+    },
+    {
+      "source": ".NET GUI Toolkit",
+      "target": "Windows Forms"
+    },
+    {
+      "source": ".NET GUI Toolkit",
+      "target": "GtkSharp"
+    },
+    {
+      "source": "GTK",
+      "target": "GtkSharp",
+      "type": "derive"
+    },
+    {
+      "source": ".NET GUI Toolkit",
+      "target": "Windows Presentation Foundation"
+    },
+    {
+      "source": "GUI Toolkit",
+      "target": "Web-based Software Framework"
+    },
+    {
+      "source": "Web-based Software Framework",
+      "target": "Chromium Embedded Framework"
+    },
+    {
+      "source": "Web-based Software Framework",
+      "target": "Electron"
+    },
+    {
+      "source": "Web-based Software Framework",
+      "target": "NW.js"
+    }
+  ]
+}

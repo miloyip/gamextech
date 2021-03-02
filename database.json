@@ -39,5 +39,6 @@
   "tech/physics.json",
   "tech/platform.json",
   "tech/programming.json",
-  "tech/se.json"
+  "tech/se.json",
+  "tech/tool.json"
 ]
