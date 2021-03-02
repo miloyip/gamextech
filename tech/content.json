@@ -12,7 +12,9 @@
       "id": "Photogrammetry"
     },
     {
-      "id": "Motion Capture"
+      "id": "Motion Capture",
+      "abbr": "Mocap",
+      "link": "https://en.wikipedia.org/wiki/Motion_capture"
     }
   ],
   "links": [

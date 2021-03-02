@@ -239,6 +239,10 @@
       "year": 2012
     },
     {
+      "id": "Breast Physics",
+      "link": "https://en.wikipedia.org/wiki/Breast_physics"
+    },
+    {
       "id": "Fluid Simulation",
       "aka": "Fluid Animation",
       "link": "https://en.wikipedia.org/wiki/Fluid_animation"
@@ -683,6 +687,10 @@
     {
       "source": "Cloth Simulation",
       "target": "Long Range Attachment"
+    },
+    {
+      "source": "Soft Body Dynamics",
+      "target": "Breast Physics"
     },
     {
       "source": "Game Physics",

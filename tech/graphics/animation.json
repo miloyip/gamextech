@@ -88,9 +88,14 @@
       "id": "Animation Tree"
     },
     {
-      "id": "Motion Capture",
-      "abbr": "Mocap",
-      "link": "https://en.wikipedia.org/wiki/Motion_capture"
+      "id": "Animation Retargeting"
+    },
+    {
+      "id": "Secondary Animation",
+      "link": "https://en.wikipedia.org/wiki/Secondary_animation"
+    },
+    {
+      "id": "Data-driven Character Animation"
     },
     {
       "id": "Motion Graph",
@@ -209,7 +214,8 @@
       "year": 2011
     },
     {
-      "id": "Facial Animation"
+      "id": "Facial Animation",
+      "link": "https://en.wikipedia.org/wiki/Computer_facial_animation"
     },
     {
       "id": "Vegetation Animation"
@@ -327,6 +333,12 @@
       "author": "Nicholas Frechette",
       "link": "https://github.com/nfrechette/acl",
       "year": 2017
+    },
+    {
+      "id": "UnityChan Spring Bone",
+      "organization": "Unity",
+      "link": "https://github.com/unity3d-jp/UnityChanSpringBone",
+      "year": 2018
     }
   ],
   "links": [
@@ -393,18 +405,34 @@
     },
     {
       "source": "Computer Animation",
-      "target": "Motion Capture"
+      "target": "Animation Retargeting"
     },
     {
-      "source": "Motion Capture",
+      "source": "Computer Animation",
+      "target": "Secondary Animation"
+    },
+    {
+      "source": "Secondary Animation",
+      "target": "Cloth Simulation"
+    },
+    {
+      "source": "Secondary Animation",
+      "target": "Breast Physics"
+    },
+    {
+      "source": "Computer Animation",
+      "target": "Data-driven Character Animation"
+    },
+    {
+      "source": "Data-driven Character Animation",
       "target": "Motion Graph"
     },
     {
-      "source": "Motion Capture",
+      "source": "Data-driven Character Animation",
       "target": "Motion Field"
     },
     {
-      "source": "Motion Capture",
+      "source": "Data-driven Character Animation",
       "target": "Motion Matching"
     },
     {
@@ -531,6 +559,10 @@
     {
       "source": "Animation Middleware",
       "target": "Animation Compression Library"
+    },
+    {
+      "source": "Animation Middleware",
+      "target": "UnityChan Spring Bone"
     }
   ]
 }
