@@ -154,7 +154,13 @@
       ],
       "title": "Motion Matching - The Road to Next Gen Animation",
       "conference": "Nucl.ai",
-      "link": "https://www.youtube.com/watch?v=z_wpgHFSWss",
+      "link": [
+        "https://www.youtube.com/watch?v=z_wpgHFSWss",
+        "https://www.gdcvault.com/play/1023280/Motion-Matching-and-The-Road",
+        "https://www.gdcvault.com/play/1022985/Motion-Matching-and-The-Road",
+        "https://www.gdcvault.com/play/1023478/Animation-Bootcamp-Motion-Matching-The",
+        "https://www.gdcvault.com/play/1023115/Animation-Bootcamp-Motion-Matching-The"
+      ],
       "year": 2015
     },
     {
