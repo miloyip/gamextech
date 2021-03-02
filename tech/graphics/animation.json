@@ -82,7 +82,14 @@
       "year": 2011
     },
     {
-      "id": "Morphing"
+      "id": "Morph Target Animation",
+      "aka": [
+        "Per-vertex Animation",
+        "Shape Interpolation",
+        "Shape Keys",
+        "Blend Shapes"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Morph_target_animation"
     },
     {
       "id": "Animation Tree"
@@ -397,7 +404,7 @@
     },
     {
       "source": "Computer Animation",
-      "target": "Morphing"
+      "target": "Morph Target Animation"
     },
     {
       "source": "Computer Animation",
