@@ -167,6 +167,27 @@
       ],
       "title": "Learned Motion Matching",
       "journal": "TOG",
+      "link": [
+        "https://static-wordpress.akamaized.net/montreal.ubisoft.com/wp-content/uploads/2020/07/09154101/Learned_Motion_Matching.pdf",
+        "https://montreal.ubisoft.com/en/introducing-learned-motion-matching/",
+        "https://www.youtube.com/watch?v=16CHDQK4W5k"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "Robust Motion In-Betweening",
+      "author": [
+        "Félix G. Harvey",
+        "Mike Yurick",
+        "Derek Nowrouzezahrai",
+        "Christopher Pal"
+      ],
+      "journal": "TOG",
+      "link": [
+        "https://static-wordpress.akamaized.net/montreal.ubisoft.com/wp-content/uploads/2020/07/09155337/RobustMotionInbetweening.pdf",
+        "https://montreal.ubisoft.com/en/automatic-in-betweening-for-faster-animation-authoring/",
+        "https://www.youtube.com/watch?v=16CHDQK4W5k"
+      ],
       "year": 2020
     },
     {
@@ -478,6 +499,10 @@
       "source": "Motion Matching",
       "target": "Learned Motion Matching",
       "type": "derive"
+    },
+    {
+      "source": "Data-driven Character Animation",
+      "target": "Robust Motion In-Betweening"
     },
     {
       "source": "Computer Animation",
