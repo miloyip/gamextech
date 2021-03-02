@@ -129,7 +129,7 @@
       "year": 2016
     },
     {
-      "id": "Momemnt of Inertia",
+      "id": "Moment of Inertia",
       "link": "https://en.wikipedia.org/wiki/Moment_of_inertia"
     },
     {
@@ -591,7 +591,7 @@
     },
     {
       "source": "Rigid Body Dynamics",
-      "target": "Momemnt of Inertia"
+      "target": "Moment of Inertia"
     },
     {
       "source": "Rigid Body Dynamics",
