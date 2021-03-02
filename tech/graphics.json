@@ -4,61 +4,12 @@
       "id": "Computer Graphics",
       "abbr": "CG",
       "link": "https://en.wikipedia.org/wiki/Computer_graphics_(computer_science)"
-    },
-    {
-      "id": "Animation"
-    },
-    {
-      "id": "Key-frame Animation"
-    },
-    {
-      "id": "Particle System"
-    },
-    {
-      "id": "Skinning"
-    },
-    {
-      "id": "Morphing"
-    },
-    {
-      "id": "Animation Tree"
-    },
-    {
-      "id": "Motion Matching"
     }
   ],
   "links": [
     {
       "source": "Technology",
       "target": "Computer Graphics"
-    },
-    {
-      "source": "Computer Graphics",
-      "target": "Animation"
-    },
-    {
-      "source": "Animation",
-      "target": "Key-frame Animation"
-    },
-    {
-      "source": "Animation",
-      "target": "Particle System"
-    },
-    {
-      "source": "Animation",
-      "target": "Skinning"
-    },
-    {
-      "source": "Animation",
-      "target": "Morphing"
-    },
-    {
-      "source": "Animation",
-      "target": "Animation Tree"
-    },
-    {
-      "source": "Animation",
-      "target": "Motion Matching"
     }
   ]
 }
