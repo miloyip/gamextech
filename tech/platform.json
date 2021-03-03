@@ -64,6 +64,14 @@
       "target": "Direct3D"
     },
     {
+      "source": "DirectX",
+      "target": "DirectInput"
+    },
+    {
+      "source": "DirectX",
+      "target": "XInput"
+    },
+    {
       "source": "Personal Computer",
       "target": "MacOS"
     },
