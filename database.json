@@ -35,6 +35,7 @@
   "tech/graphics/rendering/shadow.json",
   "tech/graphics/rendering/texture.json",
   "tech/graphics/scene.json",
+  "tech/hci.json",
   "tech/math.json",
   "tech/physics.json",
   "tech/platform.json",
