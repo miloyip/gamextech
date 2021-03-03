@@ -1,0 +1,579 @@
+{
+  "nodes": [
+    {
+      "id": "Human Computer Interaction",
+      "abbr": "HCI",
+      "link": "https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"
+    },
+    {
+      "id": "In-game Graphical User Interface",
+      "abbr": "In-game GUI"
+    },
+    {
+      "id": "In-game GUI Toolkit"
+    },
+    {
+      "id": "Fairy GUI",
+      "link": "https://en.fairygui.com/",
+      "year": 2015
+    },
+    {
+      "id": "Coherent Gameface",
+      "organization": "Coherent Labs",
+      "link": "https://coherent-labs.com/products/coherent-gameface/",
+      "year": 2018
+    },
+    {
+      "id": "Coherent Prysm",
+      "organization": "Coherent Labs",
+      "link": "https://coherent-labs.com/products/coherent-prysm/",
+      "year": 2018
+    },
+    {
+      "id": "Heads-up Display",
+      "abbr": "HUD",
+      "link": "https://en.wikipedia.org/wiki/Heads-up_display_(video_games)"
+    },
+    {
+      "id": "Game Controller",
+      "link": [
+        "https://en.wikipedia.org/wiki/Game_controller",
+        "https://en.wikipedia.org/wiki/List_of_game_controllers"
+      ]
+    },
+    {
+      "id": "Game Controller API"
+    },
+    {
+      "id": "DirectInput",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/DirectInput",
+      "year": 1995
+    },
+    {
+      "id": "XInput",
+      "organization": "Microsoft",
+      "link": "https://docs.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal",
+      "year": 2005
+    },
+    {
+      "id": "Haptic Technology",
+      "link": "https://en.wikipedia.org/wiki/Haptic_technology"
+    },
+    {
+      "id": "Vibration"
+    },
+    {
+      "id": "Force-feedback"
+    },
+    {
+      "id": "Keyboard",
+      "link": "https://en.wikipedia.org/wiki/Computer_keyboard"
+    },
+    {
+      "id": "Mouse",
+      "author": "Douglas Engelbart",
+      "link": "https://en.wikipedia.org/wiki/Computer_mouse",
+      "year": 1968
+    },
+    {
+      "id": "Joystick",
+      "author": "C. B. Mirick",
+      "link": "https://en.wikipedia.org/wiki/Joystick",
+      "year": 1926
+    },
+    {
+      "id": "Arcade Controller",
+      "link": "https://en.wikipedia.org/wiki/Arcade_controller"
+    },
+    {
+      "id": "Gamepad",
+      "link": "https://en.wikipedia.org/wiki/Gamepad"
+    },
+    {
+      "id": "Racing Wheel",
+      "link": "https://en.wikipedia.org/wiki/Racing_wheel"
+    },
+    {
+      "id": "Pedal",
+      "link": "https://en.wikipedia.org/wiki/Game_controller#Pedals"
+    },
+    {
+      "id": "Light Gun",
+      "link": "https://en.wikipedia.org/wiki/Light_gun",
+      "year": 1936
+    },
+    {
+      "id": "Rhythm Game Controller",
+      "link": "https://en.wikipedia.org/wiki/Rhythm_game_accessories"
+    },
+    {
+      "id": "Touch Screen",
+      "author": "Eric A. Johnson",
+      "title": "Touch Displays: A Programmed Man-Machine Interface",
+      "journal": "Ergonomics",
+      "link": "https://en.wikipedia.org/wiki/Touchscreen",
+      "year": 1967
+    },
+    {
+      "id": "Motion Controller",
+      "link": "https://en.wikipedia.org/wiki/Motion_controller"
+    },
+    {
+      "id": "Accelerometer",
+      "link": "https://en.wikipedia.org/wiki/Accelerometer"
+    },
+    {
+      "id": "Kinect",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Kinect",
+      "year": 2010
+    },
+    {
+      "id": "Azure Kinect",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Azure_Kinect",
+      "year": 2020
+    },
+    {
+      "id": "EyeToy",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/EyeToy",
+      "year": 2003
+    },
+    {
+      "id": "PlayStation Eye",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_Eye",
+      "year": 2007
+    },
+    {
+      "id": "PlayStation Move",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_Move",
+      "year": 2010
+    },
+    {
+      "id": "PlayStation Camera",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_Camera",
+      "year": 2013
+    },
+    {
+      "id": "Leap Motion",
+      "aka": "Ultraleap",
+      "organization": "Ultrahaptics",
+      "link": [
+        "https://www.ultraleap.com/",
+        "https://en.wikipedia.org/wiki/Leap_Motion"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "Intel RealSense",
+      "organization": "Intel",
+      "link": [
+        "https://www.intelrealsense.com/",
+        "https://en.wikipedia.org/wiki/Intel_RealSense"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "Global Positioning System",
+      "abbr": "GPS",
+      "link": "https://en.wikipedia.org/wiki/Global_Positioning_System"
+    },
+    {
+      "id": "Magnetometer",
+      "link": "https://en.wikipedia.org/wiki/Magnetometer"
+    },
+    {
+      "id": "Microphone",
+      "link": "https://en.wikipedia.org/wiki/Microphone"
+    },
+    {
+      "id": "Virtual Reality",
+      "abbr": "VR",
+      "link": "https://en.wikipedia.org/wiki/Virtual_reality"
+    },
+    {
+      "id": "Virtual Reality Headset",
+      "link": "https://en.wikipedia.org/wiki/Virtual_reality_headset"
+    },
+    {
+      "id": "Oculus Rift DK1",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Rift",
+      "year": 2013
+    },
+    {
+      "id": "Oculus Rift DK2",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Rift",
+      "year": 2014
+    },
+    {
+      "id": "Oculus Rift CV1",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Rift_CV1",
+      "year": 2016
+    },
+    {
+      "id": "Oculus Rift S",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Rift_S",
+      "year": 2019
+    },
+    {
+      "id": "Samsung Gear VR",
+      "organization": "Samsung",
+      "link": "https://en.wikipedia.org/wiki/Samsung_Gear_VR",
+      "year": 2015
+    },
+    {
+      "id": "Oculus Go",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Go",
+      "year": 2018
+    },
+    {
+      "id": "Oculus Quest",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Quest",
+      "year": 2019
+    },
+    {
+      "id": "Oculus Quest 2",
+      "organization": "Facebook",
+      "link": "https://en.wikipedia.org/wiki/Oculus_Quest_2",
+      "year": 2020
+    },
+    {
+      "id": "PlayStation VR",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_VR",
+      "year": 2016
+    },
+    {
+      "id": "HTC Vive",
+      "organization": "HTC",
+      "link": [
+        "https://www.vive.com/",
+        "https://en.wikipedia.org/wiki/HTC_Vive"
+      ],
+      "year": 2016
+    },
+    {
+      "id": "HTC Vive Pro",
+      "organization": "HTC",
+      "link": [
+        "https://www.vive.com/",
+        "https://en.wikipedia.org/wiki/HTC_Vive#Vive_Pro"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "HTC Vive Pro Eye",
+      "organization": "HTC",
+      "link": [
+        "https://www.vive.com/",
+        "https://en.wikipedia.org/wiki/HTC_Vive#Vive_Pro_Eye"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "Valve Index",
+      "organization": "Valve",
+      "link": [
+        "https://www.valvesoftware.com/en/index",
+        "https://en.wikipedia.org/wiki/Valve_Index"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "Augmented Reality",
+      "abbr": "AR",
+      "link": "https://en.wikipedia.org/wiki/Augmented_reality"
+    },
+    {
+      "id": "Augmented Reality Headset"
+    },
+    {
+      "id": "Google Glass",
+      "organization": "Google",
+      "link": "https://en.wikipedia.org/wiki/Google_Glass",
+      "year": 2013
+    },
+    {
+      "id": "Microsoft HoloLens",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Microsoft_HoloLens",
+      "year": 2016
+    },
+    {
+      "id": "Microsoft HoloLens 2",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/HoloLens_2",
+      "year": 2019
+    },
+    {
+      "id": "Magic Leap 1",
+      "organization": "Magic Leap",
+      "link": [
+        "https://www.magicleap.com/en-us/magic-leap-1",
+        "https://en.wikipedia.org/wiki/Magic_Leap"
+      ],
+      "year": 2018
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Human Computer Interaction"
+    },
+    {
+      "source": "Human Computer Interaction",
+      "target": "In-game Graphical User Interface"
+    },
+    {
+      "source": "In-game Graphical User Interface",
+      "target": "In-game GUI Toolkit"
+    },
+    {
+      "source": "In-game GUI Toolkit",
+      "target": "Dear ImGui"
+    },
+    {
+      "source": "In-game GUI Toolkit",
+      "target": "Fairy GUI"
+    },
+    {
+      "source": "In-game GUI Toolkit",
+      "target": "Coherent Gameface"
+    },
+    {
+      "source": "In-game GUI Toolkit",
+      "target": "Coherent Prysm"
+    },
+    {
+      "source": "Human Computer Interaction",
+      "target": "Heads-up Display"
+    },
+    {
+      "source": "Human Computer Interaction",
+      "target": "Game Controller"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Game Controller API"
+    },
+    {
+      "source": "Game Controller API",
+      "target": "DirectInput"
+    },
+    {
+      "source": "Game Controller API",
+      "target": "XInput"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Haptic Technology"
+    },
+    {
+      "source": "Haptic Technology",
+      "target": "Vibration"
+    },
+    {
+      "source": "Haptic Technology",
+      "target": "Force-feedback"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Keyboard"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Mouse"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Joystick"
+    },
+    {
+      "source": "Joystick",
+      "target": "Arcade Controller",
+      "type": "derive"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Gamepad"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Racing Wheel"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Pedal"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Light Gun"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Rhythm Game Controller"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Touch Screen"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Motion Controller"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "Accelerometer"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "Kinect"
+    },
+    {
+      "source": "Kinect",
+      "target": "Azure Kinect"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "EyeToy"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "PlayStation Move"
+    },
+    {
+      "source": "EyeToy",
+      "target": "PlayStation Eye",
+      "type": "derive"
+    },
+    {
+      "source": "PlayStation Eye",
+      "target": "PlayStation Camera",
+      "type": "derive"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "Leap Motion"
+    },
+    {
+      "source": "Motion Controller",
+      "target": "Intel RealSense"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Global Positioning System"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Magnetometer"
+    },
+    {
+      "source": "Game Controller",
+      "target": "Microphone"
+    },
+    {
+      "source": "Human Computer Interaction",
+      "target": "Virtual Reality"
+    },
+    {
+      "source": "Virtual Reality",
+      "target": "Virtual Reality Headset"
+    },
+    {
+      "source": "Virtual Reality Headset",
+      "target": "Oculus Rift DK1"
+    },
+    {
+      "source": "Oculus Rift DK1",
+      "target": "Oculus Rift DK2",
+      "type": "derive"
+    },
+    {
+      "source": "Oculus Rift DK2",
+      "target": "Oculus Rift CV1",
+      "type": "derive"
+    },
+    {
+      "source": "Oculus Rift CV1",
+      "target": "Oculus Rift S",
+      "type": "derive"
+    },
+    {
+      "source": "Virtual Reality Headset",
+      "target": "Samsung Gear VR"
+    },
+    {
+      "source": "Virtual Reality Headset",
+      "target": "PlayStation VR"
+    },
+    {
+      "source": "Virtual Reality Headset",
+      "target": "HTC Vive"
+    },
+    {
+      "source": "HTC Vive",
+      "target": "HTC Vive Pro",
+      "type": "derive"
+    },
+    {
+      "source": "HTC Vive Pro",
+      "target": "HTC Vive Pro Eye",
+      "type": "derive"
+    },
+    {
+      "source": "Samsung Gear VR",
+      "target": "Oculus Go",
+      "type": "derive"
+    },
+    {
+      "source": "Oculus Go",
+      "target": "Oculus Quest",
+      "type": "derive"
+    },
+    {
+      "source": "Oculus Quest",
+      "target": "Oculus Quest 2",
+      "type": "derive"
+    },
+    {
+      "source": "Virtual Reality Headset",
+      "target": "Valve Index"
+    },
+    {
+      "source": "Human Computer Interaction",
+      "target": "Augmented Reality"
+    },
+    {
+      "source": "Augmented Reality",
+      "target": "Augmented Reality Headset"
+    },
+    {
+      "source": "Augmented Reality Headset",
+      "target": "Google Glass"
+    },
+    {
+      "source": "Augmented Reality Headset",
+      "target": "Microsoft HoloLens"
+    },
+    {
+      "source": "Microsoft HoloLens",
+      "target": "Microsoft HoloLens 2",
+      "type": "derive"
+    },
+    {
+      "source": "Augmented Reality Headset",
+      "target": "Magic Leap 1"
+    }    
+  ]
+}

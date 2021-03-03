@@ -19,10 +19,6 @@
       "id": "Audio"
     },
     {
-      "id": "Human Computer Interaction",
-      "abbr": "HCI"
-    },
-    {
       "id": "Gameplay"
     },
     {
@@ -52,10 +48,6 @@
     {
       "source": "Technology",
       "target": "Audio"
-    },
-    {
-      "source": "Technology",
-      "target": "Human Computer Interaction"
     },
     {
       "source": "Technology",
