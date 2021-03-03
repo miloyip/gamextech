@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "id": "Unity",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2005
+    },
+    {
+      "id": "Unity 2",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2007
+    },
+    {
+      "id": "Unity 3",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "Unity 4",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "Unity 5",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "Unity 2017",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "Unity 2018",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "Unity 2019",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "Unity UI",
+      "aka": "uGUI",
+      "organization": "Unity Technologies",
+      "link": "https://docs.unity3d.com/Manual/com.unity.ugui.html",
+      "year": 2019
+    },
+    {
+      "id": "Unity 2020",
+      "organization": "Unity Technologies",
+      "link": [
+        "https://unity.com/",
+        "https://en.wikipedia.org/wiki/Unity_(game_engine)"
+      ],
+      "year": 2020
+    }
+  ],
+  "links": [
+    {
+      "source": "Commercial Game Engine",
+      "target": "Unity"
+    },
+    {
+      "source": "Unity",
+      "target": "Unity 2",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 2",
+      "target": "Unity 3",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 3",
+      "target": "Unity 4",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 4",
+      "target": "Unity 5",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 5",
+      "target": "Unity 2017",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 2017",
+      "target": "Unity 2018",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 2018",
+      "target": "Unity 2019",
+      "type": "derive"
+    },
+    {
+      "source": "Unity 2019",
+      "target": "Unity UI"
+    },
+    {
+      "source": "Unity 2019",
+      "target": "Unity 2020",
+      "type": "derive"
+    }
+  ]
+}

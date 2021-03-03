@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "Unreal Engine",
+      "abbr": "UE",
+      "organization": "Epic Games",
+      "link": [
+        "https://www.unrealengine.com/",
+        "https://en.wikipedia.org/wiki/Unreal_Engine"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "Unreal Engine 2",
+      "abbr": "UE2",
+      "organization": "Epic Games",
+      "link": [
+        "https://www.unrealengine.com/",
+        "https://en.wikipedia.org/wiki/Unreal_Engine"
+      ],
+      "year": 2002
+    },
+    {
+      "id": "Unreal Engine 3",
+      "abbr": "UE3",
+      "organization": "Epic Games",
+      "link": [
+        "https://www.unrealengine.com/",
+        "https://en.wikipedia.org/wiki/Unreal_Engine"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "Unreal Engine 4",
+      "abbr": "UE4",
+      "organization": "Epic Games",
+      "link": [
+        "https://www.unrealengine.com/",
+        "https://en.wikipedia.org/wiki/Unreal_Engine"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "Unreal Motion Graphics",
+      "abbr": "UMG",
+      "organization": "Epic Games",
+      "link": "https://docs.unrealengine.com/en-US/InteractiveExperiences/UMG/index.html",
+      "year": 2014
+    },
+    {
+      "id": "Unreal Engine 5",
+      "abbr": "UE5",
+      "organization": "Epic Games",
+      "link": [
+        "https://www.unrealengine.com/",
+        "https://en.wikipedia.org/wiki/Unreal_Engine"
+      ],
+      "year": 2021
+    }
+  ],
+  "links": [
+    {
+      "source": "Commercial Game Engine",
+      "target": "Unreal Engine"
+    },
+    {
+      "source": "Unreal Engine",
+      "target": "Unreal Engine 2",
+      "type": "derive"
+    },
+    {
+      "source": "Unreal Engine 2",
+      "target": "Unreal Engine 3",
+      "type": "derive"
+    },
+    {
+      "source": "Unreal Engine 3",
+      "target": "Unreal Engine 4",
+      "type": "derive"
+    },
+    {
+      "source": "Unreal Engine 4",
+      "target": "Unreal Motion Graphics"
+    },
+    {
+      "source": "Unreal Engine 4",
+      "target": "Blueprint"
+    },
+    {
+      "source": "Unreal Engine 4",
+      "target": "Unreal Engine 5",
+      "type": "derive"
+    }
+  ]
+}

@@ -21,6 +21,8 @@
   "tech/content.json",
   "tech/cs.json",
   "tech/engine.json",
+  "tech/engine/unity.json",
+  "tech/engine/unreal.json",
   "tech/graphics.json",
   "tech/graphics/animation.json",
   "tech/graphics/api.json",
