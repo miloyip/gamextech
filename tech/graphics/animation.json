@@ -108,6 +108,17 @@
       "link": "https://en.wikipedia.org/wiki/Morph_target_animation"
     },
     {
+      "id": "Deformation Transfer",
+      "author": [
+        "Robert W. Sumner",
+        "Jovan Popović"
+      ],
+      "title": "Deformation transfer for triangle meshes",
+      "journal": "TOG",
+      "link": "https://people.csail.mit.edu/sumner/research/deftransfer/",
+      "year": 2004
+    },
+    {
       "id": "Animation Tree"
     },
     {
@@ -464,6 +475,10 @@
     {
       "source": "Computer Animation",
       "target": "Morph Target Animation"
+    },
+    {
+      "source": "Morph Target Animation",
+      "target": "Deformation Transfer"
     },
     {
       "source": "Computer Animation",
