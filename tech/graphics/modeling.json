@@ -205,6 +205,17 @@
       "link": "https://en.wikipedia.org/wiki/Triangle_mesh"
     },
     {
+      "id": "Triangle Mesh Volume",
+      "author": [
+        "Cha Zhang",
+        "Tsuhan Chen"
+      ],
+      "title": "Efficient feature extraction for 2D/3D objects in mesh representation",
+      "conference": "International Conference on Image Processing",
+      "link": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.20.9775&rep=rep1&type=pdf",
+      "year": 2001
+     },
+    {
       "id": "Triangle Strip",
       "link": "https://en.wikipedia.org/wiki/Triangle_strip"
     },
@@ -506,6 +517,10 @@
     {
       "source": "Polygon Mesh",
       "target": "Triangle Mesh"
+    },
+    {
+      "source": "Triangle Mesh",
+      "target": "Triangle Mesh Volume"
     },
     {
       "source": "Triangle Mesh",
