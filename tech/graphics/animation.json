@@ -258,10 +258,13 @@
     {
       "id": "Cyclic Coordinate Descent IK",
       "abbr": "CCD IK",
-      "author": "Chris Welman",
-      "title": "Inverse kinematics and geometric constraints for articulated figure manipulation",
-      "link": "https://core.ac.uk/download/pdf/56369926.pdf",
-      "year": 1993
+      "author": [
+        "Li-Chun Tommy Wang",
+        "Chih Cheng Chen"
+      ],
+      "title": "A combined optimization method for solving the inverse kinematics problems of mechanical manipulators",
+      "journal": "IEEE Transactions on Robotics and Automation",
+      "year": 1991
     },
     {
       "id": "FABRIK",
