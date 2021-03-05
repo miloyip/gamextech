@@ -235,6 +235,21 @@
       "id": "Rope Simulation"
     },
     {
+      "id": "Discrete Elastic Rod",
+      "abbr": "DER",
+      "author": [
+        "Miklós Bergou",
+        "Max Wardetzky",
+        "Stephen Robinson",
+        "Basile Audoly",
+        "Eitan Grinspun"
+      ],
+      "title": "Discrete elastic rods",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/1399504.1360662",
+      "year": 2008
+    },
+    {
       "id": "Cloth Simulation"
     },
     {
@@ -388,6 +403,22 @@
       ],
       "conference": "SIGGRAPH",
       "year": 2014
+    },
+    {
+      "id": "Material Point Method",
+      "abbr": "MPM",
+      "author": [
+        "Deborah Sulsky",
+        "Zhen Chen",
+        "Howard L. Schreyer"
+      ],
+      "title": "A particle method for history-dependent materials",
+      "journal": "Computer methods in applied mechanics and engineering",
+      "link": [
+        "https://digital.library.unt.edu/ark:/67531/metadc1385575/",
+        "https://en.wikipedia.org/wiki/Material_point_method"
+      ],
+      "year": 1994
     },
     {
       "id": "Physics Engine"
@@ -671,6 +702,10 @@
       "target": "Rope Simulation"
     },
     {
+      "source": "Rope Simulation",
+      "target": "Discrete Elastic Rod"
+    },
+    {
       "source": "Soft Body Dynamics",
       "target": "Deformable Solid"
     },
@@ -787,6 +822,15 @@
     {
       "source": "Unified Physics",
       "target": "Unified Particle Physics"
+    },
+    {
+      "source": "Unified Physics",
+      "target": "Material Point Method"
+    },
+    {
+      "source": "Fluid Implicit Particle",
+      "target": "Material Point Method",
+      "type": "derive"
     },
     {
       "source": "Game Physics",
