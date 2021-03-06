@@ -1,0 +1,761 @@
+{
+  "nodes": [
+    {
+      "id": "Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Algorithm"
+    },
+    {
+      "id": "Computational Complexity",
+      "link": "https://en.wikipedia.org/wiki/Computational_complexity"
+    },
+    {
+      "id": "Big-O Notation",
+      "aka": [
+        "Bachmann–Landau Notation",
+        "Asymptotic Notation"
+      ],
+      "author": [
+        "Paul Bachmann",
+        "Edmund Landau"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Big_O_notation",
+      "year": 1894
+    },
+    {
+      "id": "Time Complexity",
+      "link": "https://en.wikipedia.org/wiki/Time_complexity"
+    },
+    {
+      "id": "P Complexity Class",
+      "abbr": "P",
+      "link": "https://en.wikipedia.org/wiki/P_(complexity)"
+    },
+    {
+      "id": "NP Complexity Class",
+      "abbr": "NP",
+      "link": "https://en.wikipedia.org/wiki/NP_(complexity)"
+    },
+    {
+      "id": "Master Theorem",
+      "aka": "Master Theorem for Divide-and-conquer Recurrences",
+      "author": [
+        "Jon Louis Bentley",
+        "Dorothea Haken",
+        "James B. Saxe"
+      ],
+      "title": "A general method for solving divide-and-conquer recurrences",
+      "conference": "SIGACT",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/1008861.1008865",
+        "https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)"
+      ],
+      "year": 1980
+    },
+    {
+      "id": "Space Complexity",
+      "link": "https://en.wikipedia.org/wiki/Space_complexity"
+    },
+    {
+      "id": "Algorithmic Paradigm",
+      "link": "https://en.wikipedia.org/wiki/Algorithmic_paradigm"
+    },
+    {
+      "id": "Backtracking",
+      "author": "D. H. Lehmer",
+      "link": "https://en.wikipedia.org/wiki/Backtracking"
+    },
+    {
+      "id": "Brute-force Search",
+      "aka": [
+        "Exhaustive Search",
+        "Generate and Test"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Brute-force_search"
+    },
+    {
+      "id": "Divide and Conquer",
+      "link": "https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm"
+    },
+    {
+      "id": "Dynamic Programming",
+      "author": "Richard Bellman",
+      "link": "https://en.wikipedia.org/wiki/Dynamic_programming",
+      "year": 1953
+    },
+    {
+      "id": "Greedy Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Greedy_algorithm"
+    },
+    {
+      "id": "Heuristic",
+      "link": "https://en.wikipedia.org/wiki/Heuristic_(computer_science)"
+    },
+    {
+      "id": "Sorting Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Sorting_algorithm"      
+    },
+    {
+      "id": "Comparison Sort",
+      "link": "https://en.wikipedia.org/wiki/Comparison_sort"
+    },
+    {
+      "id": "Bubble Sort",
+      "link": "https://en.wikipedia.org/wiki/Bubble_sort"
+    },
+    {
+      "id": "Selection Sort",
+      "link": "https://en.wikipedia.org/wiki/Selection_sort"
+    },
+    {
+      "id": "Insertion Sort",
+      "link": "https://en.wikipedia.org/wiki/Insertion_sort"
+    },
+    {
+      "id": "Merge Sort",
+      "author": "John von Neumann",
+      "link": "https://en.wikipedia.org/wiki/Merge_sort",
+      "year": 1945
+    },
+    {
+      "id": "Heapsort",
+      "author": "J. W. J. Williams",
+      "year": 1964
+    },
+    {
+      "id": "Quicksort",
+      "author": "Tony Hoare",
+      "title": "Algorithm 64: Quicksort",
+      "journal": "Communications of the ACM",
+      "link": "https://en.wikipedia.org/wiki/Quicksort",
+      "year": 1959
+    },
+    {
+      "id": "Non-comparison Sort"
+    },
+    {
+      "id": "Bucket Sort",
+      "aka": "Bin Sort",
+      "link": "https://en.wikipedia.org/wiki/Bucket_sort"
+    },
+    {
+      "id": "Radix Sort",
+      "author": "Herman Hollerith",
+      "link": "https://en.wikipedia.org/wiki/Radix_sort",
+      "year": 1887
+    },
+    {
+      "id": "Counting Sort",
+      "link": "https://en.wikipedia.org/wiki/Counting_sort"
+    },
+    {
+      "id": "Parallel Sorting Algorithm"
+    },
+    {
+      "id": "Sorting Network",
+      "author": [
+        "Armstrong",
+        "Nelson",
+        "O'Connor"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Sorting_network",
+      "year": 1954
+    },
+    {
+      "id": "Bitonic Sorter",
+      "author": "Ken Batcher",
+      "title": "Sorting Networks and their Applications",
+      "conference": "Spring Joint Computer Conference",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/1468075.1468121",
+        "https://en.wikipedia.org/wiki/Bitonic_sorter"
+      ],
+      "year": 1968
+    },
+    {
+      "id": "Batcher Odd-even Mergesort",
+      "author": "Ken Batcher",
+      "title": "Sorting Networks and their Applications",
+      "conference": "Spring Joint Computer Conference",
+      "link": [
+        "https://en.wikipedia.org/wiki/Batcher_odd%E2%80%93even_mergesort",
+        "https://developer.nvidia.com/gpugems/gpugems2/part-vi-simulation-and-numerical-algorithms/chapter-46-improved-gpu-sorting"
+      ],
+      "year": 1968
+    },
+    {
+      "id": "Pairwise Sorting Network",
+      "author": "Ian Parberry",
+      "title": "The Pairwise Sorting Network",
+      "journal": "Parallel Processing Letters",
+      "link": [
+        "https://pdfs.semanticscholar.org/d663/dbbdb0e35258fbdbc0da91de97f06813e9a6.pdf",
+        "https://en.wikipedia.org/wiki/Pairwise_sorting_network"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "Merge Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Merge_algorithm"
+    },
+    {
+      "id": "k-way Merge Algorithm",
+      "link": "https://en.wikipedia.org/wiki/K-way_merge_algorithm"
+    },
+    {
+      "id": "Searching Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Search_algorithm"
+    },
+    {
+      "id": "Linear Search",
+      "link": "https://en.wikipedia.org/wiki/Linear_search"
+    },
+    {
+      "id": "Binary Search",
+      "aka": [
+        "Half-interval Search",
+        "Logarithmic Search",
+        "Binary Chop"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Binary_search_algorithm"
+    },
+    {
+      "id": "Multiplicative Binary Search",
+      "author": "Thomas A. Standish",
+      "link": "https://en.wikipedia.org/wiki/Multiplicative_binary_search",
+      "year": 1980
+    },
+    {
+      "id": "Selection Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Selection_algorithm"
+    },
+    {
+      "id": "Quickselect",
+      "aka": "Hoare's Selection Algorithm",
+      "author": "Tony Hoare",
+      "title": "Algorithm 65: Find",
+      "journal": "Communications of the ACM",
+      "link": "https://en.wikipedia.org/wiki/Quickselect",
+      "year": 1961
+    },
+    {
+      "id": "String-searching Algorithm"
+    },
+    {
+      "id": "Knuth-Morris-Pratt Algorithm",
+      "author": [
+        "Donald Knuth",
+        "James H. Morris",
+        "Vaughan Pratt"
+      ],
+      "abbr": "KMP Algorithm",
+      "link": "https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm",
+      "year": 1970
+    },
+    {
+      "id": "Boyer–Moore String-search Algorithm",
+      "author": [
+        "Robert S. Boyer",
+        "J Strother Moore"
+      ],
+      "title": "A Fast String Searching Algorithm",
+      "journal": "Communications of the ACM",
+      "link": [
+        "https://www.cs.utexas.edu/users/moore/publications/fstrpos.pdf",
+        "https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm"
+      ],
+      "year": 1977
+    },
+    {
+      "id": "Random Number Generation",
+      "link": "https://en.wikipedia.org/wiki/Random_number_generation"
+    },
+    {
+      "id": "Pseudorandom Number Generator",
+      "abbr": "PRNG",
+      "link": "https://en.wikipedia.org/wiki/Pseudorandom_number_generator"
+    },
+    {
+      "id": "Middle-square Method",
+      "author": "John von Neumann",
+      "title": "“Various techniques used in connection with random digits",
+      "year": 1949
+    },
+    {
+      "id": "Lehmer Random Number Generator",
+      "author": "Derrick H. Lehmer",
+      "title": "Mathematical methods in large-scale computing units",
+      "conference": "Symposium on Large-Scale Digital Calculating Machinery",
+      "link": "https://en.wikipedia.org/wiki/Lehmer_random_number_generator",
+      "year": 1951
+    },
+    {
+      "id": "Linear Congruential Generator",
+      "abbr": "LCG",
+      "author": "W. E. Thomson",
+      "title": "A Modified Congruence Method of Generating Pseudo-random Numbers",
+      "journal": "The Computer Journal",
+      "link": [
+        "https://academic.oup.com/comjnl/article/1/2/83/425243",
+        "https://en.wikipedia.org/wiki/Linear_congruential_generator"
+      ],
+      "year": 1958
+    },
+    {
+      "id": "Permuted Congruential Generator",
+      "abbr": "PCG",
+      "author": "Melissa E. O'Neill",
+      "title": "PCG: A Family of Simple Fast Space-Efficient Statistically Good Algorithms for Random Number Generation",
+      "link": [
+        "https://www.pcg-random.org/pdf/hmc-cs-2014-0905.pdf",
+        "https://www.pcg-random.org/",
+        "https://en.wikipedia.org/wiki/Permuted_congruential_generator"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "Mersenne Twister",
+      "abbr": "MT",
+      "author": [
+        "M. Matsumoto",
+        "T. Nishimura"
+      ],
+      "title": "Mersenne twister: a 623-dimensionally equidistributed uniform pseudo-random number generator",
+      "journal": "ACM Transactions on Modeling and Computer Simulation",
+      "link": [
+        "http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/ARTICLES/mt.pdf",
+        "https://en.wikipedia.org/wiki/Mersenne_Twister"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "Xorshift",
+      "author": "George Marsaglia",
+      "title": "Xorshift RNGs",
+      "journal": "Journal of Statistical Software",
+      "link": [
+        "https://www.jstatsoft.org/article/view/v008i14",
+        "https://en.wikipedia.org/wiki/Xorshift"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "Counter-based Random Number Generator",
+      "abbr": "CBRNG",
+      "author": [
+        "John Salmon",
+        "Mark Moraes",
+        "Ron Dror",
+        "David Shaw"
+      ],
+      "title": "Parallel random numbers: as easy as 1, 2, 3",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/2063384.2063405",
+        "https://en.wikipedia.org/wiki/Counter-based_random_number_generator_(CBRNG)"
+      ],
+      "year": 2011
+    },
+    {
+      "id": "Middle Square Weyl Sequence RNG",
+      "author": "Bernard Widynski",
+      "title": "Middle Square Weyl Sequence RNG",
+      "link": "https://arxiv.org/abs/1704.00358v5",
+      "year": 2017
+    },
+    {
+      "id": "Squares CBRNG",
+      "author": "Bernard Widynski",
+      "link": "https://arxiv.org/abs/2004.06278v3",
+      "year": 2020
+    },
+    {
+      "id": "Low-discrepancy Sequence",
+      "aka": "Qusairandom Sequence",
+      "link": "https://en.wikipedia.org/wiki/Low-discrepancy_sequence"
+    },
+    {
+      "id": "Halton Sequence",
+      "author": "J.H. Halton",
+      "title": "On the efficiency of certain quasi-random sequences of points in evaluating multi-dimensional integrals",
+      "journal": "Numerische Mathematik",
+      "link": "https://en.wikipedia.org/wiki/Halton_sequence",
+      "year": 1960
+    },
+    {
+      "id": "Sobel Sequence",
+      "author": "Ilya Meerovich Sobol",
+      "title": "On the Distribution of points in a cube and approximate evaluation of integrals",
+      "journal": "U.S.S.R Comput. Maths. Math. Phys",
+      "link": "https://en.wikipedia.org/wiki/Sobol_sequence",
+      "year": 1967
+    },
+    {
+      "id": "Pseudorandom Number Sampling",
+      "aka": "Non-uniform Pseudorandom Variate Generation",
+      "link": "https://en.wikipedia.org/wiki/Pseudo-random_number_sampling"
+    },
+    {
+      "id": "Discrete Distribution Sampling",
+      "link": "https://en.wikipedia.org/wiki/Pseudo-random_number_sampling#Finite_discrete_distributions"
+    },
+    {
+      "id": "Alias Method",
+      "author": "A. J. Walker",
+      "title": "New fast method for generating discrete random numbers with arbitrary frequency distributions",
+      "journal": "Electronics Letters",
+      "link": "https://en.wikipedia.org/wiki/Alias_method",
+      "year": 1974
+    },
+    {
+      "id": "Continuous Distribution Sampling",
+      "link": "https://en.wikipedia.org/wiki/Pseudo-random_number_sampling#Continuous_distributions"
+    },
+    {
+      "id": "Rejection Sampling",
+      "link": "https://en.wikipedia.org/wiki/Rejection_sampling"
+    },
+    {
+      "id": "Inverse Transform Sampling",
+      "aka": [
+        "Inversion Sampling",
+        "Inverse Probability Integral Transform",
+        "Inverse Transformation Method",
+        "Smirnov Transform",
+        "Golden Rule"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Inverse_transform_sampling"
+    },
+    {
+      "id": "Ziggurat Algorithm",
+      "author": "George Marsaglia",
+      "link": "https://en.wikipedia.org/wiki/Ziggurat_algorithm",
+      "year": 1960
+    },
+    {
+      "id": "Normal Distribution Sampling"
+    },
+    {
+      "id": "Box-Muller Transform",
+      "author": [
+        "George Edward Pelham Box",
+        "Mervin Edgar Muller"
+      ],
+      "title": "A Note on the Generation of Random Normal Deviates",
+      "journal": "The Annals of Mathematical Statistics",
+      "link": [
+        "https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-29/issue-2/A-Note-on-the-Generation-of-Random-Normal-Deviates/10.1214/aoms/1177706645.full",
+        "https://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform"
+      ],
+      "year": 1958
+    },
+    {
+      "id": "Marsaglia Polar Method",
+      "author": [
+        "George Marsaglia", 
+        "Thomas A. Bray"
+      ],
+      "title": "A convenient method for generating normal variables",
+      "journal": "SIAM review",
+      "link": "https://en.wikipedia.org/wiki/Marsaglia_polar_method",
+      "year": 1964
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Algorithm"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Computational Complexity"
+    },
+    {
+      "source": "Computational Complexity",
+      "target": "Big-O Notation"
+    },
+    {
+      "source": "Computational Complexity",
+      "target": "Time Complexity"
+    },
+    {
+      "source": "Time Complexity",
+      "target": "P Complexity Class"
+    },
+    {
+      "source": "Time Complexity",
+      "target": "NP Complexity Class"
+    },
+    {
+      "source": "Time Complexity",
+      "target": "Master Theorem"
+    },
+    {
+      "source": "Computational Complexity",
+      "target": "Space Complexity"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Algorithmic Paradigm"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Backtracking"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Backtracking"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Brute-force Search"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Divide and Conquer"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Dynamic Programming"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Greedy Algorithm"
+    },
+    {
+      "source": "Algorithmic Paradigm",
+      "target": "Heuristic"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Sorting Algorithm"
+    },
+    {
+      "source": "Sorting Algorithm",
+      "target": "Comparison Sort"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Bubble Sort"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Selection Sort"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Insertion Sort"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Merge Sort"
+    },
+    {
+      "source": "Merge Sort",
+      "target": "Merge Algorithm",
+      "type": "use"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Heapsort"
+    },
+    {
+      "source": "Comparison Sort",
+      "target": "Quicksort"
+    },
+    {
+      "source": "Sorting Algorithm",
+      "target": "Non-comparison Sort"
+    },
+    {
+      "source": "Non-comparison Sort",
+      "target": "Bucket Sort"
+    },
+    {
+      "source": "Non-comparison Sort",
+      "target": "Radix Sort"
+    },
+    {
+      "source": "Non-comparison Sort",
+      "target": "Counting Sort"
+    },
+    {
+      "source": "Sorting Algorithm",
+      "target": "Parallel Sorting Algorithm"
+    },
+    {
+      "source": "Parallel Sorting Algorithm",
+      "target": "Sorting Network"
+    },
+    {
+      "source": "Sorting Network",
+      "target": "Bitonic Sorter"
+    },
+    {
+      "source": "Sorting Network",
+      "target": "Batcher Odd-even Mergesort"
+    },
+    {
+      "source": "Sorting Network",
+      "target": "Pairwise Sorting Network"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Merge Algorithm"
+    },
+    {
+      "source": "Merge Algorithm",
+      "target": "k-way Merge Algorithm"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Searching Algorithm"
+    },
+    {
+      "source": "Searching Algorithm",
+      "target": "Linear Search"
+    },
+    {
+      "source": "Searching Algorithm",
+      "target": "Binary Search"
+    },
+    {
+      "source": "Binary Search",
+      "target": "Multiplicative Binary Search",
+      "type": "derive"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Selection Algorithm"
+    },
+    {
+      "source": "Selection Algorithm",
+      "target": "Quickselect"
+    },
+    {
+      "source": "Algorithm",
+      "target": "String-searching Algorithm"
+    },
+    {
+      "source": "String-searching Algorithm",
+      "target": "Knuth-Morris-Pratt Algorithm"
+    },
+    {
+      "source": "String-searching Algorithm",
+      "target": "Boyer–Moore String-search Algorithm"
+    },
+    {
+      "source": "Algorithm",
+      "target": "Random Number Generation"
+    },
+    {
+      "source": "Random Number Generation",
+      "target": "Pseudorandom Number Generator"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Middle-square Method"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Lehmer Random Number Generator"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Linear Congruential Generator"
+    },
+    {
+      "source": "Linear Congruential Generator",
+      "target": "Permuted Congruential Generator",
+      "type": "derive"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Mersenne Twister"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Xorshift"
+    },
+    {
+      "source": "Middle-square Method",
+      "target": "Middle Square Weyl Sequence RNG",
+      "type": "derive"
+    },
+    {
+      "source": "Pseudorandom Number Generator",
+      "target": "Counter-based Random Number Generator"
+    },
+    {
+      "source": "Counter-based Random Number Generator",
+      "target": "Squares CBRNG"
+    },
+    {
+      "source": "Middle Square Weyl Sequence RNG",
+      "target": "Squares CBRNG",
+      "type": "derive"
+    },
+    {
+      "source": "Random Number Generation",
+      "target": "Low-discrepancy Sequence"
+    },
+    {
+      "source": "Low-discrepancy Sequence",
+      "target": "Halton Sequence"
+    },
+    {
+      "source": "Low-discrepancy Sequence",
+      "target": "Sobel Sequence"
+    },
+    {
+      "source": "Random Number Generation",
+      "target": "Pseudorandom Number Sampling"
+    },
+    {
+      "source": "Pseudorandom Number Sampling",
+      "target": "Discrete Distribution Sampling"
+    },
+    {
+      "source": "Discrete Distribution Sampling",
+      "target": "Linear Search"
+    },
+    {
+      "source": "Discrete Distribution Sampling",
+      "target": "Binary Search"
+    },
+    {
+      "source": "Discrete Distribution Sampling",
+      "target": "Alias Method"
+    },
+    {
+      "source": "Pseudorandom Number Sampling",
+      "target": "Continuous Distribution Sampling"
+    },
+    {
+      "source": "Continuous Distribution Sampling",
+      "target": "Rejection Sampling"
+    },
+    {
+      "source": "Continuous Distribution Sampling",
+      "target": "Inverse Transform Sampling"
+    },
+    {
+      "source": "Continuous Distribution Sampling",
+      "target": "Ziggurat Algorithm"
+    },
+    {
+      "source": "Pseudorandom Number Sampling",
+      "target": "Normal Distribution Sampling"
+    },
+    {
+      "source": "Normal Distribution Sampling",
+      "target": "Box-Muller Transform"
+    },
+    {
+      "source": "Normal Distribution Sampling",
+      "target": "Marsaglia Polar Method"
+    },
+    {
+      "source": "Normal Distribution Sampling",
+      "target": "Ziggurat Algorithm"
+    }
+  ]
+}

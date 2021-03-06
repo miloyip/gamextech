@@ -170,6 +170,16 @@
     {
       "source": "Nintendo Switch",
       "target": "Vulkan"
+    },
+    {
+      "source": "World Wide Web",
+      "target": "Hypertext Transfer Protocol",
+      "type": "use"
+    },
+    {
+      "source": "World Wide Web",
+      "target": "Hypertext Transfer Protocol Secure",
+      "type": "use"
     }
   ]
 }

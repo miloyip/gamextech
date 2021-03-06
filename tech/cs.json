@@ -1,9 +1,6 @@
 {
   "nodes": [
     {
-      "id": "Algorithm"
-    },
-    {
       "id": "Data Structure"
     },
     {
@@ -15,37 +12,9 @@
     {
       "id": "Convex Hull",
       "link": "https://en.wikipedia.org/wiki/Convex_hull"
-    },
-    {
-      "id": "Numerical Method"
-    },
-    {
-      "id": "Root Finding"
-    },
-    {
-      "id": "Bisection Method"
-    },
-    {
-      "id": "Newton's Method"
-    },
-    {
-      "id": "Runge-Kutta Method"
-    },
-    {
-      "id": "Differential Equation Solving"
-    },
-    {
-      "id": "Euler Method"
-    },
-    {
-      "id": "Verlet Integration"
     }
   ],
   "links": [
-    {
-      "source": "Computer Science",
-      "target": "Algorithm"
-    },
     {
       "source": "Computer Science",
       "target": "Data Structure"
@@ -61,38 +30,6 @@
     {
       "source": "Computational Geometry",
       "target": "Convex Hull"
-    },
-    {
-      "source": "Computer Science",
-      "target": "Numerical Method"
-    },
-    {
-      "source": "Numerical Method",
-      "target": "Root Finding"
-    },
-    {
-      "source": "Root Finding",
-      "target": "Bisection Method"
-    },
-    {
-      "source": "Root Finding",
-      "target": "Newton's Method"
-    },
-    {
-      "source": "Root Finding",
-      "target": "Runge-Kutta Method"
-    },
-    {
-      "source": "Numerical Method",
-      "target": "Differential Equation Solving"
-    },
-    {
-      "source": "Differential Equation Solving",
-      "target": "Euler Method"
-    },
-    {
-      "source": "Differential Equation Solving",
-      "target": "Verlet Integration"
     }
   ]
 }

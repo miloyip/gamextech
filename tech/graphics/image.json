@@ -309,8 +309,18 @@
       "target": "Joint Photographic Experts Group"
     },
     {
+      "source": "Joint Photographic Experts Group",
+      "target": "Discrete Cosine Transform",
+      "type": "use"
+    },
+    {
       "source": "Image File Format",
       "target": "Portable Network Graphics"
+    },
+    {
+      "source": "Portable Network Graphics",
+      "target": "Deflate",
+      "type": "use"
     },
     {
       "source": "Image File Format",

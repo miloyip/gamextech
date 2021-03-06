@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "id": "Serialization",
+      "link": "https://en.wikipedia.org/wiki/Serialization"
+    },
+    {
+      "id": "Extensible Markup Language",
+      "abbr": "XML",
+      "link": [
+        "https://www.w3.org/TR/xml11/",
+        "https://en.wikipedia.org/wiki/XML"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "YAML",
+      "author": [
+        "Clark Evans",
+        "Ingy döt Net",
+        "Oren Ben-Kiki"
+      ],
+      "link": "https://en.wikipedia.org/wiki/YAML",
+      "year": 2001
+    },
+    {
+      "id": "JavaScript Object Notation",
+      "abbr": "JSON",
+      "author": "Douglas Crockford",
+      "link": [
+        "https://www.json.org/",
+        "https://www.ecma-international.org/publications-and-standards/standards/ecma-404/",
+        "https://en.wikipedia.org/wiki/JSON"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "Protocol Buffers",
+      "abbr": "protobuf",
+      "organization": "Google",
+      "link": [
+        "https://developers.google.com/protocol-buffers/",
+        "https://github.com/protocolbuffers/protobuf",
+        "https://en.wikipedia.org/wiki/Protocol_Buffers"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "MessagePack",
+      "author": "Sadayuki Furuhashi",
+      "link": [
+        "https://msgpack.org/",
+        "https://github.com/msgpack",
+        "https://en.wikipedia.org/wiki/MessagePack"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "FlatBuffers",
+      "author": "Wouter van Oortmerssen",
+      "link": [
+        "https://google.github.io/flatbuffers/",
+        "https://github.com/google/flatbuffers",
+        "https://en.wikipedia.org/wiki/FlatBuffers"
+      ],
+      "year": 2014
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Serialization"
+    },
+    {
+      "source": "Serialization",
+      "target": "Extensible Markup Language"
+    },
+    {
+      "source": "Serialization",
+      "target": "YAML"
+    },
+    {
+      "source": "Serialization",
+      "target": "JavaScript Object Notation"
+    },
+    {
+      "source": "Serialization",
+      "target": "Protocol Buffers"
+    },
+    {
+      "source": "Serialization",
+      "target": "MessagePack"
+    },
+    {
+      "source": "Serialization",
+      "target": "FlatBuffers"
+    }
+  ]
+}

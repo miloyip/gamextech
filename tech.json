@@ -22,9 +22,6 @@
       "id": "Gameplay"
     },
     {
-      "id": "Multiplayer"
-    },
-    {
       "id": "Content Creation"
     }
   ],
@@ -52,10 +49,6 @@
     {
       "source": "Technology",
       "target": "Gameplay"
-    },
-    {
-      "source": "Technology",
-      "target": "Multiplayer"
     },
     {
       "source": "Technology",
