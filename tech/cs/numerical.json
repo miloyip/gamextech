@@ -126,6 +126,10 @@
       "target": "Gradient Descent"
     },
     {
+      "source": "Mathematical Optimization",
+      "target": "Simulated Annealing"
+    },
+    {
       "source": "Gradient Descent",
       "target": "Stochastic Gradient Descent"
     },
