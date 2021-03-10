@@ -1,9 +1,6 @@
 {
   "nodes": [
     {
-      "id": "Data Structure"
-    },
-    {
       "id": "Computer Architecture"
     },
     {
@@ -15,10 +12,6 @@
     }
   ],
   "links": [
-    {
-      "source": "Computer Science",
-      "target": "Data Structure"
-    },
     {
       "source": "Computer Science",
       "target": "Computer Architecture"

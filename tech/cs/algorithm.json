@@ -119,6 +119,9 @@
     {
       "id": "Heapsort",
       "author": "J. W. J. Williams",
+      "title": "Algorithm 232 - Heapsort",
+      "journal":" Communications of the ACM",
+      "link": "https://en.wikipedia.org/wiki/Heapsort",
       "year": 1964
     },
     {

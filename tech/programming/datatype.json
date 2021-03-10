@@ -1,0 +1,576 @@
+{
+  "nodes": [
+    {
+      "id": "Data Type",
+      "link": "https://en.wikipedia.org/wiki/Data_type"
+    },
+    {
+      "id": "Primitive Data Type",
+      "link": "https://en.wikipedia.org/wiki/Primitive_data_type"
+    },
+    {
+      "id": "Boolean",
+      "link": "https://en.wikipedia.org/wiki/Boolean_data_type"
+    },
+    {
+      "id": "Character",
+      "link": "https://en.wikipedia.org/wiki/Character_(computing)"
+    },
+    {
+      "id": "Enumerated Type",
+      "link": "https://en.wikipedia.org/wiki/Enumerated_type"
+    },
+    {
+      "id": "Pointer",
+      "link": "https://en.wikipedia.org/wiki/Pointer_(computer_programming)"
+    },
+    {
+      "id": "Null Pointer",
+      "link": "https://en.wikipedia.org/wiki/Null_pointer"
+    },
+    {
+      "id": "Opaque Pointer",
+      "link": "https://en.wikipedia.org/wiki/Opaque_pointer"
+    },
+    {
+      "id": "Smart Pointer",
+      "link": "https://en.wikipedia.org/wiki/Smart_pointer"
+    },
+    {
+      "id": "Reference",
+      "link": "https://en.wikipedia.org/wiki/Reference_(computer_science)"
+    },
+    {
+      "id": "Numeric Data Type"
+    },
+    {
+      "id": "Integral Data Type",
+      "aka": "Integer",
+      "link": "https://en.wikipedia.org/wiki/Integer_(computer_science)"
+    },
+    {
+      "id": "Fixed-point Number",
+      "link": "https://en.wikipedia.org/wiki/Fixed-point_arithmetic"
+    },
+    {
+      "id": "Floating-point Number",
+      "link": "https://en.wikipedia.org/wiki/Floating-point_arithmetic"
+    },
+    {
+      "id": "Single Precision Floating-point Number",
+      "aka": ["single", "float", "binary32"]
+    },
+    {
+      "id": "Double Precision Floating-point Number",
+      "aka": ["double", "binary64"]
+    },
+    {
+      "id": "Half Precision Floating-point Number",
+      "aka": ["half", "binary16"]
+    },
+    {
+      "id": "IEEE 754",
+      "organization": "IEEE",
+      "link": [
+        "https://standards.ieee.org/standard/754-2019.html",
+        "https://en.wikipedia.org/wiki/IEEE_754",
+        "https://dl.acm.org/doi/pdf/10.1145/103162.103163"
+      ],
+      "year": 1985
+    },
+    {
+      "id": "Signed Zero",
+      "link": "https://en.wikipedia.org/wiki/Signed_zero"
+    },
+    {
+      "id": "Denormal Number",
+      "aka": "Subnormal Number",
+      "link": "https://en.wikipedia.org/wiki/Denormal_number"
+    },
+    {
+      "id": "NaN",
+      "aka": "Not a Number",
+      "link": "https://en.wikipedia.org/wiki/NaN"
+    },
+    {
+      "id": "Infinity",
+      "link": "https://en.wikipedia.org/wiki/Floating-point_arithmetic#Infinities"
+    },
+    {
+      "id": "Rational Data Type",
+      "link": "https://en.wikipedia.org/wiki/Rational_data_type"
+    },
+    {
+      "id": "Complex Data Type",
+      "link": "https://en.wikipedia.org/wiki/Complex_data_type"
+    },
+    {
+      "id": "Signed Number Representation",
+      "link": "https://en.wikipedia.org/wiki/Signed_number_representations"
+    },
+    {
+      "id": "Signed Magnitude",
+      "link": "https://en.wikipedia.org/wiki/Signed_number_representations#Sign-and-magnitude_method"
+    },
+    {
+      "id": "Ones' Complement",
+      "link": "https://en.wikipedia.org/wiki/Ones%27_complement"
+    },
+    {
+      "id": "Two's Complement",
+      "link": "https://en.wikipedia.org/wiki/Two%27s_complement"
+    },
+    {
+      "id": "Offset Binary",
+      "aka": [
+        "Excess-k",
+        "Excess-n",
+        "Excess-e",
+        "Excess Code",
+        "Biased Representation"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Offset_binary"
+    },
+    {
+      "id": "Arbitrary-precision Arithmetic",
+      "link": "https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic"
+    },
+    {
+      "id": "Composite Data Type",
+      "link": "https://en.wikipedia.org/wiki/Composite_data_type"
+    },
+    {
+      "id": "Array Data Type",
+      "aka": "Array",
+      "link": "https://en.wikipedia.org/wiki/Array_data_type"
+    },
+    {
+      "id": "Variable-length Array",
+      "abbr": "VLA",
+      "aka": [
+        "Variable-sized Array",
+        "Runtime-sized Array"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Variable-length_array"
+    },
+    {
+      "id": "Array Slicing",
+      "link": "https://en.wikipedia.org/wiki/Array_slicing"
+    },
+    {
+      "id": "String",
+      "link": "https://en.wikipedia.org/wiki/String_(computer_science)"
+    },
+    {
+      "id": "Null-terminated String",
+      "link": "https://en.wikipedia.org/wiki/Null-terminated_string"
+    },
+    {
+      "id": "Empty String",
+      "aka": "Empty Word",
+      "link": "https://en.wikipedia.org/wiki/Empty_string"
+    },
+    {
+      "id": "Record",
+      "aka": [
+        "Structure",
+        "Struct",
+        "Compound Data"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Record_(computer_science)"
+    },
+    {
+      "id": "Union Type",
+      "link": "https://en.wikipedia.org/wiki/Union_type"
+    },
+    {
+      "id": "Tagged Union",
+      "aka": "Variant",
+      "link": "https://en.wikipedia.org/wiki/Tagged_union"
+    },
+    {
+      "id": "Algebraic Data Type",
+      "link": "https://en.wikipedia.org/wiki/Algebraic_data_type"
+    },
+    {
+      "id": "Sum Type",
+      "link": "https://en.wikipedia.org/wiki/Tagged_union"
+    },
+    {
+      "id": "Product Type",
+      "link": "https://en.wikipedia.org/wiki/Product_type"
+    },
+    {
+      "id": "Option Type",
+      "aka": "Maybe Type",
+      "link": "https://en.wikipedia.org/wiki/Option_type"
+    },
+    {
+      "id": "Result Type",
+      "link": "https://en.wikipedia.org/wiki/Result_type"
+    },
+    {
+      "id": "Abstract Data Type",
+      "abbr": "ADT",
+      "link": "https://en.wikipedia.org/wiki/Abstract_data_type"
+    },
+    {
+      "id": "Pair",
+      "link": "https://en.wikipedia.org/wiki/Product_type"
+    },
+    {
+      "id": "Tuple",
+      "link": "https://en.wikipedia.org/wiki/Product_type"
+    },
+    {
+      "id": "List",
+      "link": "https://en.wikipedia.org/wiki/List_(abstract_data_type)"
+    },
+    {
+      "id": "Set",
+      "link": "https://en.wikipedia.org/wiki/Set_(abstract_data_type)"
+    },
+    {
+      "id": "Multiset",
+      "aka": ["Bag", "mset"],
+      "link": "https://en.wikipedia.org/wiki/Multiset"
+    },
+    {
+      "id": "Map",
+      "aka": [
+        "Associative Array",
+        "Symbol Table",
+        "Dictionary"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Associative_array"
+    },
+    {
+      "id": "Multimap",
+      "aka": [
+        "Multihash",
+        "Multidict"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Multimap"
+    },
+    {
+      "id": "Stack",
+      "aka": "LIFO",
+      "link": "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
+    },
+    {
+      "id": "Queue",
+      "aka": "FIFO",
+      "link": "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)"
+    },
+    {
+      "id": "Double-ended Queue",
+      "aka": "Deque",
+      "link": "https://en.wikipedia.org/wiki/Double-ended_queue"
+    },
+    {
+      "id": "Priority Queue",
+      "link": "https://en.wikipedia.org/wiki/Priority_queue"
+    },
+    {
+      "id": "Double-ended Priority Queue",
+      "abbr": "DEPQ",
+      "aka": "Double-ended Heap",
+      "link": "https://en.wikipedia.org/wiki/Double-ended_priority_queue"
+    }
+  ],
+  "links": [
+    {
+      "source": "Programming",
+      "target": "Data Type"
+    },
+    {
+      "source": "Data Type",
+      "target": "Primitive Data Type"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Boolean"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Character"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Enumerated Type"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Pointer"
+    },
+    {
+      "source": "Pointer",
+      "target": "Null Pointer"
+    },
+    {
+      "source": "Pointer",
+      "target": "Opaque Pointer"
+    },
+    {
+      "source": "Pointer",
+      "target": "Smart Pointer"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Reference"
+    },
+    {
+      "source": "Primitive Data Type",
+      "target": "Numeric Data Type"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Integral Data Type"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Fixed-point Number"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Floating-point Number"
+    },
+    {
+      "source": "Floating-point Number",
+      "target": "Single Precision Floating-point Number"
+    },
+    {
+      "source": "Floating-point Number",
+      "target": "Double Precision Floating-point Number"
+    },
+    {
+      "source": "Floating-point Number",
+      "target": "Half Precision Floating-point Number"
+    },
+    {
+      "source": "Floating-point Number",
+      "target": "IEEE 754"
+    },
+    {
+      "source": "IEEE 754",
+      "target": "Signed Zero"
+    },
+    {
+      "source": "IEEE 754",
+      "target": "Denormal Number"
+    },
+    {
+      "source": "IEEE 754",
+      "target": "NaN"
+    },
+    {
+      "source": "IEEE 754",
+      "target": "Infinity"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Rational Data Type"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Complex Data Type"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Signed Number Representation"
+    },
+    {
+      "source": "Signed Number Representation",
+      "target": "Signed Magnitude"
+    },
+    {
+      "source": "Signed Number Representation",
+      "target": "Ones' Complement"
+    },
+    {
+      "source": "Signed Number Representation",
+      "target": "Two's Complement"
+    },
+    {
+      "source": "Signed Number Representation",
+      "target": "Offset Binary"
+    },
+    {
+      "source": "Numeric Data Type",
+      "target": "Arbitrary-precision Arithmetic"
+    },
+    {
+      "source": "Data Type",
+      "target": "Composite Data Type"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Array Data Type"
+    },
+    {
+      "source": "Array Data Type",
+      "target": "Variable-length Array"
+    },
+    {
+      "source": "Array Data Type",
+      "target": "Array Slicing"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "String"
+    },
+    {
+      "source": "String",
+      "target": "Null-terminated String"
+    },
+    {
+      "source": "String",
+      "target": "Empty String"
+    },
+    {
+      "source": "String",
+      "target": "Character",
+      "type": "use"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Record"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Union Type"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Tagged Union"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Algebraic Data Type"
+    },
+    {
+      "source": "Algebraic Data Type",
+      "target": "Sum Type"
+    },
+    {
+      "source": "Sum Type",
+      "target": "Tagged Union"
+    },
+    {
+      "source": "Algebraic Data Type",
+      "target": "Product Type"
+    },
+    {
+      "source": "Product Type",
+      "target": "Record"
+    },
+    {
+      "source": "Product Type",
+      "target": "Pair"
+    },
+    {
+      "source": "Product Type",
+      "target": "Tuple"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Option Type"
+    },
+    {
+      "source": "Composite Data Type",
+      "target": "Result Type"
+    },
+    {
+      "source": "Data Type",
+      "target": "Abstract Data Type"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Pair"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Tuple"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "List"
+    },
+    {
+      "source": "List",
+      "target": "Linked List",
+      "type": "use"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Set"
+    },
+    {
+      "source": "Set",
+      "target": "Hash Table",
+      "type": "use"
+    },
+    {
+      "source": "Set",
+      "target": "Binary Search Tree",
+      "type": "use"
+    },
+    {
+      "source": "Set",
+      "target": "Multiset"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Map"
+    },
+    {
+      "source": "Map",
+      "target": "Hash Table",
+      "type": "use"
+    },
+    {
+      "source": "Map",
+      "target": "Binary Search Tree",
+      "type": "use"
+    },
+    {
+      "source": "Map",
+      "target": "Multimap"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Stack"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Queue"
+    },
+    {
+      "source": "Queue",
+      "target": "Double-ended Queue"
+    },
+    {
+      "source": "Queue",
+      "target": "Circular Buffer",
+      "type": "use"
+    },
+    {
+      "source": "Abstract Data Type",
+      "target": "Priority Queue"
+    },
+    {
+      "source": "Priority Queue",
+      "target": "Heap Data Structure",
+      "type": "use"
+    },
+    {
+      "source": "Set",
+      "target": "Binary Search Tree",
+      "type": "use"
+    },
+    {
+      "source": "Priority Queue",
+      "target": "Double-ended Priority Queue"
+    }
+  ]
+}

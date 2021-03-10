@@ -22,6 +22,7 @@
   "tech/cs.json",
   "tech/cs/algorithm.json",
   "tech/cs/compression.json",
+  "tech/cs/datastruct.json",
   "tech/cs/network.json",
   "tech/cs/numerical.json",
   "tech/cs/security.json",
@@ -49,6 +50,7 @@
   "tech/physics.json",
   "tech/platform.json",
   "tech/programming.json",
+  "tech/programming/datatype.json",
   "tech/se.json",
   "tech/tool.json"
 ]
