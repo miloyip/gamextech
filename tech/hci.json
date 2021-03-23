@@ -30,6 +30,11 @@
       "year": 2018
     },
     {
+      "id": "Noesis Engine",
+      "link": "https://www.noesisengine.com/",
+      "year": 2011
+    },
+    {
       "id": "Heads-up Display",
       "abbr": "HUD",
       "link": "https://en.wikipedia.org/wiki/Heads-up_display_(video_games)"
@@ -354,6 +359,10 @@
     {
       "source": "In-game GUI Toolkit",
       "target": "Coherent Prysm"
+    },
+    {
+      "source": "In-game GUI Toolkit",
+      "target": "Noesis Engine"
     },
     {
       "source": "In-game GUI Toolkit",
