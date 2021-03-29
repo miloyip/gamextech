@@ -1,96 +1,22 @@
 {
   "nodes": [
     {
-      "id": "Software Design"
+      "id": "Software Engineering",
+      "link": "https://en.wikipedia.org/wiki/Software_engineering"
     },
     {
-      "id": "Unified Modeling Language",
-      "abbr": "UML"
+      "id": "Debugging",
+      "link": "https://en.wikipedia.org/wiki/Debugging"
     },
     {
-      "id": "Design Pattern"
-    },
-    {
-      "id": "Debugging"
-    },
-    {
-      "id": "Testing"
-    },
-    {
-      "id": "Profiling"
-    },
-    {
-      "id": "Verson Control",
-      "link": "https://en.wikipedia.org/wiki/Version_control"
-    },
-    {
-      "id": "Perforce Helix Core",
-      "abbr": "P4",
-      "organization": "Perforce",
-      "link": [
-        "https://www.perforce.com/products/helix-core",
-        "https://en.wikipedia.org/wiki/Perforce#Helix_Core"
-      ],
-      "year": 1995
-    },
-    {
-      "id": "Apache Subversion",
-      "abbr": "SVN",
-      "organization": "Apache",
-      "link": [
-        "https://subversion.apache.org/",
-        "https://en.wikipedia.org/wiki/Apache_Subversion"
-      ],
-      "year": 2000
-    },
-    {
-      "id": "TortoiseSVN",
-      "author": "Tim Kemp",
-      "link": [
-        "https://tortoisesvn.net/",
-        "https://en.wikipedia.org/wiki/TortoiseSVN"
-      ],
-      "year": 2002
-    },
-    {
-      "id": "Git",
-      "author": "Linus Torvalds",
-      "link": [
-        "https://git-scm.com/",
-        "https://en.wikipedia.org/wiki/Git"
-      ],
-      "year": 2005
-    },
-    {
-      "id": "TortoiseGit",
-      "link": [
-        "https://tortoisegit.org/",
-        "https://en.wikipedia.org/wiki/TortoiseGit"
-      ],
-      "year": 2008
-    },
-    {
-      "id": "Git Large File Storage",
-      "abbr": "git-lfs",
-      "link": [
-        "https://git-lfs.github.com/",
-        "https://github.com/git-lfs/git-lfs"
-      ],
-      "year": 2013
+      "id": "Profiling",
+      "link": "https://en.wikipedia.org/wiki/Profiling_(computer_programming)"
     }
   ],
   "links": [
     {
-      "source": "Software Engineering",
-      "target": "Software Design"
-    },
-    {
-      "source": "Software Design",
-      "target": "Unified Modeling Language"
-    },
-    {
-      "source": "Software Design",
-      "target": "Design Pattern"
+      "source": "Technology",
+      "target": "Software Engineering"
     },
     {
       "source": "Software Engineering",
@@ -98,39 +24,7 @@
     },
     {
       "source": "Software Engineering",
-      "target": "Testing"
-    },
-    {
-      "source": "Software Engineering",
       "target": "Profiling"
-    },
-    {
-      "source": "Software Engineering",
-      "target": "Verson Control"
-    },
-    {
-      "source": "Verson Control",
-      "target": "Perforce Helix Core"
-    },
-    {
-      "source": "Verson Control",
-      "target": "Apache Subversion"
-    },
-    {
-      "source": "Apache Subversion",
-      "target": "TortoiseSVN"
-    },
-    {
-      "source": "Verson Control",
-      "target": "Git"
-    },
-    {
-      "source": "Git",
-      "target": "TortoiseGit"
-    },
-    {
-      "source": "Git",
-      "target": "Git Large File Storage"
     }
   ]
 }
