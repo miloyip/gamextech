@@ -4,44 +4,13 @@
       "id": "Technology"
     },
     {
-      "id": "Mathematics"
-    },
-    {
-      "id": "Computer Science"
-    },
-    {
-      "id": "Platform"
-    },
-    {
-      "id": "Software Engineering"
-    },
-    {
       "id": "Audio"
     },
     {
       "id": "Gameplay"
-    },
-    {
-      "id": "Content Creation"
     }
   ],
   "links": [
-    {
-      "source": "Technology",
-      "target": "Mathematics"
-    },
-    {
-      "source": "Technology",
-      "target": "Computer Science"
-    },
-    {
-      "source": "Technology",
-      "target": "Platform"
-    },
-    {
-      "source": "Technology",
-      "target": "Software Engineering"
-    },
     {
       "source": "Technology",
       "target": "Audio"
@@ -49,10 +18,6 @@
     {
       "source": "Technology",
       "target": "Gameplay"
-    },
-    {
-      "source": "Technology",
-      "target": "Content Creation"
     }
   ]
 }

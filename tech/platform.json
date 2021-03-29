@@ -1,6 +1,9 @@
 {
   "nodes": [
     {
+      "id": "Platform"
+    },
+    {
       "id": "Personal Computer",
       "abbr": "PC"
     },
@@ -47,6 +50,10 @@
     }
   ],
   "links": [
+    {
+      "source": "Technology",
+      "target": "Platform"
+    },
     {
       "source": "Platform",
       "target": "Personal Computer"

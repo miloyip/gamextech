@@ -92,7 +92,7 @@
     },
     {
       "id": "Sorting Algorithm",
-      "link": "https://en.wikipedia.org/wiki/Sorting_algorithm"      
+      "link": "https://en.wikipedia.org/wiki/Sorting_algorithm"
     },
     {
       "id": "Comparison Sort",
@@ -120,7 +120,7 @@
       "id": "Heapsort",
       "author": "J. W. J. Williams",
       "title": "Algorithm 232 - Heapsort",
-      "journal":" Communications of the ACM",
+      "journal": " Communications of the ACM",
       "link": "https://en.wikipedia.org/wiki/Heapsort",
       "year": 1964
     },
@@ -453,7 +453,7 @@
     {
       "id": "Marsaglia Polar Method",
       "author": [
-        "George Marsaglia", 
+        "George Marsaglia",
         "Thomas A. Bray"
       ],
       "title": "A convenient method for generating normal variables",

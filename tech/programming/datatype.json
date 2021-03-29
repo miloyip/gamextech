@@ -58,15 +58,25 @@
     },
     {
       "id": "Single Precision Floating-point Number",
-      "aka": ["single", "float", "binary32"]
+      "aka": [
+        "single",
+        "float",
+        "binary32"
+      ]
     },
     {
       "id": "Double Precision Floating-point Number",
-      "aka": ["double", "binary64"]
+      "aka": [
+        "double",
+        "binary64"
+      ]
     },
     {
       "id": "Half Precision Floating-point Number",
-      "aka": ["half", "binary16"]
+      "aka": [
+        "half",
+        "binary16"
+      ]
     },
     {
       "id": "IEEE 754",
@@ -232,7 +242,10 @@
     },
     {
       "id": "Multiset",
-      "aka": ["Bag", "mset"],
+      "aka": [
+        "Bag",
+        "mset"
+      ],
       "link": "https://en.wikipedia.org/wiki/Multiset"
     },
     {

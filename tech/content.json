@@ -1,6 +1,9 @@
 {
   "nodes": [
     {
+      "id": "Content Creation"
+    },
+    {
       "id": "Digital Content Creation",
       "abbr": "DCC"
     },
@@ -18,6 +21,10 @@
     }
   ],
   "links": [
+    {
+      "source": "Technology",
+      "target": "Content Creation"
+    },
     {
       "source": "Content Creation",
       "target": "Digital Content Creation"

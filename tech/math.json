@@ -1,6 +1,9 @@
 {
   "nodes": [
     {
+      "id": "Mathematics"
+    },
+    {
       "id": "Algebra"
     },
     {
@@ -32,6 +35,10 @@
     }
   ],
   "links": [
+    {
+      "source": "Technology",
+      "target": "Mathematics"
+    },
     {
       "source": "Mathematics",
       "target": "Algebra"

@@ -52,5 +52,9 @@
   "tech/programming.json",
   "tech/programming/datatype.json",
   "tech/se.json",
+  "tech/se/design.json",
+  "tech/se/pattern.json",
+  "tech/se/testing.json",
+  "tech/se/version.json",
   "tech/tool.json"
 ]
