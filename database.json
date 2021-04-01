@@ -21,6 +21,7 @@
   "tech/content.json",
   "tech/cs.json",
   "tech/cs/algorithm.json",
+  "tech/cs/comparch.json",
   "tech/cs/compression.json",
   "tech/cs/datastruct.json",
   "tech/cs/network.json",

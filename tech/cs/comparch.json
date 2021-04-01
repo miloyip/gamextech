@@ -1,0 +1,754 @@
+{
+  "nodes": [
+    {
+      "id": "Computer Architecture",
+      "link": "https://en.wikipedia.org/wiki/Computer_architecture"
+    },
+    {
+      "id": "Central Processing Unit",
+      "abbr": "CPU",
+      "link": "https://en.wikipedia.org/wiki/Central_processing_unit"
+    },
+    {
+      "id": "Instruction Set Architecture",
+      "abbr": "ISA",
+      "link": "https://en.wikipedia.org/wiki/Instruction_set_architecture"
+    },
+    {
+      "id": "x86 Architecture",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/X86",
+      "year": 1978
+    },
+    {
+      "id": "x86 SIMD Instruction Set",
+      "link": "https://software.intel.com/sites/landingpage/IntrinsicsGuide/"
+    },
+    {
+      "id": "MMX",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/MMX_(instruction_set)",
+      "year": 1996
+    },
+    {
+      "id": "3DNow!",
+      "organization": "AMD",
+      "link": "https://en.wikipedia.org/wiki/3DNow!",
+      "year": 1998
+    },
+    {
+      "id": "Streaming SIMD Extensions",
+      "abbr": "SSE",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions",
+      "year": 1999
+    },
+    {
+      "id": "Streaming SIMD Extensions 2",
+      "abbr": "SSE2",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/SSE2",
+      "year": 2001
+    },
+    {
+      "id": "Streaming SIMD Extensions 3",
+      "abbr": "SSE3",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/SSE3",
+      "year": 2004
+    },
+    {
+      "id": "Supplemental Streaming SIMD Extensions 3",
+      "abbr": "SSSE3",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/SSSE3",
+      "year": 2006
+    },
+    {
+      "id": "Streaming SIMD Extensions 4",
+      "abbr": "SSE4",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/SSE4",
+      "year": 2006
+    },
+    {
+      "id": "Advanced Vector Extensions",
+      "aka": "Sandy Bridge New Extensions",
+      "abbr": "AVX",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/Advanced_Vector_Extensions",
+      "year": 2008
+    },
+    {
+      "id": "Fused Multiply-add 3",
+      "abbr": "FMA3",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/FMA_instruction_set",
+      "year": 2011
+    },
+    {
+      "id": "Fused Multiply-add 4",
+      "abbr": "FMA4",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/FMA_instruction_set",
+      "year": 2012
+    },
+    {
+      "id": "Advanced Vector Extensions 2",
+      "aka": "Haswell New Instructions",
+      "abbr": "AVX2",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#Advanced_Vector_Extensions_2",
+      "year": 2013
+    },
+    {
+      "id": "Advanced Vector Extensions 512",
+      "abbr": "AVX-512",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/AVX-512",
+      "year": 2015
+    },
+    {
+      "id": "x86-64 Architecture",
+      "link": "https://en.wikipedia.org/wiki/X86-64",
+      "year": 1999
+    },
+    {
+      "id": "ARM Architecture",
+      "organization": "ARM",
+      "link": "https://en.wikipedia.org/wiki/ARM_architecture",
+      "year": 1985
+    },
+    {
+      "id": "ARM SIMD Instruction Set"
+    },
+    {
+      "id": "ARM NEON",
+      "organization": "ARM",
+      "link": "https://en.wikipedia.org/wiki/ARM_architecture#Advanced_SIMD_(Neon)",
+      "year": 2011
+    },
+    {
+      "id": "ARM Scalable Vector Extension",
+      "organization": "ARM",
+      "abbr": "SVE",
+      "link": [
+        "https://en.wikipedia.org/wiki/AArch64#Scalable_Vector_Extension_(SVE)",
+        "https://alastairreid.github.io/papers/sve-ieee-micro-2017.pdf"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "ARM64 Architecture",
+      "organization": "ARM",
+      "aka": "AArch64",
+      "link": "https://en.wikipedia.org/wiki/AArch64",
+      "year": 2011
+    },
+    {
+      "id": "PowerPC Architecture",
+      "abbr": "PPC",
+      "organization": "AIM Alliance",
+      "link": "https://en.wikipedia.org/wiki/PowerPC",
+      "year": 1992
+    },
+    {
+      "id": "PowerPC SIMD Instruction Set"
+    },
+    {
+      "id": "AltiVec",
+      "aka": [
+        "Velocity Engine",
+        "Vector Multimedia Extension",
+        "VMX"
+      ],
+      "link": "https://en.wikipedia.org/wiki/AltiVec"
+    },
+    {
+      "id": "Vector Multimedia Extension 128",
+      "abbr": "VMX128",
+      "link": "https://en.wikipedia.org/wiki/AltiVec#VMX128",
+      "year": 2007
+    },
+    {
+      "id": "Graphics Processing Unit",
+      "abbr": "GPU",
+      "link": "https://en.wikipedia.org/wiki/Graphics_processing_unit"
+    },
+    {
+      "id": "Desktop GPU"
+    },
+    {
+      "id": "Nvidia GPU",
+      "organization": "Nvidia",
+      "link": "https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units"
+    },
+    {
+      "id": "AMD GPU",
+      "organization": "AMD",
+      "link": "https://en.wikipedia.org/wiki/Comparison_of_AMD_graphics_processing_units"
+    },
+    {
+      "id": "Intel GPU",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units"
+    },
+    {
+      "id": "Mobile GPU"
+    },
+    {
+      "id": "Adreno",
+      "link": "https://en.wikipedia.org/wiki/Adreno"
+    },
+    {
+      "id": "PowerVR",
+      "link": "https://en.wikipedia.org/wiki/PowerVR"
+    },
+    {
+      "id": "Mali",
+      "link": "https://en.wikipedia.org/wiki/Mali_(GPU)"
+    },
+    {
+      "id": "Bus",
+      "link": "https://en.wikipedia.org/wiki/Bus_(computing)"
+    },
+    {
+      "id": "Expansion Bus"
+    },
+    {
+      "id": "Peripheral Component Interconnect",
+      "abbr": "PCI",
+      "link": "https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect",
+      "year": 1992
+    },
+    {
+      "id": "PCI Express",
+      "abbr": "PCIe",
+      "link": "https://en.wikipedia.org/wiki/PCI_Express",
+      "year": 2003
+    },
+    {
+      "id": "Storage Bus"
+    },
+    {
+      "id": "Parallel AT Bus Attachment",
+      "abbr": [
+        "PATA",
+        "ATA"
+      ],
+      "organization": [
+        "Western Digital",
+        "Compaq"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Parallel_ATA",
+      "year": 1986
+    },
+    {
+      "id": "Serial AT Bus Attachment",
+      "abbr": "SATA",
+      "year": 2000
+    },
+    {
+      "id": "Peripheral Bus"
+    },
+    {
+      "id": "Universal Serial Bus",
+      "abbr": "USB",
+      "link": "https://en.wikipedia.org/wiki/USB",
+      "year": 1996
+    },
+    {
+      "id": "Computer Memory",
+      "link": "https://en.wikipedia.org/wiki/Computer_memory"
+    },
+    {
+      "id": "Random-access Memory",
+      "abbr": "RAM",
+      "link": "https://en.wikipedia.org/wiki/Random-access_memory"
+    },
+    {
+      "id": "Read-only Memory",
+      "abbr": "ROM",
+      "link": "https://en.wikipedia.org/wiki/Read-only_memory"
+    },
+    {
+      "id": "CPU Cache",
+      "link": "https://en.wikipedia.org/wiki/CPU_cache"
+    },
+    {
+      "id": "Computer Data Storage",
+      "link": "https://en.wikipedia.org/wiki/Computer_data_storage"
+    },
+    {
+      "id": "Optical Storage",
+      "link": "https://en.wikipedia.org/wiki/Optical_storage"
+    },
+    {
+      "id": "Compact Disc Read-only Memory",
+      "abbr": "CD-ROM",
+      "organization": [
+        "Sony",
+        "Phillips"
+      ],
+      "link": "https://en.wikipedia.org/wiki/CD-ROM",
+      "year": 1983
+    },
+    {
+      "id": "Digital Versatile Disc",
+      "abbr": "DVD",
+      "link": "https://en.wikipedia.org/wiki/DVD",
+      "year": 1996
+    },
+    {
+      "id": "Blu-ray Disc",
+      "abbr": "BD",
+      "organization": "Blu-ray Disc Association",
+      "link": "https://en.wikipedia.org/wiki/Blu-ray",
+      "year": 2006
+    },
+    {
+      "id": "Magnetic Storage",
+      "link": "https://en.wikipedia.org/wiki/Magnetic_storage"
+    },
+    {
+      "id": "Hard Disk Drive",
+      "abbr": "HDD",
+      "organization": "IBM",
+      "link": "https://en.wikipedia.org/wiki/Hard_disk_drive",
+      "year": 1956
+    },
+    {
+      "id": "Solid-state Storage",
+      "abbr": "SSS",
+      "link": "https://en.wikipedia.org/wiki/Solid-state_storage"
+    },
+    {
+      "id": "Flash Memory",
+      "organization": "Toshiba",
+      "link": "https://en.wikipedia.org/wiki/Flash_memory",
+      "year": 1987
+    },
+    {
+      "id": "Solid-state Drive",
+      "abbr": "SSD",
+      "organization": "SanDisk",
+      "link": "https://en.wikipedia.org/wiki/Solid-state_drive",
+      "year": 1991
+    },
+    {
+      "id": "Parallel Computing",
+      "link": "https://en.wikipedia.org/wiki/Parallel_computing"
+    },
+    {
+      "id": "Bit-level Parallelism",
+      "link": "https://en.wikipedia.org/wiki/Bit-level_parallelism"
+    },
+    {
+      "id": "Instruction-level Parallelism",
+      "abbr": "ILP",
+      "link": "https://en.wikipedia.org/wiki/Instruction-level_parallelism"
+    },
+    {
+      "id": "Instruction Pipelining",
+      "link": "https://en.wikipedia.org/wiki/Instruction_pipelining"
+    },
+    {
+      "id": "Superscalar Processor",
+      "link": "https://en.wikipedia.org/wiki/Superscalar_processor",
+      "year": 1966
+    },
+    {
+      "id": "Out-of-order Execution",
+      "aka": "Dynamic Execution",
+      "abbr": "OoOE",
+      "link": "https://en.wikipedia.org/wiki/Out-of-order_execution",
+      "year": 1966
+    },
+    {
+      "id": "Register Renaming",
+      "link": "https://en.wikipedia.org/wiki/Register_renaming",
+      "year": 1966
+    },
+    {
+      "id": "Branch Predictor",
+      "link": "https://en.wikipedia.org/wiki/Branch_predictor"
+    },
+    {
+      "id": "Data Parallelism",
+      "link": "https://en.wikipedia.org/wiki/Data_parallelism"
+    },
+    {
+      "id": "Task Parallelism",
+      "link": "https://en.wikipedia.org/wiki/Task_parallelism"
+    },
+    {
+      "id": "Simultaneous Multithreading",
+      "abbr": "SMT",
+      "link": "https://en.wikipedia.org/wiki/Simultaneous_multithreading"
+    },
+    {
+      "id": "Hyper-threading",
+      "abbr": "HT",
+      "organization": "Intel",
+      "link": "https://en.wikipedia.org/wiki/Hyper-threading",
+      "year": 2002
+    },
+    {
+      "id": "Flynn's Taxonomy",
+      "author": "Michael J. Flynn",
+      "title": "Some Computer Organizations and Their Effectiveness",
+      "journal": "IEEE Transactions on Computers",
+      "link": "https://en.wikipedia.org/wiki/Flynn%27s_taxonomy",
+      "year": 1972
+    },
+    {
+      "id": "Single Instruction Single Data",
+      "abbr": "SISD",
+      "link": "https://en.wikipedia.org/wiki/SISD"
+    },
+    {
+      "id": "Single Instruction Multiple Data",
+      "abbr": "SIMD",
+      "link": "https://en.wikipedia.org/wiki/SIMD"
+    },
+    {
+      "id": "Multiple Instruction Single Data",
+      "abbr": "MISD",
+      "link": "https://en.wikipedia.org/wiki/MISD"
+    },
+    {
+      "id": "Multiple Instruction Multiple Data",
+      "abbr": "MIMD",
+      "link": "https://en.wikipedia.org/wiki/MIMD"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Computer Architecture"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Central Processing Unit"
+    },
+    {
+      "source": "Central Processing Unit",
+      "target": "Instruction Set Architecture"
+    },
+    {
+      "source": "Instruction Set Architecture",
+      "target": "x86 Architecture"
+    },
+    {
+      "source": "x86 Architecture",
+      "target": "x86 SIMD Instruction Set"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "MMX"
+    },
+    {
+      "source": "MMX",
+      "target": "3DNow!",
+      "type": "derive"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Streaming SIMD Extensions"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Streaming SIMD Extensions 2"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Streaming SIMD Extensions 3"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Supplemental Streaming SIMD Extensions 3"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Streaming SIMD Extensions 4"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Advanced Vector Extensions"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Fused Multiply-add 3"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Fused Multiply-add 4"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Advanced Vector Extensions 2"
+    },
+    {
+      "source": "x86 SIMD Instruction Set",
+      "target": "Advanced Vector Extensions 512"
+    },
+    {
+      "source": "x86 Architecture",
+      "target": "x86-64 Architecture",
+      "type": "derive"
+    },
+    {
+      "source": "Instruction Set Architecture",
+      "target": "ARM Architecture"
+    },
+    {
+      "source": "ARM Architecture",
+      "target": "ARM SIMD Instruction Set"
+    },
+    {
+      "source": "ARM SIMD Instruction Set",
+      "target": "ARM NEON"
+    },
+    {
+      "source": "ARM SIMD Instruction Set",
+      "target": "ARM Scalable Vector Extension"
+    },
+    {
+      "source": "ARM Architecture",
+      "target": "ARM64 Architecture",
+      "type": "derive"
+    },
+    {
+      "source": "Instruction Set Architecture",
+      "target": "PowerPC Architecture"
+    },
+    {
+      "source": "PowerPC Architecture",
+      "target": "PowerPC SIMD Instruction Set"
+    },
+    {
+      "source": "PowerPC SIMD Instruction Set",
+      "target": "AltiVec"
+    },
+    {
+      "source": "PowerPC SIMD Instruction Set",
+      "target": "Vector Multimedia Extension 128"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Graphics Processing Unit"
+    },
+    {
+      "source": "Graphics Processing Unit",
+      "target": "Desktop GPU"
+    },
+    {
+      "source": "Desktop GPU",
+      "target": "Nvidia GPU"
+    },
+    {
+      "source": "Desktop GPU",
+      "target": "AMD GPU"
+    },
+    {
+      "source": "Desktop GPU",
+      "target": "Intel GPU"
+    },
+    {
+      "source": "Graphics Processing Unit",
+      "target": "Mobile GPU"
+    },
+    {
+      "source": "Mobile GPU",
+      "target": "Adreno"
+    },
+    {
+      "source": "Mobile GPU",
+      "target": "PowerVR"
+    },
+    {
+      "source": "Mobile GPU",
+      "target": "Mali"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Bus"
+    },
+    {
+      "source": "Bus",
+      "target": "Expansion Bus"
+    },
+    {
+      "source": "Expansion Bus",
+      "target": "Peripheral Component Interconnect"
+    },
+    {
+      "source": "Expansion Bus",
+      "target": "Peripheral Component Interconnect"
+    },
+    {
+      "source": "Expansion Bus",
+      "target": "PCI Express"
+    },
+    {
+      "source": "Bus",
+      "target": "Storage Bus"
+    },
+    {
+      "source": "Storage Bus",
+      "target": "Parallel AT Bus Attachment"
+    },
+    {
+      "source": "Storage Bus",
+      "target": "Serial AT Bus Attachment"
+    },
+    {
+      "source": "Bus",
+      "target": "Peripheral Bus"
+    },
+    {
+      "source": "Peripheral Bus",
+      "target": "Universal Serial Bus"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Computer Memory"
+    },
+    {
+      "source": "Computer Memory",
+      "target": "Random-access Memory"
+    },
+    {
+      "source": "Computer Memory",
+      "target": "Read-only Memory"
+    },
+    {
+      "source": "Computer Memory",
+      "target": "CPU Cache"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Computer Data Storage"
+    },
+    {
+      "source": "Computer Data Storage",
+      "target": "Optical Storage"
+    },
+    {
+      "source": "Optical Storage",
+      "target": "Compact Disc Read-only Memory"
+    },
+    {
+      "source": "Optical Storage",
+      "target": "Digital Versatile Disc"
+    },
+    {
+      "source": "Optical Storage",
+      "target": "Blu-ray Disc"
+    },
+    {
+      "source": "Computer Data Storage",
+      "target": "Magnetic Storage"
+    },
+    {
+      "source": "Magnetic Storage",
+      "target": "Hard Disk Drive"
+    },
+    {
+      "source": "Computer Data Storage",
+      "target": "Solid-state Storage"
+    },
+    {
+      "source": "Solid-state Storage",
+      "target": "Flash Memory"
+    },
+    {
+      "source": "Flash Memory",
+      "target": "Solid-state Drive"
+    },
+    {
+      "source": "Computer Architecture",
+      "target": "Parallel Computing"
+    },
+    {
+      "source": "Parallel Computing",
+      "target": "Bit-level Parallelism"
+    },
+    {
+      "source": "Parallel Computing",
+      "target": "Instruction-level Parallelism"
+    },
+    {
+      "source": "Central Processing Unit",
+      "target": "Instruction-level Parallelism"
+    },
+    {
+      "source": "Instruction-level Parallelism",
+      "target": "Instruction Pipelining"
+    },
+    {
+      "source": "Instruction-level Parallelism",
+      "target": "Superscalar Processor"
+    },
+    {
+      "source": "Instruction-level Parallelism",
+      "target": "Out-of-order Execution"
+    },
+    {
+      "source": "Instruction-level Parallelism",
+      "target": "Register Renaming"
+    },
+    {
+      "source": "Instruction-level Parallelism",
+      "target": "Branch Predictor"
+    },
+    {
+      "source": "Parallel Computing",
+      "target": "Data Parallelism"
+    },
+    {
+      "source": "Parallel Computing",
+      "target": "Task Parallelism"
+    },
+    {
+      "source": "Central Processing Unit",
+      "target": "Simultaneous Multithreading"
+    },
+    {
+      "source": "Simultaneous Multithreading",
+      "target": "Hyper-threading"
+    },
+    {
+      "source": "Parallel Computing",
+      "target": "Flynn's Taxonomy"
+    },
+    {
+      "source": "Flynn's Taxonomy",
+      "target": "Single Instruction Single Data"
+    },
+    {
+      "source": "Flynn's Taxonomy",
+      "target": "Single Instruction Multiple Data"
+    },
+    {
+      "source": "Single Instruction Multiple Data",
+      "target": "x86 SIMD Instruction Set"
+    },
+    {
+      "source": "Single Instruction Multiple Data",
+      "target": "ARM SIMD Instruction Set"
+    },
+    {
+      "source": "Single Instruction Multiple Data",
+      "target": "PowerPC SIMD Instruction Set"
+    },
+    {
+      "source": "Flynn's Taxonomy",
+      "target": "Multiple Instruction Single Data"
+    },
+    {
+      "source": "Flynn's Taxonomy",
+      "target": "Multiple Instruction Multiple Data"
+    }
+  ]
+}

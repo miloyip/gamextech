@@ -1,10 +1,8 @@
 {
   "nodes": [
     {
-      "id": "Computer Science"
-    },
-    {
-      "id": "Computer Architecture"
+      "id": "Computer Science",
+      "link": "https://en.wikipedia.org/wiki/Computer_science"
     },
     {
       "id": "Computational Geometry"
@@ -18,10 +16,6 @@
     {
       "source": "Technology",
       "target": "Computer Science"
-    },
-    {
-      "source": "Computer Science",
-      "target": "Computer Architecture"
     },
     {
       "source": "Computer Science",
