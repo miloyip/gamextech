@@ -123,7 +123,10 @@
     },
     {
       "id": "macOS",
-      "aka": ["Mac OS X", "OS X"],
+      "aka": [
+        "Mac OS X",
+        "OS X"
+      ],
       "organization": "Apple",
       "link": "https://en.wikipedia.org/wiki/MacOS",
       "year": 2001
@@ -260,25 +263,25 @@
     },
     {
       "id": "Xbox",
-      "organization": "Microsoft",      
+      "organization": "Microsoft",
       "link": "https://en.wikipedia.org/wiki/Xbox",
       "year": 2001
     },
     {
       "id": "Xbox 360",
-      "organization": "Microsoft",      
+      "organization": "Microsoft",
       "link": "https://en.wikipedia.org/wiki/Xbox_360",
       "year": 2005
     },
     {
       "id": "Xbox One",
-      "organization": "Microsoft",      
+      "organization": "Microsoft",
       "link": "https://en.wikipedia.org/wiki/Xbox",
       "year": 2013
     },
     {
       "id": "Xbox Series X/S",
-      "organization": "Microsoft",      
+      "organization": "Microsoft",
       "link": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S",
       "year": 2020
     },
@@ -610,13 +613,11 @@
       "source": "Game Boy Color",
       "target": "Game Boy Advance",
       "type": "derive"
-
     },
     {
       "source": "Game Boy Advance",
       "target": "Nintendo DS",
       "type": "derive"
-
     },
     {
       "source": "Nintendo DS",
