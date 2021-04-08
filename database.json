@@ -26,6 +26,7 @@
   "tech/cs/datastruct.json",
   "tech/cs/network.json",
   "tech/cs/numerical.json",
+  "tech/cs/os.json",
   "tech/cs/security.json",
   "tech/cs/serialization.json",
   "tech/engine.json",

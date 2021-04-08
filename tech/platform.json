@@ -1,52 +1,353 @@
 {
   "nodes": [
     {
-      "id": "Platform"
+      "id": "Platform",
+      "link": "https://en.wikipedia.org/wiki/Computing_platform"
     },
     {
       "id": "Personal Computer",
-      "abbr": "PC"
+      "abbr": "PC",
+      "link": "https://en.wikipedia.org/wiki/Personal_computer"
     },
     {
-      "id": "Windows"
+      "id": "Windows",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Microsoft_Windows",
+      "year": 1985
     },
     {
-      "id": "DirectX"
+      "id": "Windows 3.0",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_3.0",
+      "year": 1990
     },
     {
-      "id": "MacOS"
+      "id": "Windows 3.1",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_3.1x",
+      "year": 1992
     },
     {
-      "id": "Linux"
+      "id": "Windows 95",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_95",
+      "year": 1995
     },
     {
-      "id": "Mobile Device"
+      "id": "Windows 98",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_98",
+      "year": 1998
     },
     {
-      "id": "iOS"
+      "id": "Windows Me",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_Me",
+      "year": 2000
     },
     {
-      "id": "Android"
+      "id": "Windows NT",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_NT",
+      "year": 1993
     },
     {
-      "id": "Video Game Console"
+      "id": "Windows 2000",
+      "aka": "Windows NT 5.0",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_2000",
+      "year": 2000
     },
     {
-      "id": "PlayStation"
+      "id": "Windows XP",
+      "aka": "Windows NT 5.1",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_XP",
+      "year": 2001
     },
     {
-      "id": "Xbox"
+      "id": "Windows Vista",
+      "aka": "Windows NT 6.0",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_Vista",
+      "year": 2007
     },
     {
-      "id": "Portable Game Console"
+      "id": "Windows 7",
+      "aka": "Windows NT 6.1",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_7",
+      "year": 2009
+    },
+    {
+      "id": "Windows 8",
+      "aka": "Windows NT 6.2",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_8",
+      "year": 2012
+    },
+    {
+      "id": "Windows 10",
+      "aka": "Windows NT 10.0",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/Windows_10",
+      "year": 2015
+    },
+    {
+      "id": "DirectX",
+      "organization": "Microsoft",
+      "link": "https://en.wikipedia.org/wiki/DirectX",
+      "year": 1995
+    },
+    {
+      "id": "Unix",
+      "organization": "Bell Labs",
+      "link": "https://en.wikipedia.org/wiki/NeXTSTEP",
+      "year": 1973
+    },
+    {
+      "id": "Berkeley Software Distribution",
+      "organization": "University of California, Berkeley",
+      "abbr": "BSD",
+      "year": 1977
+    },
+    {
+      "id": "NeXTSTEP",
+      "link": "https://en.wikipedia.org/wiki/NeXTSTEP",
+      "year": 1989
+    },
+    {
+      "id": "Macintosh",
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/Macintosh"
+    },
+    {
+      "id": "macOS",
+      "aka": ["Mac OS X", "OS X"],
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/MacOS",
+      "year": 2001
+    },
+    {
+      "id": "Linux",
+      "author": "Linus Torvalds",
+      "link": "https://en.wikipedia.org/wiki/Linux",
+      "year": 1991
+    },
+    {
+      "id": "Chrome OS",
+      "organization": "Google",
+      "link": "https://en.wikipedia.org/wiki/Chrome_OS",
+      "year": 2011
+    },
+    {
+      "id": "Mobile Device",
+      "link": "https://en.wikipedia.org/wiki/Mobile_device"
+    },
+    {
+      "id": "iOS",
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/IOS",
+      "year": 2007
+    },
+    {
+      "id": "tvOS",
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/TvOS",
+      "year": 2015
+    },
+    {
+      "id": "watchOS",
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/WatchOS",
+      "year": 2015
+    },
+    {
+      "id": "iPadOS",
+      "organization": "Apple",
+      "link": "https://en.wikipedia.org/wiki/IPadOS",
+      "year": 2019
+    },
+    {
+      "id": "Android",
+      "organization": "Google",
+      "link": "https://en.wikipedia.org/wiki/Android_(operating_system)",
+      "year": 2008
+    },
+    {
+      "id": "Video Game Console",
+      "link": "https://en.wikipedia.org/wiki/Video_game_console"
+    },
+    {
+      "id": "Nintendo Entertainment System",
+      "abbr": "NES",
+      "aka": "Famicom",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
+      "year": 1983
+    },
+    {
+      "id": "Super Nintendo Entertainment System",
+      "abbr": "SNES",
+      "aka": [
+        "Super Famicom",
+        "SFC"
+      ],
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+      "year": 1990
+    },
+    {
+      "id": "Nintendo 64",
+      "abbr": "N64",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_64",
+      "year": 1996
+    },
+    {
+      "id": "GameCube",
+      "abbr": "GC",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/GameCube",
+      "year": 2001
+    },
+    {
+      "id": "Wii",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Wii",
+      "year": 2006
+    },
+    {
+      "id": "Wii U",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Wii_U",
+      "year": 2012
+    },
+    {
+      "id": "PlayStation",
+      "abbr": "PS",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation",
+      "year": 1994
+    },
+    {
+      "id": "PlayStation 2",
+      "abbr": "PS2",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_2",
+      "year": 2000
+    },
+    {
+      "id": "PlayStation 3",
+      "abbr": "PS3",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_3",
+      "year": 2006
+    },
+    {
+      "id": "PlayStation 4",
+      "abbr": "PS4",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_4",
+      "year": 2013
+    },
+    {
+      "id": "PlayStation 5",
+      "abbr": "PS5",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_5",
+      "year": 2020
+    },
+    {
+      "id": "Xbox",
+      "organization": "Microsoft",      
+      "link": "https://en.wikipedia.org/wiki/Xbox",
+      "year": 2001
+    },
+    {
+      "id": "Xbox 360",
+      "organization": "Microsoft",      
+      "link": "https://en.wikipedia.org/wiki/Xbox_360",
+      "year": 2005
+    },
+    {
+      "id": "Xbox One",
+      "organization": "Microsoft",      
+      "link": "https://en.wikipedia.org/wiki/Xbox",
+      "year": 2013
+    },
+    {
+      "id": "Xbox Series X/S",
+      "organization": "Microsoft",      
+      "link": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S",
+      "year": 2020
+    },
+    {
+      "id": "Handheld Game Console",
+      "link": "https://en.wikipedia.org/wiki/Handheld_game_console"
+    },
+    {
+      "id": "PlayStation Portable",
+      "abbr": "PSP",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_Portable",
+      "year": 2004
+    },
+    {
+      "id": "PlayStation Vita",
+      "abbr": "PS Vita",
+      "organization": "Sony",
+      "link": "https://en.wikipedia.org/wiki/PlayStation_Portable",
+      "year": 2011
+    },
+    {
+      "id": "Game Boy",
+      "abbr": "GB",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Game_Boy",
+      "year": 1989
+    },
+    {
+      "id": "Game Boy Color",
+      "abbr": "GBC",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Game_Boy_Color",
+      "year": 1998
+    },
+    {
+      "id": "Game Boy Advance",
+      "abbr": "GBA",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Game_Boy_Advance",
+      "year": 2001
+    },
+    {
+      "id": "Nintendo DS",
+      "abbr": "NDS",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_DS",
+      "year": 2004
+    },
+    {
+      "id": "Nintendo 3DS",
+      "abbr": "N3DS",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_3DS",
+      "year": 2011
     },
     {
       "id": "Nintendo Switch",
-      "abbr": "NS"
+      "abbr": "NS",
+      "organization": "Nintendo",
+      "link": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+      "year": 2017
     },
     {
       "id": "World Wide Web",
-      "abbr": "WWW"
+      "author": "Sir Timothy Berners-Lee",
+      "abbr": "WWW",
+      "link": "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "year": 1989
     }
   ],
   "links": [
@@ -61,6 +362,63 @@
     {
       "source": "Personal Computer",
       "target": "Windows"
+    },
+    {
+      "source": "Windows",
+      "target": "Windows 3.0"
+    },
+    {
+      "source": "Windows 3.0",
+      "target": "Windows 3.1",
+      "type": "derive"
+    },
+    {
+      "source": "Windows",
+      "target": "Windows 95"
+    },
+    {
+      "source": "Windows 95",
+      "target": "Windows 98",
+      "type": "derive"
+    },
+    {
+      "source": "Windows 98",
+      "target": "Windows Me",
+      "type": "derive"
+    },
+    {
+      "source": "Windows",
+      "target": "Windows NT"
+    },
+    {
+      "source": "Windows NT",
+      "target": "Windows 2000",
+      "type": "derive"
+    },
+    {
+      "source": "Windows 2000",
+      "target": "Windows XP",
+      "type": "derive"
+    },
+    {
+      "source": "Windows XP",
+      "target": "Windows Vista",
+      "type": "derive"
+    },
+    {
+      "source": "Windows Vista",
+      "target": "Windows 7",
+      "type": "derive"
+    },
+    {
+      "source": "Windows 7",
+      "target": "Windows 8",
+      "type": "derive"
+    },
+    {
+      "source": "Windows 8",
+      "target": "Windows 10",
+      "type": "derive"
     },
     {
       "source": "Windows",
@@ -80,11 +438,42 @@
     },
     {
       "source": "Personal Computer",
-      "target": "MacOS"
+      "target": "Unix"
+    },
+    {
+      "source": "Unix",
+      "target": "Berkeley Software Distribution"
+    },
+    {
+      "source": "Berkeley Software Distribution",
+      "target": "NeXTSTEP",
+      "type": "derive"
+    },
+    {
+      "source": "NeXTSTEP",
+      "target": "macOS",
+      "type": "derive"
+    },
+    {
+      "source": "Personal Computer",
+      "target": "Macintosh"
+    },
+    {
+      "source": "Macintosh",
+      "target": "macOS"
     },
     {
       "source": "Personal Computer",
       "target": "Linux"
+    },
+    {
+      "source": "Personal Computer",
+      "target": "Chrome OS"
+    },
+    {
+      "source": "Linux",
+      "target": "Chrome OS",
+      "type": "derive"
     },
     {
       "source": "Platform",
@@ -95,8 +484,28 @@
       "target": "iOS"
     },
     {
+      "source": "iOS",
+      "target": "tvOS",
+      "type": "derive"
+    },
+    {
+      "source": "iOS",
+      "target": "watchOS",
+      "type": "derive"
+    },
+    {
+      "source": "iOS",
+      "target": "iPadOS",
+      "type": "derive"
+    },
+    {
       "source": "Mobile Device",
       "target": "Android"
+    },
+    {
+      "source": "Linux",
+      "target": "Android",
+      "type": "derive"
     },
     {
       "source": "Platform",
@@ -107,20 +516,155 @@
       "target": "PlayStation"
     },
     {
+      "source": "PlayStation",
+      "target": "PlayStation 2",
+      "type": "derive"
+    },
+    {
+      "source": "PlayStation 2",
+      "target": "PlayStation 3",
+      "type": "derive"
+    },
+    {
+      "source": "PlayStation 3",
+      "target": "PlayStation 4",
+      "type": "derive"
+    },
+    {
+      "source": "PlayStation 4",
+      "target": "x86-64 Architecture",
+      "type": "use"
+    },
+    {
+      "source": "PlayStation 4",
+      "target": "PlayStation 5",
+      "type": "derive"
+    },
+    {
+      "source": "PlayStation 5",
+      "target": "x86-64 Architecture",
+      "type": "use"
+    },
+    {
       "source": "Video Game Console",
       "target": "Xbox"
     },
     {
+      "source": "Xbox",
+      "target": "x86 Architecture",
+      "type": "use"
+    },
+    {
+      "source": "Xbox",
+      "target": "Xbox 360",
+      "type": "derive"
+    },
+    {
+      "source": "Xbox 360",
+      "target": "PowerPC Architecture",
+      "type": "use"
+    },
+    {
+      "source": "Xbox 360",
+      "target": "Xbox One",
+      "type": "derive"
+    },
+    {
+      "source": "Xbox One",
+      "target": "x86-64 Architecture",
+      "type": "use"
+    },
+    {
+      "source": "Xbox One",
+      "target": "Xbox Series X/S",
+      "type": "derive"
+    },
+    {
+      "source": "Xbox Series X/S",
+      "target": "x86-64 Architecture",
+      "type": "use"
+    },
+    {
       "source": "Platform",
-      "target": "Portable Game Console"
+      "target": "Handheld Game Console"
+    },
+    {
+      "source": "Handheld Game Console",
+      "target": "PlayStation Portable"
+    },
+    {
+      "source": "PlayStation Portable",
+      "target": "PlayStation Vita",
+      "type": "derive"
+    },
+    {
+      "source": "Handheld Game Console",
+      "target": "Game Boy"
+    },
+    {
+      "source": "Game Boy",
+      "target": "Game Boy Color",
+      "type": "derive"
+    },
+    {
+      "source": "Game Boy Color",
+      "target": "Game Boy Advance",
+      "type": "derive"
+
+    },
+    {
+      "source": "Game Boy Advance",
+      "target": "Nintendo DS",
+      "type": "derive"
+
+    },
+    {
+      "source": "Nintendo DS",
+      "target": "Nintendo 3DS",
+      "type": "derive"
     },
     {
       "source": "Video Game Console",
+      "target": "Nintendo Entertainment System"
+    },
+    {
+      "source": "Nintendo Entertainment System",
+      "target": "Super Nintendo Entertainment System",
+      "type": "derive"
+    },
+    {
+      "source": "Super Nintendo Entertainment System",
+      "target": "Nintendo 64",
+      "type": "derive"
+    },
+    {
+      "source": "Nintendo 64",
+      "target": "GameCube",
+      "type": "derive"
+    },
+    {
+      "source": "GameCube",
+      "target": "Wii",
+      "type": "derive"
+    },
+    {
+      "source": "Wii",
+      "target": "Wii U",
+      "type": "derive"
+    },
+    {
+      "source": "Wii U",
+      "target": "Nintendo Switch",
+      "type": "derive"
+    },
+    {
+      "source": "Handheld Game Console",
       "target": "Nintendo Switch"
     },
     {
-      "source": "Portable Game Console",
-      "target": "Nintendo Switch"
+      "source": "Nintendo Switch",
+      "target": "ARM64 Architecture",
+      "type": "use"
     },
     {
       "source": "Platform",
@@ -139,7 +683,7 @@
       "target": "Vulkan"
     },
     {
-      "source": "MacOS",
+      "source": "macOS",
       "target": "Metal"
     },
     {
