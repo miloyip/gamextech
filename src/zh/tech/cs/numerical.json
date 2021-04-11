@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "Numerical Analysis",
+      "aka": "Numerical Method",
+      "link": "https://en.wikipedia.org/wiki/Numerical_analysis"
+    },
+    {
+      "id": "Root Finding",
+      "link": "https://en.wikipedia.org/wiki/Root-finding_algorithms"
+    },
+    {
+      "id": "Bisection Method",
+      "aka": [
+        "Interval Halving Method",
+        "Binary search Method",
+        "Dichotomy Method"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Bisection_method"
+    },
+    {
+      "id": "Newton's Method",
+      "aka": "Newton–Raphson method",
+      "author": [
+        "Isaac Newton",
+        "Joseph Raphson"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Newton%27s_method",
+      "year": 1669
+    },
+    {
+      "id": "Runge-Kutta Method",
+      "author": [
+        "Carl David Tolmé Runge",
+        "Martin Kutta"
+      ],
+      "link": "https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods",
+      "year": 1895
+    },
+    {
+      "id": "Mathematical Optimization",
+      "link": "https://en.wikipedia.org/wiki/Mathematical_optimization"
+    },
+    {
+      "id": "Gradient Descent",
+      "abbr": "GD",
+      "link": "https://en.wikipedia.org/wiki/Gradient_descent"
+    },
+    {
+      "id": "Stochastic Gradient Descent",
+      "abbr": "SGD",
+      "link": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent"
+    },
+    {
+      "id": "Simulated Annealing",
+      "abbr": "SA",
+      "author": [
+        "Scott Kirkpatrick",
+        "C. Daniel Gelatt",
+        "Mario P. Vecchi"
+      ],
+      "title": "Optimization by Simulated Annealing",
+      "link": [
+        "http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/TemperAnneal/KirkpatrickAnnealScience1983.pdf",
+        "https://en.wikipedia.org/wiki/Simulated_annealing"
+      ],
+      "year": 1983
+    },
+    {
+      "id": "Numerical Integration"
+    },
+    {
+      "id": "Monte Carlo Integration",
+      "link": "https://en.wikipedia.org/wiki/Monte_Carlo_integration"
+    },
+    {
+      "id": "Quasi-Monte Carlo Method",
+      "link": "https://en.wikipedia.org/wiki/Quasi-Monte_Carlo_method"
+    },
+    {
+      "id": "Differential Equation Solving"
+    },
+    {
+      "id": "Euler Method",
+      "author": "Leonhard Euler",
+      "aka": "Forward Euler Method",
+      "link": "https://en.wikipedia.org/wiki/Euler_method",
+      "year": 1768
+    },
+    {
+      "id": "Verlet Integration"
+    },
+    {
+      "id": "Courant-Friedrichs-Lewy Condition",
+      "abbr": "CFL Condition",
+      "link": "https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Numerical Analysis"
+    },
+    {
+      "source": "Numerical Analysis",
+      "target": "Root Finding"
+    },
+    {
+      "source": "Root Finding",
+      "target": "Bisection Method"
+    },
+    {
+      "source": "Root Finding",
+      "target": "Newton's Method"
+    },
+    {
+      "source": "Root Finding",
+      "target": "Runge-Kutta Method"
+    },
+    {
+      "source": "Numerical Analysis",
+      "target": "Mathematical Optimization"
+    },
+    {
+      "source": "Mathematical Optimization",
+      "target": "Gradient Descent"
+    },
+    {
+      "source": "Mathematical Optimization",
+      "target": "Simulated Annealing"
+    },
+    {
+      "source": "Gradient Descent",
+      "target": "Stochastic Gradient Descent"
+    },
+    {
+      "source": "Numerical Analysis",
+      "target": "Numerical Integration"
+    },
+    {
+      "source": "Numerical Integration",
+      "target": "Monte Carlo Integration"
+    },
+    {
+      "source": "Numerical Integration",
+      "target": "Quasi-Monte Carlo Method"
+    },
+    {
+      "source": "Numerical Analysis",
+      "target": "Differential Equation Solving"
+    },
+    {
+      "source": "Differential Equation Solving",
+      "target": "Euler Method"
+    },
+    {
+      "source": "Differential Equation Solving",
+      "target": "Verlet Integration"
+    },
+    {
+      "source": "Differential Equation Solving",
+      "target": "Courant-Friedrichs-Lewy Condition"
+    }
+  ]
+}

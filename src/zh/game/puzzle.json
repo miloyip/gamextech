@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": "Puzzle Game",
+      "abbr": "PUZ",
+      "link": "https://en.wikipedia.org/wiki/Puzzle_video_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Puzzle Game"
+    }
+  ]
+}

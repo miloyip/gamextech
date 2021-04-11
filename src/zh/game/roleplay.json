@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": "Role-playing Game",
+      "abbr": "RPG",
+      "link": "https://en.wikipedia.org/wiki/Role-playing_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Role-playing Game"
+    }
+  ]
+}

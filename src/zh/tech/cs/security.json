@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "id": "Information Security",
+      "link": "https://en.wikipedia.org/wiki/Information_security"
+    },
+    {
+      "id": "Authentication",
+      "link": "https://en.wikipedia.org/wiki/Authentication"
+    },
+    {
+      "id": "Authentication Protocol",
+      "link": "https://en.wikipedia.org/wiki/Authentication_protocol"
+    },
+    {
+      "id": "OpenID",
+      "link": "https://en.wikipedia.org/wiki/OpenID"
+    },
+    {
+      "id": "OAuth",
+      "link": "https://en.wikipedia.org/wiki/OAuth"
+    },
+    {
+      "id": "Cryptography",
+      "link": "https://en.wikipedia.org/wiki/Cryptography"
+    },
+    {
+      "id": "Encryption",
+      "link": "https://en.wikipedia.org/wiki/Encryption"
+    },
+    {
+      "id": "Symmetric Key",
+      "link": "https://en.wikipedia.org/wiki/Symmetric-key_algorithm"
+    },
+    {
+      "id": "XOR Cipher",
+      "link": "https://en.wikipedia.org/wiki/XOR_cipher"
+    },
+    {
+      "id": "Stream Cipher",
+      "link": "https://en.wikipedia.org/wiki/Stream_cipher"
+    },
+    {
+      "id": "RC4",
+      "link": "https://en.wikipedia.org/wiki/RC4"
+    },
+    {
+      "id": "Public Key",
+      "aka": "Asymmetric Key",
+      "link": "https://en.wikipedia.org/wiki/Public-key_cryptography"
+    },
+    {
+      "id": "Rivest-Shamir-Adleman",
+      "abbr": "RSA"
+    },
+    {
+      "id": "Cryptographic Hash Function",
+      "abbr": "CHF",
+      "link": "https://en.wikipedia.org/wiki/Cryptographic_hash_function"
+    },
+    {
+      "id": "MD5",
+      "link": "https://en.wikipedia.org/wiki/MD5"
+    },
+    {
+      "id": "SHA-1",
+      "aka": "Secure Hash Algorithm 1",
+      "link": "https://en.wikipedia.org/wiki/SHA-1"
+    },
+    {
+      "id": "Salt",
+      "link": "https://en.wikipedia.org/wiki/Salt_(cryptography)"
+    },
+    {
+      "id": "Cryptography Library",
+      "link": "https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Information Security"
+    },
+    {
+      "source": "Information Security",
+      "target": "Authentication"
+    },
+    {
+      "source": "Authentication",
+      "target": "Authentication Protocol"
+    },
+    {
+      "source": "Authentication Protocol",
+      "target": "OpenID"
+    },
+    {
+      "source": "Authentication Protocol",
+      "target": "OAuth"
+    },
+    {
+      "source": "Information Security",
+      "target": "Cryptography"
+    },
+    {
+      "source": "Cryptography",
+      "target": "Encryption"
+    },
+    {
+      "source": "Encryption",
+      "target": "Symmetric Key"
+    },
+    {
+      "source": "Symmetric Key",
+      "target": "XOR Cipher"
+    },
+    {
+      "source": "Symmetric Key",
+      "target": "Stream Cipher"
+    },
+    {
+      "source": "Stream Cipher",
+      "target": "RC4"
+    },
+    {
+      "source": "Encryption",
+      "target": "Public Key"
+    },
+    {
+      "source": "Public Key",
+      "target": "Rivest-Shamir-Adleman"
+    },
+    {
+      "source": "Cryptography",
+      "target": "Cryptographic Hash Function"
+    },
+    {
+      "source": "Cryptographic Hash Function",
+      "target": "MD5"
+    },
+    {
+      "source": "Cryptographic Hash Function",
+      "target": "SHA-1"
+    },
+    {
+      "source": "Cryptographic Hash Function",
+      "target": "Salt"
+    },
+    {
+      "source": "Cryptography",
+      "target": "Cryptography Library"
+    }
+  ]
+}

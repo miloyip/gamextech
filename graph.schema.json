@@ -24,6 +24,9 @@
           "id": {
             "type": "string"
           },
+          "id_display": {
+            "type": "string"
+          },
           "abbr": {
             "$ref": "#/definitions/string_or_array_of_string"
           },

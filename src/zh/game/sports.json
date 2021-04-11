@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "id": "Sports Game",
+      "link": "https://en.wikipedia.org/wiki/Sports_video_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Sports Game"
+    }
+  ]
+}

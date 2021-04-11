@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "id": "Strategy Game",
+      "link": "https://en.wikipedia.org/wiki/Strategy_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Strategy Game"
+    }
+  ]
+}

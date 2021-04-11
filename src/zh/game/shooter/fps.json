@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "id": "First-person Shooter",
+      "abbr": "FPS"
+    },
+    {
+      "id": "Doom",
+      "organization": "id Software",
+      "link": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
+      "year": 1993
+    },
+    {
+      "id": "Quake",
+      "organization": "id Software",
+      "link": "https://en.wikipedia.org/wiki/Quake_(video_game)",
+      "year": 1996
+    },
+    {
+      "id": "Half-Life 2",
+      "organization": "Valve",
+      "link": "https://en.wikipedia.org/wiki/Half-Life_2",
+      "year": 2004
+    },
+    {
+      "id": "Halo 2",
+      "organization": "Bungie",
+      "link": "https://en.wikipedia.org/wiki/Halo_2",
+      "year": 2004
+    },
+    {
+      "id": "F.E.A.R.",
+      "organization": "Monolith Productions",
+      "link": "https://en.wikipedia.org/wiki/F.E.A.R._(video_game)",
+      "year": 2005
+    }
+  ],
+  "links": [
+    {
+      "source": "Shooter Game",
+      "target": "First-person Shooter"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Doom"
+    },
+    {
+      "source": "Doom",
+      "target": "Doom Engine",
+      "type": "use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Quake"
+    },
+    {
+      "source": "Quake",
+      "target": "Quake Engine",
+      "type": "first-use"
+    },
+    {
+      "source": "Quake",
+      "target": "Light Map",
+      "type": "first-use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Half-Life 2"
+    },
+    {
+      "source": "Half-Life 2",
+      "target": "Source",
+      "type": "use"
+    },
+    {
+      "source": "Half-Life 2",
+      "target": "Radiosity Normal Mapping",
+      "type": "first-use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "Halo 2"
+    },
+    {
+      "source": "Halo 2",
+      "target": "Halo 2 Behavior DAG",
+      "type": "first-use"
+    },
+    {
+      "source": "First-person Shooter",
+      "target": "F.E.A.R."
+    },
+    {
+      "source": "F.E.A.R.",
+      "target": "Goal-Oriented Action Planning",
+      "type": "first-use"
+    }
+  ]
+}

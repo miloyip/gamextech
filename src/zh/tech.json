@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "Technology",
+      "id_display": "技术"
+    },
+    {
+      "id": "Audio",
+      "id_display": "音频"
+    },
+    {
+      "id": "Gameplay"
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Audio"
+    },
+    {
+      "source": "Technology",
+      "target": "Gameplay"
+    }
+  ]
+}

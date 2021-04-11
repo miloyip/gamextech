@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "Computer Science",
+      "link": "https://en.wikipedia.org/wiki/Computer_science"
+    },
+    {
+      "id": "Computational Geometry"
+    },
+    {
+      "id": "Convex Hull",
+      "link": "https://en.wikipedia.org/wiki/Convex_hull"
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Computer Science"
+    },
+    {
+      "source": "Computer Science",
+      "target": "Computational Geometry"
+    },
+    {
+      "source": "Computational Geometry",
+      "target": "Convex Hull"
+    }
+  ]
+}

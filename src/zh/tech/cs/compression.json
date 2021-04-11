@@ -1,0 +1,462 @@
+{
+  "nodes": [
+    {
+      "id": "Data Compression",
+      "link": "https://en.wikipedia.org/wiki/Data_compression"
+    },
+    {
+      "id": "Lossless Compression",
+      "link": "https://en.wikipedia.org/wiki/Lossless_compression"
+    },
+    {
+      "id": "Entropy Encoding",
+      "link": "https://en.wikipedia.org/wiki/Entropy_encoding"
+    },
+    {
+      "id": "Huffman Coding",
+      "abbr": "HC",
+      "author": "David A. Huffman",
+      "title": "A Method for the Construction of Minimum-Redundancy Codes",
+      "journal": "Proceedings of the IRE",
+      "link": [
+        "http://compression.ru/download/articles/huff/huffman_1952_minimum-redundancy-codes.pdf",
+        "https://en.wikipedia.org/wiki/Huffman_coding"
+      ],
+      "year": 1952
+    },
+    {
+      "id": "Arithmetic Coding",
+      "abbr": "AC",
+      "link": "https://en.wikipedia.org/wiki/Arithmetic_coding",
+      "year": 1976
+    },
+    {
+      "id": "Dictionary Coder",
+      "link": "https://en.wikipedia.org/wiki/Dictionary_coder"
+    },
+    {
+      "id": "Lempel-Ziv",
+      "abbr": "LZ",
+      "author": [
+        "Abraham Lempel",
+        "Jacob Ziv"
+      ],
+      "title": "A Universal Algorithm for Sequential Data Compression",
+      "journal": "IEEE Transactions on Information Theory",
+      "link": [
+        "https://cs.nyu.edu/~roweis/csc310-2006/extras/ziv_lempel_1977_universal_algorithm.pdf",
+        "https://en.wikipedia.org/wiki/LZ77_and_LZ78"
+      ],
+      "year": 1977
+    },
+    {
+      "id": "Lempel–Ziv–Storer–Szymanski",
+      "abbr": "LZSS",
+      "author": [
+        "James A. Storer",
+        "Thomas G. Szymanski"
+      ],
+      "title": "Data Compression via Textual Substitution",
+      "journal": "Journal of the ACM",
+      "year": 1982
+    },
+    {
+      "id": "Deflate",
+      "author": "Phil Katz",
+      "link": [
+        "https://tools.ietf.org/html/rfc1951",
+        "https://en.wikipedia.org/wiki/Deflate"
+      ],
+      "year": 1993
+    },
+    {
+      "id": "gzip",
+      "author": [
+        "Jean-loup Gailly",
+        "Mark Adler"
+      ],
+      "link": [
+        "https://www.gnu.org/software/gzip/",
+        "https://en.wikipedia.org/wiki/Gzip"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "zlib",
+      "author": [
+        "Jean-loup Gailly",
+        "Mark Adler"
+      ],
+      "link": [
+        "http://zlib.net/",
+        "https://en.wikipedia.org/wiki/Zlib"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "Lempel-Ziv-Oberhumer",
+      "abbr": "LZO",
+      "author": "Markus F.X.J. Oberhumer",
+      "link": [
+        "http://www.oberhumer.com/opensource/lzo/",
+        "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Oberhumer"
+      ],
+      "year": 1996
+    },
+    {
+      "id": "Lempel-Ziv-Markov Chain",
+      "abbr": "LZMA",
+      "author": "Igor Pavlov",
+      "link": [
+        "https://www.7-zip.org/",
+        "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "LZMA SDK",
+      "link": "https://www.7-zip.org/sdk.html"
+    },
+    {
+      "id": "Snappy",
+      "author": [
+        "Jeff Dean",
+        "Sanjay Ghemawat",
+        "Steinar H. Gunderson"
+      ],
+      "organization": "Google",
+      "link": [
+        "https://google.github.io/snappy/",
+        "https://github.com/google/snappy",
+        "https://en.wikipedia.org/wiki/Snappy_(compression)"
+      ],
+      "year": 2011
+    },
+    {
+      "id": "Brotli",
+      "author": [
+        "Jyrki Alakuijala",
+        "Zoltán Szabadka"
+      ],
+      "link": [
+        "https://tools.ietf.org/html/rfc7932",
+        "https://github.com/google/brotli",
+        "https://en.wikipedia.org/wiki/Brotli"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "Asymmetric Numeral Systems",
+      "abbr": "ANS",
+      "author": "Jarosław Duda",
+      "link": "https://en.wikipedia.org/wiki/Asymmetric_numeral_systems",
+      "year": 2013
+    },
+    {
+      "id": "Finite State Entropy",
+      "abbr": "FSE",
+      "link": "https://github.com/Cyan4973/FiniteStateEntropy",
+      "year": 2013
+    },
+    {
+      "id": "Lempel–Ziv Finite State Entropy",
+      "abbr": "LZFSE",
+      "organization": "Apple",
+      "link": [
+        "https://github.com/lzfse/lzfse",
+        "https://en.wikipedia.org/wiki/LZFSE"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "Zstandard",
+      "author": "Yann Collet",
+      "organization": "Facebook",
+      "link": [
+        "https://facebook.github.io/zstd/",
+        "https://en.wikipedia.org/wiki/Zstandard"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "Run-length Encoding",
+      "abbr": "RLE",
+      "author": [
+        "A. H. Robinson",
+        "C. Cherry"
+      ],
+      "title": "Results of a prototype television bandwidth compression scheme",
+      "journal": "Proceedings of the IEEE",
+      "link": "https://en.wikipedia.org/wiki/Run-length_encoding",
+      "year": 1967
+    },
+    {
+      "id": "Delta Encoding",
+      "link": "https://en.wikipedia.org/wiki/Delta_encoding"
+    },
+    {
+      "id": "Golomb Coding",
+      "author": "Solomon W. Golomb",
+      "title": "Run-length encodings",
+      "link": [
+        "http://urchin.earth.li/~twic/Golombs_Original_Paper/",
+        "https://en.wikipedia.org/wiki/Golomb_coding"
+      ],
+      "journal": "IEEE Transaction on Information Theory",
+      "year": 1966
+    },
+    {
+      "id": "Rice Coding",
+      "author": "Robert F. Rice",
+      "title": "Some practical universal noiseless coding techniques",
+      "link": [
+        "https://ntrs.nasa.gov/citations/19790014634",
+        "https://en.wikipedia.org/wiki/Golomb_coding#Rice_coding"
+      ],
+      "year": 1979
+    },
+    {
+      "id": "Burrows-Wheeler Transform",
+      "abbr": "BWT",
+      "author": [
+        "Michael Burrows",
+        "David Wheeler"
+      ],
+      "title": "A block sorting lossless data compression algorithm",
+      "link": [
+        "https://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf",
+        "https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform"
+      ],
+      "year": 1994
+    },
+    {
+      "id": "bzip2",
+      "author": "Julian Seward",
+      "link": [
+        "http://sourceware.org/bzip2/",
+        "https://en.wikipedia.org/wiki/Bzip2"
+      ],
+      "year": 1996
+    },
+    {
+      "id": "Lossy Compression",
+      "link": "https://en.wikipedia.org/wiki/Lossy_compression"
+    },
+    {
+      "id": "Quantization",
+      "link": "https://en.wikipedia.org/wiki/Quantization_(signal_processing)"
+    },
+    {
+      "id": "Transform Coding",
+      "link": "https://en.wikipedia.org/wiki/Transform_coding"
+    },
+    {
+      "id": "Discrete Cosine Transform",
+      "abbr": "DCT",
+      "author": [
+        "Nasir Ahmed",
+        "T. Natarajan",
+        "K. R. Rao"
+      ],
+      "title": "Discrete Cosine Transform",
+      "journal": "IEEE Transactions on Computers",
+      "link": [
+        "https://www.ic.tu-berlin.de/fileadmin/fg121/Source-Coding_WS12/selected-readings/Ahmed_et_al.__1974.pdf",
+        "https://en.wikipedia.org/wiki/Discrete_cosine_transform"
+      ],
+      "year": 1974
+    },
+    {
+      "id": "Predictive Coding"
+    },
+    {
+      "id": "Differential Pulse-code Modulation",
+      "abbr": "DPCM",
+      "author": "C. Chapin Cutler",
+      "organization": "Bell Labs",
+      "link": "https://en.wikipedia.org/wiki/Differential_pulse-code_modulation",
+      "year": 1950
+    },
+    {
+      "id": "Adaptive Differential Pulse-code Modulation",
+      "abbr": "ADPCM",
+      "author": [
+        "P. Cummiskey",
+        "Nikil S. Jayant",
+        "James L. Flanagan"
+      ],
+      "title": "Adaptive quantization in differential PCM coding of speech",
+      "journal": "The Bell System Technical Journal",
+      "year": 1973,
+      "link": "https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Science",
+      "target": "Data Compression"
+    },
+    {
+      "source": "Data Compression",
+      "target": "Lossless Compression"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Entropy Encoding"
+    },
+    {
+      "source": "Entropy Encoding",
+      "target": "Huffman Coding"
+    },
+    {
+      "source": "Entropy Encoding",
+      "target": "Arithmetic Coding"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Dictionary Coder"
+    },
+    {
+      "source": "Dictionary Coder",
+      "target": "Lempel-Ziv"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Lempel-Ziv-Oberhumer",
+      "type": "derive"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Lempel-Ziv-Oberhumer",
+      "type": "derive"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Lempel–Ziv–Storer–Szymanski",
+      "type": "derive"
+    },
+    {
+      "source": "Lempel–Ziv–Storer–Szymanski",
+      "target": "Deflate",
+      "type": "derive"
+    },
+    {
+      "source": "Huffman Coding",
+      "target": "Deflate",
+      "type": "derive"
+    },
+    {
+      "source": "Deflate",
+      "target": "gzip"
+    },
+    {
+      "source": "Deflate",
+      "target": "zlib"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Lempel-Ziv-Markov Chain",
+      "type": "derive"
+    },
+    {
+      "source": "Lempel-Ziv-Markov Chain",
+      "target": "LZMA SDK"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Snappy",
+      "type": "derive"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Brotli",
+      "type": "derive"
+    },
+    {
+      "source": "Entropy Encoding",
+      "target": "Asymmetric Numeral Systems"
+    },
+    {
+      "source": "Asymmetric Numeral Systems",
+      "target": "Finite State Entropy"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Lempel–Ziv Finite State Entropy",
+      "type": "derive"
+    },
+    {
+      "source": "Finite State Entropy",
+      "target": "Lempel–Ziv Finite State Entropy",
+      "type": "derive"
+    },
+    {
+      "source": "Asymmetric Numeral Systems",
+      "target": "Zstandard"
+    },
+    {
+      "source": "Lempel-Ziv",
+      "target": "Zstandard",
+      "type": "derive"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Run-length Encoding"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Delta Encoding"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Golomb Coding"
+    },
+    {
+      "source": "Golomb Coding",
+      "target": "Rice Coding",
+      "type": "derive"
+    },
+    {
+      "source": "Lossless Compression",
+      "target": "Burrows-Wheeler Transform"
+    },
+    {
+      "source": "Burrows-Wheeler Transform",
+      "target": "bzip2",
+      "type": "derive"
+    },
+    {
+      "source": "Data Compression",
+      "target": "Lossy Compression"
+    },
+    {
+      "source": "Lossy Compression",
+      "target": "Quantization"
+    },
+    {
+      "source": "Lossy Compression",
+      "target": "Transform Coding"
+    },
+    {
+      "source": "Transform Coding",
+      "target": "Discrete Cosine Transform"
+    },
+    {
+      "source": "Lossy Compression",
+      "target": "Predictive Coding"
+    },
+    {
+      "source": "Predictive Coding",
+      "target": "Differential Pulse-code Modulation"
+    },
+    {
+      "source": "Differential Pulse-code Modulation",
+      "target": "Adaptive Differential Pulse-code Modulation",
+      "type": "derive"
+    },
+    {
+      "source": "Data Compression",
+      "target": "Texture Compression"
+    }
+  ]
+}

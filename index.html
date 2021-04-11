@@ -62,7 +62,6 @@ svg text::selection {
 }
 #fork {
   display: block;
-  position: fixed;
   margin: 0;
   padding: 0.5rem;
   right: 0;
@@ -155,6 +154,11 @@ svg text::selection {
     </span>
     <span style="display:inline-block; width:100px;" id="stat">
     </span>
+    <span style="width: 100px">
+        Language
+        <select id="lang">
+        </select>
+    </span>
 </span>
 <span id="fork">
 <a href="https://github.com/miloyip/gamextech" title="Fork me on Github"><svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
@@ -172,7 +176,8 @@ const preset = {
   title: 'Game ⨯ Tech (beta)',
   selected: ['Game', 'Technology'],
   expand: 1,
-  chronology: false
+  chronology: false,
+  lang: 'en'
 }
 
 // Current state
@@ -181,6 +186,7 @@ let selected = new Set(preset.selected)
 let title = preset.title
 let expand = preset.expand
 let chronology = preset.chronology
+let lang = preset.lang
 
 // UI state
 const margin = { left: 0, top: 40, right: 0, bottom: 40 }
@@ -198,6 +204,23 @@ let nodes = []; let links = []
 
 parseURLdatabse()
 reloadDatabase().then(main)
+initI18n()
+// i18n init
+function initI18n () {
+  fetch('i18n.json')
+    .then(res => res.json())
+    .then(i18nList => {
+      const selectList = document.querySelector('#lang')
+      selectList.innerHTML = Object.keys(i18nList).map(item => {
+        if (item === lang) return `<option value="${item}" selected="selected">${i18nList[item]}</option>`
+        return `<option value="${item}" >${i18nList[item]}</option>`
+      }).join('')
+    })
+}
+
+function getI18nUrl (url) {
+  return `src/${lang}/${url}`
+}
 
 function reloadDatabase () {
   if (database.length !== 0) {
@@ -208,7 +231,7 @@ function reloadDatabase () {
 }
 
 function loadDatabase (database) {
-  return Promise.all(database.map(url => d3.json(url))).then(files => {
+  return Promise.all(database.map(url => d3.json(getI18nUrl(url)))).then(files => {
     nodes = [].concat.apply([], files.map(file => file.nodes))
     links = [].concat.apply([], files.map(file => file.links))
 
@@ -279,6 +302,14 @@ function main () {
       expand = parseInt(event.srcElement.value)
       pushState()
       restartSimulation()
+    })
+
+  d3.select('#lang')
+    .on('change', event => {
+      lang = event.srcElement.value
+      pushState()
+      window.location.reload()
+      // reloadDatabase().then(restartSimulation)
     })
 
   d3.select('#chronology')
@@ -679,7 +710,7 @@ function updatePopup () {
   if (popup) {
     updatePopupBounds()
     const d = popup.node
-    let html = `<p>${d.id}${d.abbr ? ' (' + d.abbr + ')' : ''}`
+    let html = `<p>${(d.id_display ? d.id_display : d.id)}${d.abbr ? ' (' + d.abbr + ')' : ''}`
     if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(', ') : d.aka}</small>`
     html += '</p>'
     if (d.synopsis) html += `<p>${d.synopsis}</p>`
@@ -736,6 +767,7 @@ function updatePopup () {
 function pushState () {
   const q = []
   if (database.length !== 0) { q.push(`d=${database.join(',')}`) }
+  if (lang !== preset.lang) { q.push(`lang=${lang}`) }
   if (title !== preset.title) { q.push(`t=${encodeURIComponent(title)}`) }
   if (selected.size !== preset.selected.length || !preset.selected.every(id => selected.has(id))) {
     q.push(`s=${Array.from(selected).map(id => encodeURIComponent(id.replace(/ /g, '_')))
@@ -774,6 +806,7 @@ function parseURLdatabse () {
   const q = new URL(document.location.href).searchParams
   const d = q.get('d')
   database = d ? d.split(',') : preset.database
+  lang = q.get('lang') ? q.get('lang') : preset.lang
 }
 
 function updateStateFromURL () {
@@ -842,7 +875,7 @@ function chronologyConstraint (d) {
 
 function nodeHtml (d) {
   const lineHeight = 12
-  let s = d.id + (d.abbr ? ` (${d.abbr})` : '') + (chronology && d.year ? `\n${d.year}` : '')
+  let s = (d.id_display ? d.id_display : d.id) + (d.abbr ? ` (${d.abbr})` : '') + (chronology && d.year ? `\n${d.year}` : '')
   let y = 0
   s = s.replace(/(?![^\n]{1,20}$)([^\n]{1,20})\s/g, '$1\n')
     .split('\n')
