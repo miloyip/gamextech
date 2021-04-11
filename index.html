@@ -710,7 +710,7 @@ function updatePopup () {
   if (popup) {
     updatePopupBounds()
     const d = popup.node
-    let html = `<p>${d.id}${d.abbr ? ' (' + d.abbr + ')' : ''}`
+    let html = `<p>${(d.id_display ? d.id_display : d.id)}${d.abbr ? ' (' + d.abbr + ')' : ''}`
     if (d.aka) html += `<br/><small>a.k.a. ${Array.isArray(d.aka) ? d.aka.join(', ') : d.aka}</small>`
     html += '</p>'
     if (d.synopsis) html += `<p>${d.synopsis}</p>`
