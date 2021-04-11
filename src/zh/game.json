@@ -1,7 +1,8 @@
 {
   "nodes": [
     {
-      "id": "Game"
+      "id": "Game",
+      "id_display": "游戏"
     }
   ],
   "links": []

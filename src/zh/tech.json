@@ -1,10 +1,12 @@
 {
   "nodes": [
     {
-      "id": "Technology"
+      "id": "Technology",
+      "id_display": "技术"
     },
     {
-      "id": "Audio"
+      "id": "Audio",
+      "id_display": "音频"
     },
     {
       "id": "Gameplay"

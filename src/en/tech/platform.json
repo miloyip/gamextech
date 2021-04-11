@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "Platform",
+      "id": "平台",
       "link": "https://en.wikipedia.org/wiki/Computing_platform"
     },
     {
@@ -356,10 +356,10 @@
   "links": [
     {
       "source": "Technology",
-      "target": "Platform"
+      "target": "平台"
     },
     {
-      "source": "Platform",
+      "source": "平台",
       "target": "Personal Computer"
     },
     {
@@ -479,7 +479,7 @@
       "type": "derive"
     },
     {
-      "source": "Platform",
+      "source": "平台",
       "target": "Mobile Device"
     },
     {
@@ -511,7 +511,7 @@
       "type": "derive"
     },
     {
-      "source": "Platform",
+      "source": "平台",
       "target": "Video Game Console"
     },
     {
@@ -588,7 +588,7 @@
       "type": "use"
     },
     {
-      "source": "Platform",
+      "source": "平台",
       "target": "Handheld Game Console"
     },
     {
@@ -668,7 +668,7 @@
       "type": "use"
     },
     {
-      "source": "Platform",
+      "source": "平台",
       "target": "World Wide Web"
     },
     {

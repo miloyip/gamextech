@@ -2,10 +2,12 @@
   "nodes": [
     {
       "id": "Platform",
+      "id_display": "平台",
       "link": "https://en.wikipedia.org/wiki/Computing_platform"
     },
     {
       "id": "Personal Computer",
+      "id_display": "个人电脑",
       "abbr": "PC",
       "link": "https://en.wikipedia.org/wiki/Personal_computer"
     },
