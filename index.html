@@ -180,20 +180,6 @@ const preset = {
   lang: 'en'
 }
 
-// i18n init
-function initI18n () {
-  fetch('i18n.json')
-    .then(res => res.json())
-    .then(i18nList => {
-      const selectList = document.querySelector('#lang')
-      selectList.innerHTML = Object.keys(i18nList).filter(item => item !== 'default').map(item => {
-        if (item === preset.lang) return `<option value="${item}" selected="selected">${i18nList[item]}</option>`
-        return `<option value="${item}" >${i18nList[item]}</option>`
-      }).join('')
-    })
-}
-initI18n()
-
 // Current state
 let database = preset.database
 let selected = new Set(preset.selected)
@@ -218,6 +204,19 @@ let nodes = []; let links = []
 
 parseURLdatabse()
 reloadDatabase().then(main)
+initI18n()
+// i18n init
+function initI18n () {
+  fetch('i18n.json')
+    .then(res => res.json())
+    .then(i18nList => {
+      const selectList = document.querySelector('#lang')
+      selectList.innerHTML = Object.keys(i18nList).map(item => {
+        if (item === lang) return `<option value="${item}" selected="selected">${i18nList[item]}</option>`
+        return `<option value="${item}" >${i18nList[item]}</option>`
+      }).join('')
+    })
+}
 
 function getI18nUrl (url) {
   return `src/${lang}/${url}`
@@ -309,7 +308,8 @@ function main () {
     .on('change', event => {
       lang = event.srcElement.value
       pushState()
-      reloadDatabase()
+      window.location.reload()
+      // reloadDatabase().then(restartSimulation)
     })
 
   d3.select('#chronology')
@@ -806,7 +806,7 @@ function parseURLdatabse () {
   const q = new URL(document.location.href).searchParams
   const d = q.get('d')
   database = d ? d.split(',') : preset.database
-  lang = q.get('lang')
+  lang = q.get('lang') ? q.get('lang') : preset.lang
 }
 
 function updateStateFromURL () {
