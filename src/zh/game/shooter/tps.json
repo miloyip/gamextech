@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "Third-person Shooter",
+      "abbr": "TPS"
+    },
+    {
+      "id": "Hitman: Codename 47",
+      "organization": " IO Interactive",
+      "link": "https://en.wikipedia.org/wiki/Hitman:_Codename_47",
+      "year": 2000
+    }
+  ],
+  "links": [
+    {
+      "source": "Shooter Game",
+      "target": "Third-person Shooter"
+    },
+    {
+      "source": "Third-person Shooter",
+      "target": "Hitman: Codename 47"
+    },
+    {
+      "source": "Hitman: Codename 47",
+      "target": "Hitman Character Physics"
+    }
+  ]
+}

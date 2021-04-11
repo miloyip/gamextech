@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "Software Engineering",
+      "link": "https://en.wikipedia.org/wiki/Software_engineering"
+    },
+    {
+      "id": "Debugging",
+      "link": "https://en.wikipedia.org/wiki/Debugging"
+    },
+    {
+      "id": "Profiling",
+      "link": "https://en.wikipedia.org/wiki/Profiling_(computer_programming)"
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Software Engineering"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Debugging"
+    },
+    {
+      "source": "Software Engineering",
+      "target": "Profiling"
+    }
+  ]
+}

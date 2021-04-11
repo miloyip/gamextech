@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": "Adventure Game",
+      "abbr": "AVG",
+      "link": "https://en.wikipedia.org/wiki/Adventure_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Adventure Game"
+    }
+  ]
+}

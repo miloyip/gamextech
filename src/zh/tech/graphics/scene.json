@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": "Scene Management"
+    },
+    {
+      "id": "Scene Graph",
+      "link": "https://en.wikipedia.org/wiki/Scene_graph"
+    },
+    {
+      "id": "Bounding Volume",
+      "link": "https://en.wikipedia.org/wiki/Bounding_volume"
+    },
+    {
+      "id": "Bounding Sphere",
+      "link": "https://en.wikipedia.org/wiki/Bounding_sphere"
+    },
+    {
+      "id": "Axis-aligned Bounding Box",
+      "abbr": "AABB",
+      "link": "https://en.wikipedia.org/wiki/Minimum_bounding_box"
+    },
+    {
+      "id": "Oriented Bounding Box",
+      "abbr": "OBB",
+      "link": "https://en.wikipedia.org/wiki/Minimum_bounding_box"
+    },
+    {
+      "id": "Discrete Oriented Polytope",
+      "abbr": [
+        "DOP",
+        "k-DOP"
+      ]
+    },
+    {
+      "id": "Space Partitioning",
+      "link": "https://en.wikipedia.org/wiki/Space_partitioning"
+    },
+    {
+      "id": "Bounding Volume Hierarchy",
+      "abbr": "BVH",
+      "link": "https://en.wikipedia.org/wiki/Bounding_volume_hierarchy"
+    },
+    {
+      "id": "Binary Space Partitioning",
+      "abbr": "BSP",
+      "link": "https://en.wikipedia.org/wiki/Binary_space_partitioning"
+    },
+    {
+      "id": "Quadtree",
+      "link": "https://en.wikipedia.org/wiki/Quadtree"
+    },
+    {
+      "id": "Octree",
+      "link": "https://en.wikipedia.org/wiki/Octree"
+    },
+    {
+      "id": "Loose Octree",
+      "author": "Thatcher Ulrich",
+      "title": "Loose Octrees",
+      "journal": "Game Programming Gems",
+      "year": 2000
+    },
+    {
+      "id": "k-d Tree",
+      "link": "https://en.wikipedia.org/wiki/K-d_tree"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Graphics",
+      "target": "Scene Management"
+    },
+    {
+      "source": "Scene Management",
+      "target": "Scene Graph"
+    },
+    {
+      "source": "Scene Management",
+      "target": "Bounding Volume"
+    },
+    {
+      "source": "Bounding Volume",
+      "target": "Bounding Sphere"
+    },
+    {
+      "source": "Bounding Volume",
+      "target": "Axis-aligned Bounding Box"
+    },
+    {
+      "source": "Bounding Volume",
+      "target": "Oriented Bounding Box"
+    },
+    {
+      "source": "Bounding Volume",
+      "target": "Discrete Oriented Polytope"
+    },
+    {
+      "source": "Bounding Volume",
+      "target": "Convex Hull"
+    },
+    {
+      "source": "Scene Management",
+      "target": "Space Partitioning"
+    },
+    {
+      "source": "Space Partitioning",
+      "target": "Bounding Volume Hierarchy"
+    },
+    {
+      "source": "Bounding Volume Hierarchy",
+      "target": "Bounding Volume",
+      "type": "use"
+    },
+    {
+      "source": "Space Partitioning",
+      "target": "Binary Space Partitioning"
+    },
+    {
+      "source": "Space Partitioning",
+      "target": "Quadtree"
+    },
+    {
+      "source": "Quadtree",
+      "target": "Axis-aligned Bounding Box",
+      "type": "use"
+    },
+    {
+      "source": "Space Partitioning",
+      "target": "Octree"
+    },
+    {
+      "source": "Octree",
+      "target": "Axis-aligned Bounding Box",
+      "type": "use"
+    },
+    {
+      "source": "Octree",
+      "target": "Loose Octree",
+      "type": "derive"
+    },
+    {
+      "source": "Space Partitioning",
+      "target": "k-d Tree"
+    },
+    {
+      "source": "k-d Tree",
+      "target": "Axis-aligned Bounding Box",
+      "type": "use"
+    }
+  ]
+}

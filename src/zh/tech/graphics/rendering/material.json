@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "Material"
+    },
+    {
+      "id": "Phenomenological Material"
+    },
+    {
+      "id": "Physically-based Material"
+    },
+    {
+      "id": "Data-driven Material"
+    },
+    {
+      "id": "Specialized Material"
+    },
+    {
+      "id": "Albedo",
+      "link": "https://en.wikipedia.org/wiki/Albedo"
+    },
+    {
+      "id": "Bidirectional Reflectance Distribution Function",
+      "abbr": "BRDF",
+      "author": "Fred Nicodemus",
+      "title": "Directional reflectance and emissivity of an opaque surface",
+      "journal": "Applied Optics",
+      "link": [
+        "https://www.semanticscholar.org/paper/Directional-Reflectance-and-Emissivity-of-an-Opaque-Nicodemus/432b3d347f5a5df2c4806ca34af7ca2819949fd8",
+        "https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function"
+      ],
+      "year": 1965
+    },
+    {
+      "id": "Smith Masking Function",
+      "author": "Bruce G. Smith",
+      "title": "Geometrical Shadowing of a Random Rough Surface",
+      "journal": "IEEE Transactions on Antennas and Propagation",
+      "year": 1967
+    },
+    {
+      "id": "Bidirectional Transmittance Distribution Function",
+      "abbr": "BTDF"
+    },
+    {
+      "id": "Lambertian Reflectance",
+      "author": "Johann Heinrich Lambert",
+      "title": "Photometria",
+      "link": "https://en.wikipedia.org/wiki/Lambertian_reflectance",
+      "year": 1760
+    },
+    {
+      "id": "Phong Reflection Model",
+      "aka": [
+        "Phong illumination",
+        "Phong Lighting"
+      ],
+      "author": "Bui Tuong Phong",
+      "title": "Illumination for computer generated pictures",
+      "journal": "Communications of the ACM",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/360825.360839",
+        "https://en.wikipedia.org/wiki/Phong_reflection_model"
+      ],
+      "year": 1975
+    },
+    {
+      "id": "Blinn-Phong Reflection Model",
+      "aka": "Modified Phong Reflection Model",
+      "author": "James Blinn",
+      "title": "Models of Light Reflection for Computer Synthesized Pictures",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/563858.563893",
+        "https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model"
+      ],
+      "year": 1977
+    },
+    {
+      "id": "Microfacet Model",
+      "author": [
+        "Kenneth E. Torrance",
+        "Ephraim M. Sparrow"
+      ],
+      "title": "Theory for off-specular reflection from roughened surfaces.",
+      "conference": "JOSA",
+      "year": 1967
+    },
+    {
+      "id": "Normal Distribution Function",
+      "abbr": "NDF",
+      "aka": [
+        "Microfacet Distribution Function",
+        "Facet Slope Distribution Function",
+        "Distribution of Normals",
+        "The D Term"
+      ],
+      "author": [
+        "Kenneth E. Torrance",
+        "Ephraim M. Sparrow"
+      ],
+      "title": "Theory for off-specular reflection from roughened surfaces.",
+      "conference": "JOSA",
+      "year": 1967
+    },
+    {
+      "id": "Geometric Attenuation",
+      "aka": "Masking Function",
+      "author": [
+        "Kenneth E. Torrance",
+        "Ephraim M. Sparrow"
+      ],
+      "title": "Theory for off-specular reflection from roughened surfaces.",
+      "conference": "JOSA",
+      "year": 1967
+    },
+    {
+      "id": "Torrance-Sparrow Model",
+      "author": [
+        "Kenneth E. Torrance",
+        "Ephraim M. Sparrow"
+      ],
+      "title": "Theory for off-specular reflection from roughened surfaces.",
+      "conference": "JOSA",
+      "year": 1967
+    },
+    {
+      "id": "Oren–Nayar Reflectance Model",
+      "author": [
+        "Michael Oren",
+        "Shree K. Nayar"
+      ],
+      "title": "Generalization of Lambert's reflectance model",
+      "conference": "SIGGRAPH",
+      "link": [
+        "http://cseweb.ucsd.edu/~viscomp/classes/cse168/sp20/readings/orennayar.pdf",
+        "https://en.wikipedia.org/wiki/Oren%E2%80%93Nayar_reflectance_model"
+      ],
+      "year": 1994
+    },
+    {
+      "id": "Beckmann-Spizzichino Distribution",
+      "aka": "Beckmann Distribution",
+      "author": [
+        "Petr Beckmann",
+        "André Spizzichino"
+      ],
+      "title": "The scattering of electromagnetic waves from rough surfaces",
+      "year": 1963
+    },
+    {
+      "id": "Trowbridge–Reitz Distribution",
+      "author": [
+        "S. Trowbridge",
+        "K. P. Reitz"
+      ],
+      "title": "Average irregularity representation of a rough ray reflection",
+      "journal": "JOSA",
+      "year": 1975
+    },
+    {
+      "id": "Heidrich–Seidel Anisotropic Distribution",
+      "author": [
+        "Wolfgang Heidrich",
+        "Hans-Peter Seidel"
+      ],
+      "title": "Efficient Rendering of Anisotropic Surfaces Using Computer Graphics Hardware",
+      "conference": "IMDSP",
+      "year": 1998
+    },
+    {
+      "id": "Gaussian Distribution",
+      "author": [
+        "Petr Beckmann",
+        "André Spizzichino"
+      ],
+      "title": "The scattering of electromagnetic waves from rough surfaces",
+      "year": 1963
+    },
+    {
+      "id": "Ward Anisotropic Distribution",
+      "synopsis": "Approximation of Anisotropic (Elliptical) Gaussian Model",
+      "author": "Gregory J. Ward",
+      "title": "Measuring and modeling anisotropic reflection",
+      "conference": "SIGGRAPH",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/133994.134078",
+        "https://en.wikipedia.org/wiki/Specular_highlight#Ward_anisotropic_distribution"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "GGX Distribution",
+      "author": [
+        "Bruce Walter",
+        "Stephen R. Marschner",
+        "Hongsong Li",
+        "Kenneth E. Torrance"
+      ],
+      "title": "Microfacet Models for Refraction through Rough Surfaces.",
+      "conference": "EGSR",
+      "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.443.6410&rep=rep1&type=pdf",
+      "year": 2007
+    },
+    {
+      "id": "Cook–Torrance Model",
+      "author": [
+        "Robert L. Cook",
+        "Kenneth E. Torrance"
+      ],
+      "title": "A reflectance model for computer graphics",
+      "journal": "TOG",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/357290.357293",
+        "https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model"
+      ],
+      "year": 1982
+    },
+    {
+      "id": "Fresnel Reflectance",
+      "aka": "Fresnel Term",
+      "author": "Augustin-Jean Fresnel",
+      "link": "https://en.wikipedia.org/wiki/Fresnel_equations",
+      "year": 1821
+    },
+    {
+      "id": "Schlick's Approximation",
+      "author": "Schlick, Christophe",
+      "title": "An inexpensive BRDF model for physically‐based rendering",
+      "journal": "Computer Graphics Forum",
+      "link": [
+        "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.50.2297&rep=rep1&type=pdf",
+        "https://en.wikipedia.org/wiki/Schlick%27s_approximation"
+      ],
+      "year": 1994
+    },
+    {
+      "id": "Disney BRDF",
+      "aka": "Disney Principled BRDF",
+      "author": "Brent Burley",
+      "title": "Physically-Based Shading at Disney",
+      "conference": "SIGGRAPH",
+      "link": "https://www.disneyanimation.com/publications/physically-based-shading-at-disney/",
+      "year": 2012
+    },
+    {
+      "id": "Generalized-Trowbridge-Reitz Distribution",
+      "abbr": "GTR",
+      "author": "Brent Burley",
+      "title": "Physically-Based Shading at Disney",
+      "conference": "SIGGRAPH",
+      "link": "https://www.disneyanimation.com/publications/physically-based-shading-at-disney/",
+      "year": 2012
+    },
+    {
+      "id": "Modified Phong Reflectance Model",
+      "author": [
+        "Eric P. Lafortune",
+        "Yves D. Willems"
+      ],
+      "title": "Using the modified phong reflectance model for physically based rendering",
+      "link": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.28.6852&rep=rep1&type=pdf",
+      "year": 1994
+    },
+    {
+      "id": "Lafortune Model",
+      "author": [
+        "Eric P. Lafortune",
+        "Sing-Choong Foo",
+        "Kenneth E. Torrance",
+        "Donald P. Greenberg"
+      ],
+      "title": "Non-linear approximation of reflectance functions",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/258734.258801",
+      "year": 1997
+    },
+    {
+      "id": "MERL BRDF Database",
+      "author": [
+        "Wojciech Matusik",
+        "Hanspeter Pfister",
+        "Matt Brand",
+        "Leonard McMillan"
+      ],
+      "title": "A Data-Driven Reflectance Model",
+      "journal": "TOG",
+      "link": [
+        "https://www.merl.com/brdf/",
+        "https://merl.com/publications/docs/TR2003-83.pdf"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "Hair Material"
+    },
+    {
+      "id": "Kajiya-Kay Model",
+      "author": [
+        "James T.Kajiya",
+        "Timothy L. Kay"
+      ],
+      "title": "Rendering fur with three dimensional textures",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/74334.74361",
+      "year": 1989
+    },
+    {
+      "id": "Marschner Model",
+      "author": [
+        "Stephen R. Marschner",
+        "Henrik Wann Jensen",
+        "Mike Cammarano"
+      ],
+      "title": "Light scattering from human hair fibers",
+      "journal": "TOG",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/882262.882345",
+      "year": 2003
+    },
+    {
+      "id": "Skin Material"
+    }
+  ],
+  "links": [
+    {
+      "source": "Rendering",
+      "target": "Material"
+    },
+    {
+      "source": "Material",
+      "target": "Phenomenological Material"
+    },
+    {
+      "source": "Material",
+      "target": "Physically-based Material"
+    },
+    {
+      "source": "Material",
+      "target": "Data-driven Material"
+    },
+    {
+      "source": "Material",
+      "target": "Specialized Material"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Albedo"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Bidirectional Reflectance Distribution Function"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Bidirectional Transmittance Distribution Function"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Lambertian Reflectance"
+    },
+    {
+      "source": "Lambertian Reflectance",
+      "target": "Oren–Nayar Reflectance Model",
+      "type": "derive"
+    },
+    {
+      "source": "Phenomenological Material",
+      "target": "Phong Reflection Model"
+    },
+    {
+      "source": "Phong Reflection Model",
+      "target": "Lambertian Reflectance",
+      "type": "use"
+    },
+    {
+      "source": "Phong Reflection Model",
+      "target": "Blinn-Phong Reflection Model",
+      "type": "derive"
+    },
+    {
+      "source": "Phenomenological Material",
+      "target": "Lafortune Model"
+    },
+    {
+      "source": "Torrance-Sparrow Model",
+      "target": "Blinn-Phong Reflection Model",
+      "type": "derive"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Fresnel Reflectance"
+    },
+    {
+      "source": "Fresnel Reflectance",
+      "target": "Schlick's Approximation"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Microfacet Model"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Normal Distribution Function"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Geometric Attenuation"
+    },
+    {
+      "source": "Geometric Attenuation",
+      "target": "Smith Masking Function"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Fresnel Reflectance",
+      "type": "use"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Torrance-Sparrow Model"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Oren–Nayar Reflectance Model"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Gaussian Distribution"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Beckmann-Spizzichino Distribution"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Trowbridge–Reitz Distribution"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Heidrich–Seidel Anisotropic Distribution"
+    },
+    {
+      "source": "Phong Reflection Model",
+      "target": "Heidrich–Seidel Anisotropic Distribution",
+      "type": "derive"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Ward Anisotropic Distribution"
+    },
+    {
+      "source": "Microfacet Model",
+      "target": "Cook–Torrance Model"
+    },
+    {
+      "source": "Cook–Torrance Model",
+      "target": "Beckmann-Spizzichino Distribution",
+      "type": "use"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "GGX Distribution"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Disney BRDF"
+    },
+    {
+      "source": "Disney BRDF",
+      "target": "Schlick's Approximation",
+      "type": "use"
+    },
+    {
+      "source": "Disney BRDF",
+      "target": "Generalized-Trowbridge-Reitz Distribution",
+      "type": "use"
+    },
+    {
+      "source": "Disney BRDF",
+      "target": "Smith Masking Function",
+      "type": "use"
+    },
+    {
+      "source": "Trowbridge–Reitz Distribution",
+      "target": "Generalized-Trowbridge-Reitz Distribution",
+      "type": "derive"
+    },
+    {
+      "source": "Normal Distribution Function",
+      "target": "Generalized-Trowbridge-Reitz Distribution"
+    },
+    {
+      "source": "Physically-based Material",
+      "target": "Modified Phong Reflectance Model"
+    },
+    {
+      "source": "Phong Reflection Model",
+      "target": "Modified Phong Reflectance Model",
+      "type": "derive"
+    },
+    {
+      "source": "Data-driven Material",
+      "target": "MERL BRDF Database"
+    },
+    {
+      "source": "Specialized Material",
+      "target": "Hair Material"
+    },
+    {
+      "source": "Hair Material",
+      "target": "Kajiya-Kay Model"
+    },
+    {
+      "source": "Hair Material",
+      "target": "Marschner Model"
+    },
+    {
+      "source": "Specialized Material",
+      "target": "Skin Material"
+    }
+  ]
+}

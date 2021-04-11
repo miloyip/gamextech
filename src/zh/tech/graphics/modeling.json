@@ -1,0 +1,635 @@
+{
+  "nodes": [
+    {
+      "id": "Modeling",
+      "link": "https://en.wikipedia.org/wiki/3D_modeling"
+    },
+    {
+      "id": "Curve"
+    },
+    {
+      "id": "Implicit Curve",
+      "link": "https://en.wikipedia.org/wiki/Implicit_curve"
+    },
+    {
+      "id": "2D Signed Distance Field",
+      "abbr": "2D SDF",
+      "aka": "2D Signed Distance Function",
+      "link": "https://www.iquilezles.org/www/articles/distfunctions2d/distfunctions2d.htm"
+    },
+    {
+      "id": "Contour Extraction"
+    },
+    {
+      "id": "Marching Squares",
+      "link": "https://en.wikipedia.org/wiki/Marching_squares"
+    },
+    {
+      "id": "Bézier Curve",
+      "link": "https://en.wikipedia.org/wiki/B%C3%A9zier_curve"
+    },
+    {
+      "id": "Composite Bézier curve",
+      "link": "https://en.wikipedia.org/wiki/Composite_B%C3%A9zier_curve"
+    },
+    {
+      "id": "De Casteljau's Algorithm",
+      "author": "Paul de Casteljau",
+      "link": "https://en.wikipedia.org/wiki/De_Casteljau%27s_algorithm"
+    },
+    {
+      "id": "B-spline",
+      "link": "https://en.wikipedia.org/wiki/B-spline"
+    },
+    {
+      "id": "Non-uniform rational B-spline",
+      "abbr": "NURBS",
+      "link": "https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline"
+    },
+    {
+      "id": "Cubic Hermite spline",
+      "link": "https://en.wikipedia.org/wiki/Cubic_Hermite_spline"
+    },
+    {
+      "id": "Catmull-Rom Spline",
+      "author": [
+        "Edwin Catmull",
+        "Raphael Rom"
+      ],
+      "title": "A class of local interpolating splines",
+      "journal": "Computer Aided Geometric Design",
+      "link": "https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Catmull%E2%80%93Rom_spline",
+      "year": 1974
+    },
+    {
+      "id": "Curved Surface"
+    },
+    {
+      "id": "Bézier Surface",
+      "link": "https://en.wikipedia.org/wiki/B%C3%A9zier_surface"
+    },
+    {
+      "id": "Subdivision Surface",
+      "link": "https://en.wikipedia.org/wiki/Subdivision_surface"
+    },
+    {
+      "id": "Subdivision Surface Approximating Scheme"
+    },
+    {
+      "id": "Catmull-Clark Subdivision Surface",
+      "author": [
+        "Edwin Catmull",
+        "James Clark"
+      ],
+      "title": "Recursively generated B-spline surfaces on arbitrary topological meshes",
+      "journal": "Computer-aided design",
+      "link": [
+        "http://www.cs.jhu.edu/~cohen/Seminar/cc.pdf",
+        "https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface"
+      ],
+      "year": 1978
+    },
+    {
+      "id": "Loop Subdivision Surface",
+      "author": "Charles Loop",
+      "title": "Smooth Subdivision Surfaces Based on Triangles",
+      "link": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-10.pdf",
+      "year": 1987
+    },
+    {
+      "id": "Subdivision Surface Interpolating Scheme"
+    },
+    {
+      "id": "Butterfly Subdivision Scheme",
+      "author": [
+        "Nira Dyn",
+        "David Levine",
+        "John A. Gregory"
+      ],
+      "title": "A butterfly subdivision scheme for surface interpolation with tension control",
+      "journal": "TOG",
+      "year": 1990
+    },
+    {
+      "id": "Implicit Surface",
+      "link": "https://en.wikipedia.org/wiki/Implicit_surface"
+    },
+    {
+      "id": "3D Signed Distance Field",
+      "abbr": "3D SDF",
+      "aka": "3D Signed Distance Function",
+      "link": "https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm"
+    },
+    {
+      "id": "Metaballs",
+      "author": "James F Blinn",
+      "title": "A generalization of algebraic surface drawing",
+      "journal": "TOG",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/357306.357310",
+        "https://en.wikipedia.org/wiki/Metaballs"
+      ],
+      "year": 1982
+    },
+    {
+      "id": "Isosurface Extraction",
+      "link": "https://en.wikipedia.org/wiki/Isosurface"
+    },
+    {
+      "id": "Marching Cubes",
+      "author": [
+        "William E. Lorensen",
+        "Harvey E. Cline"
+      ],
+      "title": "Marching cubes: A high resolution 3D surface construction algorithm",
+      "conference": "SIGGRAPH",
+      "link": "https://en.wikipedia.org/wiki/Marching_cubes",
+      "year": 1987
+    },
+    {
+      "id": "Marching Tetrahedra",
+      "author": [
+        "Akio Doi",
+        "Akio Koide"
+      ],
+      "title": "An efficient method of triangulating equi-valued surfaces by using tetrahedral cells",
+      "journal": "IEICE TRANSACTIONS on Information and Systems",
+      "link": "https://en.wikipedia.org/wiki/Marching_tetrahedra",
+      "year": 1991
+    },
+    {
+      "id": "Dual Contouring",
+      "author": [
+        "Tao Ju",
+        "Frank Losasso",
+        "Scott Schaefer",
+        "Joe Warren"
+      ],
+      "title": "Dual contouring of hermite data.",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/566570.566586",
+      "year": 2002
+    },
+    {
+      "id": "Dual Marching Cubes",
+      "author": [
+        "Scott Schaefer",
+        "Joe Warren"
+      ],
+      "title": "Dual marching cubes: Primal contouring of dual grids",
+      "conference": "PG",
+      "link": "https://people.eecs.berkeley.edu/~jrs/meshpapers/SchaeferWarren.pdf",
+      "year": 2004
+    },
+    {
+      "id": "Manifold Dual Contouring",
+      "author": [
+        "Scott Schaefer",
+        "Tao Ju",
+        "Joe Warren"
+      ],
+      "title": "Manifold dual contouring",
+      "journal": "TVCG",
+      "year": 2007
+    },
+    {
+      "id": "Mesh",
+      "link": "https://en.wikipedia.org/wiki/Types_of_mesh"
+    },
+    {
+      "id": "Polygon Mesh",
+      "link": "https://en.wikipedia.org/wiki/Polygon_mesh"
+    },
+    {
+      "id": "Triangle Mesh",
+      "link": "https://en.wikipedia.org/wiki/Triangle_mesh"
+    },
+    {
+      "id": "Triangle Mesh Volume",
+      "author": [
+        "Cha Zhang",
+        "Tsuhan Chen"
+      ],
+      "title": "Efficient feature extraction for 2D/3D objects in mesh representation",
+      "conference": "International Conference on Image Processing",
+      "link": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.20.9775&rep=rep1&type=pdf",
+      "year": 2001
+    },
+    {
+      "id": "Triangle Strip",
+      "link": "https://en.wikipedia.org/wiki/Triangle_strip"
+    },
+    {
+      "id": "Quadrilateral Mesh"
+    },
+    {
+      "id": "Polygon Mesh Representation"
+    },
+    {
+      "id": "Vertex-vertex Mesh",
+      "link": "https://en.wikipedia.org/wiki/Polygon_mesh#Vertex-vertex_meshes"
+    },
+    {
+      "id": "Face-vertex Mesh",
+      "link": "https://en.wikipedia.org/wiki/Polygon_mesh#Face-vertex_meshes"
+    },
+    {
+      "id": "Winged-edge Mesh",
+      "author": "Bruce G. Baumgart",
+      "title": "Winged Edge Polyhedron Representation",
+      "link": [
+        "https://pdfs.semanticscholar.org/b06e/58ef0e1586431c18d42fab5dd9c8fd4c9c04.pdf",
+        "https://en.wikipedia.org/wiki/Polygon_mesh#Winged-edge_meshes",
+        "https://en.wikipedia.org/wiki/Winged_edge"
+      ],
+      "year": 1972
+    },
+    {
+      "id": "Doubly Connected Edge List",
+      "abbr": "DCEL",
+      "aka": "Half-edge Mesh",
+      "author": [
+        "David E. Muller",
+        "Franco P. Preparata"
+      ],
+      "title": "Finding the intersection of two convex polyhedra.",
+      "journal": "Theoretical Computer Science",
+      "link": "https://en.wikipedia.org/wiki/Doubly_connected_edge_list",
+      "year": 1978
+    },
+    {
+      "id": "Quad-edge Mesh",
+      "author": [
+        "Leonidas J. Guibas",
+        "Jorge Stolfi"
+      ],
+      "title": "Primitives for the manipulation of general subdivisions and the computation of Voronoi diagrams",
+      "journal": "TOG",
+      "link": [
+        "https://dl.acm.org/doi/pdf/10.1145/282918.282923",
+        "https://en.wikipedia.org/wiki/Quad-edge"
+      ],
+      "year": 1985
+    },
+    {
+      "id": "Render Dynamic Mesh",
+      "author": [
+        "Robert F. Tobler",
+        "Stefan Maierhofer"
+      ],
+      "title": "A Mesh Data Structure for Rendering and Subdivision",
+      "link": [
+        "http://wscg.zcu.cz/wscg2006/Papers_2006/Short/E17-full.pdf",
+        "https://en.wikipedia.org/wiki/Polygon_mesh#Render_dynamic_meshes"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "Progressive Mesh",
+      "author": "Hugues Hoppe",
+      "title": "Progressive meshes",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/237170.237216",
+      "year": 1996
+    },
+    {
+      "id": "Geometry Image",
+      "author": [
+        "Xianfeng Gu",
+        "Steven J. Gortler",
+        "Hugues Hoppe"
+      ],
+      "title": "Geometry images",
+      "conference": "SIGGRAPH",
+      "link": "https://dl.acm.org/doi/pdf/10.1145/566570.566589",
+      "year": 2002
+    },
+    {
+      "id": "Polygon Triangulation",
+      "link": "https://en.wikipedia.org/wiki/Polygon_triangulation"
+    },
+    {
+      "id": "Mesh Compression"
+    },
+    {
+      "id": "EdgeBreaker",
+      "author": "Jarek Rossignac",
+      "title": "Edgebreaker: Connectivity compression for triangle meshes",
+      "journal": "TVCG",
+      "link": "https://smartech.gatech.edu/bitstream/handle/1853/3483/98-35.pdf",
+      "year": 1999
+    },
+    {
+      "id": "Volumetric Mesh",
+      "link": "https://en.wikipedia.org/wiki/Volume_mesh"
+    },
+    {
+      "id": "Tetrahedral Mesh"
+    },
+    {
+      "id": "Hexahedral Mesh"
+    },
+    {
+      "id": "Height Field",
+      "aka": "Height Map",
+      "link": "https://en.wikipedia.org/wiki/Heightmap"
+    },
+    {
+      "id": "Voxel"
+    },
+    {
+      "id": "Constructive Solid Geometry",
+      "abbr": "CSG",
+      "link": "https://en.wikipedia.org/wiki/Constructive_solid_geometry"
+    },
+    {
+      "id": "Free-form Deformation",
+      "abbr": "FFD",
+      "author": [
+        "Thomas W. Sederberg",
+        "Scott R. Parry"
+      ],
+      "title": "Free-form deformation of solid geometric models",
+      "conference": "SIGGRAPH",
+      "year": 1986
+    },
+    {
+      "id": "Billboard"
+    },
+    {
+      "id": "Impostor"
+    },
+    {
+      "id": "Tessellation",
+      "link": "https://en.wikipedia.org/wiki/Tessellation_(computer_graphics)"
+    },
+    {
+      "id": "Displacement Mapping",
+      "link": "https://en.wikipedia.org/wiki/Displacement_mapping"
+    },
+    {
+      "id": "Point Cloud",
+      "link": "https://en.wikipedia.org/wiki/Point_cloud"
+    }
+  ],
+  "links": [
+    {
+      "source": "Computer Graphics",
+      "target": "Modeling"
+    },
+    {
+      "source": "Modeling",
+      "target": "Curve"
+    },
+    {
+      "source": "Curve",
+      "target": "Implicit Curve"
+    },
+    {
+      "source": "Implicit Curve",
+      "target": "2D Signed Distance Field"
+    },
+    {
+      "source": "Implicit Curve",
+      "target": "Contour Extraction"
+    },
+    {
+      "source": "Contour Extraction",
+      "target": "Marching Squares"
+    },
+    {
+      "source": "Curve",
+      "target": "Bézier Curve"
+    },
+    {
+      "source": "Bézier Curve",
+      "target": "Composite Bézier curve"
+    },
+    {
+      "source": "Bézier Curve",
+      "target": "De Casteljau's Algorithm"
+    },
+    {
+      "source": "Curve",
+      "target": "B-spline"
+    },
+    {
+      "source": "B-spline",
+      "target": "Non-uniform rational B-spline",
+      "type": "derive"
+    },
+    {
+      "source": "Curve",
+      "target": "Cubic Hermite spline"
+    },
+    {
+      "source": "Cubic Hermite spline",
+      "target": "Catmull-Rom Spline",
+      "type": "derive"
+    },
+    {
+      "source": "Modeling",
+      "target": "Curved Surface"
+    },
+    {
+      "source": "Curved Surface",
+      "target": "Implicit Surface"
+    },
+    {
+      "source": "Implicit Surface",
+      "target": "3D Signed Distance Field"
+    },
+    {
+      "source": "Implicit Surface",
+      "target": "Metaballs"
+    },
+    {
+      "source": "Implicit Surface",
+      "target": "Isosurface Extraction"
+    },
+    {
+      "source": "Isosurface Extraction",
+      "target": "Marching Cubes"
+    },
+    {
+      "source": "Marching Cubes",
+      "target": "Marching Tetrahedra",
+      "type": "derive"
+    },
+    {
+      "source": "Marching Cubes",
+      "target": "Dual Marching Cubes",
+      "type": "derive"
+    },
+    {
+      "source": "Isosurface Extraction",
+      "target": "Dual Contouring"
+    },
+    {
+      "source": "Dual Contouring",
+      "target": "Manifold Dual Contouring",
+      "type": "derive"
+    },
+    {
+      "source": "Curved Surface",
+      "target": "Bézier Surface"
+    },
+    {
+      "source": "Bézier Surface",
+      "target": "De Casteljau's Algorithm"
+    },
+    {
+      "source": "Curved Surface",
+      "target": "Non-uniform rational B-spline"
+    },
+    {
+      "source": "Curved Surface",
+      "target": "Subdivision Surface"
+    },
+    {
+      "source": "Subdivision Surface",
+      "target": "Subdivision Surface Approximating Scheme"
+    },
+    {
+      "source": "Subdivision Surface Approximating Scheme",
+      "target": "Catmull-Clark Subdivision Surface"
+    },
+    {
+      "source": "Subdivision Surface Approximating Scheme",
+      "target": "Loop Subdivision Surface"
+    },
+    {
+      "source": "Subdivision Surface",
+      "target": "Subdivision Surface Interpolating Scheme"
+    },
+    {
+      "source": "Subdivision Surface Interpolating Scheme",
+      "target": "Butterfly Subdivision Scheme"
+    },
+    {
+      "source": "Modeling",
+      "target": "Mesh"
+    },
+    {
+      "source": "Mesh",
+      "target": "Polygon Mesh"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Triangle Mesh"
+    },
+    {
+      "source": "Triangle Mesh",
+      "target": "Triangle Mesh Volume"
+    },
+    {
+      "source": "Triangle Mesh",
+      "target": "Triangle Strip"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Quadrilateral Mesh"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Polygon Mesh Representation"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Vertex-vertex Mesh"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Face-vertex Mesh"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Winged-edge Mesh"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Doubly Connected Edge List"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Quad-edge Mesh"
+    },
+    {
+      "source": "Polygon Mesh Representation",
+      "target": "Render Dynamic Mesh"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Progressive Mesh"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Geometry Image"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Mesh Compression"
+    },
+    {
+      "source": "Polygon Mesh",
+      "target": "Polygon Triangulation"
+    },
+    {
+      "source": "Mesh Compression",
+      "target": "EdgeBreaker"
+    },
+    {
+      "source": "Mesh",
+      "target": "Volumetric Mesh"
+    },
+    {
+      "source": "Volumetric Mesh",
+      "target": "Tetrahedral Mesh"
+    },
+    {
+      "source": "Volumetric Mesh",
+      "target": "Hexahedral Mesh"
+    },
+    {
+      "source": "Modeling",
+      "target": "Voxel"
+    },
+    {
+      "source": "Voxel",
+      "target": "Isosurface Extraction"
+    },
+    {
+      "source": "Modeling",
+      "target": "Height Field"
+    },
+    {
+      "source": "Modeling",
+      "target": "Constructive Solid Geometry"
+    },
+    {
+      "source": "Modeling",
+      "target": "Free-form Deformation"
+    },
+    {
+      "source": "Modeling",
+      "target": "Billboard"
+    },
+    {
+      "source": "Billboard",
+      "target": "Impostor",
+      "type": "derive"
+    },
+    {
+      "source": "Modeling",
+      "target": "Tessellation"
+    },
+    {
+      "source": "Tessellation",
+      "target": "Displacement Mapping"
+    },
+    {
+      "source": "Modeling",
+      "target": "Point Cloud"
+    }
+  ]
+}

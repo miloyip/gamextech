@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "id": "Shooter Game",
+      "link": "https://en.wikipedia.org/wiki/Shooter_game"
+    }
+  ],
+  "links": [
+    {
+      "source": "Game",
+      "target": "Shooter Game"
+    }
+  ]
+}

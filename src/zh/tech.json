@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {
+      "id": "Technology"
+    },
+    {
+      "id": "Audio"
+    },
+    {
+      "id": "Gameplay"
+    }
+  ],
+  "links": [
+    {
+      "source": "Technology",
+      "target": "Audio"
+    },
+    {
+      "source": "Technology",
+      "target": "Gameplay"
+    }
+  ]
+}

@@ -81,6 +81,16 @@ If you want to add a lot of data or reorganize existing structure, you may creat
 
 Adding new features and fixing bugs are welcome as well.
 
+### i18n
+If you want translate to other lang. Please follow:
+1. `node addNewLang.js your-lang`
+2. please translate src/your-lang 
+3. Add your lang destription at i18n.json
+
+If default lang json have new content. Please follow:
+1. `node updateFromDefaultLang.js`
+2. please translate src/your-lang
+
 ### Testing
 
 Run `npm install` and `npm test` to validate the database with schema and additional checks.
